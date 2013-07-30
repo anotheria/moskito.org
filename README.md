@@ -1,4 +1,4 @@
 moskito.org
 ===========
 
-Contents of moskito.org website
+This project is the Home of moskito.org website.
