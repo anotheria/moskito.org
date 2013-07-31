@@ -5,14 +5,16 @@ body {
 }
 
 body {
-    background: #e5e5e5;
-    color: #8e919b;
+    background: #FFF;
+    color: #444;
     font-size: 12px;
     padding: 0;
 }
 
 .header {
     height: 90px;
+    background: #FFF;
+    width: 100%;
 }
 
 .main-box {
@@ -23,6 +25,61 @@ body {
 .logo {
     margin: 25px 0 0 0;
     float: left;
+}
+
+.logo > a > img {
+    height: 40px;
+    float: left;
+    -webkit-transition: all 0.12s linear;
+    -moz-transition: all 0.12s linear;
+    -o-transition: all 0.12s linear;
+    transition: all 0.12s linear;
+}
+
+.logo > a {
+    display: inline-block;
+}
+
+.logo > a > span {
+    display: inline-block;
+    float: left;
+    font-family: open_sanslight;
+    margin-left: 10px;
+    font-size: 21px;
+    line-height: 22px;
+    color: #000;
+}
+
+.logo > a > span > b {
+    display: block;
+    font-weight: normal;
+    font-family: open_sansregular;
+}
+
+.scroll {
+    padding-top: 50px;
+}
+
+.scroll .header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+    height: 50px;
+}
+
+.scroll .logo > a > img {
+    height: 30px;
+}
+
+.scroll .logo > a > span {
+    display: none;
+}
+
+.scroll .logo {
+    margin-top: 10px;
 }
 
 ul.main-menu {
@@ -48,6 +105,15 @@ ul.main-menu > li > span {
     padding: 45px 15px 20px 15px;
     color: #999;
     border-top: 3px solid #e5e5e5;
+    -webkit-transition: all 0.12s linear;
+    -moz-transition: all 0.12s linear;
+    -o-transition: all 0.12s linear;
+    transition: all 0.12s linear;
+}
+
+.scroll ul.main-menu > li > a,
+.scroll ul.main-menu > li > span {
+    padding: 13px 15px 20px 15px;
 }
 
 ul.main-menu > li > a:hover {
@@ -166,12 +232,6 @@ button.btn.blue-btn {
 
 .frame {
     background: #FFF;
-    padding: 20px 30px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    border: 1px solid #d8d8d8;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.08);
     margin: 0 0 30px;
 }
 
@@ -259,7 +319,7 @@ button.btn.blue-btn {
 
 .news span {
     font-size: 12px;
-    color: #c9c9c9;
+    color: #9a9a9a;
 }
 
 .news p {
