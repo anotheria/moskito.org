@@ -65,7 +65,7 @@ body {
     left: 0;
     position: fixed;
     z-index: 2000;
-    background: rgba(255,255,255,0.9);
+    background: #FFF;
     box-shadow: 0 1px 10px rgba(0,0,0,0.5);
     height: 50px;
 }
@@ -74,8 +74,13 @@ body {
     height: 30px;
 }
 
-.scroll .logo > a > span {
+.scroll .logo > a > span b {
     display: none;
+}
+
+.scroll .logo > a > span {
+    margin-top: 3px;
+    font-size: 18px;
 }
 
 .scroll .logo {
@@ -131,7 +136,7 @@ ul.main-menu > li.active > span {
     margin-top: 60px;
     width: 739px;
     height: 443px;
-    background: url(../img/mac.png) center center;
+    background: url(../img/mac.png) no-repeat center center;
     -moz-background-size: 100%;
     -webkit-background-size: 100%;
     -o-background-size: 100%;
@@ -181,21 +186,38 @@ button.btn.blue-btn {
     background-image: none;
     box-shadow: none;
     border: none;
+    -webkit-transition: background 0.12s linear;
+    -moz-transition: background 0.12s linear;
+    -o-transition: background 0.12s linear;
+    transition: background 0.12s linear;
 }
 
 button.btn.green-btn {
     background: #93c01b;
 }
 
+button.btn.green-btn:hover {
+    background: #87b900;
+}
+
 button.btn.blue-btn {
     background: #5ba1dc;
+}
+
+button.btn.blue-btn:hover {
+    background: #4d98d8;
+}
+
+button.btn.green-btn:active,
+button.btn.blue-btn:active {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) inset;
 }
 
 .main-info button.btn.blue-btn {
     margin: 0 0 0 10px;
 }
 
-.carousel {
+.carousel-area {
     margin: 25px 0 0 89px;
     width: 562px;
     height: 351px;
@@ -203,31 +225,7 @@ button.btn.blue-btn {
     -moz-border-radius: 4px;
     border-radius: 4px;
     overflow: hidden;
-}
-
-.mac .carousel-control {
-    top: 50%;
-    margin-top: -20px;
-    -webkit-transition: all 0.12s linear;
-    -moz-transition: all 0.12s linear;
-    -o-transition: all 0.12s linear;
-    transition: all 0.12s linear;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-
-.mac:hover .carousel-control {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-}
-
-.mac:hover .carousel-control:hover {
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-}
-
-.mac .carousel-indicators > li {
-    display: none;
+    background: #FFF;
 }
 
 .frame {
@@ -237,7 +235,8 @@ button.btn.blue-btn {
 
 .frame-title {
     border-bottom: 1px solid #ddd;
-    margin: 0 0 25px 0;
+    margin-bottom: 25px;
+    margin-top: 35px;
 }
 
 .frame-title h2 {
@@ -331,10 +330,7 @@ button.btn.blue-btn {
     border-top: 1px solid #CCC;
     font-family: open_sanslight;
     font-size: 13px;
-}
-
-.padder {
-    padding: 20px 30px;
+    padding: 20px 0 0 0;
 }
 
 ul.links {
@@ -342,6 +338,7 @@ ul.links {
     display: block;
     width: 360px;
     margin: 0;
+    overflow: hidden;
 }
 
 ul.links > li {
@@ -361,7 +358,7 @@ ul.links > li {
 
 .brands {
     background: #f5f5f5;
-    padding-bottom: 30px;
+    padding: 20px 0 30px 0;
 }
 
 .brands .span2 {
@@ -381,4 +378,177 @@ ul.links > li {
 .brands img:hover {
     opacity: 0.4;
     filter: alpha(opacity=40);
+}
+
+.hexagon {
+    width: 110px;
+    height: 121px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hexagon i {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 121px;
+    line-height: 121px;
+    text-align: center;
+    color: #FFF;
+    font-size: 60px;
+}
+
+.hexagon img {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.wrapper {
+    min-width: 550px;
+}
+
+.features-list ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.features-list li {
+    width: 280px;
+    height: 230px;
+    padding: 0;
+    margin: 6px;
+    display: block;
+    float: left;
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+@media (max-width: 1350px) {
+    .mac {
+        width: 660px;
+        height: 396px;
+        margin: 75px 0 0 0;
+    }
+
+    .carousel-area {
+        margin: 22px 0 0 82px;
+    }
+
+    .carousel-area,
+    .carousel-area img {
+        width: 496px;
+        height: 315px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mac {
+        width: 550px;
+        height: 330px;
+        margin: 110px 0 0 0;
+    }
+
+    .main-info {
+        margin: 75px 0 0 0;
+    }
+
+    .carousel-area {
+        margin: 17px 0 0 69px;
+    }
+
+    .carousel-area,
+    .carousel-area img {
+        width: 414px;
+        height: 263px;
+    }
+
+    .features-list li {
+        width: 230px;
+    }
+}
+
+@media (max-width: 979px) {
+    .main-box .presentation {
+        display: none;
+    }
+
+    .main-box .span5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-info {
+        margin: 120px 0 0 0;
+    }
+
+    .content .news-box .frame {
+        margin-bottom: 0;
+    }
+
+    .footer .links-box {
+        margin-bottom: 30px;
+    }
+
+    .footer .feedback-box {
+        margin-bottom: 10px;
+    }
+
+    .footer .links-box,
+    .footer .feedback-box,
+    .content .facebook-box,
+    .content .news-box {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    ul.links {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll .header {
+        position: relative;
+        height: 90px;
+        box-shadow: none;
+    }
+
+    .scroll {
+        padding-top: 0;
+    }
+
+    .scroll .logo > a > img {
+        height: 40px;
+    }
+
+    .scroll .logo > a > span b {
+        display: block;
+    }
+
+    .scroll .logo > a > span {
+        margin-top: 0;
+        font-size: 21px;
+    }
+
+    .scroll .logo {
+        margin-top: 25px;
+    }
+
+    .scroll ul.main-menu > li > a, .scroll ul.main-menu > li > span {
+        padding: 45px 15px 20px 15px;
+    }
+
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .features-list li {
+        width: 260px;
+    }
 }
