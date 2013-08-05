@@ -11,6 +11,11 @@ body {
     padding: 0;
 }
 
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
 .header {
     height: 90px;
     background: #FFF;
@@ -19,7 +24,7 @@ body {
 
 .main-box {
     height: 540px;
-    background: url(../img/main_bg.jpg) center center;
+    background: url(../img/main_bg.jpg) no-repeat fixed center top;
 }
 
 .logo {
@@ -30,10 +35,10 @@ body {
 .logo > a > img {
     height: 40px;
     float: left;
-    -webkit-transition: all 0.12s linear;
-    -moz-transition: all 0.12s linear;
-    -o-transition: all 0.12s linear;
-    transition: all 0.12s linear;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
 }
 
 .logo > a {
@@ -57,7 +62,7 @@ body {
 }
 
 .scroll {
-    padding-top: 50px;
+    padding-top: 90px;
 }
 
 .scroll .header {
@@ -65,8 +70,7 @@ body {
     left: 0;
     position: fixed;
     z-index: 2000;
-    background: #FFF;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 0px rgba(0,0,0,0.15);
     height: 50px;
 }
 
@@ -110,10 +114,6 @@ ul.main-menu > li > span {
     padding: 45px 15px 20px 15px;
     color: #999;
     border-top: 3px solid #e5e5e5;
-    -webkit-transition: all 0.12s linear;
-    -moz-transition: all 0.12s linear;
-    -o-transition: all 0.12s linear;
-    transition: all 0.12s linear;
 }
 
 .scroll ul.main-menu > li > a,
@@ -327,10 +327,11 @@ button.btn.blue-btn:active {
 
 .footer {
     background: #f5f5f5;
-    border-top: 1px solid #CCC;
+    border-top: 1px solid #DDD;
     font-family: open_sanslight;
     font-size: 13px;
     padding: 20px 0 0 0;
+    color: #999;
 }
 
 ul.links {
@@ -423,9 +424,45 @@ ul.links > li {
     display: block;
     float: left;
 }
-.clearfix {
-    float: none;
-    clear: both;
+
+#toTop {
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    bottom:25px;
+    right:10px;
+    font-weight: normal;
+    width: 50px;
+    height: 55px;
+}
+
+#toTop i {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 34px;
+    color: #C9C9C9;
+    -webkit-transition: all 0.12s linear;
+    -moz-transition: all 0.12s linear;
+    -o-transition: all 0.12s linear;
+    transition: all 0.12s linear;
+}
+
+#toTop:hover i {
+    line-height: 35px;
+    color: #666;
+}
+
+.presentation {
+    position: relative;
+}
+
+.presentation-title {
+    position: absolute;
+    right: -110px;
+    top: 80px;
+    width: 90px;
 }
 
 @media (max-width: 1350px) {
@@ -443,6 +480,11 @@ ul.links > li {
     .carousel-area img {
         width: 496px;
         height: 315px;
+    }
+
+    .presentation-title {
+        right: -40px;
+        top: 100px;
     }
 }
 
@@ -469,6 +511,11 @@ ul.links > li {
 
     .features-list li {
         width: 230px;
+    }
+
+    .presentation-title {
+        right: -65px;
+        top: 130px;
     }
 }
 

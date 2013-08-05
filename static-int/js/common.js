@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(this).tab('show');
     })
     $(window).scroll(function(){
-        if ( $(this).scrollTop() > 30){
+        if ( $(this).scrollTop() > 40){
             $('body').addClass("scroll");
         } else if($(this).scrollTop() <= 30 && $('body').hasClass("scroll")) {
             $('body').removeClass("scroll");
@@ -13,6 +13,8 @@ $(document).ready(function() {
     });//scroll
 
     $("#carousel").carouFredSel({
+        width   : '100%',
+        height : '100%',
         scroll: {
             fx: "crossfade",
             duration: 700
@@ -81,4 +83,5 @@ $(document).ready(function() {
     }
 
     $().UItoTop({ easingType: 'easeOutQuart', text: '<i class="icon-angle-up"></i>' });
+
 });
