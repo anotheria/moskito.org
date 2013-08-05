@@ -20,7 +20,7 @@ $(document).ready(function() {
             duration: 1000
         },
         auto    : {
-            pauseOnHover: 'immediate'
+            pauseOnHover: 'resume'
         },
         prev: {
             button: "#carouselPrev",
@@ -34,39 +34,54 @@ $(document).ready(function() {
 
     $(".features-list ul").carouFredSel({
         width   : "100%",
-        items	: 4,
+        items	: 3,
         scroll	: {
             items: 2,
             duration: 1000
         },
         auto    : {
-            pauseOnHover: 'immediate'
-        }
+            pauseOnHover: 'resume'
+        },
+        swipe: {
+            onTouch: true,
+            onMouse: true
+        },
+        pagination  : ".features-pagination"
     });
 
     $(window).resize(function(){
         $(".features-list ul").carouFredSel({
             width   : "100%",
-            items	: 4,
+            items	: 3,
             scroll	: {
                 items: 2,
                 duration: 1000
             },
             auto    : {
-                pauseOnHover: 'immediate'
-            }
+                pauseOnHover: 'resume'
+            },
+            swipe: {
+                onTouch: true,
+                onMouse: true
+            },
+            pagination  : ".features-pagination"
         });
         if ($(window).width() < 979) {
             $(".features-list ul").carouFredSel({
                 width   : "100%",
-                items	: 3,
+                items	: 2,
                 scroll	: {
                     items: 2,
                     duration: 1000
                 },
                 auto    : {
-                    pauseOnHover: 'immediate'
-                }
+                    pauseOnHover: 'resume'
+                },
+                swipe: {
+                    onTouch: true,
+                    onMouse: true
+                },
+                pagination  : ".features-pagination"
             });
         }
         if ($(window).width() < 768) {
@@ -78,8 +93,13 @@ $(document).ready(function() {
                     duration: 1000
                 },
                 auto    : {
-                    pauseOnHover: 'immediate'
-                }
+                    pauseOnHover: 'resume'
+                },
+                swipe: {
+                    onTouch: true,
+                    onMouse: true
+                },
+                pagination  : ".features-pagination"
             });
         }
     });
@@ -87,14 +107,19 @@ $(document).ready(function() {
     if ($(window).width() < 979) {
         $(".features-list ul").carouFredSel({
             width   : "100%",
-            items	: 3,
+            items	: 2,
             scroll	: {
                 items: 2,
                 duration: 1000
             },
             auto    : {
-                pauseOnHover: 'immediate'
-            }
+                pauseOnHover: 'resume'
+            },
+            swipe: {
+                onTouch: true,
+                onMouse: true
+            },
+            pagination  : ".features-pagination"
         });
     }
     if ($(window).width() < 768) {
@@ -106,8 +131,13 @@ $(document).ready(function() {
                 duration: 1000
             },
             auto    : {
-                pauseOnHover: 'immediate'
-            }
+                pauseOnHover: 'resume'
+            },
+            swipe: {
+                onTouch: true,
+                onMouse: true
+            },
+            pagination  : ".features-pagination"
         });
     }
 

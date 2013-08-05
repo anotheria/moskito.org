@@ -102,7 +102,7 @@ ul.main-menu > li {
     float: left;
     height: 87px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 2px;
     font-size: 18px;
     font-family: open_sanslight;
     font-weight: normal;
@@ -113,7 +113,11 @@ ul.main-menu > li > span {
     display: block;
     padding: 45px 15px 20px 15px;
     color: #999;
-    border-top: 3px solid #e5e5e5;
+    border-top: 3px solid #DDD;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
 }
 
 .scroll ul.main-menu > li > a,
@@ -123,7 +127,7 @@ ul.main-menu > li > span {
 
 ul.main-menu > li > a:hover {
     color: #666;
-    border-top: 3px solid #b6b6b6;
+    border-top: 3px solid #999;
     text-decoration: none;
 }
 
@@ -240,6 +244,8 @@ button.btn.blue-btn:active {
     margin-bottom: 25px;
     margin-top: 35px;
 }
+
+.features-title
 
 .frame-title h2 {
     margin: 0;
@@ -412,6 +418,10 @@ ul.links > li {
     min-width: 550px;
 }
 
+.features-list .frame-title {
+    position: relative;
+}
+
 .features-list ul {
     margin: 0 auto;
     padding: 0;
@@ -419,12 +429,45 @@ ul.links > li {
     display: block;
 }
 .features-list li {
-    width: 280px;
-    height: 230px;
+    width: 360px;
+    height: 240px;
     padding: 0;
-    margin: 6px;
+    margin: 20px;
     display: block;
     float: left;
+}
+
+.features-pagination {
+    position: absolute;
+    right: 0;
+    top: 49px;
+    background: #FFF;
+}
+
+.features-pagination span {
+    display: none;
+}
+
+.features-pagination a {
+    display: inline-block;
+    height: 3px;
+    width: 70px;
+    background: #DDD;
+    border-top: 10px solid #FFF;
+    border-bottom: 10px solid #FFF;
+    margin: 0 0 0 2px;
+    -webkit-transition: all 0.12s linear;
+    -moz-transition: all 0.12s linear;
+    -o-transition: all 0.12s linear;
+    transition: all 0.12s linear;
+}
+
+.features-pagination a:hover {
+    background: #999;
+}
+
+.features-pagination a.selected {
+    background: #5BA1DC;
 }
 
 #toTop {
@@ -471,43 +514,43 @@ ul.links > li {
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     border-radius: 60px;
-    width: 60px;
-    height: 60px;
-    background: rgba(0,0,0,0.4);
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.3);
     text-align: center;
-    line-height: 58px;
+    line-height: 48px;
     color: #FFF;
     font-size: 28px;
     cursor: pointer;
     position: absolute;
     top: 50%;
     margin-top: -25px;
-    z-index: 1000;
     -webkit-transition: all 0.12s linear;
     -moz-transition: all 0.12s linear;
     -o-transition: all 0.12s linear;
     transition: all 0.12s linear;
     display: none;
-}
-
-.arrow-circle i {
-    display: inline-block;
-    margin-left: 15px;
-    margin-right: 15px;
+    z-index: 1000;
 }
 
 .arrow-circle#carouselPrev {
-    left: -60px;
+    left: 30px;
     display: none;
     margin-top: -40px;
-    text-align: right;
 }
 
 .arrow-circle#carouselNext {
-    right: -60px;
+    right: 30px;
     display: none;
     margin-top: -40px;
-    text-align: left;
+}
+
+.mac:hover .arrow-circle#carouselNext {
+    right: 10px;
+}
+
+.mac:hover .arrow-circle#carouselPrev {
+    left: 10px;
 }
 
 .mac .arrow-circle {
@@ -520,18 +563,9 @@ ul.links > li {
     filter: alpha(opacity=100);
 }
 
-.mac .arrow-circle:hover {
+.arrow-circle:hover {
     background: rgba(0,0,0,0.5);
 }
-
-.mac:hover .arrow-circle#carouselNext {
-    right: -30px;
-}
-
-.mac:hover .arrow-circle#carouselPrev {
-    left: -30px;
-}
-
 
 @media (max-width: 1350px) {
     .mac {
@@ -554,6 +588,14 @@ ul.links > li {
         right: -40px;
         top: 100px;
     }
+
+    .mac:hover .arrow-circle#carouselNext {
+        right: 0px;
+    }
+
+    .mac:hover .arrow-circle#carouselPrev {
+        left: 0px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -564,7 +606,7 @@ ul.links > li {
     }
 
     .main-info {
-        margin: 75px 0 0 0;
+        margin: 60px 0 0 0;
     }
 
     .carousel-area {
@@ -578,12 +620,18 @@ ul.links > li {
     }
 
     .features-list li {
-        width: 230px;
+        width: 285px;
+        height: 280px;
     }
 
     .presentation-title {
         right: -65px;
-        top: 130px;
+        top: 100px;
+    }
+
+    h1 {
+        font-size: 25px;
+        line-height: 34px;
     }
 }
 
@@ -598,7 +646,7 @@ ul.links > li {
     }
 
     .main-info {
-        margin: 120px 0 0 0;
+        margin: 80px 0 0 0;
     }
 
     .content .news-box .frame {
@@ -623,6 +671,16 @@ ul.links > li {
 
     ul.links {
         width: auto;
+    }
+
+    .features-list li {
+        width: 350px;
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 46px;
     }
 }
 
@@ -665,5 +723,14 @@ ul.links > li {
 
     .features-list li {
         width: 260px;
+    }
+
+    .main-info {
+        margin: 50px 0 0 0;
+    }
+
+    .main-box {
+        height: 540px;
+        background-position: center 0px;
     }
 }
