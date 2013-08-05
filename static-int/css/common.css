@@ -24,7 +24,7 @@ a:focus {
 
 .main-box {
     height: 540px;
-    background: url(../img/main_bg.jpg) no-repeat fixed center top;
+    background: url(../img/main_bg.jpg) no-repeat fixed center 50px;
 }
 
 .logo {
@@ -142,10 +142,11 @@ ul.main-menu > li.active > span {
     -o-background-size: 100%;
     background-size: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 32px;
     font-weight: normal;
 }
 
@@ -157,7 +158,7 @@ h2 {
 }
 
 .main-info {
-    margin-top: 90px;
+    margin-top: 80px;
     font-family: open_sanslight;
     color: #FFF;
 }
@@ -226,6 +227,7 @@ button.btn.blue-btn:active {
     border-radius: 4px;
     overflow: hidden;
     background: #FFF;
+    position: relative;
 }
 
 .frame {
@@ -464,6 +466,72 @@ ul.links > li {
     top: 80px;
     width: 90px;
 }
+
+.arrow-circle {
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    line-height: 58px;
+    color: #FFF;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 1000;
+    -webkit-transition: all 0.12s linear;
+    -moz-transition: all 0.12s linear;
+    -o-transition: all 0.12s linear;
+    transition: all 0.12s linear;
+    display: none;
+}
+
+.arrow-circle i {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.arrow-circle#carouselPrev {
+    left: -60px;
+    display: none;
+    margin-top: -40px;
+    text-align: right;
+}
+
+.arrow-circle#carouselNext {
+    right: -60px;
+    display: none;
+    margin-top: -40px;
+    text-align: left;
+}
+
+.mac .arrow-circle {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.mac:hover .arrow-circle {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.mac .arrow-circle:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+.mac:hover .arrow-circle#carouselNext {
+    right: -30px;
+}
+
+.mac:hover .arrow-circle#carouselPrev {
+    left: -30px;
+}
+
 
 @media (max-width: 1350px) {
     .mac {

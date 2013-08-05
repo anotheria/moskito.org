@@ -13,11 +13,22 @@ $(document).ready(function() {
     });//scroll
 
     $("#carousel").carouFredSel({
-        width   : '100%',
-        height : '100%',
+        width: '100%',
+        height: '100%',
         scroll: {
             fx: "crossfade",
-            duration: 700
+            duration: 1000
+        },
+        auto    : {
+            pauseOnHover: 'immediate'
+        },
+        prev: {
+            button: "#carouselPrev",
+            key: "left"
+        },
+        next: {
+            button: "#carouselNext",
+            key	: "right"
         }
     });
 
@@ -26,7 +37,10 @@ $(document).ready(function() {
         items	: 4,
         scroll	: {
             items: 2,
-            duration: 700
+            duration: 1000
+        },
+        auto    : {
+            pauseOnHover: 'immediate'
         }
     });
 
@@ -36,7 +50,10 @@ $(document).ready(function() {
             items	: 4,
             scroll	: {
                 items: 2,
-                duration: 700
+                duration: 1000
+            },
+            auto    : {
+                pauseOnHover: 'immediate'
             }
         });
         if ($(window).width() < 979) {
@@ -45,7 +62,10 @@ $(document).ready(function() {
                 items	: 3,
                 scroll	: {
                     items: 2,
-                    duration: 700
+                    duration: 1000
+                },
+                auto    : {
+                    pauseOnHover: 'immediate'
                 }
             });
         }
@@ -55,7 +75,10 @@ $(document).ready(function() {
                 items	: 2,
                 scroll	: {
                     items: 2,
-                    duration: 700
+                    duration: 1000
+                },
+                auto    : {
+                    pauseOnHover: 'immediate'
                 }
             });
         }
@@ -67,7 +90,10 @@ $(document).ready(function() {
             items	: 3,
             scroll	: {
                 items: 2,
-                duration: 700
+                duration: 1000
+            },
+            auto    : {
+                pauseOnHover: 'immediate'
             }
         });
     }
@@ -77,7 +103,10 @@ $(document).ready(function() {
             items	: 2,
             scroll	: {
                 items: 2,
-                duration: 700
+                duration: 1000
+            },
+            auto    : {
+                pauseOnHover: 'immediate'
             }
         });
     }
