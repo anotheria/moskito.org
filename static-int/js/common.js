@@ -1,9 +1,4 @@
 $(document).ready(function() {
-    $('.carousel').carousel();
-    $('#myTab a').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-    })
     $(window).scroll(function(){
         if ( $(this).scrollTop() > 40){
             $('body').addClass("scroll");
