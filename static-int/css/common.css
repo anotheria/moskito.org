@@ -11,6 +11,10 @@ body {
     padding: 0;
 }
 
+a {
+    color: #4f93cd;
+}
+
 a:focus {
     text-decoration: none;
     outline: none;
@@ -150,7 +154,7 @@ ul.main-menu > li.active > span {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 31px;
     font-weight: normal;
 }
 
@@ -378,28 +382,9 @@ ul.links > li {
     font-weight: normal;
 }
 
-.brands {
+.clients {
     background: #f5f5f5;
     padding: 20px 0 30px 0;
-}
-
-.brands .span2 {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.brands img {
-    -webkit-transition: all 0.12s linear;
-    -moz-transition: all 0.12s linear;
-    -o-transition: all 0.12s linear;
-    transition: all 0.12s linear;
-    opacity: 0.2;
-    filter: alpha(opacity=20);
-}
-
-.brands img:hover {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
 }
 
 .hexagon {
@@ -580,6 +565,44 @@ ul.links > li {
     background: rgba(0,0,0,0.5);
 }
 
+.clients ul {
+    list-style: none;
+    margin: 0;
+}
+
+.clients ul li {
+    position: relative;
+    height: 80px;
+    float: left;
+    margin-right: 95px;
+}
+
+.clients ul li:last-child {
+    margin-right: 0;
+}
+
+.clients ul li img {
+    -webkit-transition: all 0.12s linear;
+    -moz-transition: all 0.12s linear;
+    -o-transition: all 0.12s linear;
+    transition: all 0.12s linear;
+    height: 60px;
+}
+
+.clients ul li img.monochrome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+
+.clients ul li:hover img.monochrome {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
 @media (max-width: 1350px) {
     .mac {
         width: 660px;
@@ -646,6 +669,14 @@ ul.links > li {
         font-size: 25px;
         line-height: 34px;
     }
+
+    .clients ul li {
+        margin-right: 70px;
+    }
+
+    .clients ul li img {
+        height: 50px;
+    }
 }
 
 @media (max-width: 979px) {
@@ -675,11 +706,13 @@ ul.links > li {
     }
 
     .footer .links-box,
-    .footer .feedback-box,
-    .content .facebook-box,
-    .content .news-box {
+    .footer .feedback-box {
         width: 100%;
         margin-left: 0;
+    }
+
+    h2 {
+        font-size: 24px;
     }
 
     ul.links {
