@@ -17,7 +17,9 @@ $(document).ready(function() {
         height: '100%',
         scroll: {
             fx: "crossfade",
-            duration: 1000
+            duration: 1000,
+            timeoutDuration: 7000
+
         },
         auto    : {
             pauseOnHover: 'resume'
@@ -37,7 +39,8 @@ $(document).ready(function() {
         items	: 3,
         scroll	: {
             items: 2,
-            duration: 1000
+            duration: 1000,
+            timeoutDuration: 7000
         },
         auto    : {
             pauseOnHover: 'resume'
@@ -55,7 +58,8 @@ $(document).ready(function() {
             items	: 3,
             scroll	: {
                 items: 2,
-                duration: 1000
+                duration: 1000,
+                timeoutDuration: 7000
             },
             auto    : {
                 pauseOnHover: 'resume'
@@ -72,7 +76,8 @@ $(document).ready(function() {
                 items	: 2,
                 scroll	: {
                     items: 2,
-                    duration: 1000
+                    duration: 1000,
+                    timeoutDuration: 7000
                 },
                 auto    : {
                     pauseOnHover: 'resume'
@@ -90,7 +95,8 @@ $(document).ready(function() {
                 items	: 2,
                 scroll	: {
                     items: 2,
-                    duration: 1000
+                    duration: 1000,
+                    timeoutDuration: 7000
                 },
                 auto    : {
                     pauseOnHover: 'resume'
@@ -110,7 +116,8 @@ $(document).ready(function() {
             items	: 2,
             scroll	: {
                 items: 2,
-                duration: 1000
+                duration: 1000,
+                timeoutDuration: 7000
             },
             auto    : {
                 pauseOnHover: 'resume'
@@ -128,7 +135,8 @@ $(document).ready(function() {
             items	: 2,
             scroll	: {
                 items: 2,
-                duration: 1000
+                duration: 1000,
+                timeoutDuration: 7000
             },
             auto    : {
                 pauseOnHover: 'resume'
