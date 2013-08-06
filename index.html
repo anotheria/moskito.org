@@ -14,15 +14,13 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="wrapper">
     <div class="header">
         <div class="container">
@@ -159,30 +157,38 @@
 
     <div class="container content">
         <div class="row-fluid">
-            <div class="span8 news-box">
+            <div class="span4 next-box">
+                <div class="frame">
+                    <div class="frame-title">
+                        <h2>What's Next</h2>
+                    </div>
+                    <ul>
+                        <li><a href="#">About MoSKito-Bzzz</a></li>
+                        <li><a href="#">Start working, step by step</a></li>
+                        <li><a href="#">MoSKito Documentation Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span4 news-box">
                 <div class="frame">
                     <div class="frame-title">
                         <h2>MoSKito News</h2>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span6 news">
-                            <span>2013-07-29</span>
-                            <p>MoSKito Control for Android - first prototype is available on GitHub.</p>
-                        </div>
-                        <div class="span6 news">
-                            <span>2013-07-20</span>
-                            <p>MoSKito Control for iPhone - in iOS 7 Design.<br/><a href="http://otainstall.anotheria.net/moskito_control/">Install via OTA</a></p>
-                        </div>
+                    <div class="news">
+                        <span>2013-07-29</span>
+                        <p>MoSKito Control for Android - first prototype is available on GitHub.</p>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span6 news">
-                            <span>2013-07-14</span>
-                            <p>MoSKito Control 0.2 got Chart Support.<br/><a href="https://github.com/anotheria/moskito-control">Clone on GitHub</a></p>
-                        </div>
-                        <div class="span6 news">
-                            <span>2013-03-14</span>
-                            <p>2.2.0 which was long time 2.1.7-SNAPSHOT was upgraded to major version and released today.<br/><a href="https://confluence.opensource.anotheria.net/display/MSK/03+Change+Log">Change log</a></p>
-                        </div>
+                    <div class="news">
+                        <span>2013-07-20</span>
+                        <p>MoSKito Control for iPhone - in iOS 7 Design.<br/><a href="http://otainstall.anotheria.net/moskito_control/">Install via OTA</a></p>
+                    </div>
+                    <div class="news">
+                        <span>2013-07-14</span>
+                        <p>MoSKito Control 0.2 got Chart Support.<br/><a href="https://github.com/anotheria/moskito-control">Clone on GitHub</a></p>
+                    </div>
+                    <div class="news">
+                        <span>2013-03-14</span>
+                        <p>2.2.0 which was long time 2.1.7-SNAPSHOT was upgraded to major version and released today.<br/><a href="https://confluence.opensource.anotheria.net/display/MSK/03+Change+Log">Change log</a></p>
                     </div>
                 </div>
             </div>
@@ -191,7 +197,7 @@
                     <div class="frame-title">
                         <h2>Find us on Facebook</h2>
                     </div>
-                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Anotherianet/120131349401" data-width="292" data-height="250" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+                    <div class="fb-like-box" data-href="https://www.facebook.com/FacebookDevelopers" data-width="370" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
                 </div>
             </div>
         </div>

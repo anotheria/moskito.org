@@ -317,6 +317,19 @@ button.btn.blue-btn:active {
     font-size: 14px;
 }
 
+.next-box ul {
+    margin: 0;
+    list-style: none;
+}
+
+.next-box ul li {
+    font-family: open_sanslight;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 25px;
+    background: url(../img/mark.png) no-repeat left 6px;
+    font-size: 13px;
+}
+
 .news {
     font-family: open_sanslight;
     margin: 0 0 10px 0;
