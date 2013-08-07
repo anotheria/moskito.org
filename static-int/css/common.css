@@ -13,6 +13,10 @@ body {
 
 a {
     color: #4f93cd;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
 }
 
 a:focus {
@@ -428,11 +432,34 @@ ul.links > li {
 }
 .features-list li {
     width: 360px;
-    height: 240px;
+    height: 300px;
     padding: 0;
-    margin: 20px;
+    margin: 20px 20px 0 20px;
     display: block;
     float: left;
+    position: relative;
+}
+
+.features-list li a.btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    margin-left: -45px;
+    background: #f5f5f5;
+    box-shadow: none;
+    border: 1px solid #efefef;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+    color: #4f93cd;
+}
+
+.features-list li a.btn:hover {
+    background: #f5f5f5;
+    border: 1px solid #DDD;
+    color: #005580;
 }
 
 .features-pagination {
@@ -661,7 +688,7 @@ ul.links > li {
 
     .features-list li {
         width: 285px;
-        height: 280px;
+        height: 320px;
     }
 
     .presentation-title {
@@ -725,7 +752,7 @@ ul.links > li {
 
     .features-list li {
         width: 350px;
-        height: 280px;
+        height: 300px;
     }
 
     h1 {
@@ -773,6 +800,11 @@ ul.links > li {
 
     .features-list li {
         width: 260px;
+        height: 320px;
+    }
+
+    .core-item h3 {
+        font-size: 16px;
     }
 
     .main-info {
