@@ -87,7 +87,9 @@ a:focus {
 }
 
 .scroll .logo > a > span b {
-    display: none;
+    font-weight: normal;
+    display: inline-block;
+    font-family: open_sanslight;
 }
 
 .scroll .logo > a > span {
@@ -185,12 +187,12 @@ h2 {
     margin: 0 0 25px;
 }
 
-button.btn {
+.btn {
     font-family: open_sanslight;
 }
 
-button.btn.green-btn,
-button.btn.blue-btn {
+.btn.green-btn,
+.btn.blue-btn {
     padding: 12px 25px;
     color: #FFF;
     text-shadow: none;
@@ -205,24 +207,25 @@ button.btn.blue-btn {
     transition: background 0.12s linear;
 }
 
-button.btn.green-btn {
+.btn.green-btn {
     background: #93c01b;
+    margin-right: 8px;
 }
 
-button.btn.green-btn:hover {
+.btn.green-btn:hover {
     background: #87b900;
 }
 
-button.btn.blue-btn {
+.btn.blue-btn {
     background: #5ba1dc;
 }
 
-button.btn.blue-btn:hover {
+.btn.blue-btn:hover {
     background: #4d98d8;
 }
 
-button.btn.green-btn:active,
-button.btn.blue-btn:active {
+.btn.green-btn:active,
+.btn.blue-btn:active {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1) inset;
 }
 
@@ -634,6 +637,13 @@ ul.links > li {
     overflow: hidden;
 }
 
+.modal-backdrop, .modal-backdrop.fade.in {
+    background-color: #000;
+}
+
+.scroll .modal-scrollable {
+    margin-top: 50px;
+}
 
 @media (max-width: 1350px) {
     .mac {
@@ -775,10 +785,6 @@ ul.links > li {
 
     .scroll .logo > a > img {
         height: 40px;
-    }
-
-    .scroll .logo > a > span b {
-        display: block;
     }
 
     .scroll .logo > a > span {
