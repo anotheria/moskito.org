@@ -413,7 +413,7 @@ ul.links > li {
 }
 
 .wrapper {
-    min-width: 550px;
+    min-width: 600px;
 }
 
 .features-list .frame-title {
@@ -600,6 +600,10 @@ ul.links > li {
 .clients ul li:hover img.monochrome {
     opacity: 0;
     filter: alpha(opacity=0);
+}
+
+.facebook-box {
+    overflow: hidden;
 }
 
 
