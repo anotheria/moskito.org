@@ -454,6 +454,7 @@ ul.links > li {
     -o-transition: all 0.08s linear;
     transition: all 0.08s linear;
     color: #4f93cd;
+    font-size: 13px;
 }
 
 .features-list li a.btn:hover {
