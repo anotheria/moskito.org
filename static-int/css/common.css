@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    background: #FFF;
+    background: #F5F5F5;
     color: #444;
     font-size: 12px;
     padding: 0;
@@ -28,6 +28,11 @@ a:focus {
     height: 90px;
     background: #FFF;
     width: 100%;
+}
+
+.inner-page .header {
+    background: #F5F5F5;
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .main-box {
@@ -80,6 +85,8 @@ a:focus {
     z-index: 2000;
     box-shadow: 0 1px 0px rgba(0,0,0,0.15);
     height: 50px;
+    background: #FFF;
+    border: none;
 }
 
 .scroll .logo > a > img {
@@ -245,6 +252,17 @@ h2 {
     position: relative;
 }
 
+.frame.main-text {
+    font-family: open_sanslight;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 50px 0 60px 0;
+}
+
+.main-text p {
+    margin: 0 0 15px 0;
+}
+
 .frame {
     background: #FFF;
     margin: 0 0 30px;
@@ -263,8 +281,9 @@ h2 {
 }
 
 .content {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background: #FFF;
+    overflow: hidden;
 }
 
 .frame .nav-tabs
@@ -420,6 +439,10 @@ ul.links > li {
 
 .wrapper {
     min-width: 600px;
+}
+
+.features-list {
+    margin-bottom: 50px;
 }
 
 .features-list .frame-title {
