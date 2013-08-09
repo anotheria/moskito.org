@@ -671,6 +671,10 @@ ul.links > li {
     cursor: default;
 }
 
+.scroll .tooltip {
+    visibility: hidden;
+}
+
 @media (max-width: 1350px) {
     .mac {
         width: 660px;
