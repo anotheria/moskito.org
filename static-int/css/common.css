@@ -667,6 +667,10 @@ ul.links > li {
     margin-top: 50px;
 }
 
+.inactive {
+    cursor: default;
+}
+
 @media (max-width: 1350px) {
     .mac {
         width: 660px;
