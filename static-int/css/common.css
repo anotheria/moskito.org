@@ -252,6 +252,11 @@ h2 {
     position: relative;
 }
 
+.carousel-area img {
+    width: 562px;
+    height: 351px;
+}
+
 .frame.main-text {
     font-family: open_sanslight;
     font-size: 13px;

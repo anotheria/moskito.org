@@ -1,15 +1,12 @@
 $(document).ready(function() {
 
     $("#carousel").carouFredSel({
-        width: '100%',
-        height: '100%',
         scroll: {
             fx: "crossfade",
             duration: 1000,
             timeoutDuration: 7000
-
         },
-        auto    : {
+        auto: {
             pauseOnHover: 'resume'
         },
         prev: {
