@@ -28,6 +28,9 @@ a:focus {
     height: 90px;
     background: #FFF;
     width: 100%;
+    visibility: visible;
+    position: relative;
+    z-index: 2000;
 }
 
 .inner-page .header {
@@ -54,10 +57,6 @@ a:focus {
     transition: all 0.08s linear;
 }
 
-.logo > a {
-    display: inline-block;
-}
-
 .logo > a > span {
     display: inline-block;
     float: left;
@@ -82,7 +81,6 @@ a:focus {
     top: 0;
     left: 0;
     position: fixed;
-    z-index: 2000;
     box-shadow: 0 1px 0px rgba(0,0,0,0.15);
     height: 50px;
     background: #FFF;
@@ -275,18 +273,17 @@ h2 {
 
 .frame-title {
     border-bottom: 1px solid #ddd;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     margin-top: 35px;
 }
 
-.features-title
 
-.frame-title h2 {
-    margin: 0;
+.features-list .frame-title {
+    margin-bottom: 10px;
 }
 
 .content {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     background: #FFF;
     overflow: hidden;
 }
@@ -341,7 +338,9 @@ h2 {
 .core-item h3 {
     font-size: 18px;
     color: #000;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    line-height: 24px;
 }
 
 .core-item p {
@@ -386,7 +385,7 @@ h2 {
     border-top: 1px solid #DDD;
     font-family: open_sanslight;
     font-size: 13px;
-    padding: 20px 0 0 0;
+    padding: 30px 0 0 0;
 }
 
 ul.links {
@@ -408,13 +407,12 @@ ul.links > li {
 }
 
 .footer b {
-    font-family: open_sansbold;
+    font-family: open_sansregular;
     font-weight: normal;
 }
 
 .clients {
-    background: #f5f5f5;
-    padding: 20px 0 30px 0;
+    padding: 10px 0 5px 0;
 }
 
 .hexagon {
@@ -434,7 +432,7 @@ ul.links > li {
     line-height: 121px;
     text-align: center;
     color: #FFF;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .hexagon img {
@@ -443,7 +441,7 @@ ul.links > li {
 }
 
 .wrapper {
-    min-width: 600px;
+    min-width: 320px;
 }
 
 .features-list {
@@ -712,6 +710,11 @@ ul.links > li {
 }
 
 @media (max-width: 1200px) {
+    ul.links > li {
+        background: none;
+        padding: 0;
+    }
+
     .mac {
         width: 550px;
         height: 330px;
@@ -757,6 +760,11 @@ ul.links > li {
 }
 
 @media (max-width: 979px) {
+    ul.links > li {
+        padding: 0 0 0 25px;
+        background: url(../img/mark.png) no-repeat left 5px;
+    }
+
     .main-box .presentation {
         display: none;
     }
@@ -788,6 +796,10 @@ ul.links > li {
         margin-left: 0;
     }
 
+    .footer .twitter-box {
+        display: none;
+    }
+
     h2 {
         font-size: 24px;
     }
@@ -805,9 +817,7 @@ ul.links > li {
         font-size: 36px;
         line-height: 46px;
     }
-}
 
-@media (max-width: 768px) {
     .scroll .header {
         position: relative;
         height: 90px;
@@ -835,6 +845,18 @@ ul.links > li {
         padding: 45px 15px 20px 15px;
     }
 
+    .scroll .logo > a > span b {
+        display: block;
+        font-family: open_sansregular;
+    }
+
+    .main-box {
+        height: 540px;
+        background-position: center 0px;
+    }
+}
+
+@media (max-width: 768px) {
     .container {
         margin-left: 20px;
         margin-right: 20px;
@@ -853,8 +875,105 @@ ul.links > li {
         margin: 50px 0 0 0;
     }
 
-    .main-box {
-        height: 540px;
-        background-position: center 0px;
+    .header {
+        text-align: center;
+    }
+
+    ul.main-menu,
+    .logo {
+        float: none;
+        text-align: center;
+    }
+
+    ul.main-menu {
+        display: inline-block;
+        margin-top: 13px;
+    }
+
+    .scroll ul.main-menu > li > a,
+    .scroll ul.main-menu > li > span,
+    ul.main-menu > li > a,
+    ul.main-menu > li > span {
+        padding: 13px 15px 20px 15px;
+        color: #adbbca;
+    }
+
+    ul.main-menu > li.active > span {
+        color: #FFF;
+    }
+
+    .main-info {
+        margin: 80px 0 0;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .logo > a {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 31px;
+        line-height: 41px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .main-info p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .features-list li {
+        height: 340px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .main-info p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .features-list li {
+        height: 420px;
+    }
+
+    ul.main-menu > li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .features-list li {
+        height: 500px;
+    }
+
+    h1 {
+        font-size: 21px;
+        line-height: 28px;
+    }
+
+    .btn.green-btn, .btn.blue-btn {
+        font-size: 14px;
+    }
+
+    .features-pagination a {
+        width: 60px;
     }
 }

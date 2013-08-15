@@ -12,9 +12,6 @@
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/font-awesome-3.2.1/css/font-awesome.min.css" />
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/font/fonts.css" />
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/common.css" />
-    <!--[if IE 8]>
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/common_ie.css"/>
-    <![endif]-->
 </head>
 <body>
 <div id="fb-root"></div>
@@ -84,12 +81,12 @@
             <div class="logo">
                 <a href="http://moskito.org">
                     <img src="static-int/img/logo.png" alt="MoSKito"/>
-                    <span><b>MoSKito</b> Monitoring</span>
+                    <span><b>MoSKito</b> &nbsp;&nbsp;Control</span>
                 </a>
             </div>
             <ul class="main-menu">
-                <li class="active"><span>Essential</span></li>
-                <li class="inactive"><span data-toggle="tooltip" title="Coming soon">Control</span></li>
+                <li class="inactive"><a href="index.html">Essential</a></li>
+                <li class="active"><span>Control</span></li>
                 <li class="inactive"><span data-toggle="tooltip" title="Coming soon">Central</span></li>
             </ul>
         </div>
@@ -105,12 +102,10 @@
                             Free & open source.<br>
                         </h1>
                         <p>
-                            MoSKito is a multi-purpose, non-invasive, interval-based monitoring system for collecting, storing and
-                            providing instant analysis of application’s performance and behavior data.
+                            MoSKito Control is bla blub blib.
                             <br/><br/>
                             Measure and optimise your app's performance. Make your architectural decisions visible and measurable.
                         </p>
-                        <a class="btn green-btn" href="#watchMovie" role="button" data-toggle="modal">Watch Movie</a>
                         <a class="btn blue-btn" href="#showDemo" role="button" data-toggle="modal">Show Demo</a>
                     </div>
                 </div>
@@ -138,7 +133,7 @@
     <div class="content">
         <div class="frame features-list">
             <div class="frame-title container">
-                <h2 class="pull-left">MoSKito Features</h2>
+                <h2 class="pull-left">MoSKito Control Features</h2>
                 <div class="features-pagination"></div>
             </div>
             <ul>
@@ -147,7 +142,7 @@
                         <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
                         <i class="icon-dashboard"></i>
                     </div>
-                    <h3>Collect any performance data</h3>
+                    <h3>One glance - full control</h3>
                     <p>Threads. Memory. Caches. Storages. Registrations. Payments. Conversion. Partner Performance.
                         Online Users. Load distribution... Whatever you need! </p>
                     <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-collectanydata" class="btn">More</a>
@@ -155,9 +150,9 @@
                 <li class="core-item">
                     <div class="hexagon">
                         <img src="static-int/img/hexagon.png" alt="Non-Invasive"/>
-                        <i class="icon-keyboard"></i>
+                        <i class="icon-bar-chart"></i>
                     </div>
-                    <h3>No code change required</h3>
+                    <h3>Combined charts from multiple application nodes.</h3>
                     <p>MoSKito is non-invasive: it measures 'around' the monitored code, without changing it.
                        Integration is done via proxies, annotations, inheritance, aop, class loaders or plain calling.</p>
                     <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-nocodechange" class="btn">More</a>
@@ -167,57 +162,17 @@
                         <img src="static-int/img/hexagon.png" alt="Monitoring System Kit"/>
                         <i class="icon-refresh"></i>
                     </div>
-                    <h3>See more with short intervals</h3>
+                    <h3>Change history.</h3>
                     <p>MoSKito is interval-based, using short (5min) & long (24h) monitoring intervals.
                        Shorter intervals are more sensitive to anomalies, providing more understanding about the system’s behavior.</p>
                     <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-intervals" class="btn">More</a>
                 </li>
                 <li class="core-item">
                     <div class="hexagon">
-                        <img src="static-int/img/hexagon.png" alt="Interval based"/>
-                        <i class="icon-lock"></i>
-                    </div>
-                    <h3>Keep your data private</h3>
-                    <p>MoSKito does not use any external servers or resources for processing or storing your app's data.
-                       All the collected info is kept locally, ensuring your privacy.</p>
-                    <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-privacy" class="btn">More</a>
-                </li>
-                <li class="core-item">
-                    <div class="hexagon">
-                        <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
-                        <i class="icon-warning-sign"></i>
-                    </div>
-                    <h3>Define and watch critical areas</h3>
-                    <p>Set performance boundaries for the most critical parameters of your app with <b>thresholds</b>.
-                       Then, monitor their health with a simple alarm system, intuitive as a traffic light.</p>
-                    <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-thresholds" class="btn">More</a>
-                </li>
-                <li class="core-item">
-                    <div class="hexagon">
-                        <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
-                        <i class="icon-bar-chart"></i>
-                    </div>
-                    <h3>Display data in charts</h3>
-                    <p>Get a powerful visual analytic tool with <b>accumulators</b>.</p>
-                    <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-accumulators" class="btn">More</a>
-                </li>
-                <li class="core-item">
-                    <div class="hexagon">
-                        <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
-                        <i class="icon-eye-open"></i>
-                    </div>
-                    <h3>Make app's inner life visible</h3>
-                    <p>Record user actions in the form of actual calls that occur inside your web application with <b>journeys</b>.
-                       Get effective live system profiling with no performance impact.</p>
-                    <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-journeys" class="btn">More</a>
-                </li>
-                </li>
-                <li class="core-item">
-                    <div class="hexagon">
                         <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
                         <i class="icon-tablet"></i>
                     </div>
-                    <h3>Use it on your mobile device</h3>
+                    <h3>Available in your pocket</h3>
                     <p>Get MoSKito App on your iOS device and keep track of your app performance while enjoying your barbecue.
                        Android app is coming soon!</p>
                     <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-mobile" class="btn">More</a>
@@ -233,13 +188,13 @@
                             <h2>What's Next</h2>
                         </div>
                         <ul>
-                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/About+MoSKito-Essential">About MoSKito-Essential</a></li>
-                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Start+working%2C+step+by+step">Start working, step by step</a></li>
-                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Home">MoSKito Documentation Home</a></li>
+                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Control">About MoSKito-Control</a></li>
+                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Start+working%2C+step+by+step">TBD Start working, step by step</a></li>
+                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Control">MoSKito-Control Home</a></li>
                             <br/>
-                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Integration+Guide">Integration guide</a></li>
-                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Configuration+Guide">Configuration guide</a></li>
-                            <li><a href="http://search.maven.org/#search%7Cga%7C1%7Cmoskito">Maven dependencies</a></li>
+                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Integration+Guide">TBD Integration guide</a></li>
+                            <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Configuration+Guide">TBD Configuration guide</a></li>
+                            <li><a href="http://search.maven.org/#search%7Cga%7C1%7Cmoskito-control">TBD Maven dependencies</a></li>
                         </ul>
                     </div>
                 </div>
@@ -249,16 +204,16 @@
                             <h2>MoSKito News</h2>
                         </div>
                         <div class="news">
-                            <span>2013-08-15</span>
-                            <p>Welcome to the new MoSKito.org website! Why do we love it? <a href="http://blog.anotheria.net/?p=529">Read the blog post</a></p>
-                        </div>
-                        <div class="news">
                             <span>2013-07-29</span>
                             <p>MoSKito Control for Android - first prototype is available on GitHub.</p>
                         </div>
                         <div class="news">
                             <span>2013-07-20</span>
                             <p>MoSKito Control for iPhone - in iOS 7 Design.<br/><a href="http://otainstall.anotheria.net/moskito_control/">Install via OTA</a></p>
+                        </div>
+                        <div class="news">
+                            <span>2013-07-14</span>
+                            <p>MoSKito Control 0.2 got Chart Support.<br/><a href="https://github.com/anotheria/moskito-control">Clone on GitHub</a></p>
                         </div>
                     </div>
                 </div>
@@ -281,13 +236,13 @@
                     <h2>More</h2>
                     <ul class="links">
                         <li><a href="license.html">License</a></li>
-                        <li><a href="https://github.com/anotheria">Anotheria on GitHub</a></li>
-                        <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Change+Log">ChangeLog</a></li>
-                        <li><a href="https://jira.opensource.anotheria.net/browse/MSK">Submit a bug</a></li>
+                        <li><a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito+Control+ChangeLog">ChangeLog</a></li>
+                        <li><a href="https://github.com/anotheria/moskito-control">MoSKito-Control on GitHub</a></li>
+                        <li><a href="https://github.com/anotheria/moskito-control-agent">MoSKito-Control-Agent on GitHub</a></li>
+                        <li><a href="https://jira.opensource.anotheria.net/browse/MSKCONTROL">Submit a bug</a></li>
                         <li><a href="http://blog.anotheria.net/category/msk/">Blog</a></li>
                         <li><a href="http://lists.anotheria.net/cgi-bin/mailman/listinfo/moskito-users">Subscribe to mailing list</a></li>
                         <li><a href="http://moskito-users.1088230.n5.nabble.com/">Mailing list archives</a></li>
-                        <li><a href="http://jaxenter.de/JavaMonitoringmitMoSKito-111567">Java Magazin</a></li>
                     </ul>
                 </div>
                 <div class="span4 feedback-box">
@@ -303,42 +258,38 @@
                             <br/><b>Leon Rosenberg and the MoSKito Team</b>
                         </p>
                 </div>
-                <div class="span4 twitter-box">
+                <div class="span4">
 <a class="twitter-timeline" href="https://twitter.com/search?q=%23moskito-java" data-widget-id="365391211919454208">Tweets about "#moskito-java"</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
             </div>
         </div>
-
-        <div class="clients">
-
-                <div class="frame-title container">
-                    <h2>Monitored by MoSKito</h2>
-                </div>
-            <div class="container">
-                <ul>
-                    <li>
-                        <img class="monochrome" src="static-int/img/client5_monochrome.png"/>
-                        <img class="color" src="static-int/img/client5.png"/>
-                    </li>
-                    <li>
-                        <img class="monochrome" src="static-int/img/client4_monochrome.png"/>
-                        <img class="color" src="static-int/img/client4.png"/>
-                    </li>
-                    <li>
-                        <img class="monochrome" src="static-int/img/client1_monochrome.png"/>
-                        <img class="color" src="static-int/img/client1.png"/>
-                    </li>
-                    <li>
-                        <img class="monochrome" src="static-int/img/client3_monochrome.png"/>
-                        <img class="color" src="static-int/img/client3.png"/>
-                    </li>
-                    <li>
-                        <img class="monochrome" src="static-int/img/client2_monochrome.png"/>
-                        <img class="color" src="static-int/img/client2.png"/>
-                    </li>
-                </ul>
-            </div>
+    </div>
+    <div class="clients">
+        <div class="container">
+            <h2>Monitored by MoSKito</h2>
+            <ul>
+                <li>
+                    <img class="monochrome" src="static-int/img/client5_monochrome.png"/>
+                    <img class="color" src="static-int/img/client5.png"/>
+                </li>
+                <li>
+                    <img class="monochrome" src="static-int/img/client4_monochrome.png"/>
+                    <img class="color" src="static-int/img/client4.png"/>
+                </li>
+                <li>
+                    <img class="monochrome" src="static-int/img/client1_monochrome.png"/>
+                    <img class="color" src="static-int/img/client1.png"/>
+                </li>
+                <li>
+                    <img class="monochrome" src="static-int/img/client3_monochrome.png"/>
+                    <img class="color" src="static-int/img/client3.png"/>
+                </li>
+                <li>
+                    <img class="monochrome" src="static-int/img/client2_monochrome.png"/>
+                    <img class="color" src="static-int/img/client2.png"/>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
