@@ -281,6 +281,16 @@ h2 {
     position: relative;
 }
 
+.display .glass {
+    background: url(../img/glass.png) no-repeat;
+    width: 344px;
+    height: 397px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    z-index: 100;
+}
+
 .moskito-control .carousel-area {
     background: none;
 }
