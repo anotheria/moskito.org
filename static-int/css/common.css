@@ -43,6 +43,10 @@ a:focus {
     background: url(../img/main_bg.jpg) no-repeat fixed center 50px;
 }
 
+.moskito-control .main-box {
+    background: url(../img/main_bg_control.jpg) no-repeat fixed center 50px;
+}
+
 .logo {
     margin: 25px 0 0 0;
     float: left;
@@ -164,6 +168,33 @@ ul.main-menu > li.active > span {
     position: relative;
 }
 
+.display {
+    margin-top: 67px;
+    width: 656px;
+    height: 473px;
+    background: url(../img/display.png) no-repeat center center;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    overflow: hidden;
+    position: relative;
+    float: right;
+}
+
+.display-box {
+    position: relative;
+    overflow: hidden;
+    padding: 0 60px;
+    width: 656px;
+    margin-left: -60px;
+}
+
+.display-box #carouselPrev.arrow-circle,
+.display-box #carouselNext.arrow-circle {
+    top: 270px;
+}
+
 h1 {
     font-size: 31px;
     font-weight: normal;
@@ -250,9 +281,24 @@ h2 {
     position: relative;
 }
 
+.moskito-control .carousel-area {
+    background: none;
+}
+
 .carousel-area img {
     width: 562px;
     height: 351px;
+}
+
+.display .carousel-area {
+    margin: 25px 0 0 28px;
+    width: 602px;
+    height: 350px;
+}
+
+.display .carousel-area img {
+    width: 602px;
+    height: 350px;
 }
 
 .frame.main-text {
@@ -468,6 +514,10 @@ ul.links > li {
     position: relative;
 }
 
+.moskito-control .features-list li {
+    height: 275px;
+}
+
 .features-list li a.btn {
     position: absolute;
     bottom: 0;
@@ -603,15 +653,25 @@ ul.links > li {
     right: 10px;
 }
 
+.display-box:hover .arrow-circle#carouselNext {
+    right: 0px;
+}
+
 .mac:hover .arrow-circle#carouselPrev {
     left: 10px;
 }
 
+.display-box:hover .arrow-circle#carouselPrev {
+    left: 0px;
+}
+
+.display-box .arrow-circle,
 .mac .arrow-circle {
     opacity: 0;
     filter: alpha(opacity=0);
 }
 
+.display-box:hover .arrow-circle,
 .mac:hover .arrow-circle {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -740,6 +800,10 @@ ul.links > li {
         height: 320px;
     }
 
+    .moskito-control .features-list li {
+        height: 300px;
+    }
+
     .presentation-title {
         right: -65px;
         top: 100px;
@@ -813,6 +877,10 @@ ul.links > li {
         height: 300px;
     }
 
+    .moskito-control .features-list li {
+        height: 280px;
+    }
+
     h1 {
         font-size: 36px;
         line-height: 46px;
@@ -864,6 +932,10 @@ ul.links > li {
 
     .features-list li {
         width: 260px;
+        height: 320px;
+    }
+
+    .moskito-control .features-list li {
         height: 320px;
     }
 
@@ -919,6 +991,10 @@ ul.links > li {
     h1 {
         font-size: 31px;
         line-height: 41px;
+    }
+
+    .moskito-control .features-list li {
+        height: 350px;
     }
 }
 
