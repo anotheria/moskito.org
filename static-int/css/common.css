@@ -31,7 +31,7 @@ a:focus {
     width: 100%;
     visibility: visible;
     position: relative;
-    z-index: 2000;
+    z-index: 1000;
 }
 
 .inner-page .header {
@@ -747,6 +747,10 @@ ul.links > li {
 
 .scroll .tooltip {
     visibility: hidden;
+}
+
+#watchMovie object {
+    width: 100%;
 }
 
 @media (max-width: 1350px) {
