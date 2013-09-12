@@ -26,7 +26,8 @@ a:focus {
 
 .header {
     height: 90px;
-    background: #FFF;
+    background-color: #FFF;
+    background-color: rgba(255,255,255,0.93);
     width: 100%;
     visibility: visible;
     position: relative;
@@ -41,6 +42,7 @@ a:focus {
 .main-box {
     height: 540px;
     background: url(../img/main_bg.jpg) no-repeat fixed center 50px;
+    overflow: hidden;
 }
 
 .moskito-control .main-box {
@@ -87,7 +89,6 @@ a:focus {
     position: fixed;
     box-shadow: 0 1px 0px rgba(0,0,0,0.15);
     height: 50px;
-    background: #FFF;
     border: none;
 }
 
@@ -171,7 +172,7 @@ ul.main-menu > li.active > span {
 .display {
     margin-top: 67px;
     width: 656px;
-    height: 473px;
+    height: 553px;
     background: url(../img/display.png) no-repeat center center;
     -moz-background-size: 100%;
     -webkit-background-size: 100%;
@@ -277,12 +278,12 @@ h2 {
     -moz-border-radius: 4px;
     border-radius: 4px;
     overflow: hidden;
-    background: #FFF;
     position: relative;
 }
 
 .display .glass {
     background: url(../img/glass.png) no-repeat;
+    background-size: 100% 100%;
     width: 344px;
     height: 397px;
     position: absolute;
@@ -755,6 +756,30 @@ ul.links > li {
         margin: 75px 0 0 0;
     }
 
+    .display {
+        width: 600px;
+        height: 506px;
+        margin-right: 50px;
+        margin-top: 45px;
+    }
+
+    .display .carousel-area {
+        width: 561px;
+        height: 328px;
+        margin: 20px 0 0 20px;
+    }
+
+    .display .carousel-area img
+    {
+        width: 561px;
+        height: 328px;
+    }
+
+    .display .glass {
+        width: 315px;
+        height: 365px;
+    }
+
     .carousel-area {
         margin: 22px 0 0 82px;
     }
@@ -780,6 +805,28 @@ ul.links > li {
 }
 
 @media (max-width: 1200px) {
+    .display {
+        width: 480px;
+        height: 405px;
+        margin-right: 160px;
+        margin-top: 85px;
+    }
+
+    .display .carousel-area {
+        width: 442px;
+        height: 255px;
+    }
+
+    .display .carousel-area img {
+        width: 442px;
+        height: 255px;
+    }
+
+    .display .glass {
+        width: 252px;
+        height: 293px;
+    }
+
     ul.links > li {
         background: none;
         padding: 0;
@@ -928,6 +975,7 @@ ul.links > li {
         font-family: open_sansregular;
     }
 
+    .moskito-control .main-box,
     .main-box {
         height: 540px;
         background-position: center 0px;
