@@ -27,7 +27,7 @@ a:focus {
 .header {
     height: 90px;
     background-color: #FFF;
-    background-color: rgba(255,255,255,0.93);
+    background-color: rgba(255, 255, 255, 0.93);
     width: 100%;
     visibility: visible;
     position: relative;
@@ -47,6 +47,15 @@ a:focus {
 
 .moskito-control .main-box {
     background: url(../img/main_bg_control.jpg) no-repeat fixed center 50px;
+}
+
+.moskito-central  .main-box {
+    background: url(../img/main_bg_central.jpg) no-repeat fixed center 50px;
+}
+
+.central-img {
+    float: right;
+    margin-top: 55px;
 }
 
 .logo {
@@ -87,7 +96,7 @@ a:focus {
     top: 0;
     left: 0;
     position: fixed;
-    box-shadow: 0 1px 0px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
     height: 50px;
     border: none;
 }
@@ -224,6 +233,18 @@ h2 {
     margin: 0 0 25px;
 }
 
+.moskito-control .main-info {
+    margin-top: 105px;
+}
+
+.moskito-central .main-info {
+    margin-top: 145px;
+}
+
+.moskito-central .main-info p {
+    font-size: 18px;
+}
+
 .btn {
     font-family: open_sanslight;
 }
@@ -263,7 +284,7 @@ h2 {
 
 .btn.green-btn:active,
 .btn.blue-btn:active {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1) inset;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
 }
 
 .main-info button.btn.blue-btn {
@@ -334,7 +355,6 @@ h2 {
     margin-top: 35px;
 }
 
-
 .features-list .frame-title {
     margin-bottom: 10px;
 }
@@ -345,8 +365,7 @@ h2 {
     overflow: hidden;
 }
 
-.frame .nav-tabs
-{
+.frame .nav-tabs {
     border: none;
     margin: 0;
     position: relative;
@@ -515,6 +534,7 @@ ul.links > li {
     list-style: none;
     display: block;
 }
+
 .features-list li {
     width: 360px;
     height: 300px;
@@ -586,11 +606,11 @@ ul.links > li {
 }
 
 #toTop {
-    display:none;
-    text-decoration:none;
-    position:fixed;
-    bottom:25px;
-    right:10px;
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
     font-weight: normal;
     width: 50px;
     height: 55px;
@@ -631,7 +651,7 @@ ul.links > li {
     border-radius: 60px;
     width: 50px;
     height: 50px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     text-align: center;
     line-height: 48px;
     color: #FFF;
@@ -689,7 +709,7 @@ ul.links > li {
 }
 
 .arrow-circle:hover {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .clients ul {
@@ -722,7 +742,6 @@ ul.links > li {
     left: 0;
     z-index: 20;
 }
-
 
 .clients ul li:hover img.monochrome {
     opacity: 0;
@@ -773,8 +792,7 @@ ul.links > li {
         margin: 20px 0 0 20px;
     }
 
-    .display .carousel-area img
-    {
+    .display .carousel-area img {
         width: 561px;
         height: 328px;
     }
@@ -1060,7 +1078,6 @@ ul.links > li {
     }
 }
 
-
 @media (max-width: 550px) {
     h1 {
         font-size: 28px;
@@ -1071,6 +1088,7 @@ ul.links > li {
         font-size: 14px;
         line-height: 24px;
     }
+
     .features-list li {
         height: 340px;
         width: 150px;
@@ -1114,4 +1132,93 @@ ul.links > li {
     .features-pagination a {
         width: 60px;
     }
+}
+
+.main-info h1 {
+    position: relative;
+    left: -200px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.30s linear;
+    -moz-transition: all 0.30s linear;
+    -o-transition: all 0.30s linear;
+    transition: all 0.30s linear;
+}
+
+.main-info p {
+    position: relative;
+    right: -200px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.30s linear;
+    -moz-transition: all 0.30s linear;
+    -o-transition: all 0.30s linear;
+    transition: all 0.30s linear;
+    transition-delay: 0.30s;
+}
+
+.main-box .central-img,
+.main-box .display,
+.main-box .mac {
+    position: relative;
+    top: -150px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.20s linear;
+    -moz-transition: all 0.20s linear;
+    -o-transition: all 0.20s linear;
+    transition: all 0.20s linear;
+}
+
+.main-info .btn {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.20s linear;
+    -moz-transition: all 0.20s linear;
+    -o-transition: all 0.20s linear;
+    transition: all 0.20s linear;
+    transition-delay: 0.50s;
+}
+
+.main-box .presentation-title {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.20s linear;
+    -moz-transition: all 0.20s linear;
+    -o-transition: all 0.20s linear;
+    transition: all 0.20s linear;
+    transition-delay: 1s;
+}
+
+.animation-start .main-box .presentation-title {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.animation-start .main-info .btn {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    bottom: 0;
+}
+
+.animation-start .main-box .central-img,
+.animation-start .main-box .display,
+.animation-start .main-box .mac {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    top: 0;
+}
+
+.animation-start .main-info h1 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 0;
+}
+
+.animation-start .main-info p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    right: 0;
 }
