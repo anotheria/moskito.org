@@ -41,7 +41,7 @@ a:focus {
 
 .main-box {
     height: 540px;
-    background: url(../img/main_bg.jpg) no-repeat fixed center 50px;
+    background: #000 url(../img/main_bg.jpg) no-repeat fixed center 50px;
     overflow: hidden;
 }
 
@@ -1175,10 +1175,10 @@ ul.links > li {
     bottom: -50px;
     opacity: 0;
     filter: alpha(opacity=0);
-    -webkit-transition: all 0.20s linear;
-    -moz-transition: all 0.20s linear;
-    -o-transition: all 0.20s linear;
-    transition: all 0.20s linear;
+    -webkit-transition: opacity 0.20s, bottom 0.20s;
+    -moz-transition: opacity 0.20s, bottom 0.20s;
+    -o-transition: opacity 0.20s, bottom 0.20s;
+    transition: opacity 0.20s, bottom 0.20s;
     transition-delay: 0.50s;
 }
 
