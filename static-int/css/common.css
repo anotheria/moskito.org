@@ -41,7 +41,7 @@ a:focus {
 
 .main-box {
     height: 540px;
-    background: url(../img/main_bg.jpg) no-repeat fixed center 50px;
+    background: #000 url(../img/main_bg.jpg) no-repeat fixed center 50px;
     overflow: hidden;
 }
 
