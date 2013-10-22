@@ -11,6 +11,10 @@ body {
     padding: 0;
 }
 
+body > a > img {
+    display: none;
+}
+
 a {
     color: #4f93cd;
     -webkit-transition: all 0.08s linear;
