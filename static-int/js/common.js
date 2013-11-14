@@ -12,6 +12,4 @@ $(document).ready(function () {
     $('.inactive span').tooltip({
         placement: 'bottom'
     });
-
-    $('body').addClass('animation-start');
 });
