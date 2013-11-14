@@ -99,9 +99,9 @@ a:focus {
     top: 0;
     left: 0;
     position: fixed;
-    border-bottom: 1px solid #EFEFEF;
     height: 50px;
     background-color: #F5F5F5;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
 .scroll .logo > a > img {
@@ -461,7 +461,7 @@ h2 {
 
 .footer {
     background: #f5f5f5;
-    border-top: 1px solid #efefef;
+    border-top: 1px solid #DDD;
     font-family: open_sanslight;
     font-size: 13px;
     padding: 30px 0 0 0;
@@ -1139,58 +1139,249 @@ ul.links > li {
 
 .main-info h1 {
     position: relative;
-    left: -200px;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all 0.30s linear;
-    -moz-transition: all 0.30s linear;
-    -o-transition: all 0.30s linear;
-    transition: all 0.30s linear;
+    -moz-animation: title 1s alternate;
+    -webkit-animation: title 1s alternate;
+    -ms-animation: title 1s alternate;
 }
 
 .main-info p {
     position: relative;
-    right: -200px;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all 0.30s linear;
-    -moz-transition: all 0.30s linear;
-    -o-transition: all 0.30s linear;
-    transition: all 0.30s linear;
-    transition-delay: 0.30s;
+    -moz-animation: text 1.2s alternate;
+    -webkit-animation: text 1.2s alternate;
+    -ms-animation: text 1.2s alternate;
 }
 
 .main-box .central-img,
 .main-box .display,
 .main-box .mac {
     position: relative;
-    top: -150px;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all 0.20s linear;
-    -moz-transition: all 0.20s linear;
-    -o-transition: all 0.20s linear;
-    transition: all 0.20s linear;
+    -moz-animation: img 1.2s alternate;
+    -webkit-animation: img 1.2s alternate;
+    -ms-animation: img 1.2s alternate;
 }
 
 .main-info .btn {
     position: relative;
-    bottom: -50px;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: opacity 0.20s, bottom 0.20s;
-    -moz-transition: opacity 0.20s, bottom 0.20s;
-    -o-transition: opacity 0.20s, bottom 0.20s;
-    transition: opacity 0.20s, bottom 0.20s;
-    transition-delay: 0.50s;
+    -moz-animation: btn 1s alternate;
+    -webkit-animation: btn 1s alternate;
+    -ms-animation: btn 1s alternate;
 }
 
 .main-box .presentation-title {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all 0.20s linear;
-    -moz-transition: all 0.20s linear;
-    -o-transition: all 0.20s linear;
-    transition: all 0.20s linear;
-    transition-delay: 1s;
+    -moz-animation: ptitle 1.5s alternate;
+    -webkit-animation: ptitle 1.5s alternate;
+    -ms-animation: ptitle 1.5s alternate;
+}
+
+@-moz-keyframes title {
+    0% {
+        left: -500px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes title {
+    0% {
+        left: -500px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes title {
+    0% {
+        left: -500px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes text {
+    0% {
+        right: -700px;
+        opacity: 0;
+    }
+    30% {
+        right: -700px;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes text {
+    0% {
+        right: -700px;
+        opacity: 0;
+    }
+    30% {
+        right: -700px;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes text {
+    0% {
+        right: -700px;
+        opacity: 0;
+    }
+    30% {
+        right: -700px;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes btn {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    60% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes btn {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    60% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes btn {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    60% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes img {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    60% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes img {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    60% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes img {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    90% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes ptitle {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    70% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: -110px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes ptitle {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    70% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: -110px;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes ptitle {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    70% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: -110px;
+        opacity: 1;
+    }
 }
