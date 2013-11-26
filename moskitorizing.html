@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Moskitorizing your application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description"
+          content="Moskitorizing your application"/>
+    <meta name="keywords"
+          content="MoSKito, Moskitorizing, application"/>
+    <link rel="shortcut icon" href="static-int/img/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-2.3.2/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet"
+          href="static-ext/bootstrap-2.3.2/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet"
+          href="static-ext/bootstrap-modal-2.1/css/bootstrap-modal.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/jquery.ui.totop-1.2/css/ui.totop.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet"
+          href="static-ext/font-awesome-3.2.1/css/font-awesome.min.css"/>
+    <!--Icons on the page may be changed by simply inserting the icon name.
+    Icon names and previews are here: http://fortawesome.github.io/Font-Awesome/icons/ -->
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/font/fonts.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/common.css"/>
+    <!--[if IE 8]>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/common_ie.css"/>
+    <![endif]-->
+</head>
+<body class="moskitorizing">
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="wrapper">
+
+<div id="watchMovie" class="modal hide fade" tabindex="-1" data-width="830">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>MoSKito Movie</h3>
+    </div>
+    <div class="modal-body">
+        <object width="800" height="600" id="moskito" data="static-int/swf/moskito.swf"
+                type="application/x-shockwave-flash">
+            <param value="static-int/swf/moskito.swf" name="movie"/>
+            <param value="high" name="quality"/>
+            <param value="#ffffff" name="bgcolor"/>
+            <param value="true" name="play"/>
+            <param value="true" name="loop"/>
+            <param value="window" name="wmode"/>
+            <param value="showall" name="scale"/>
+            <param value="true" name="menu"/>
+            <param value="false" name="devicefont"/>
+            <param value="" name="salign"/>
+            <param value="sameDomain" name="allowScriptAccess"/>
+            <!--[if !IE]>-->
+            <object width="800" height="600" data="static-int/swf/moskito.swf" type="application/x-shockwave-flash">
+                <param value="moskito.swf" name="movie"/>
+                <param value="high" name="quality"/>
+                <param value="#ffffff" name="bgcolor"/>
+                <param value="true" name="play"/>
+                <param value="true" name="loop"/>
+                <param value="window" name="wmode"/>
+                <param value="showall" name="scale"/>
+                <param value="true" name="menu"/>
+                <param value="false" name="devicefont"/>
+                <param value="" name="salign"/>
+                <param value="sameDomain" name="allowScriptAccess"/>
+                <!--<![endif]-->
+                <a href="http://www.adobe.com/go/getflash">
+                    <img alt="Get Adobe Flash player"
+                         src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"/>
+                </a>
+                <!--[if !IE]>-->
+            </object>
+            <!--<![endif]-->
+        </object>
+    </div>
+</div>
+
+<div id="showDemo" class="modal hide fade" tabindex="-1">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Coming Very Soon</h3>
+    </div>
+    <div class="modal-body">
+        <p>Coming Very Soon! Promise! Scout's honor!</p>
+    </div>
+</div>
+
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="http://moskito.org">
+                <img src="static-int/img/logo.png" alt="MoSKito"/>
+                <span><b>Moskitorizing</b> your app</span>
+            </a>
+        </div>
+        <ul class="main-menu">
+            <li><a href="index.html">Essential</a></li>
+            <li><a href="moskito-control.html">Control</a></li>
+            <li><a href="moskito-central.html">Central</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="main-box">
+    <div class="container">
+        <div class="main-info">
+            <p class="first-message">
+                In case you want to try MoSKito but don't have time for setup, we can help.
+            </p>
+
+            <p class="first-message">
+                We'll get your app ready for monitoring, so that you could enjoy MoSKito in its entirety.
+            </p>
+
+            <h1> MoSKitoRize your application!</h1>
+        </div>
+    </div>
+</div>
+
+<div class="gray-box">
+    <div class="container">
+        <div class="row-fluid step-area">
+            <div class="pull-left left-side">
+                <p>
+                    You have a Java web app
+                    <br/>and you want to monitor it with MoSKito.
+                </p>
+            </div>
+            <div class="pull-left center-side">
+                <img src="static-int/img/rize1.png"
+                     alt="You have a Java web app and you want to monitor it with MoSKito."/>
+                <span class="vline"></span>
+            </div>
+            <div class="pull-left right-side">
+                <span class="step-box"><a href="#content"><b class="caret"></b></a></span>
+                <span class="hline"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="content">
+
+    <div class="container">
+        <div class="row-fluid step-area">
+            <div class="pull-left left-side">
+                <span class="step-box">1</span>
+                <span class="hline"></span>
+            </div>
+            <div class="pull-left center-side">
+                <img src="static-int/img/rize2.png" alt="You let us know"/>
+                <span class="vline"></span>
+                <span class="vline intop"></span>
+            </div>
+            <div class="pull-left right-side">
+                <p>
+                    You let us know by writing to
+                    <br/><a href="mailto:moskito@anotheria.net">moskito@anotheria.net</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row-fluid step-area">
+            <div class="pull-left left-side">
+                <p class="line4">
+                    You share your application code with us
+                </p>
+                <small>
+                    Either we fork it on GitHub or you send us the sources, anything will do.
+                    If your app can't work without your environment, we'll« need access to the test machine where your
+                    app's being built.
+                </small>
+            </div>
+            <div class="pull-left center-side">
+                <img src="static-int/img/rize3.png" alt="You share your application code with us"/>
+                <span class="vline"></span>
+            </div>
+            <div class="pull-left right-side">
+                <span class="step-box">2</span>
+                <span class="hline"></span>
+            </div>
+        </div>
+
+        <div class="row-fluid step-area">
+            <div class="pull-left left-side">
+                <span class="step-box">3</span>
+                <span class="hline"></span>
+            </div>
+            <div class="pull-left center-side">
+                <img src="static-int/img/rize4.png"
+                     alt="We integrate MoSKito into your application and help you deploy it."/>
+                <span class="vline"></span>
+            </div>
+            <div class="pull-left right-side">
+                <p>
+                    We integrate MoSKito into your application
+                    <br/>and help you deploy it.
+                </p>
+            </div>
+        </div>
+
+        <div class="row-fluid step-area">
+            <div class="pull-left left-side">
+                <p>
+                    We show you how to integrate MoSKito deeper
+                    <br/>and explain how to use the additional tools.
+                </p>
+            </div>
+            <div class="pull-left center-side">
+                <img src="static-int/img/rize5.png" alt=" We show you how to integrate MoSKito"/>
+                <span class="vline"></span>
+            </div>
+            <div class="pull-left right-side">
+                <span class="step-box">4</span>
+                <span class="hline"></span>
+            </div>
+        </div>
+
+        <div class="row-fluid step-area">
+            <div class="pull-left left-side">
+                <span class="step-box">5</span>
+                <span class="hline"></span>
+            </div>
+            <div class="pull-left center-side">
+                <img src="static-int/img/rize6.png" alt="You become a happy MoSKito user"/>
+                <span class="vline"></span>
+            </div>
+            <div class="pull-left right-side">
+                <p>
+                    You become a happy MoSKito user,
+                    <br/>knowing every step and breath of your app.
+                </p>
+            </div>
+        </div>
+
+        <div class="row-fluid step-area">
+            <div class="pull-left left-side">
+                <p class="line1">
+                    We all go for a beer, either physically or virtually. *
+                </p>
+            </div>
+            <div class="pull-left center-side">
+                <img src="static-int/img/rize7.png" alt="We all go for a beer, either physically or virtually."/>
+                <span class="vline"></span>
+            </div>
+            <div class="pull-left right-side">
+                <span class="step-box">6</span>
+                <span class="hline"></span>
+            </div>
+        </div>
+
+        <div class="tl-area">
+
+            <p>
+                * — This step is obligatory and can't be skipped or omitted.
+            </p>
+            <span class="vline"></span>
+        </div>
+
+        <div class="tl-area">
+            <a href="mailto: moskito@anotheria.net" class="btn green-btn">MoSKitoRize me!</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="static-ext/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="static-ext/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="static-ext/jquery.ui.totop-1.2/js/easing.js"></script>
+<script type="text/javascript" src="static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="static-int/js/common.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+    _uacct = "UA-2363606-2";
+    urchinTracker();
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('.step-box a').on('click', function (e) {
+            e.preventDefault();
+
+            var target = this.hash,
+                    $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+    });
+
+</script>
+<!-- Copyright (c) 2000-2013 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+<script type="text/javascript">document.write(String.fromCharCode(60) + 'script type="text/javascript" src="http' + ("https:" == document.location.protocol ? "s" : "") + '://code.etracker.com/t.js?et=vd9QQx">' + String.fromCharCode(60) + '/script>');</script>
+
+<!-- etracker PARAMETER 3.0 -->
+<script type="text/javascript">
+    /* Start of configurable tracking parameters.
+     To use the following parameters, please remove the leading two slashes (//) and add the desired value to the parameter. */
+    var et_pagename = "ESSENTIAL";
+    var et_areas = "MOSKITO";
+</script>
+<!-- etracker PARAMETER END -->
+
+<script type="text/javascript">_etc();</script>
+<noscript><p><a href="http://www.etracker.com" class="hidden"><img style="border:0px;" alt=""
+                                                                   src="https://www.etracker.com/nscnt.php?et=vd9QQx"/></a>
+</p></noscript>
+<!-- etracker CODE NOSCRIPT 3.0 -->
+<noscript>
+    <p><a href='http://www.etracker.de/app?et=vd9QQx' class="hidden">
+        <img style='border:0px;' alt='' src='https://www.etracker.de/fcnt.php?
+et=vd9QQx&amp;v=3.0&amp;java=n&amp;et_easy=0
+&amp;et_pagename=ESSENTIAL
+&amp;et_areas=MOSKITO'/></a></p>
+</noscript>
+<!-- etracker CODE NOSCRIPT END-->
+
+<!-- etracker CODE END -->
+
+
+</body>
+</html>

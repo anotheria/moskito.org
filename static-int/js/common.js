@@ -7,8 +7,6 @@ $(document).ready(function () {
         }
     });//scroll
 
-    $().UItoTop({ easingType: 'easeOutQuart', text: '<i class="icon-angle-up"></i>' });
-
     $('.inactive span').tooltip({
         placement: 'bottom'
     });

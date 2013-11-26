@@ -11,6 +11,10 @@ body {
     padding: 0;
 }
 
+body.moskitorizing {
+    background: #FFF;
+}
+
 body > a > img {
     display: none;
 }
@@ -49,11 +53,195 @@ a:focus {
 }
 
 .moskito-control .main-box {
-    background: url(../img/main_bg_control.jpg) no-repeat fixed center 50px;
+    background: #000 url(../img/main_bg_control.jpg) no-repeat fixed center 50px;
 }
 
 .moskito-central  .main-box {
-    background: url(../img/main_bg_central.jpg) no-repeat fixed center 50px;
+    background: #000 url(../img/main_bg_central.jpg) no-repeat fixed center 50px;
+}
+
+.moskitorizing .main-box {
+    background: none;
+    background-color: #FFF;
+    text-align: center;
+    height: auto;
+}
+
+.moskitorizing .main-box .main-info {
+    margin-top: 40px;
+}
+
+.moskitorizing  .main-box p,
+.moskitorizing  .main-box h1 {
+    color: #000;
+}
+
+.moskitorizing  .main-box h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-family: open_sanslight;
+}
+
+.moskitorizing  .main-box p {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.gray-box {
+    padding: 80px 0;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    background: #F5F5F5;
+}
+
+.right-side p,
+.left-side p {
+    font-size: 18px;
+    font-family: open_sanslight;
+    line-height: 28px;
+    margin-top: 45px;
+    margin-right: 15px;
+}
+
+.right-side p {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.right-side small,
+.left-side small {
+    display: block;
+    color: #9B9B9B;
+    font-size: 13px;
+    font-family: open_sanslight;
+    margin-right: 15px;
+}
+
+.step-area p.line4 {
+    margin-top: 27px;
+}
+
+.step-area p.line1 {
+    margin-top: 63px;
+}
+
+.left-side {
+    width: 510px;
+    margin-right: 5px;
+    text-align: right;
+}
+
+.right-side {
+    width: 510px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.center-side {
+    width: 140px;
+    position: relative;
+    z-index: 110;
+}
+
+.vline {
+    position: absolute;
+    right: 50%;
+    top: 157px;
+    height: 70px;
+    display: block;
+    width: 1px;
+    background: #e0e0e0;
+}
+
+.vline.intop {
+    top: -75px;
+}
+
+.tl-area {
+    position: relative;
+    text-align: center;
+    font-family: open_sanslight;
+    margin-bottom: 80px;
+}
+
+.tl-area p {
+    display: block;
+    font-size: 13px;
+    color: #9b9b9b;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+
+.tl-area .vline {
+    bottom: -75px;
+    top: inherit;
+}
+
+.tl-area .btn.green-btn {
+    padding: 15px 35px;
+}
+
+.content .step-area {
+    margin-bottom: 80px;
+}
+
+.content .step-area:first-child {
+    margin-top: 80px;
+}
+
+.hline {
+    display: block;
+    height: 1px;
+    background: #e0e0e0;
+    margin-right: 75px;
+    margin-top: 78px;
+}
+
+.step-box {
+    display: block;
+    width: 69px;
+    height: 76px;
+    background: url(../img/step_box.png) no-repeat center center;
+    float: right;
+    margin-top: 40px;
+    text-align: center;
+    line-height: 74px;
+    font-size: 31px;
+    color: #8e8e8e;
+    font-family: open_sanslight;
+    position: relative;
+}
+
+.step-box a {
+    display: inline-block;
+    padding: 40px;
+}
+
+.step-box .caret {
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-right: 7px solid rgba(0, 0, 0, 0);
+    border-top: 7px solid #8E8E8E;
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 50%;
+    margin-right: -7px;
+    opacity: 0.8;
+}
+
+.step-box a:hover .caret {
+    opacity: 1;
+}
+
+.left-side .step-box {
+    float: left;
+}
+
+.left-side .hline {
+    margin-left: 75px;
+    margin-right: 0;
 }
 
 .central-img {
@@ -209,8 +397,8 @@ ul.main-menu > li.active > span {
 }
 
 h1 {
-    font-size: 31px;
-    font-weight: normal;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 h2 {
@@ -830,6 +1018,10 @@ ul.links > li {
 }
 
 @media (max-width: 1200px) {
+    .left-side, .right-side {
+        width: 390px;
+    }
+
     .display {
         width: 480px;
         height: 405px;
@@ -906,6 +1098,18 @@ ul.links > li {
 }
 
 @media (max-width: 979px) {
+    .left-side, .right-side {
+        width: 280px;
+    }
+
+    .right-side small, .left-side small {
+        display: none;
+    }
+
+    .step-area p.line4 {
+        margin-top: 45px;
+    }
+
     ul.links > li {
         padding: 0 0 0 25px;
         background: url(../img/mark.png) no-repeat left 5px;
@@ -1008,6 +1212,14 @@ ul.links > li {
 }
 
 @media (max-width: 768px) {
+    .moskitorizing .main-box {
+        margin-top: 80px;
+    }
+
+    .center-side {
+        display: none;
+    }
+
     .container {
         margin-left: 20px;
         margin-right: 20px;
@@ -1071,6 +1283,22 @@ ul.links > li {
 }
 
 @media (max-width: 650px) {
+    .hline,
+    .step-box {
+        display: none;
+    }
+
+    .left-side, .right-side {
+        width: auto;
+        text-align: center;
+        margin: 0;
+        float: none;
+    }
+
+    .right-side p, .left-side p {
+        margin: 0;
+    }
+
     h1 {
         font-size: 31px;
         line-height: 41px;
