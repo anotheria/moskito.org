@@ -717,6 +717,17 @@ ul.links > li {
     font-size: 50px;
 }
 
+.moskito-support .hexagon {
+    height: 80px;
+}
+
+.moskito-support .hexagon i {
+    color: #444;
+    font-size: 76px;
+    line-height: 80px;
+    height: 80px;
+}
+
 .hexagon img {
     opacity: 0.6;
     filter: alpha(opacity=60);
@@ -760,7 +771,7 @@ li.core-item {
 }
 
 .moskito-support li.core-item {
-    min-height: 275px;
+    min-height: 235px;
 }
 
 li.core-item a.btn {
