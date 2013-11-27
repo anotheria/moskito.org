@@ -89,6 +89,10 @@ a:focus {
     font-size: 18px;
 }
 
+.moskito-support  .main-box {
+    background: #000 url(../img/main_bg_support.jpg) no-repeat fixed center 50px;
+}
+
 .gray-box {
     padding: 80px 0;
     border-top: 1px solid #DDDDDD;
