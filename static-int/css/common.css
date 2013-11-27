@@ -60,6 +60,7 @@ a:focus {
     background: #000 url(../img/main_bg_central.jpg) no-repeat fixed center 50px;
 }
 
+.moskito-support .main-box,
 .moskitorizing .main-box {
     background: none;
     background-color: #FFF;
@@ -67,8 +68,9 @@ a:focus {
     height: auto;
 }
 
+.moskito-support .main-box .main-info,
 .moskitorizing .main-box .main-info {
-    margin-top: 40px;
+    margin: 80px 0;
 }
 
 .moskitorizing  .main-box p,
@@ -76,15 +78,19 @@ a:focus {
     color: #000;
 }
 
-.moskitorizing  .main-box h1 {
+.moskito-support .main-box h1,
+.moskitorizing .main-box h1 {
     font-size: 48px;
     font-weight: 300;
     margin-top: 30px;
-    margin-bottom: 80px;
     font-family: open_sanslight;
 }
 
-.moskitorizing  .main-box p {
+.moskito-support .main-box p {
+    font-size: 18px;
+}
+
+.moskitorizing .main-box p {
     margin-bottom: 8px;
     font-size: 18px;
 }
@@ -550,6 +556,11 @@ h2 {
     margin-top: 35px;
 }
 
+.frame-title p {
+    font-size: 14px;
+    font-family: open_sanslight;
+}
+
 .features-list .frame-title {
     margin-bottom: 10px;
 }
@@ -744,7 +755,15 @@ ul.links > li {
     height: 275px;
 }
 
-.features-list li a.btn {
+li.core-item {
+    position: relative;
+}
+
+.moskito-support li.core-item {
+    min-height: 275px;
+}
+
+li.core-item a.btn {
     position: absolute;
     bottom: 0;
     left: 50%;
