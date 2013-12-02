@@ -99,6 +99,20 @@ a:focus {
     font-size: 18px;
 }
 
+.moskito-support .main-box h3 {
+    font-weight: normal;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+.moskito-support .main-box p {
+    margin-bottom: 5px;
+}
+
+.moskito-support .main-box h1 {
+    margin-bottom: 35px;
+}
+
 .moskito-support  .main-box {
     background: #000 url(../img/main_bg_support.jpg) no-repeat fixed center 50px;
 }
@@ -1455,6 +1469,20 @@ li.core-item a.btn {
     -ms-animation: btn 1s alternate;
 }
 
+.moskito-support .main-info .btn {
+    position: relative;
+    -moz-animation: btn 1.3s alternate;
+    -webkit-animation: btn 1.3s alternate;
+    -ms-animation: btn 1.3s alternate;
+}
+
+.main-info h3 {
+    position: relative;
+    -moz-animation: h3 1s alternate;
+    -webkit-animation: h3 1s alternate;
+    -ms-animation: h3 1s alternate;
+}
+
 .main-box .presentation-title {
     -moz-animation: ptitle 1.5s alternate;
     -webkit-animation: ptitle 1.5s alternate;
@@ -1570,6 +1598,96 @@ li.core-item a.btn {
 }
 
 @-ms-keyframes btn {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    60% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes btn2 {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    80% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes btn2 {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    80% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes btn2 {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    80% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes h3 {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    60% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes h3 {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    60% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes h3 {
     0% {
         bottom: -100px;
         opacity: 0;
