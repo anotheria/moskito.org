@@ -12,5 +12,4 @@ $(document).ready(function () {
     });
 
     $('#xmasGreeting').modal('show');
-
 });
