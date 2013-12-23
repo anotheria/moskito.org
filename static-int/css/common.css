@@ -458,6 +458,18 @@ h2 {
     color: #000;
 }
 
+h3 {
+    font-family: open_sanslight;
+    font-weight: normal;
+    color: #000;
+}
+
+.modal-body {
+    font-family: open_sanslight;
+    font-size: 14px;
+    line-height: 18px;
+}
+
 .main-info {
     margin-top: 80px;
     font-family: open_sanslight;

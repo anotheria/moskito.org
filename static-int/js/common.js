@@ -10,4 +10,6 @@ $(document).ready(function () {
     $('.inactive span').tooltip({
         placement: 'bottom'
     });
+
+    $('#xmasGreeting').modal('show');
 });
