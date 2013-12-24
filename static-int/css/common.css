@@ -1493,6 +1493,7 @@ li.core-item a.btn {
     -moz-animation: h3 1s alternate;
     -webkit-animation: h3 1s alternate;
     -ms-animation: h3 1s alternate;
+    color: #FFF;
 }
 
 .main-box .presentation-title {
