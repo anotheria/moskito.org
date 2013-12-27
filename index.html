@@ -36,7 +36,7 @@
     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="wrapper">
+<div itemscope itemtype="http://schema.org/SoftwareApplication" class="wrapper">
 
 <div id="xmasGreeting" class="modal hide fade">
     <div class="modal-header">
@@ -122,7 +122,8 @@
 <div class="header">
     <div class="container">
         <div class="logo">
-            <a href="http://moskito.org">
+            <!-- Rich snippet: url -->
+            <a itemprop="url" href="http://moskito.org">
                 <img src="static-int/img/logo.png" alt="MoSKito"/>
                 <span><b>MoSKito</b> Monitoring</span>
             </a>
@@ -139,14 +140,16 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span5">
-                <div class="main-info">
-                    <h1>Monitoring for Java applications.<br>
+                <div itemscope itemtype="http://schema.org/SoftwareApplication" class="main-info">
+                    <!-- Rich snippet: description -->
+                    <h1 itemprop="description">Monitoring for Java applications.<br>
                         Complete ecosystem for DevOps.<br>
                         Free & open source<br>
                     </h1>
 
                     <p>
-                        MoSKito is a multi-purpose, non-invasive, interval-based Java monitoring tool for collecting,
+                        <!-- Rich snippet: name -->
+                        <span itemprop="name">MoSKito</span> is a multi-purpose, non-invasive, interval-based Java monitoring tool for collecting,
                         storing and providing instant analysis of application’s performance and behavior data.
                         <br/><br/>
                         Optimise your application performance management.<br>
@@ -330,8 +333,8 @@
 
                     <div class="news">
                         <span>2013-12-23</span>
-
-                        <p>MoSKito "Christmas" version 2.4.1 released: improvements for Glassfish users and more,
+                        <!-- Rich snippet: software version -->
+                        <p>MoSKito "Christmas" version <span itemprop="softwareVersion">2.4.1</span> released: improvements for Glassfish users and more,
                             see the <a href="https://confluence.opensource.anotheria.net/display/MSK/Change+Log#ChangeLog-2_4_1">ChangeLog</a>.
                         </p>
                     </div>
@@ -374,7 +377,8 @@
                 <h2>More</h2>
                 <ul class="links">
                     <li><a href="license.html">License</a></li>
-                    <li><a href="https://github.com/anotheria">Anotheria on GitHub</a></li>
+                    <!-- Rich snippet: download url and publisher -->
+                    <li><a itemprop="downloadUrl" href="https://github.com/anotheria/moskito">MoSKito on GitHub</a></li>
                     <li><a href="https://confluence.opensource.anotheria.net/display/MSK/Change+Log">ChangeLog</a></li>
                     <li><a href="https://jira.opensource.anotheria.net/browse/MSK">Submit a bug</a></li>
                     <li><a href="http://blog.anotheria.net/category/msk/">Blog</a></li>
@@ -400,7 +404,11 @@
 
                 <p>
                     Thank you for your interest in MoSKito.
-                    <br/><b>Leon Rosenberg and the MoSKito Team</b>
+                    <!-- Rich snippet: author -->
+                    <br/><b itemscope itemtype="http://schema.org/SoftwareApplication">
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">
+                    Leon Rosenberg</span></span> and the MoSKito Team</b>
                 </p>
             </div>
             <div class="span4 twitter-box">
