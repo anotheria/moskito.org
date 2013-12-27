@@ -31,12 +31,12 @@
     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="wrapper moskito-control">
+<div itemscope itemtype="http://schema.org/SoftwareApplication" class="wrapper moskito-control">
 
 <div class="header">
     <div class="container">
         <div class="logo">
-            <a href="http://moskito.org">
+            <a itemprop="url" href="http://www.moskito.org/moskito-control.html">
                 <img src="static-int/img/logo.png" alt="MoSKito"/>
                 <span><b>MoSKito</b> &nbsp;&nbsp;Control</span>
             </a>
@@ -59,8 +59,8 @@
                     </h1>
 
                     <p>
-                        MoSKito-Control is a web-based real-time performance monitoring tool, designed for controlling
-                        multi-node apps.
+                        <span itemprop="name">MoSKito-Control</span> is a <span itemprop="description">web-based real-time performance monitoring tool, designed for controlling
+                        multi-node apps</span>.
                         <br/><br/>
                         Enjoy <i>a bird's eye view</i> on your application,<br>
                         predicting any upcoming problem.
@@ -246,7 +246,7 @@
                     <li><a href="license.html">License</a></li>
                     <li><a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Control+ChangeLog">ChangeLog</a>
                     </li>
-                    <li><a href="https://github.com/anotheria/moskito-control">MoSKito-Control on GitHub</a></li>
+                    <li><a itemprop="downloadUrl" href="https://github.com/anotheria/moskito-control">MoSKito-Control on GitHub</a></li>
                     <li><a href="https://github.com/anotheria/moskito-control-agent">MoSKito-Control-Agent on GitHub</a>
                     </li>
                     <li><a href="https://jira.opensource.anotheria.net/browse/MSKCONTROL">Submit a bug</a></li>
@@ -272,7 +272,11 @@
 
                 <p>
                     Thank you for your interest in MoSKito.
-                    <br/><b>Leon Rosenberg and the MoSKito Team</b>
+                    <!-- Rich snippet: author -->
+                    <br/><b itemscope itemtype="http://schema.org/SoftwareApplication">
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">
+                    Leon Rosenberg</span></span> and the MoSKito Team</b>
                 </p>
             </div>
             <div class="span4">
