@@ -204,41 +204,113 @@ But for now, let's integrate the WebUI into your application, and get the party 
 <div class="docs-section">
     <h2 id="section-aop" class="anchor">AOP</h2>
 
-    <p>One of the easiest way to integrate MoSKito into your code is to use AspectJ. 
+    <p>One of the easiest way to integrate MoSKito into your code is to use AOP with AspectJ. You need three steps:
 	</p>
 
-    <p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut
-        tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit
-        amet gravida nibh, facilisis gravida odio. Phasellus auctor velit at lacus blandit, commodo iaculis
-        justo viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget mi mi. Fusce quam tortor,
-        commodo ac dui quis, bibendum viverra erat. Maecenas mattis lectus enim, quis tincidunt dui molestie
-        euismod. Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus.</p>
-
-    <div class="accordion" id="accordion1">
+    <div class="accordion" id="accordion-aop1">
         <div class="accordion-group">
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1"
-                   href="#collapse1">
-                    Show code
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-aop1"
+                   href="#collapse-webui-maven">
+                    1) Define MoSKito version and declare dependencies. 
                 </a>
             </div>
-            <div id="collapse1" class="accordion-body collapse">
+            <div id="collapse-aop1" class="accordion-body collapse">
                 <div class="accordion-inner">
                                             <pre class="brush: xml;">
                                                 <properties>
-                                                    <moskito.version>2.4.0</moskito.version>
+                                                    <moskito.version>2.4.2</moskito.version>
                                                 </properties>
-                                                <dependency>
-                                                    <groupId>net.anotheria</groupId>
-                                                    <artifactId>moskito-core</artifactId>
-                                                    <version>${moskito.version}</version>
-                                                </dependency>
-                                                <dependency>
-                                                    <groupId>net.anotheria</groupId>
-                                                    <artifactId>moskito-aop</artifactId>
-                                                    <version>${moskito.version}</version>
-                                                </dependency>
-                                            </pre>
+												<dependency>
+												    <groupId>net.anotheria</groupId>
+												    <artifactId>moskito-core</artifactId>
+												    <version>${moskito.version}</version>
+												</dependency>
+												<dependency>
+												    <groupId>net.anotheria</groupId>
+												    <artifactId>moskito-aop</artifactId>
+												    <version>${moskito.version}</version>
+												</dependency>
+											 </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion" id="accordion-aop2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-aop2"
+                   href="#collapse-aop2">
+                    2) Add AOP plugin and allow AspectJ to do compile time weaving:
+                </a>
+            </div>
+            <div id="collapse-aop2" class="accordion-body collapse">
+                <div class="accordion-inner">
+                                            <pre class="brush: xml;">
+												<plugins>
+												    <plugin>
+												        <groupId>org.codehaus.mojo</groupId>
+												        <artifactId>aspectj-maven-plugin</artifactId>
+												        <version>1.4</version>
+												        <configuration>
+												            <aspectLibraries>
+												                <aspectLibrary>
+												                    <groupId>net.anotheria</groupId>
+												                    <artifactId>moskito-aop</artifactId>
+												                </aspectLibrary>
+												            </aspectLibraries>
+												            <source>1.6</source>
+												            <target>1.6</target>
+												        </configuration>
+												        <executions>
+												            <execution>
+												                <goals>
+												                    <goal>compile</goal>
+												                </goals>
+												            </execution>
+												        </executions>
+												    </plugin>
+												</plugins>												
+											</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion" id="accordion-aop3">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-aop3"
+                   href="#collapse-aop3">
+                    3) Annotate classes
+                </a>
+            </div>
+            <div id="collapse-aop3" class="accordion-body collapse">
+                <div class="accordion-inner">
+                                            <pre class="brush: java;">
+//simply add @Monitor to any class you want to monitor
+@Monitor
+public class MonitoredClass {
+	public void firstMethod(){
+		//do something
+	}
+
+	public void secondMethod(){
+		//do something else
+	}
+
+//you can also exclude methods from monitoring:
+	@DontMonitor
+	public void doNotMonitorMe(){
+
+	}	
+	
+//or you can just monitor one or multiple methods:
+public class ClassWithMonitoredMethod {
+	@Monitor
+	public void firstMethod(){
+		//do something
+	}	
+											</pre>
                 </div>
             </div>
         </div>
