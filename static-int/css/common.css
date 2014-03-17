@@ -60,6 +60,12 @@ a:focus {
     background: #000 url(../img/main_bg_central.jpg) no-repeat fixed center 50px;
 }
 
+.moskito-code  .main-box {
+    background: #000 url(../img/main_bg_code.jpg) no-repeat fixed center 50px;
+    text-align: center;
+    height: auto;
+}
+
 .moskito-support .main-box,
 .moskitorizing .main-box {
     background: none;
@@ -82,6 +88,7 @@ a:focus {
     color: #000;
 }
 
+.moskito-code .main-box h1,
 .moskito-support .main-box h1,
 .moskitorizing .main-box h1 {
     font-size: 48px;
@@ -90,8 +97,10 @@ a:focus {
     font-family: open_sanslight;
 }
 
+.moskito-code .main-box p,
 .moskito-support .main-box p {
     font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .moskitorizing .main-box p {
@@ -105,10 +114,11 @@ a:focus {
     margin-top: 25px;
 }
 
-.moskito-support .main-box p {
-    margin-bottom: 5px;
+.moskito-code .main-info {
+    margin-bottom: 80px;
 }
 
+.moskito-code .main-box h1,
 .moskito-support .main-box h1 {
     margin-bottom: 35px;
 }
@@ -334,8 +344,9 @@ a:focus {
     left: 0;
     position: fixed;
     height: 50px;
-    background-color: #F5F5F5;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 50px rgba(0, 0, 0, 0.25);
 }
 
 .scroll .logo > a > img {
@@ -378,7 +389,7 @@ ul.main-menu > li > a,
 ul.main-menu > li > span {
     display: block;
     padding: 45px 15px 20px 15px;
-    color: #999;
+    color: #888;
     border-top: 3px solid #DDD;
     -webkit-transition: all 0.08s linear;
     -moz-transition: all 0.08s linear;
@@ -396,7 +407,7 @@ ul.main-menu > li > span {
 }
 
 ul.main-menu > li > a:hover {
-    color: #666;
+    color: #777;
     border-top: 3px solid #999;
     text-decoration: none;
 }
@@ -716,7 +727,6 @@ h3 {
 
 .footer {
     background: #f5f5f5;
-    border-top: 1px solid #DDD;
     font-family: open_sanslight;
     font-size: 13px;
     padding: 30px 0 0 0;
@@ -1049,6 +1059,136 @@ li.core-item a.btn {
     width: 100%;
 }
 
+.scrollspy {
+    margin-top: 40px;
+}
+
+.scrollspy-content h2 {
+    font-weight: normal;
+    font-family: arial;
+    font-size: 36px;
+    color: #444;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.scrollspy-content h3 {
+    font-weight: normal;
+    font-family: arial;
+    font-size: 26px;
+    color: #444;
+}
+
+.scrollspy a {
+    font-size: 13px;
+    padding: 4px 15px;
+    font-family: open_sanslight;
+    color: #888;
+    border-left: 2px solid #FFF;
+}
+
+.scrollspy .active a:hover,
+.scrollspy .active a {
+    color: #4F93CD;
+    font-weight: bold;
+    border-left: 2px solid #4F93CD;
+}
+
+.scrollspy > li > a:focus {
+    background: none;
+}
+
+.scrollspy > li > a:hover {
+    color: #4F93CD;
+    border-left: 2px solid #CCC;
+    background: none;
+}
+
+.scrollspy.fixed {
+    position: fixed;
+    top: 60px;
+}
+
+.scroll-area {
+    height: 250px;
+    position: relative;
+    overflow: auto;
+}
+
+.scrollspy .active .dropdown-menu {
+    display: block;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    margin-left: 20px;
+    padding: 0;
+    float: none;
+    background: none;
+}
+
+.scrollspy .active .dropdown-menu a:hover,
+.scrollspy .active .dropdown-menu a {
+    border-left: 2px solid #FFF;
+    color: #888;
+    font-size: 12px;
+    padding: 2px 15px;
+    font-weight: normal;
+    background: none;
+}
+
+.scrollspy .active .dropdown-menu a:hover {
+    color: #4F93CD;
+    border-left: 2px solid #CCC;
+}
+
+.scrollspy .active .dropdown-menu .active a:hover,
+.scrollspy .active .dropdown-menu .active a {
+    background: none;
+    color: #4F93CD;
+    border-left: 2px solid #4F93CD;
+    background: none;
+    font-weight: bold;
+}
+
+.scrollspy-content {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.docs-section {
+    margin-bottom: 80px;
+}
+
+.docs-section:last-child {
+    margin-bottom: 0;
+}
+
+.panel-title {
+    font-size: 16px;
+}
+
+.accordion-inner .toolbar {
+    display: none;
+}
+
+h2.anchor {
+    margin-top: -90px;
+    padding-top: 90px;
+}
+
+h3.anchor {
+    margin-top: -90px;
+    padding-top: 90px;
+}
+
+.accordion-group {
+    position: relative;
+    z-index: 10;
+}
+
 @media (max-width: 1350px) {
     .mac {
         width: 660px;
@@ -1205,7 +1345,7 @@ li.core-item a.btn {
         display: none;
     }
 
-    .main-box .span5 {
+    .main-box .col-md-5 {
         width: 100%;
         text-align: center;
     }
@@ -1365,6 +1505,10 @@ li.core-item a.btn {
 
     .logo > a {
         display: inline-block;
+    }
+
+    .scrollspy {
+        display: none;
     }
 }
 
