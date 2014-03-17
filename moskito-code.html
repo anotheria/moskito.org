@@ -71,118 +71,133 @@
 	    <h2 id="section-webui" class="anchor">Integrate WebUI</h2>
 
 	    <p>
-	    	The easiest way to handle MoSKito 
+ 			Usually after integrating something into something else, you want to see the results. To see the results of your MoSKito Integration you need a kind of UI. Surely you can watch the logs,
+but this is kind of boring, and there are no good pictures to show. Therefore, we will stick with the Web User Interface - short WebUI. MoSKito WebUI is integrated directly into your application. 
+This has a set of advantages and disadvantages, as well as historical reasons, which we are not going to bring on now. A standalone version of MoSKito WebUI is on its way, and will probably hit the shelves with 2.5 or 2.6.
+But for now, let's integrate the WebUI into your application, and get the party going. There are different ways to build apps, and therefore different ways to integrate WebUI, so we will stick with the most common ones.
+<br>For more information on WebUI visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-WebUI">MoSKito WebUI Documentation</a>.
 	    </p>
 
-	    <div class="accordion" id="accordion3">
+	    <div class="accordion" id="accordion-webui">
 	        <div class="accordion-group">
 	            <div class="accordion-heading">
-	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3"
-	                   href="#collapse3">
-	                    Show code
+	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui" href="#collapse-webui">
+	                    How WebUI looks like (click to show)
 	                </a>
 	            </div>
-	            <div id="collapse3" class="accordion-body collapse">
+	            <div id="collapse-webui" class="accordion-body collapse">
 	                <div class="accordion-inner">
-	                                            <pre class="brush: xml;">
-	                                                <properties>
-	                                                    <moskito.version>2.4.0</moskito.version>
-	                                                </properties>
-	                                                <dependency>
-	                                                    <groupId>net.anotheria</groupId>
-	                                                    <artifactId>moskito-core</artifactId>
-	                                                    <version>${moskito.version}</version>
-	                                                </dependency>
-	                                                <dependency>
-	                                                    <groupId>net.anotheria</groupId>
-	                                                    <artifactId>moskito-aop</artifactId>
-	                                                    <version>${moskito.version}</version>
-	                                                </dependency>
-	                                            </pre>
+						<img src="static-int/img/moskito_scr_3.png">
 	                </div>
 	            </div>
 	        </div>
 	    </div>
 
-	    <h3 id="section-4dot1" class="anchor">Section 4.1</h3>
+	    <h3 id="section-webui-maven" class="anchor">Maven</h3>
 
-	    <p>In mauris nunc, convallis eget pretium eu, bibendum non leo. Proin suscipit purus adipiscing dolor
-	        gravida, in fermentum sapien blandit. Praesent pellentesque ligula dui, in gravida turpis vehicula
-	        ac. Pellentesque hendrerit nunc ut luctus hendrerit. Aliquam nec tincidunt urna. Ut interdum nec
-	        odio non interdum. Curabitur ligula justo, dapibus non ligula tristique, dapibus tristique nulla.
-	        Aliquam pulvinar dapibus eros, rutrum pretium urna iaculis ut. Nam est est, tempus id egestas et,
-	        viverra in dui. Aliquam gravida orci tortor, sed congue justo ornare vel. Cras in quam consectetur
-	        eros varius scelerisque. Ut vel fermentum purus. Nullam interdum blandit turpis, id pellentesque
-	        massa feugiat at. Ut sed lectus lectus. Vestibulum ante ipsum primis in faucibus orci luctus et
-	        ultrices posuere cubilia Curae; Nulla rutrum, ante quis convallis ultricies, magna quam rhoncus
-	        erat, in lacinia libero magna a ipsum.</p>
-
-	    <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas
-	        sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla
-	        tempus aliquet. Praesent luctus hendrerit arcu non laoreet. Morbi consequat placerat magna, ac
-	        ornare odio sagittis sed. Donec vitae ullamcorper purus. Vivamus non metus ac justo porta
-	        volutpat.</p>
-
-	    <div class="accordion" id="accordion4">
+	    <p>The Maven integration of the WebUI is basically a small set of pom manipulations. 
+		Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
+		</p>
+	    <div class="accordion" id="accordion-webui-maven">
 	        <div class="accordion-group">
 	            <div class="accordion-heading">
-	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4"
-	                   href="#collapse4">
-	                    Show code
+	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven"
+	                   href="#collapse-webui-maven">
+	                    1) Define MoSKito Version and dependencies. 
 	                </a>
 	            </div>
-	            <div id="collapse4" class="accordion-body collapse">
+	            <div id="collapse-webui-maven" class="accordion-body collapse">
 	                <div class="accordion-inner">
 	                                            <pre class="brush: xml;">
 	                                                <properties>
 	                                                    <moskito.version>2.4.0</moskito.version>
 	                                                </properties>
-	                                                <dependency>
-	                                                    <groupId>net.anotheria</groupId>
-	                                                    <artifactId>moskito-core</artifactId>
-	                                                    <version>${moskito.version}</version>
-	                                                </dependency>
-	                                                <dependency>
-	                                                    <groupId>net.anotheria</groupId>
-	                                                    <artifactId>moskito-aop</artifactId>
-	                                                    <version>${moskito.version}</version>
-	                                                </dependency>
-	                                            </pre>
+													<dependency>
+													    <groupId>net.anotheria</groupId>
+													    <artifactId>moskito-web</artifactId>
+													    <version>${moskito.version}</version>
+													</dependency>
+													<dependency>
+													    <groupId>net.anotheria</groupId>
+													    <artifactId>moskito-webui</artifactId>
+													    <version>${moskito.version}</version>
+													</dependency>
+													<dependency>
+													    <groupId>net.anotheria</groupId>
+													    <artifactId>moskito-webui-jersey</artifactId>
+													    <version>${moskito.version}</version>
+													</dependency>
+												 </pre>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="accordion" id="accordion-webui-maven2">
+	        <div class="accordion-group">
+	            <div class="accordion-heading">
+	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven2"
+	                   href="#collapse-webui-maven2">
+	                    2) Add plugins
+	                </a>
+	            </div>
+	            <div id="collapse-webui-maven2" class="accordion-body collapse">
+	                <div class="accordion-inner">
+	                                            <pre class="brush: xml;">
+													<plugin>
+													    <groupId>org.apache.maven.plugins</groupId>
+													    <artifactId>maven-dependency-plugin</artifactId>
+													    <configuration>
+													        <artifactItems><artifactItem>
+													            <groupId>net.anotheria</groupId>
+													            <artifactId>moskito-webui</artifactId>
+													            <version>${moskito.version}</version>
+													            <type>jar</type>
+													            <overWrite>true</overWrite>
+													            <outputDirectory>${project.build.directory}/tmp</outputDirectory>
+													            <includes>img/**,js/**,**/*.jsp,css/**</includes>
+													        </artifactItem></artifactItems>
+													    </configuration>
+													    <executions>
+													        <execution>
+													            <phase>compile</phase>
+													            <goals>
+													                <goal>unpack</goal>
+													            </goals>
+													        </execution>
+													    </executions>
+													</plugin>
+
+													<plugin>
+													    <artifactId>maven-war-plugin</artifactId>
+													    <version>2.1</version>
+													    <configuration>
+													        <webResources>
+													            <resource>
+													              <directory>${project.build.directory}/tmp</directory>
+													            </resource>
+													        </webResources>
+													    </configuration>
+													</plugin>												 
+													</pre>
 	                </div>
 	            </div>
 	        </div>
 	    </div>
 
-	    <h3 id="section-4dot2" class="anchor">Section 4.2</h3>
 
-	    <p>Pellentesque viverra, velit eu blandit viverra, justo nulla vestibulum nisl, at egestas ligula augue
-	        non ipsum. Aliquam non posuere metus, sed luctus erat. Vivamus malesuada libero quis sem elementum
-	        condimentum. Vestibulum interdum, turpis nec venenatis fringilla, odio elit hendrerit dui, a commodo
-	        metus tortor a eros. Suspendisse egestas neque vitae laoreet pellentesque. Donec accumsan, elit quis
-	        rhoncus fringilla, quam leo feugiat velit, nec hendrerit purus diam aliquet neque. Pellentesque
-	        imperdiet sed erat eu varius.</p>
+	    <h3 id="section-webui-gradle" class="anchor">Gradle</h3>
 
-	    <p>Morbi sed fermentum ipsum. Morbi a orci vulputate tortor ornare blandit a quis orci. Donec aliquam
-	        sodales gravida. In ut ullamcorper nisi, ac pretium velit. Vestibulum vitae lectus volutpat,
-	        consequat lorem sit amet, pulvinar tellus. In tincidunt vel leo eget pulvinar. Curabitur a eros non
-	        lacus malesuada aliquam. Praesent et tempus odio. Integer a quam nunc. In hac habitasse platea
-	        dictumst. Aliquam porta nibh nulla, et mattis turpis placerat eget. Pellentesque dui diam,
-	        pellentesque vel gravida id, accumsan eu magna. Sed a semper arcu, ut dignissim leo.</p>
+	    <p>Gradle is super</p>
 
-	    <h3 id="section-4dot3" class="anchor">Section 4.3</h3>
+	    <h3 id="section-webui-ant" class="anchor">Ant</h3>
 
-	    <p>Fusce enim arcu, interdum vel metus dignissim, venenatis feugiat purus. Nulla posuere orci ut leo
-	        sodales, sed cursus dolor ornare. Cum sociis natoque penatibus et magnis dis parturient montes,
-	        nascetur ridiculus mus. Etiam sit amet quam orci. Nulla sollicitudin lectus eget posuere venenatis.
-	        Sed vestibulum elementum sagittis. Quisque tristique tortor quis feugiat sollicitudin. Ut
-	        pellentesque luctus vulputate. Ut at odio ac erat blandit vehicula ut eget urna. In hac habitasse
-	        platea dictumst. Nullam ut iaculis nibh, eget eleifend elit.</p>
+	    <p>Gradle is also super</p>
 
-	    <p>Sed vitae lobortis diam, id molestie magna. Aliquam consequat ipsum quis est dictum ultrices. Aenean
-	        nibh velit, fringilla in diam id, blandit hendrerit lacus. Donec vehicula rutrum tellus eget
-	        fermentum. Pellentesque ac erat et arcu ornare tincidunt. Aliquam erat volutpat. Vivamus lobortis
-	        urna quis gravida semper. In condimentum, est a faucibus luctus, mi dolor cursus mi, id vehicula
-	        arcu risus a nibh. Pellentesque blandit sapien lacus, vel vehicula nunc feugiat sit amet.</p>
+	    <h3 id="section-webui-toolless" class="anchor">Without any tools at all</h3>
+
+	    <p>No tools are best tools</p>
+
+
 	</div>
 	
 	
