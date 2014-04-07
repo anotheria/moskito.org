@@ -66,141 +66,8 @@
 <div class="row-fluid">
 
 <div class="span9 scrollspy-content">
-	
-	<div class="docs-section">
-	    <h2 id="section-webui" class="anchor">Integrate WebUI</h2>
-
-	    <p>
- 			Usually after integrating something into something else, you want to see the results. To see the results of your MoSKito Integration you need a kind of UI. Surely you can watch the logs,
-but this is kind of boring, and there are no good pictures to show. Therefore, we will stick with the Web User Interface - short WebUI. MoSKito WebUI is integrated directly into your application. 
-This has a set of advantages and disadvantages, as well as historical reasons, which we are not going to bring on now. A standalone version of MoSKito WebUI is on its way, and will probably hit the shelves with 2.5 or 2.6.
-But for now, let's integrate the WebUI into your application, and get the party going. There are different ways to build apps, and therefore different ways to integrate WebUI, so we will stick with the most common ones.
-<br>For more information on WebUI visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-WebUI">MoSKito WebUI Documentation</a>.
-	    </p>
-
-	    <div class="accordion" id="accordion-webui">
-	        <div class="accordion-group">
-	            <div class="accordion-heading">
-	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui" href="#collapse-webui">
-	                    How WebUI looks like (click to show)
-	                </a>
-	            </div>
-	            <div id="collapse-webui" class="accordion-body collapse">
-	                <div class="accordion-inner">
-						<img src="static-int/img/moskito_scr_3.png">
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-
-	    <h3 id="section-webui-maven" class="anchor">Maven</h3>
-
-	    <p>The Maven integration of the WebUI is basically a small set of pom manipulations. 
-		Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
-		</p>
-	    <div class="accordion" id="accordion-webui-maven">
-	        <div class="accordion-group">
-	            <div class="accordion-heading">
-	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven"
-	                   href="#collapse-webui-maven">
-	                    1) Define MoSKito Version and dependencies. 
-	                </a>
-	            </div>
-	            <div id="collapse-webui-maven" class="accordion-body in collapse">
-	                <div class="accordion-inner">
-	                                            <pre class="brush: xml;">
-	                                                <properties>
-	                                                    <moskito.version>2.4.0</moskito.version>
-	                                                </properties>
-													<dependency>
-													    <groupId>net.anotheria</groupId>
-													    <artifactId>moskito-web</artifactId>
-													    <version>${moskito.version}</version>
-													</dependency>
-													<dependency>
-													    <groupId>net.anotheria</groupId>
-													    <artifactId>moskito-webui</artifactId>
-													    <version>${moskito.version}</version>
-													</dependency>
-													<dependency>
-													    <groupId>net.anotheria</groupId>
-													    <artifactId>moskito-webui-jersey</artifactId>
-													    <version>${moskito.version}</version>
-													</dependency>
-												 </pre>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	    <div class="accordion" id="accordion-webui-maven2">
-	        <div class="accordion-group">
-	            <div class="accordion-heading">
-	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven2"
-	                   href="#collapse-webui-maven2">
-	                    2) Add plugins
-	                </a>
-	            </div>
-	            <div id="collapse-webui-maven2" class="accordion-body in collapse">
-	                <div class="accordion-inner">
-	                                            <pre class="brush: xml;">
-													<plugin>
-													    <groupId>org.apache.maven.plugins</groupId>
-													    <artifactId>maven-dependency-plugin</artifactId>
-													    <configuration>
-													        <artifactItems><artifactItem>
-													            <groupId>net.anotheria</groupId>
-													            <artifactId>moskito-webui</artifactId>
-													            <version>${moskito.version}</version>
-													            <type>jar</type>
-													            <overWrite>true</overWrite>
-													            <outputDirectory>${project.build.directory}/tmp</outputDirectory>
-													            <includes>img/**,js/**,**/*.jsp,css/**</includes>
-													        </artifactItem></artifactItems>
-													    </configuration>
-													    <executions>
-													        <execution>
-													            <phase>compile</phase>
-													            <goals>
-													                <goal>unpack</goal>
-													            </goals>
-													        </execution>
-													    </executions>
-													</plugin>
-
-													<plugin>
-													    <artifactId>maven-war-plugin</artifactId>
-													    <version>2.1</version>
-													    <configuration>
-													        <webResources>
-													            <resource>
-													              <directory>${project.build.directory}/tmp</directory>
-													            </resource>
-													        </webResources>
-													    </configuration>
-													</plugin>												 
-													</pre>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-
-
-	    <h3 id="section-webui-gradle" class="anchor">Gradle</h3>
-
-	    <p>Gradle is super</p>
-
-	    <h3 id="section-webui-ant" class="anchor">Ant</h3>
-
-	    <p>Gradle is also super</p>
-
-	    <h3 id="section-webui-toolless" class="anchor">Without any tools at all</h3>
-
-	    <p>No tools are best tools</p>
-
-
-	</div>
-	
-	
+		
+	<!-- AOP -->
 <div class="docs-section">
     <h2 id="section-aop" class="anchor">AOP</h2>
 
@@ -236,6 +103,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
             </div>
         </div>
     </div>
+
     <div class="accordion" id="accordion-aop2">
         <div class="accordion-group">
             <div class="accordion-heading">
@@ -315,8 +183,122 @@ public class ClassWithMonitoredMethod {
             </div>
         </div>
     </div>
-
+	<p>Check out <a href="https://github.com/anotheria/moskito-examples/tree/master/aop">MoSKito examples, AOP Module</a> on GitHub and <a href="https://confluence.opensource.anotheria.net/display/MSK/Working+with+Annotations">Guide on Annotations</a> for more information.</p>
 </div>
+
+<!-- CDI start -->
+<div class="docs-section">
+    <h2 id="section-cdi" class="anchor">CDI</h2>
+
+    <p>If you want to use MoSKito in JEE Environment or simply in context of JSR-299, MoSKito CDI support is the way to go.
+	</p>
+
+    <div class="accordion" id="accordion-cdi1">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cdi1"
+                   href="#collapse-cdi1">
+                    1) Define MoSKito version and declare dependencies. 
+                </a>
+            </div>
+            <div id="collapse-cdi1" class="accordion-body in collapse">
+                <div class="accordion-inner">
+                                            <pre class="brush: xml;">
+                                                <properties>
+                                                    <moskito.version>2.4.2</moskito.version>
+                                                </properties>
+												<dependency>
+												    <groupId>net.anotheria</groupId>
+												    <artifactId>moskito-core</artifactId>
+												    <version>${moskito.version}</version>
+												</dependency>
+												<dependency>
+												    <groupId>net.anotheria</groupId>
+												    <artifactId>moskito-cdi</artifactId>
+												    <version>${moskito.version}</version>
+												</dependency>
+											 </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion" id="accordion-cdi2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cdi2"
+                   href="#collapse-cdi2">
+                    2) Annotate classes
+                </a>
+            </div>
+            <div id="collapse-cdi2" class="accordion-body in collapse">
+                <div class="accordion-inner">
+                                            <pre class="brush: java;">
+//simply add @Monitor to any class you want to monitor
+@Monitor
+public class MonitoredClass {
+	public void firstMethod(){
+		//do something
+	}
+
+	public void secondMethod(){
+		//do something else
+	}
+
+//you can also exclude methods from monitoring:
+	@DontMonitor
+	public void doNotMonitorMe(){
+
+	}	
+	
+//or you can just monitor one or multiple methods:
+public class ClassWithMonitoredMethod {
+	@Monitor
+	public void firstMethod(){
+		//do something
+	}	
+											</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- CDI Part 3 -->
+    <div class="accordion" id="accordion-cdi3">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cdi3"
+                   href="#collapse-cdi3">
+                    3) Add beans to <i>beans.xml</i>
+                </a>
+            </div>
+            <div id="collapse-cdi3" class="accordion-body in collapse">
+                <div class="accordion-inner">
+					<pre class="brush: xml;">
+						<beans xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:schemaLocation="
+							http://java.sun.com/xml/ns/javaee
+							http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
+							<interceptors>
+								<class>net.anotheria.moskito.integration.cdi.CountInterceptor</class>
+								<class>net.anotheria.moskito.integration.cdi.CallInterceptor</class>
+
+								<!-- add those to be able to mark a category or subsystem -->
+								<class>net.anotheria.moskito.integration.cdi.WebCallInterceptor<class>
+								<class>net.anotheria.moskito.integration.cdi.ServiceCallInterceptor</class>
+								<class>net.anotheria.moskito.integration.cdi.DaoCallInterceptor</class>
+							</interceptors>
+						</beans>
+					</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<p>Check out <a href="https://github.com/anotheria/moskito-examples/tree/master/aop">MoSKito examples, AOP Module</a> on GitHub and <a href="https://confluence.opensource.anotheria.net/display/MSK/Working+with+Annotations">Guide on Annotations</a> for more information.</p>
+</div>
+
 
 <div class="docs-section">
     <h2 id="section-2" class="anchor">Section 2</h2>
@@ -517,6 +499,141 @@ public class ClassWithMonitoredMethod {
         arcu risus a nibh. Pellentesque blandit sapien lacus, vel vehicula nunc feugiat sit amet.</p>
 </div>
 
+<!-- Inspect -->
+<div class="docs-section">
+    <h2 id="section-webui" class="anchor">Integrate WebUI</h2>
+
+    <p>
+		Usually after integrating something into something else, you want to see the results. To see the results of your MoSKito Integration you need a kind of UI. Surely you can watch the logs,
+but this is kind of boring, and there are no good pictures to show. Therefore, we will stick with the Web User Interface - short WebUI. MoSKito WebUI is integrated directly into your application. 
+This has a set of advantages and disadvantages, as well as historical reasons, which we are not going to bring on now. A standalone version of MoSKito WebUI is on its way, and will probably hit the shelves with 2.5 or 2.6.
+But for now, let's integrate the WebUI into your application, and get the party going. There are different ways to build apps, and therefore different ways to integrate WebUI, so we will stick with the most common ones.
+<br>For more information on WebUI visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-WebUI">MoSKito WebUI Documentation</a>.
+    </p>
+
+    <div class="accordion" id="accordion-webui">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui" href="#collapse-webui">
+                    How WebUI looks like (click to show)
+                </a>
+            </div>
+            <div id="collapse-webui" class="accordion-body collapse">
+                <div class="accordion-inner">
+					<img src="static-int/img/moskito_scr_3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 id="section-webui-maven" class="anchor">Maven</h3>
+
+    <p>The Maven integration of the WebUI is basically a small set of pom manipulations. 
+	Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
+	</p>
+    <div class="accordion" id="accordion-webui-maven">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven"
+                   href="#collapse-webui-maven">
+                    1) Define MoSKito Version and dependencies. 
+                </a>
+            </div>
+            <div id="collapse-webui-maven" class="accordion-body in collapse">
+                <div class="accordion-inner">
+                                            <pre class="brush: xml;">
+                                                <properties>
+                                                    <moskito.version>2.4.0</moskito.version>
+                                                </properties>
+												<dependency>
+												    <groupId>net.anotheria</groupId>
+												    <artifactId>moskito-web</artifactId>
+												    <version>${moskito.version}</version>
+												</dependency>
+												<dependency>
+												    <groupId>net.anotheria</groupId>
+												    <artifactId>moskito-webui</artifactId>
+												    <version>${moskito.version}</version>
+												</dependency>
+												<dependency>
+												    <groupId>net.anotheria</groupId>
+												    <artifactId>moskito-webui-jersey</artifactId>
+												    <version>${moskito.version}</version>
+												</dependency>
+											 </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion" id="accordion-webui-maven2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven2"
+                   href="#collapse-webui-maven2">
+                    2) Add plugins
+                </a>
+            </div>
+            <div id="collapse-webui-maven2" class="accordion-body in collapse">
+                <div class="accordion-inner">
+                                            <pre class="brush: xml;">
+												<plugin>
+												    <groupId>org.apache.maven.plugins</groupId>
+												    <artifactId>maven-dependency-plugin</artifactId>
+												    <configuration>
+												        <artifactItems><artifactItem>
+												            <groupId>net.anotheria</groupId>
+												            <artifactId>moskito-webui</artifactId>
+												            <version>${moskito.version}</version>
+												            <type>jar</type>
+												            <overWrite>true</overWrite>
+												            <outputDirectory>${project.build.directory}/tmp</outputDirectory>
+												            <includes>img/**,js/**,**/*.jsp,css/**</includes>
+												        </artifactItem></artifactItems>
+												    </configuration>
+												    <executions>
+												        <execution>
+												            <phase>compile</phase>
+												            <goals>
+												                <goal>unpack</goal>
+												            </goals>
+												        </execution>
+												    </executions>
+												</plugin>
+
+												<plugin>
+												    <artifactId>maven-war-plugin</artifactId>
+												    <version>2.1</version>
+												    <configuration>
+												        <webResources>
+												            <resource>
+												              <directory>${project.build.directory}/tmp</directory>
+												            </resource>
+												        </webResources>
+												    </configuration>
+												</plugin>												 
+												</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h3 id="section-webui-gradle" class="anchor">Gradle</h3>
+
+    <p>Gradle is super</p>
+
+    <h3 id="section-webui-ant" class="anchor">Ant</h3>
+
+    <p>Gradle is also super</p>
+
+    <h3 id="section-webui-toolless" class="anchor">Without any tools at all</h3>
+
+    <p>No tools are best tools</p>
+
+
+</div>
+<!-- Inspect End -->
+
 <div class="docs-section">
     <h2 id="section-5" class="anchor">Section 5</h2>
 
@@ -562,7 +679,13 @@ public class ClassWithMonitoredMethod {
     <nav id="myNavbar" role="navigation">
         <div id="navbarCollapse">
             <ul class="nav navbar-nav scrollspy">
-                <li class="active dropdown"><a href="#section-webui">WebUI Integration</a>
+                <li><a href="#section-aop">AOP</a></li>
+                <li><a href="#section-cdi">CDI</a></li>
+                <li><a href="#section-spring">Spring</a></li>
+                <li><a href="#section-web">Web</a></li>
+                <li><a href="#section-ehcache">Ehcache</a></li>
+                <li><a href="#section-proxy">Proxies</a></li>
+                <li class="active dropdown"><a href="#section-webui">Inspect Integration</a>
                     <ul class="dropdown-menu">
                         <li><a href="#section-webui-maven">Maven</a></li>
                         <li><a href="#section-webui-gradle">Gradle</a></li>
@@ -570,12 +693,6 @@ public class ClassWithMonitoredMethod {
                         <li><a href="#section-webui-toollees">Toolless</a></li>
                     </ul>
 				</li>
-                <li><a href="#section-aop">AOP</a></li>
-                <li><a href="#section-cdi">CDI</a></li>
-                <li><a href="#section-spring">Spring</a></li>
-                <li><a href="#section-web">Web</a></li>
-                <li><a href="#section-ehcache">Ehcache</a></li>
-                <li><a href="#section-proxy">Proxies</a></li>
             </ul>
         </div>
     </nav>
