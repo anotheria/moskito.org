@@ -84,21 +84,21 @@
             </div>
             <div id="collapse-aop1" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                                            <pre class="brush: xml;">
-                                                <properties>
-                                                    <moskito.version>2.4.2</moskito.version>
-                                                </properties>
-												<dependency>
-												    <groupId>net.anotheria</groupId>
-												    <artifactId>moskito-core</artifactId>
-												    <version>${moskito.version}</version>
-												</dependency>
-												<dependency>
-												    <groupId>net.anotheria</groupId>
-												    <artifactId>moskito-aop</artifactId>
-												    <version>${moskito.version}</version>
-												</dependency>
-											 </pre>
+                    <pre class="brush: xml;">
+                        <properties>
+                            <moskito.version>2.4.2</moskito.version>
+                        </properties>
+                        <dependency>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-core</artifactId>
+                            <version>${moskito.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-aop</artifactId>
+                            <version>${moskito.version}</version>
+                        </dependency>
+                     </pre>
                 </div>
             </div>
         </div>
@@ -114,32 +114,32 @@
             </div>
             <div id="collapse-aop2" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                                            <pre class="brush: xml;">
-												<plugins>
-												    <plugin>
-												        <groupId>org.codehaus.mojo</groupId>
-												        <artifactId>aspectj-maven-plugin</artifactId>
-												        <version>1.4</version>
-												        <configuration>
-												            <aspectLibraries>
-												                <aspectLibrary>
-												                    <groupId>net.anotheria</groupId>
-												                    <artifactId>moskito-aop</artifactId>
-												                </aspectLibrary>
-												            </aspectLibraries>
-												            <source>1.6</source>
-												            <target>1.6</target>
-												        </configuration>
-												        <executions>
-												            <execution>
-												                <goals>
-												                    <goal>compile</goal>
-												                </goals>
-												            </execution>
-												        </executions>
-												    </plugin>
-												</plugins>												
-											</pre>
+                    <pre class="brush: xml;">
+                        <plugins>
+                            <plugin>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>aspectj-maven-plugin</artifactId>
+                                <version>1.4</version>
+                                <configuration>
+                                    <aspectLibraries>
+                                        <aspectLibrary>
+                                            <groupId>net.anotheria</groupId>
+                                            <artifactId>moskito-aop</artifactId>
+                                        </aspectLibrary>
+                                    </aspectLibraries>
+                                    <source>1.6</source>
+                                    <target>1.6</target>
+                                </configuration>
+                                <executions>
+                                    <execution>
+                                        <goals>
+                                            <goal>compile</goal>
+                                        </goals>
+                                    </execution>
+                                </executions>
+                            </plugin>
+                        </plugins>
+                    </pre>
                 </div>
             </div>
         </div>
@@ -190,8 +190,7 @@ public class ClassWithMonitoredMethod {
 <div class="docs-section">
     <h2 id="section-cdi" class="anchor">CDI</h2>
 
-    <p>If you want to use MoSKito in JEE Environment or simply in context of JSR-299, MoSKito CDI support is the way to go.
-	</p>
+    <p>If you want to use MoSKito in JEE Environment or simply in context of JSR-299, MoSKito CDI support is the way to go.</p>
 
     <div class="accordion" id="accordion-cdi1">
         <div class="accordion-group">
@@ -203,21 +202,21 @@ public class ClassWithMonitoredMethod {
             </div>
             <div id="collapse-cdi1" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                                            <pre class="brush: xml;">
-                                                <properties>
-                                                    <moskito.version>2.4.2</moskito.version>
-                                                </properties>
-												<dependency>
-												    <groupId>net.anotheria</groupId>
-												    <artifactId>moskito-core</artifactId>
-												    <version>${moskito.version}</version>
-												</dependency>
-												<dependency>
-												    <groupId>net.anotheria</groupId>
-												    <artifactId>moskito-cdi</artifactId>
-												    <version>${moskito.version}</version>
-												</dependency>
-											 </pre>
+                    <pre class="brush: xml;">
+                        <properties>
+                            <moskito.version>2.4.2</moskito.version>
+                        </properties>
+                        <dependency>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-core</artifactId>
+                            <version>${moskito.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-cdi</artifactId>
+                            <version>${moskito.version}</version>
+                        </dependency>
+                     </pre>
                 </div>
             </div>
         </div>
@@ -234,7 +233,7 @@ public class ClassWithMonitoredMethod {
             <div id="collapse-cdi2" class="accordion-body in collapse">
                 <div class="accordion-inner">
                                             <pre class="brush: java;">
-//simply add @Monitor to any class you want to monitor
+//simply add @Monitor to any CDI managed bean
 @Monitor
 public class MonitoredClass {
 	public void firstMethod(){
@@ -296,63 +295,21 @@ public class ClassWithMonitoredMethod {
         </div>
     </div>
 
-	<p>Check out <a href="https://github.com/anotheria/moskito-examples/tree/master/aop">MoSKito examples, AOP Module</a> on GitHub and <a href="https://confluence.opensource.anotheria.net/display/MSK/Working+with+Annotations">Guide on Annotations</a> for more information.</p>
+	<p>Check out <a href="https://github.com/anotheria/moskito-jboss">MoSKito JBoss example project</a> on GitHub and <a href="https://confluence.opensource.anotheria.net/display/MSK/Working+with+Annotations">Guide on Annotations</a> for more information.</p>
 </div>
 
-
+<!-- spring -->
 <div class="docs-section">
-    <h2 id="section-2" class="anchor">Section 2</h2>
+    <h2 id="section-spring" class="anchor">Spring</h2>
 
-    <p>Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse ultrices
-        placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra tincidunt. Quisque
-        non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra interdum bibendum. Donec ac
-        sollicitudin dolor. Sed fringilla vitae lacus at rutrum. Phasellus congue vestibulum ligula sed
-        consequat.</p>
+    <p>
+        There are two easy ways to integrate MoSKito into your spring application. First: <a href="#section-aop">use classic AOP straight away</a>.
+    </p>
 
-    <p>Vestibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed. Nam odio tortor, dictum
-        quis malesuada at, pellentesque vitae orci. Vivamus elementum, felis eu auctor lobortis, diam velit
-        egestas lacus, quis fermentum metus ante quis urna. Sed at facilisis libero. Cum sociis natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum bibendum blandit
-        dolor. Nunc orci dolor, molestie nec nibh in, hendrerit tincidunt ante. Vivamus sem augue, hendrerit
-        non sapien in, mollis ornare augue.</p>
-
-    <div class="accordion" id="accordion2">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
-                   href="#collapse2">
-                    Show code
-                </a>
-            </div>
-            <div id="collapse2" class="accordion-body collapse">
-                <div class="accordion-inner">
-                                            <pre class="brush: xml;">
-                                                <plugin>
-                                                    <groupId>org.codehaus.mojo
-                                                        <artifactId>aspectj-maven-plugin
-                                                            <version>1.4
-                                                                <configuration>
-                                                                    <aspectLibraries>
-                                                                        <aspectLibrary>
-                                                                            <groupId>net.anotheria
-                                                                                <artifactId>moskito-aop
-                                                                        </aspectLibrary>
-                                                                    </aspectLibraries>
-                                                                </configuration>
-                                                                <executions>
-                                                                    <execution>
-                                                                        <goals>
-                                                                            <goal>compile
-                                                                        </goals>
-                                                                    </execution>
-                                                                </executions>
-                                                </plugin>
-                                            </pre>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <p>
+        You can also use <i>spring-aop</i> to even spare the annotations. Check out <a href="https://github.com/anotheria/moskito-examples/tree/master/spring2">MoSKito Spring AOP Example</a> on
+        how to create your spring aspects and declare beans.
+    </p>
 </div>
 
 <div class="docs-section">
