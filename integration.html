@@ -369,7 +369,7 @@ public class ClassWithMonitoredMethod {
 
 <!-- Inspect -->
 <div class="docs-section">
-    <h2 id="section-webui" class="anchor">Integrate WebUI</h2>
+    <h2 id="section-inspect" class="anchor">Enable MoSKito Inspect</h2>
 
     <p>
 		Usually after integrating something into something else, you want to see the results. To see the results of your MoSKito Integration you need a kind of UI. Surely you can watch the logs,
@@ -379,14 +379,14 @@ But for now, let's integrate the WebUI into your application, and get the party 
 <br>For more information on WebUI visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-WebUI">MoSKito WebUI Documentation</a>.
     </p>
 
-    <div class="accordion" id="accordion-webui">
+    <div class="accordion" id="accordion-inspect">
         <div class="accordion-group">
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui" href="#collapse-webui">
-                    How WebUI looks like (click to show)
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect" href="#collapse-inspect">
+                    How Inspect looks like (click to show)
                 </a>
             </div>
-            <div id="collapse-webui" class="accordion-body collapse">
+            <div id="collapse-inspect" class="accordion-body collapse">
                 <div class="accordion-inner">
 					<img src="static-int/img/moskito_scr_3.png">
                 </div>
@@ -394,20 +394,20 @@ But for now, let's integrate the WebUI into your application, and get the party 
         </div>
     </div>
 
-    <h3 id="section-webui-maven" class="anchor">Maven</h3>
+    <h3 id="section-inspect-maven" class="anchor">Maven</h3>
 
     <p>The Maven integration of the WebUI is basically a small set of pom manipulations. 
 	Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
 	</p>
-    <div class="accordion" id="accordion-webui-maven">
+    <div class="accordion" id="accordion-inspect-maven">
         <div class="accordion-group">
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven"
-                   href="#collapse-webui-maven">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-maven"
+                   href="#collapse-inspect-maven">
                     1) Define MoSKito Version and dependencies. 
                 </a>
             </div>
-            <div id="collapse-webui-maven" class="accordion-body in collapse">
+            <div id="collapse-inspect-maven" class="accordion-body in collapse">
                 <div class="accordion-inner">
                                             <pre class="brush: xml;">
                                                 <properties>
@@ -433,15 +433,15 @@ But for now, let's integrate the WebUI into your application, and get the party 
             </div>
         </div>
     </div>
-    <div class="accordion" id="accordion-webui-maven2">
+    <div class="accordion" id="accordion-inspect-maven2">
         <div class="accordion-group">
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-webui-maven2"
-                   href="#collapse-webui-maven2">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-maven2"
+                   href="#collapse-inspect-maven2">
                     2) Add plugins
                 </a>
             </div>
-            <div id="collapse-webui-maven2" class="accordion-body in collapse">
+            <div id="collapse-inspect-maven2" class="accordion-body in collapse">
                 <div class="accordion-inner">
                                             <pre class="brush: xml;">
 												<plugin>
@@ -486,15 +486,15 @@ But for now, let's integrate the WebUI into your application, and get the party 
     </div>
 
 
-    <h3 id="section-webui-gradle" class="anchor">Gradle</h3>
+    <h3 id="section-inspect-gradle" class="anchor">Gradle</h3>
 
     <p>Gradle is super</p>
 
-    <h3 id="section-webui-ant" class="anchor">Ant</h3>
+    <h3 id="section-inspect-ant" class="anchor">Ant</h3>
 
     <p>Gradle is also super</p>
 
-    <h3 id="section-webui-toolless" class="anchor">Without any tools at all</h3>
+    <h3 id="section-inspect-toolless" class="anchor">Without any tools at all</h3>
 
     <p>No tools are best tools</p>
 
@@ -555,10 +555,10 @@ But for now, let's integrate the WebUI into your application, and get the party 
                 <li><a href="#section-proxy">Proxies</a></li>
                 <li class="active dropdown"><a href="#section-webui">Inspect Integration</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#section-webui-maven">Maven</a></li>
-                        <li><a href="#section-webui-gradle">Gradle</a></li>
-                        <li><a href="#section-webui-ant">Ant</a></li>
-                        <li><a href="#section-webui-toollees">Toolless</a></li>
+                        <li><a href="#section-inspect-maven">Maven</a></li>
+                        <li><a href="#section-inspect-gradle">Gradle</a></li>
+                        <li><a href="#section-inspect-ant">Ant</a></li>
+                        <li><a href="#section-inspect-toollees">Toolless</a></li>
                     </ul>
 				</li>
             </ul>
