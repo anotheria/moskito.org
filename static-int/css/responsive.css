@@ -1,0 +1,405 @@
+@media (max-width: 1350px) {
+    .mac {
+        width: 660px;
+        height: 396px;
+        margin: 75px 0 0 0;
+    }
+
+    .display {
+        width: 600px;
+        height: 506px;
+        margin-right: 50px;
+        margin-top: 45px;
+    }
+
+    .display .carousel-area {
+        width: 561px;
+        height: 328px;
+        margin: 20px 0 0 20px;
+    }
+
+    .display .carousel-area img {
+        width: 561px;
+        height: 328px;
+    }
+
+    .display .glass {
+        width: 315px;
+        height: 365px;
+    }
+
+    .carousel-area {
+        margin: 22px 0 0 82px;
+    }
+
+    .carousel-area,
+    .carousel-area img {
+        width: 496px;
+        height: 315px;
+    }
+
+    .presentation-title {
+        right: -40px;
+        top: 100px;
+    }
+
+    .mac:hover .arrow-circle#carouselNext {
+        right: 0px;
+    }
+
+    .mac:hover .arrow-circle#carouselPrev {
+        left: 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .left-side, .right-side {
+        width: 390px;
+    }
+
+    .display {
+        width: 480px;
+        height: 405px;
+        margin-right: 160px;
+        margin-top: 85px;
+    }
+
+    .display .carousel-area {
+        width: 442px;
+        height: 255px;
+    }
+
+    .display .carousel-area img {
+        width: 442px;
+        height: 255px;
+    }
+
+    .display .glass {
+        width: 252px;
+        height: 293px;
+    }
+
+    ul.links > li {
+        background: none;
+        padding: 0;
+    }
+
+    .mac {
+        width: 550px;
+        height: 330px;
+        margin: 110px 0 0 0;
+    }
+
+    .main-info {
+        margin: 60px 0 0 0;
+    }
+
+    .carousel-area {
+        margin: 17px 0 0 69px;
+    }
+
+    .carousel-area,
+    .carousel-area img {
+        width: 414px;
+        height: 263px;
+    }
+
+    .features-list li {
+        width: 285px;
+        height: 320px;
+    }
+
+    .moskito-control .features-list li {
+        height: 300px;
+    }
+
+    .presentation-title {
+        right: -65px;
+        top: 100px;
+    }
+
+    h1 {
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+    .clients ul li {
+        margin-right: 70px;
+    }
+
+    .clients ul li img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 979px) {
+    .left-side, .right-side {
+        width: 280px;
+    }
+
+    .right-side small, .left-side small {
+        display: none;
+    }
+
+    .step-area p.line4 {
+        margin-top: 45px;
+    }
+
+    ul.links > li {
+        padding: 0 0 0 25px;
+        background: url(../img/mark.png) no-repeat left 5px;
+    }
+
+    .main-box .presentation {
+        display: none;
+    }
+
+    .main-box .col-md-5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-info {
+        margin: 80px 0 0 0;
+    }
+
+    .content .news-box .frame {
+        margin-bottom: 0;
+    }
+
+    .footer .links-box {
+        margin-bottom: 30px;
+    }
+
+    .footer .feedback-box {
+        margin-bottom: 10px;
+    }
+
+    .footer .links-box,
+    .footer .feedback-box {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .footer .twitter-box {
+        display: none;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    ul.links {
+        width: auto;
+    }
+
+    .features-list li {
+        width: 350px;
+        height: 300px;
+    }
+
+    .moskito-control .features-list li {
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .scroll .header {
+        position: relative;
+        height: 90px;
+        box-shadow: none;
+    }
+
+    .scroll {
+        padding-top: 0;
+    }
+
+    .scroll .logo > a > img {
+        height: 40px;
+    }
+
+    .scroll .logo > a > span {
+        margin-top: 0;
+        font-size: 21px;
+    }
+
+    .scroll .logo {
+        margin-top: 25px;
+    }
+
+    .scroll ul.main-menu > li > a, .scroll ul.main-menu > li > span {
+        padding: 45px 15px 20px 15px;
+    }
+
+    .scroll .logo > a > span b {
+        display: block;
+        font-family: open_sansregular;
+    }
+
+    .moskito-control .main-box,
+    .main-box {
+        height: 540px;
+        background-position: center 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .moskitorizing .main-box {
+        margin-top: 80px;
+    }
+
+    .center-side {
+        display: none;
+    }
+
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .features-list li {
+        width: 260px;
+        height: 320px;
+    }
+
+    .moskito-control .features-list li {
+        height: 320px;
+    }
+
+    .core-item h3 {
+        font-size: 16px;
+    }
+
+    .main-info {
+        margin: 50px 0 0 0;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    ul.main-menu,
+    .logo {
+        float: none;
+        text-align: center;
+    }
+
+    ul.main-menu {
+        display: inline-block;
+        margin-top: 13px;
+    }
+
+    .scroll ul.main-menu > li > a,
+    .scroll ul.main-menu > li > span,
+    ul.main-menu > li > a,
+    ul.main-menu > li > span {
+        padding: 13px 15px 20px 15px;
+        color: #adbbca;
+    }
+
+    ul.main-menu > li.active > span {
+        color: #FFF;
+    }
+
+    .main-info {
+        margin: 80px 0 0;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .logo > a {
+        display: inline-block;
+    }
+
+    .scrollspy {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .hline,
+    .step-box {
+        display: none;
+    }
+
+    .left-side, .right-side {
+        width: auto;
+        text-align: center;
+        margin: 0;
+        float: none;
+    }
+
+    .right-side p, .left-side p {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 31px;
+        line-height: 41px;
+    }
+
+    .moskito-control .features-list li {
+        height: 350px;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .main-info p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .features-list li {
+        height: 340px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .main-info p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .features-list li {
+        height: 420px;
+    }
+
+    ul.main-menu > li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .features-list li {
+        height: 500px;
+    }
+
+    h1 {
+        font-size: 21px;
+        line-height: 28px;
+    }
+
+    .btn.green-btn, .btn.blue-btn {
+        font-size: 14px;
+    }
+
+    .features-pagination a {
+        width: 60px;
+    }
+}

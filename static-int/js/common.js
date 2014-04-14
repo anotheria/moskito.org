@@ -12,4 +12,16 @@ $(document).ready(function () {
     });
 
     $('#xmasGreeting').modal('show');
+
+    $('.integrate-box').hover(function () {
+        $('.integrate-box').css('margin-right', '0%');
+    }, function () {
+        $('.integrate-box').css('margin-right', '50%');
+    });
+
+    $('.inspect-box').hover(function () {
+        $('.integrate-box').css('margin-right', '100%');
+    }, function () {
+        $('.integrate-box').css('margin-right', '50%');
+    });
 });
