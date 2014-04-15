@@ -331,7 +331,7 @@ public class ClassWithMonitoredMethod {
     </p>
 </div>
 
-    <!-- spring -->
+    <!-- web -->
     <div class="docs-section">
         <h2 id="section-web" class="anchor">Web</h2>
 
@@ -367,7 +367,116 @@ public class ClassWithMonitoredMethod {
         </p>
     </div>
 
-<!-- Inspect -->
+    <!-- ehcache -->
+    <div class="docs-section">
+        <h2 id="section-ehcache" class="anchor">Ehcache</h2>
+
+        <p>
+            The ehcache integration guide will make his appearance shortly, however, in the meantime there is an
+            <a target="_blank" href="https://github.com/anotheria/moskito-examples/tree/master/ehcache">ehcache integration example project on github</a>.
+        </p>
+    </div>
+
+    <!-- proxies -->
+    <div class="docs-section">
+        <h2 id="section-proxy" class="anchor">Proxies</h2>
+
+        <p>
+            Java Runtime Proxies (java.lang.reflect.Proxy) was the first available way of MoSKito Integration back in 2007. The proxies are less convenient as
+            aspect oriented monitoring but they have their positive sides:
+            <ul>
+                <li>They monitor interfaces, not implementations, meaning that you only monitor declared methods and public contracts.</li>
+                <li>They monitor from client perspective, so each client that obtains an instance of a service-proxy is monitored separately and you can learn which parts of your application are causing the load. </li>
+            </ul>
+        </p>
+        <p>
+            Proxies are part of the moskito-core package and are integrated via maven, gradle or ant, similar to the <a href="#section-aop">AOP</a> or <a href="#section-cdi">CDI</a> pom magic.
+            Assuming you have a service:
+		<pre class="brush: xml;">
+        public interface SimpleService{
+            void doSomethingMethod();
+        }
+        </pre>
+        and an implementation:
+		<pre class="brush: xml;">
+        public class SimpleServiceImpl implements SimpleService{
+            public void doSomethingMethod(){
+        }
+        </pre>
+
+         With declared dependencies simply call this line in your code:
+		<pre class="brush: xml;">
+            SimpleService service = ProxyUtils.createServiceInstance(new SimpleServiceImpl(), "default", SimpleService.class);
+        </pre>
+        Every call that you perform through your <i>service</i> variable is monitored. If you create a second proxied <i>SimpleService</i> instance, you will have them both in MoSKito Inspect and can separate between them.
+        </p>
+        <p> Of course you are not limited to monitor 'services', each and every interface can be monitored. Visit <a target="_blank" href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Integration+Guide#MoSKito-EssentialIntegrationGuide-PROXIES">Integration guide on proxies</a> for more options and details.
+            <br/>
+            One note, though: monitored proxies are memory resident, and it's generally not a good idea to create them on each call, since they will be referenced by the registry and never die.
+        So in cases you want to measure what happens in a class, which objects are continuously reinstantiated, you need <a href="#section-callexecution">CallExecution</a>.</p>
+    </div>
+
+    <!-- callexecution -->
+    <div class="docs-section">
+        <h2 id="section-callexecution" class="anchor">Call Execution</h2>
+        <p>
+            In case you want to monitor just a part of your method or your code is splittered in multiple chunks along multiple threads/classes/methods or you simply don't have an object that is
+            supposed to live long and create new <i>executors</i> continuously (for example the command pattern) - Call Execution is what you need.<br>
+            Basically CallExecution consists of two steps:
+
+
+        </p>
+        <div class="accordion" id="accordion-callexecution1">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-callexecution1"
+                       href="#collapse-callexecution1">
+                        1) Create a producer somewhere as static field or somehow scoped bean:
+                    </a>
+                </div>
+                <div id="collapse-callexecution1" class="accordion-body in collapse">
+                    <div class="accordion-inner">
+                    <pre class="brush: java;">
+                        private OnDemandStatsProducer&lt;ServiceStats> producer;
+                        public SomeConstructorOrInitMethod(){
+                            producer = new OnDemandStatsProducer&lt;ServiceStats>("my-business-process", "category", "subsystem", ServiceStatsFactory.DEFAULT_INSTANCE);
+                            ProducerRegistryFactory.getProducerRegistryInstance().registerProducer(producer);
+                        }
+                     </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordion-callexecution2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-callexecution2"
+                       href="#collapse-callexecution2">
+                        2) Tell MoSKito when to count.
+                    </a>
+                </div>
+                <div id="collapse-callexecution2" class="accordion-body in collapse">
+                    <div class="accordion-inner">
+                        <pre class="brush: java;">
+                            CallExecution execution = producer.getStats("phase1").createCallExecution();
+                            execution.startExecution();
+                            //now we are doing something extremely important...
+                            execution.finishExecution();
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>The producer <i>my-business-process</i> will show up in MoSKito Inspect with stat <i>phase1</i>. Of course you can have multiple phases associated with one producer (or multiple calls for that matter).
+            You will also be able to pause/resume phases with multiple execution parts in 2.5.0.<br/> See <a target="_blank" href="https://github.com/anotheria/moskito-examples/tree/master/callexecution">Example on CallExecution on GitHub</a> for more details.
+        </p>
+
+    </div>
+
+
+    <!-- Inspect -->
 <div class="docs-section">
     <h2 id="section-inspect" class="anchor">Enable MoSKito Inspect</h2>
 
@@ -409,26 +518,26 @@ But for now, let's integrate the WebUI into your application, and get the party 
             </div>
             <div id="collapse-inspect-maven" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                                            <pre class="brush: xml;">
-                                                <properties>
-                                                    <moskito.version>2.4.0</moskito.version>
-                                                </properties>
-												<dependency>
-												    <groupId>net.anotheria</groupId>
-												    <artifactId>moskito-web</artifactId>
-												    <version>${moskito.version}</version>
-												</dependency>
-												<dependency>
-												    <groupId>net.anotheria</groupId>
-												    <artifactId>moskito-webui</artifactId>
-												    <version>${moskito.version}</version>
-												</dependency>
-												<dependency>
-												    <groupId>net.anotheria</groupId>
-												    <artifactId>moskito-webui-jersey</artifactId>
-												    <version>${moskito.version}</version>
-												</dependency>
-											 </pre>
+                    <pre class="brush: xml;">
+                        <properties>
+                            <moskito.version>2.4.0</moskito.version>
+                        </properties>
+                        <dependency>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-web</artifactId>
+                            <version>${moskito.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-webui</artifactId>
+                            <version>${moskito.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-webui-jersey</artifactId>
+                            <version>${moskito.version}</version>
+                        </dependency>
+                     </pre>
                 </div>
             </div>
         </div>
@@ -443,43 +552,43 @@ But for now, let's integrate the WebUI into your application, and get the party 
             </div>
             <div id="collapse-inspect-maven2" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                                            <pre class="brush: xml;">
-												<plugin>
-												    <groupId>org.apache.maven.plugins</groupId>
-												    <artifactId>maven-dependency-plugin</artifactId>
-												    <configuration>
-												        <artifactItems><artifactItem>
-												            <groupId>net.anotheria</groupId>
-												            <artifactId>moskito-webui</artifactId>
-												            <version>${moskito.version}</version>
-												            <type>jar</type>
-												            <overWrite>true</overWrite>
-												            <outputDirectory>${project.build.directory}/tmp</outputDirectory>
-												            <includes>img/**,js/**,**/*.jsp,css/**</includes>
-												        </artifactItem></artifactItems>
-												    </configuration>
-												    <executions>
-												        <execution>
-												            <phase>compile</phase>
-												            <goals>
-												                <goal>unpack</goal>
-												            </goals>
-												        </execution>
-												    </executions>
-												</plugin>
+                    <pre class="brush: xml;">
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-dependency-plugin</artifactId>
+                            <configuration>
+                                <artifactItems><artifactItem>
+                                    <groupId>net.anotheria</groupId>
+                                    <artifactId>moskito-webui</artifactId>
+                                    <version>${moskito.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.directory}/tmp</outputDirectory>
+                                    <includes>img/**,js/**,**/*.jsp,css/**</includes>
+                                </artifactItem></artifactItems>
+                            </configuration>
+                            <executions>
+                                <execution>
+                                    <phase>compile</phase>
+                                    <goals>
+                                        <goal>unpack</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                        </plugin>
 
-												<plugin>
-												    <artifactId>maven-war-plugin</artifactId>
-												    <version>2.1</version>
-												    <configuration>
-												        <webResources>
-												            <resource>
-												              <directory>${project.build.directory}/tmp</directory>
-												            </resource>
-												        </webResources>
-												    </configuration>
-												</plugin>												 
-												</pre>
+                        <plugin>
+                            <artifactId>maven-war-plugin</artifactId>
+                            <version>2.1</version>
+                            <configuration>
+                                <webResources>
+                                    <resource>
+                                      <directory>${project.build.directory}/tmp</directory>
+                                    </resource>
+                                </webResources>
+                            </configuration>
+                        </plugin>
+                        </pre>
                 </div>
             </div>
         </div>
@@ -488,58 +597,20 @@ But for now, let's integrate the WebUI into your application, and get the party 
 
     <h3 id="section-inspect-gradle" class="anchor">Gradle</h3>
 
-    <p>Gradle is super</p>
+    <p>Upcoming.</p>
 
     <h3 id="section-inspect-ant" class="anchor">Ant</h3>
 
-    <p>Gradle is also super</p>
+    <p>Upcoming.</p>
 
     <h3 id="section-inspect-toolless" class="anchor">Without any tools at all</h3>
 
-    <p>No tools are best tools</p>
+    <p>Upcoming.</p>
 
 
 </div>
 <!-- Inspect End -->
 
-<div class="docs-section">
-    <h2 id="section-5" class="anchor">Section 5</h2>
-
-    <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas
-        sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla
-        tempus aliquet. Praesent luctus hendrerit arcu non laoreet. Morbi consequat placerat magna, ac
-        ornare odio sagittis sed. Donec vitae ullamcorper purus. Vivamus non metus ac justo porta
-        volutpat.</p>
-
-    <p>Vivamus mattis accumsan erat, vel convallis risus pretium nec. Integer nunc nulla, viverra ut sem
-        non, scelerisque vehicula arcu. Fusce bibendum convallis augue sit amet lobortis. Cras porta urna
-        turpis, sodales lobortis purus adipiscing id. Maecenas ullamcorper, turpis suscipit pellentesque
-        fringilla, massa lacus pulvinar mi, nec dignissim velit arcu eget purus. Nam at dapibus tellus, eget
-        euismod nisl. Ut eget venenatis sapien. Vivamus vulputate varius mauris, vel varius nisl facilisis
-        ac. Nulla aliquet justo a nibh ornare, eu congue neque rutrum.</p>
-
-    <p>Suspendisse a orci facilisis, dignissim tortor vitae, ultrices mi. Vestibulum a iaculis lacus.
-        Phasellus vitae convallis ligula, nec volutpat tellus. Vivamus scelerisque mollis nisl, nec vehicula
-        elit egestas a. Sed luctus metus id mi gravida, faucibus convallis neque pretium. Maecenas quis
-        sapien ut leo fringilla tempor vitae sit amet leo. Donec imperdiet tempus placerat. Pellentesque
-        pulvinar ultrices nunc sed ultrices. Morbi vel mi pretium, fermentum lacus et, viverra tellus.
-        Phasellus sodales libero nec dui convallis, sit amet fermentum sapien auctor. Vestibulum ante ipsum
-        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed eu elementum nibh, quis varius
-        libero.</p>
-
-    <p>Morbi sed fermentum ipsum. Morbi a orci vulputate tortor ornare blandit a quis orci. Donec aliquam
-        sodales gravida. In ut ullamcorper nisi, ac pretium velit. Vestibulum vitae lectus volutpat,
-        consequat lorem sit amet, pulvinar tellus. In tincidunt vel leo eget pulvinar. Curabitur a eros non
-        lacus malesuada aliquam. Praesent et tempus odio. Integer a quam nunc. In hac habitasse platea
-        dictumst. Aliquam porta nibh nulla, et mattis turpis placerat eget. Pellentesque dui diam,
-        pellentesque vel gravida id, accumsan eu magna. Sed a semper arcu, ut dignissim leo.</p>
-
-    <p>Sed vitae lobortis diam, id molestie magna. Aliquam consequat ipsum quis est dictum ultrices. Aenean
-        nibh velit, fringilla in diam id, blandit hendrerit lacus. Donec vehicula rutrum tellus eget
-        fermentum. Pellentesque ac erat et arcu ornare tincidunt. Aliquam erat volutpat. Vivamus lobortis
-        urna quis gravida semper. In condimentum, est a faucibus luctus, mi dolor cursus mi, id vehicula
-        arcu risus a nibh. Pellentesque blandit sapien lacus, vel vehicula nunc feugiat sit amet.</p>
-</div>
 </div>
 
 
@@ -553,6 +624,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
                 <li><a href="#section-web">Web</a></li>
                 <li><a href="#section-ehcache">Ehcache</a></li>
                 <li><a href="#section-proxy">Proxies</a></li>
+                <li><a href="#section-callexecution">Call Execution</a></li>
                 <li class="active dropdown"><a href="#section-webui">Inspect Integration</a>
                     <ul class="dropdown-menu">
                         <li><a href="#section-inspect-maven">Maven</a></li>
