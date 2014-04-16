@@ -21,12 +21,9 @@
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/font/fonts.css"/>
     <link type="text/css" rel="stylesheet" href="static-ext/google-code-prettify/prettify.css"/>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/common.css"/>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 </head>
 
-<body data-target="#myNavbar" data-spy="scroll">
+<body data-spy="scroll" data-target="#myNavbar" data-offset="100">
 <div id="fb-root"></div>
 
 <div class="wrapper moskito-code">
@@ -72,7 +69,7 @@
 
 <!-- AOP -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-aop">AOP</h2>
+    <h2 id="section-aop" class="anchor">AOP</h2>
 
     <p>One of the easiest way to integrate MoSKito into your code is to use AOP with AspectJ. You need three steps:
     </p>
@@ -87,19 +84,23 @@
             </div>
             <div id="collapse-aop1" class="accordion-body in collapse">
                 <div class="accordion-inner">
-<pre class="prettyprint linenums"><code class="language-xml">&lt;properties>
-    &lt;moskito.version&gt;2.4.2&lt;/moskito.version&gt;
-    &lt;/properties&gt;
-    &lt;dependency&gt;
-    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
-    &lt;artifactId&gt;moskito-core&lt;/artifactId&gt;
-    &lt;version&gt;${moskito.version}&lt;/version&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-    &lt;groupId>net.anotheria&lt;/groupId&gt;
-    &lt;artifactId&gt;moskito-aop&lt;/artifactId&gt;
-    &lt;version&gt;${moskito.version}&lt;/version&gt;
-    &lt;/dependency&gt;</code></pre>
+
+
+                    <pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
+                        &lt;moskito.version&gt;2.4.2&lt;/moskito.version&gt;
+                        &lt;/properties&gt;
+                        &lt;dependency&gt;
+                        &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+                        &lt;artifactId&gt;moskito-core&lt;/artifactId&gt;
+                        &lt;version&gt;${moskito.version}&lt;/version&gt;
+                        &lt;/dependency&gt;
+                        &lt;dependency&gt;
+                        &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+                        &lt;artifactId&gt;moskito-aop&lt;/artifactId&gt;
+                        &lt;version&gt;${moskito.version}&lt;/version&gt;
+                        &lt;/dependency&gt;</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -115,6 +116,9 @@
             </div>
             <div id="collapse-aop2" class="accordion-body in collapse">
                 <div class="accordion-inner">
+
+
+
 <pre class="prettyprint linenums"><code class="language-xml">&lt;plugins&gt;
     &lt;plugin&gt;
     &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
@@ -139,6 +143,8 @@
     &lt;/executions&gt;
     &lt;/plugin&gt;
     &lt;/plugins&gt;</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -153,29 +159,33 @@
             </div>
             <div id="collapse-aop3" class="accordion-body in collapse">
                 <div class="accordion-inner">
+
+
 <pre class="prettyprint linenums"><code class="language-java">//simply add @Monitor to any class you want to monitor
     @Monitor
     public class MonitoredClass {
-    public void firstMethod(){
+    public void firstMethod() {
     //do something
     }
 
-    public void secondMethod(){
+    public void secondMethod() {
     //do something else
     }
 
     //you can also exclude methods from monitoring:
     @DontMonitor
-    public void doNotMonitorMe(){
+    public void doNotMonitorMe() {
 
     }
 
     //or you can just monitor one or multiple methods:
     public class ClassWithMonitoredMethod {
     @Monitor
-    public void firstMethod(){
+    public void firstMethod() {
     //do something
     }</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -188,7 +198,7 @@
 
 <!-- CDI start -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-cdi">CDI (JBoss, Glassfish)</h2>
+    <h2 id="section-cdi" class="anchor">CDI (JBoss, Glassfish)</h2>
 
     <p>If you want to use MoSKito in JEE Environment or simply in context of JSR-299, MoSKito CDI support is the way to
         go.</p>
@@ -203,6 +213,8 @@
             </div>
             <div id="collapse-cdi1" class="accordion-body in collapse">
                 <div class="accordion-inner">
+
+
 <pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
     &lt;moskito.version&gt;2.4.2&lt;/moskito.version&gt;
     &lt;/properties&gt;
@@ -216,6 +228,8 @@
     &lt;artifactId&gt;moskito-cdi&lt;/artifactId&gt;
     &lt;version&gt;${moskito.version}&lt;/version&gt;
     &lt;/dependency&gt;</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -231,6 +245,8 @@
             </div>
             <div id="collapse-cdi2" class="accordion-body in collapse">
                 <div class="accordion-inner">
+
+
 <pre class="prettyprint linenums"><code class="language-java">//simply add @Monitor to any CDI managed bean
     @Monitor
     public class MonitoredClass {
@@ -254,6 +270,8 @@
     public void firstMethod(){
     //do something
     }</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -271,6 +289,8 @@
             </div>
             <div id="collapse-cdi3" class="accordion-body in collapse">
                 <div class="accordion-inner">
+
+
 <pre class="prettyprint linenums"><code class="language-xml">&lt;beans xmlns="http://java.sun.com/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
@@ -286,6 +306,8 @@
     &lt;class&gt;net.anotheria.moskito.integration.cdi.DaoCallInterceptor&lt;/class&gt;
     &lt;/interceptors&gt;
     &lt;/beans&gt;</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -298,7 +320,7 @@
 
 <!-- spring -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-spring">Spring</h2>
+    <h2 id="section-spring" class="anchor">Spring</h2>
 
     <p>
         There are two easy ways to integrate MoSKito into your spring application. First: <a href="#section-aop">use
@@ -309,6 +331,8 @@
         You can also use <i>spring-aop</i> to even spare the annotations. Check out <a
             href="https://github.com/anotheria/moskito-examples/tree/master/spring2">MoSKito Spring AOP Example</a> on
         how to create your spring aspects and declare beans. Example:
+
+
 <pre class="prettyprint linenums"><code class="language-xml">&lt;!-- start AOP --&gt;
     &lt;bean id="moskitoAspect" class="org.anotheria.moskitoexamples.spring2.SpringAspect"/&gt;
 
@@ -325,32 +349,36 @@
     &lt;/aop:aspect&gt;
 
     &lt;/aop:config&gt;
-
-    &lt;/bean&gt;
     &lt;!-- end of AOP --&gt;</code></pre>
+
 
     </p>
 </div>
 
 <!-- web -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-web">Web</h2>
+    <h2 id="section-web" class="anchor">Web</h2>
 
     <p>
         MoSKito comes with some juicy set of out-of-the-box web statistics. To include them in monitoring you simply
         have to add the jar to your dependencies (or put it into the WEB-INF/lib folder):
+
+
 <pre class="prettyprint linenums"><code class="language-xml">&lt;dependency&gt;
     &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
     &lt;artifactId&gt;moskito-webui&lt;/artifactId&gt;
     &lt;version&gt;2.4.2&lt;/version&gt;
     &lt;/dependency&gt;</code></pre>
+
+
     </p>
 
     <p>
         If you don't have servlet 3.0 compliant container, you will have to add the filters either programmatically or
         to your <strong>web.xml</strong>strong>. It is pretty simple still:
-<pre class="prettyprint linenums"><code class="language-xml">&lt;pre class="brush: xml;"&gt;
-    &lt;filter&gt;
+
+
+<pre class="prettyprint linenums"><code class="language-xml">&lt;filter&gt;
     &lt;filter-name&gt;RequestURIFilter&lt;/filter-name&gt;
     &lt;filter-class&gt;net.anotheria.moskito.web.filters.RequestURIFilter&lt;/filter-class&gt;
     &lt;init-param&gt;
@@ -361,18 +389,20 @@
     &lt;filter-mapping&gt;
     &lt;filter-name&gt;RequestURIFilter&lt;/filter-name&gt;
     &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
-    &lt;/filter-mapping&gt;
-    &lt;/pre&gt;</code></pre>
+    &lt;/filter-mapping&gt;</code></pre>
+
+
     Check the <a href="https://github.com/anotheria/moskito/blob/master/moskito-web/etc/META-INF/web-fragment.xml">MoSKito
     Web Fragment</a> for the further examples and our <a
         href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Integration+Guide#MoSKito-EssentialIntegrationGuide-WEB">web
     integration page</a> for explanations on filters and listeners.
+
     </p>
 </div>
 
 <!-- ehcache -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-ehcache">Ehcache</h2>
+    <h2 id="section-ehcache" class="anchor">Ehcache</h2>
 
     <p>
         The ehcache integration guide will make his appearance shortly, however, in the meantime there is an
@@ -383,7 +413,7 @@
 
 <!-- proxies -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-proxy">Proxies</h2>
+    <h2 id="section-proxy" class="anchor">Proxies</h2>
 
     <p>
         Java Runtime Proxies (java.lang.reflect.Proxy) was the first available way of MoSKito Integration back in 2007.
@@ -403,20 +433,27 @@
             href="#section-aop">AOP</a> or <a href="#section-cdi">CDI</a> pom magic.
         Assuming you have a service:
 
+
 <pre class="prettyprint linenums"><code class="language-java">public interface SimpleService{
     void doSomethingMethod();
     }</code></pre>
 
+
     and an implementation:
+
 
 <pre class="prettyprint linenums"><code class="language-java">public class SimpleServiceImpl implements SimpleService{
     public void doSomethingMethod(){
     }</code></pre>
 
+
     With declared dependencies simply call this line in your code:
-    <pre class="prettyprint linenums"><code class="language-java">SimpleService service =
+
+
+    <pre class="prettyprint linenums"><code class="language-xml">SimpleService service =
         ProxyUtils.createServiceInstance(new SimpleServiceImpl(), "default", SimpleService.class);</code></pre>
-    </pre>
+
+
     Every call that you perform through your <i>service</i> variable is monitored. If you create a second proxied <i>SimpleService</i>
     instance, you will have them both in MoSKito Inspect and can separate between them.
     </p>
@@ -433,7 +470,7 @@
 
 <!-- callexecution -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-callexecution">Call Execution</h2>
+    <h2 id="section-callexecution" class="anchor">Call Execution</h2>
 
     <p>
         In case you want to monitor just a part of your method or your code is splittered in multiple chunks along
@@ -455,12 +492,16 @@
             </div>
             <div id="collapse-callexecution1" class="accordion-body in collapse">
                 <div class="accordion-inner">
+
+
 <pre class="prettyprint linenums"><code class="language-java">private OnDemandStatsProducer&lt;ServiceStats> producer;
     public SomeConstructorOrInitMethod(){
     producer = new OnDemandStatsProducer&lt;ServiceStats>("my-business-process", "category", "subsystem",
     ServiceStatsFactory.DEFAULT_INSTANCE);
     ProducerRegistryFactory.getProducerRegistryInstance().registerProducer(producer);
     }</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -476,11 +517,13 @@
             </div>
             <div id="collapse-callexecution2" class="accordion-body in collapse">
                 <div class="accordion-inner">
+
 <pre class="prettyprint linenums"><code class="language-java">CallExecution execution =
     producer.getStats("phase1").createCallExecution();
     execution.startExecution();
     //now we are doing something extremely important...
     execution.finishExecution();</code></pre>
+
                 </div>
             </div>
         </div>
@@ -498,7 +541,7 @@
 
 <!-- Inspect -->
 <div class="docs-section">
-    <h2 class="anchor" id="section-inspect">Enable MoSKito Inspect</h2>
+    <h2 id="section-inspect" class="anchor">Enable MoSKito Inspect</h2>
 
     <p>
         Usually after integrating something into something else, you want to see the results. To see the results of your
@@ -638,7 +681,6 @@
         <p>Upcoming.</p>
     </div>
 
-
 </div>
 <!-- Inspect End -->
 
@@ -649,14 +691,14 @@
     <nav id="myNavbar" role="navigation">
         <div id="navbarCollapse">
             <ul class="nav navbar-nav scrollspy">
-                <li class="active"><a href="#section-aop">AOP</a></li>
+                <li><a href="#section-aop">AOP</a></li>
                 <li><a href="#section-cdi">CDI</a></li>
                 <li><a href="#section-spring">Spring</a></li>
                 <li><a href="#section-web">Web</a></li>
                 <li><a href="#section-ehcache">Ehcache</a></li>
                 <li><a href="#section-proxy">Proxies</a></li>
                 <li><a href="#section-callexecution">Call Execution</a></li>
-                <li class="dropdown"><a href="#section-inspect">Inspect Integration</a>
+                <li class="active dropdown"><a href="#section-inspect">Inspect Integration</a>
                     <ul class="dropdown-menu">
                         <li><a href="#section-inspect-maven">Maven</a></li>
                         <li><a href="#section-inspect-gradle">Gradle</a></li>
@@ -676,7 +718,7 @@
 </div>
 <!-- End of content -->
 
-<div class="clients">
+<div class="clients footer">
 
     <div class="frame-title container">
         <h2>Monitored by MoSKito</h2>
@@ -727,7 +769,6 @@
 <script type="text/javascript" src="static-ext/jquery.ui.totop-1.2/js/easing.js"></script>
 <script type="text/javascript" src="static-ext/jquery.ui.totop-1.2/js/jquery.ui.totop.min.js"></script>
 <script type="text/javascript" src="static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
-
 
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 

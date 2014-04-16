@@ -1341,3 +1341,11 @@ h3.anchor {
     border-radius: 0;
     margin: -9px -15px;
 }
+
+.kwd, .prettyprint .tag {
+    color: #001993;
+}
+
+.str, .atv {
+    color: #008f00;
+}
