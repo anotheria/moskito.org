@@ -50,6 +50,7 @@
     .mac:hover .arrow-circle#carouselPrev {
         left: 0px;
     }
+
 }
 
 @media (max-width: 1200px) {
@@ -129,6 +130,15 @@
 
     .clients ul li img {
         height: 50px;
+    }
+
+    .view-box {
+        width: 554px;
+        height: 340px;
+    }
+
+    .home .main-box {
+        height: 600px;
     }
 }
 
@@ -244,6 +254,11 @@
         height: 540px;
         background-position: center 0px;
     }
+
+    .right-view-area,
+    .left-view-area {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -319,6 +334,20 @@
     .scrollspy {
         display: none;
     }
+
+    .btnline .span6 {
+        text-align: center;
+    }
+
+    .btnline .span6 .btn {
+        display: block;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .btnline .btn.green-btn {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -345,6 +374,14 @@
 
     .moskito-control .features-list li {
         height: 350px;
+    }
+
+    .view-box {
+        display: none;
+    }
+
+    .home .main-box {
+        height: 500px;
     }
 }
 
