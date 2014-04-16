@@ -1159,6 +1159,11 @@ li.core-item a.btn {
 
 .docs-section {
     margin-bottom: 80px;
+    margin-top: -100px;
+}
+
+.sub-docs-section {
+    margin-top: -100px;
 }
 
 .docs-section:last-child {
@@ -1173,14 +1178,16 @@ li.core-item a.btn {
     display: none;
 }
 
+.accordion-inner {
+    background-color: #F7F7F9;
+}
+
 h2.anchor {
-    margin-top: -90px;
-    padding-top: 90px;
+    padding-top: 100px;
 }
 
 h3.anchor {
-    margin-top: -90px;
-    padding-top: 90px;
+    padding-top: 100px;
 }
 
 .accordion-group {
@@ -1327,4 +1334,10 @@ h3.anchor {
     height: 500px;
     width: 43px;
     background-image: url(../img/rline.png);
+}
+
+.accordion-inner .prettyprint.linenums {
+    border: none;
+    border-radius: 0;
+    margin: -9px -15px;
 }
