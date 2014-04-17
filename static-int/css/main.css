@@ -727,7 +727,6 @@ h3 {
     font-family: open_sanslight;
     font-size: 13px;
     padding: 30px 0 0 0;
-    border-top: 1px solid #DDDDDD;
 
 }
 
@@ -1348,4 +1347,49 @@ h3.anchor {
 
 .str, .atv {
     color: #008f00;
+}
+
+.link-box:hover,
+.link-box {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    background: #F5F5F5;
+    font-family: open_sanslight;
+    border-radius: 5px;
+    margin: 60px 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.link-box .lb-img {
+    background: #000;
+}
+
+.link-box .lb-img img {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.link-box:hover .lb-img img {
+    opacity: 0.7;
+}
+
+.link-box p {
+    font-size: 14px;
+}
+
+.link-box h2 {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+}
+
+.link-box .paddner {
+    padding: 20px 30px;
 }
