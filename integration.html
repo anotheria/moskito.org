@@ -19,7 +19,7 @@
     <!--Icons on the page may be changed by simply inserting the icon name.
     Icon names and previews are here: http://fortawesome.github.io/Font-Awesome/icons/ -->
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/font/fonts.css"/>
-    <link type="text/css" rel="stylesheet" href="static-ext/syntaxhighlighter-3.0.83/styles/shCoreDefault.css"/>
+    <link type="text/css" rel="stylesheet" href="static-ext/google-code-prettify/prettify.css"/>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/common.css"/>
 </head>
 
@@ -66,7 +66,7 @@
 <div class="row-fluid">
 
 <div class="span9 scrollspy-content">
-		
+
 	<!-- AOP -->
 <div class="docs-section">
     <h2 id="section-aop" class="anchor">AOP</h2>
@@ -79,26 +79,28 @@
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-aop1"
                    href="#collapse-aop1">
-                    1) Define MoSKito version and declare dependencies. 
+                    1) Define MoSKito version and declare dependencies.
                 </a>
             </div>
             <div id="collapse-aop1" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                    <pre class="brush: xml;">
-                        <properties>
-                            <moskito.version>2.4.2</moskito.version>
-                        </properties>
-                        <dependency>
-                            <groupId>net.anotheria</groupId>
-                            <artifactId>moskito-core</artifactId>
-                            <version>${moskito.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>net.anotheria</groupId>
-                            <artifactId>moskito-aop</artifactId>
-                            <version>${moskito.version}</version>
-                        </dependency>
-                     </pre>
+
+
+                    <pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
+    &lt;moskito.version&gt;2.4.2&lt;/moskito.version&gt;
+&lt;/properties&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-core&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-aop&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -114,32 +116,36 @@
             </div>
             <div id="collapse-aop2" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                    <pre class="brush: xml;">
-                        <plugins>
-                            <plugin>
-                                <groupId>org.codehaus.mojo</groupId>
-                                <artifactId>aspectj-maven-plugin</artifactId>
-                                <version>1.4</version>
-                                <configuration>
-                                    <aspectLibraries>
-                                        <aspectLibrary>
-                                            <groupId>net.anotheria</groupId>
-                                            <artifactId>moskito-aop</artifactId>
-                                        </aspectLibrary>
-                                    </aspectLibraries>
-                                    <source>1.6</source>
-                                    <target>1.6</target>
-                                </configuration>
-                                <executions>
-                                    <execution>
-                                        <goals>
-                                            <goal>compile</goal>
-                                        </goals>
-                                    </execution>
-                                </executions>
-                            </plugin>
-                        </plugins>
-                    </pre>
+
+
+
+<pre class="prettyprint linenums"><code class="language-xml">&lt;plugins&gt;
+    &lt;plugin&gt;
+        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+        &lt;artifactId&gt;aspectj-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.4&lt;/version&gt;
+        &lt;configuration&gt;
+            &lt;aspectLibraries&gt;
+                &lt;aspectLibrary&gt;
+                    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+                    &lt;artifactId&gt;moskito-aop&lt;/artifactId&gt;
+                &lt;/aspectLibrary&gt;
+            &lt;/aspectLibraries&gt;
+            &lt;source&gt;1.6&lt;/source&gt;
+            &lt;target&gt;1.6&lt;/target&gt;
+        &lt;/configuration&gt;
+        &lt;executions&gt;
+            &lt;execution&gt;
+                &lt;goals&gt;
+                    &lt;goal&gt;compile&lt;/goal&gt;
+                &lt;/goals&gt;
+            &lt;/execution&gt;
+        &lt;/executions&gt;
+    &lt;/plugin&gt;
+&lt;/plugins&gt;</code></pre>
+
+
+
                 </div>
             </div>
         </div>
@@ -154,31 +160,33 @@
             </div>
             <div id="collapse-aop3" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                                            <pre class="brush: java;">
-//simply add @Monitor to any class you want to monitor
+
+
+<pre class="prettyprint linenums"><code class="language-java">//simply add @Monitor to any class you want to monitor
 @Monitor
 public class MonitoredClass {
-	public void firstMethod(){
-		//do something
-	}
+    public void firstMethod() {
+        //do something
+    }
 
-	public void secondMethod(){
-		//do something else
-	}
+    public void secondMethod() {
+        //do something else
+    }
 
 //you can also exclude methods from monitoring:
-	@DontMonitor
-	public void doNotMonitorMe(){
+    @DontMonitor
+    public void doNotMonitorMe() {
 
-	}	
-	
+    }
+
 //or you can just monitor one or multiple methods:
 public class ClassWithMonitoredMethod {
-	@Monitor
-	public void firstMethod(){
-		//do something
-	}	
-											</pre>
+    @Monitor
+    public void firstMethod() {
+        //do something
+    }</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -197,26 +205,28 @@ public class ClassWithMonitoredMethod {
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cdi1"
                    href="#collapse-cdi1">
-                    1) Define MoSKito version and declare dependencies. 
+                    1) Define MoSKito version and declare dependencies.
                 </a>
             </div>
             <div id="collapse-cdi1" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                    <pre class="brush: xml;">
-                        <properties>
-                            <moskito.version>2.4.2</moskito.version>
-                        </properties>
-                        <dependency>
-                            <groupId>net.anotheria</groupId>
-                            <artifactId>moskito-core</artifactId>
-                            <version>${moskito.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>net.anotheria</groupId>
-                            <artifactId>moskito-cdi</artifactId>
-                            <version>${moskito.version}</version>
-                        </dependency>
-                     </pre>
+
+
+<pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
+    &lt;moskito.version&gt;2.4.2&lt;/moskito.version&gt;
+&lt;/properties&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-core&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-cdi&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -232,31 +242,33 @@ public class ClassWithMonitoredMethod {
             </div>
             <div id="collapse-cdi2" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                                            <pre class="brush: java;">
-//simply add @Monitor to any CDI managed bean
+
+
+<pre class="prettyprint linenums"><code class="language-java">//simply add @Monitor to any CDI managed bean
 @Monitor
 public class MonitoredClass {
-	public void firstMethod(){
-		//do something
-	}
+    public void firstMethod(){
+        //do something
+    }
 
-	public void secondMethod(){
-		//do something else
-	}
+    public void secondMethod(){
+        //do something else
+    }
 
 //you can also exclude methods from monitoring:
-	@DontMonitor
-	public void doNotMonitorMe(){
+    @DontMonitor
+    public void doNotMonitorMe(){
 
-	}	
-	
+    }
+
 //or you can just monitor one or multiple methods:
 public class ClassWithMonitoredMethod {
-	@Monitor
-	public void firstMethod(){
-		//do something
-	}	
-											</pre>
+    @Monitor
+    public void firstMethod(){
+        //do something
+}</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -274,22 +286,24 @@ public class ClassWithMonitoredMethod {
             </div>
             <div id="collapse-cdi3" class="accordion-body in collapse">
                 <div class="accordion-inner">
-					<pre class="brush: xml;">
-						<beans xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-							xsi:schemaLocation="
-							http://java.sun.com/xml/ns/javaee
-							http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
-							<interceptors>
-								<class>net.anotheria.moskito.integration.cdi.CountInterceptor</class>
-								<class>net.anotheria.moskito.integration.cdi.CallInterceptor</class>
 
-								<!-- add those to be able to mark a category or subsystem -->
-								<class>net.anotheria.moskito.integration.cdi.WebCallInterceptor<class>
-								<class>net.anotheria.moskito.integration.cdi.ServiceCallInterceptor</class>
-								<class>net.anotheria.moskito.integration.cdi.DaoCallInterceptor</class>
-							</interceptors>
-						</beans>
-					</pre>
+
+<pre class="prettyprint linenums"><code class="language-xml">&lt;beans xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/beans_1_0.xsd"&gt;
+    &lt;interceptors&gt;
+        &lt;class&gt;net.anotheria.moskito.integration.cdi.CountInterceptor&lt;/class&gt;
+        &lt;class&gt;net.anotheria.moskito.integration.cdi.CallInterceptor&lt;/class&gt;
+
+        &lt;!-- add those to be able to mark a category or subsystem --&gt;
+        &lt;class&gt;net.anotheria.moskito.integration.cdi.WebCallInterceptor&lt;class&gt;
+        &lt;class&gt;net.anotheria.moskito.integration.cdi.ServiceCallInterceptor&lt;/class&gt;
+        &lt;class&gt;net.anotheria.moskito.integration.cdi.DaoCallInterceptor&lt;/class&gt;
+    &lt;/interceptors&gt;
+&lt;/beans&gt;</code></pre>
+
+
                 </div>
             </div>
         </div>
@@ -309,24 +323,24 @@ public class ClassWithMonitoredMethod {
     <p>
         You can also use <i>spring-aop</i> to even spare the annotations. Check out <a href="https://github.com/anotheria/moskito-examples/tree/master/spring2">MoSKito Spring AOP Example</a> on
         how to create your spring aspects and declare beans. Example:
-		<pre class="brush: xml;">
-        <!-- start AOP -->
-        <bean id="moskitoAspect" class="org.anotheria.moskitoexamples.spring2.SpringAspect"/>
 
-        <aop:config proxy-target-class="true">
-            <aop:aspect ref="moskitoAspect" order="1">
-                <aop:around method="doProfiling"
-                            pointcut="org.anotheria.moskitoexamples.spring2.SpringAspect.aroundEveryMethod() and target(org.anotheria.moskitoexamples.spring2.b.BServiceImpl)"/>
-            </aop:aspect>
-            <aop:aspect ref="moskitoAspect" order="1">
-                <aop:around method="doProfiling"
-                            pointcut="org.anotheria.moskitoexamples.spring2.SpringAspect.aroundEveryMethod() and @within(net.anotheria.moskito.aop.annotation.Monitor)"/>
-            </aop:aspect>
 
-        </aop:config>
-        <!-- end of AOP -->
+<pre class="prettyprint linenums"><code class="language-xml">&lt;!-- start AOP --&gt;
+&lt;bean id="moskitoAspect" class="org.anotheria.moskitoexamples.spring2.SpringAspect"/&gt;
 
-        </pre>
+&lt;aop:config proxy-target-class="true"&gt;
+    &lt;aop:aspect ref="moskitoAspect" order="1"&gt;
+        &lt;aop:around method="doProfiling"
+                    pointcut="org.anotheria.moskitoexamples.spring2.SpringAspect.aroundEveryMethod() and target(org.anotheria.moskitoexamples.spring2.b.BServiceImpl)"/&gt;
+    &lt;/aop:aspect&gt;
+    &lt;aop:aspect ref="moskitoAspect" order="1"&gt;
+        &lt;aop:around method="doProfiling"
+                    pointcut="org.anotheria.moskitoexamples.spring2.SpringAspect.aroundEveryMethod() and @within(net.anotheria.moskito.aop.annotation.Monitor)"/&gt;
+    &lt;/aop:aspect&gt;
+
+&lt;/aop:config&gt;
+&lt;!-- end of AOP --&gt;</code></pre>
+
 
     </p>
 </div>
@@ -337,31 +351,35 @@ public class ClassWithMonitoredMethod {
 
         <p>
            MoSKito comes with some juicy set of out-of-the-box web statistics. To include them in monitoring you simply have to add the jar to your dependencies (or put it into the WEB-INF/lib folder):
-		<pre class="brush: xml;">
-		<dependency>
-            <groupId>net.anotheria</groupId>
-            <artifactId>moskito-webui</artifactId>
-            <version>2.4.2</version>
-        </dependency>
-        </pre>
+
+
+<pre class="prettyprint linenums"><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-webui&lt;/artifactId&gt;
+    &lt;version&gt;2.4.2&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+
+
         </p>
 
         <p>
             If you don't have servlet 3.0 compliant container, you will have to add the filters either programmatically or to your <strong>web.xml</strong>strong>. It is pretty simple still:
-		<pre class="brush: xml;">
-        <filter>
-            <filter-name>RequestURIFilter</filter-name>
-            <filter-class>net.anotheria.moskito.web.filters.RequestURIFilter</filter-class>
-            <init-param>
-                <param-name>limit</param-name>
-                <param-value>100</param-value>
-            </init-param>
-        </filter>
-        <filter-mapping>
-            <filter-name>RequestURIFilter</filter-name>
-            <url-pattern>/*</url-pattern>
-        </filter-mapping>
-        </pre>
+
+
+<pre class="prettyprint linenums"><code class="language-xml">&lt;filter&gt;
+    &lt;filter-name&gt;RequestURIFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;net.anotheria.moskito.web.filters.RequestURIFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;limit&lt;/param-name&gt;
+        &lt;param-value&gt;100&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;RequestURIFilter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;</code></pre>
+
+
         Check the <a href="https://github.com/anotheria/moskito/blob/master/moskito-web/etc/META-INF/web-fragment.xml">MoSKito Web Fragment</a> for the further examples and our <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Integration+Guide#MoSKito-EssentialIntegrationGuide-WEB">web integration page</a> for explanations on filters and listeners.
 
         </p>
@@ -392,22 +410,27 @@ public class ClassWithMonitoredMethod {
         <p>
             Proxies are part of the moskito-core package and are integrated via maven, gradle or ant, similar to the <a href="#section-aop">AOP</a> or <a href="#section-cdi">CDI</a> pom magic.
             Assuming you have a service:
-		<pre class="brush: xml;">
-        public interface SimpleService{
-            void doSomethingMethod();
-        }
-        </pre>
+
+
+<pre class="prettyprint linenums"><code class="language-java">public interface SimpleService{
+    void doSomethingMethod();
+}</code></pre>
+
+
         and an implementation:
-		<pre class="brush: xml;">
-        public class SimpleServiceImpl implements SimpleService{
-            public void doSomethingMethod(){
-        }
-        </pre>
+
+
+<pre class="prettyprint linenums"><code class="language-java">public class SimpleServiceImpl implements SimpleService{
+    public void doSomethingMethod(){
+}</code></pre>
+
 
          With declared dependencies simply call this line in your code:
-		<pre class="brush: xml;">
-            SimpleService service = ProxyUtils.createServiceInstance(new SimpleServiceImpl(), "default", SimpleService.class);
-        </pre>
+
+
+<pre class="prettyprint linenums"><code class="language-xml">SimpleService service = ProxyUtils.createServiceInstance(new SimpleServiceImpl(), "default", SimpleService.class);</code></pre>
+
+
         Every call that you perform through your <i>service</i> variable is monitored. If you create a second proxied <i>SimpleService</i> instance, you will have them both in MoSKito Inspect and can separate between them.
         </p>
         <p> Of course you are not limited to monitor 'services', each and every interface can be monitored. Visit <a target="_blank" href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Integration+Guide#MoSKito-EssentialIntegrationGuide-PROXIES">Integration guide on proxies</a> for more options and details.
@@ -436,13 +459,15 @@ public class ClassWithMonitoredMethod {
                 </div>
                 <div id="collapse-callexecution1" class="accordion-body in collapse">
                     <div class="accordion-inner">
-                    <pre class="brush: java;">
-                        private OnDemandStatsProducer&lt;ServiceStats> producer;
-                        public SomeConstructorOrInitMethod(){
-                            producer = new OnDemandStatsProducer&lt;ServiceStats>("my-business-process", "category", "subsystem", ServiceStatsFactory.DEFAULT_INSTANCE);
-                            ProducerRegistryFactory.getProducerRegistryInstance().registerProducer(producer);
-                        }
-                     </pre>
+
+
+<pre class="prettyprint linenums"><code class="language-java">private OnDemandStatsProducer&lt;ServiceStats> producer;
+public SomeConstructorOrInitMethod(){
+    producer = new OnDemandStatsProducer&lt;ServiceStats>("my-business-process", "category", "subsystem", ServiceStatsFactory.DEFAULT_INSTANCE);
+    ProducerRegistryFactory.getProducerRegistryInstance().registerProducer(producer);
+}</code></pre>
+
+
                     </div>
                 </div>
             </div>
@@ -458,12 +483,12 @@ public class ClassWithMonitoredMethod {
                 </div>
                 <div id="collapse-callexecution2" class="accordion-body in collapse">
                     <div class="accordion-inner">
-                        <pre class="brush: java;">
-                            CallExecution execution = producer.getStats("phase1").createCallExecution();
-                            execution.startExecution();
-                            //now we are doing something extremely important...
-                            execution.finishExecution();
-                        </pre>
+
+<pre class="prettyprint linenums"><code class="language-java">CallExecution execution = producer.getStats("phase1").createCallExecution();
+execution.startExecution();
+//now we are doing something extremely important...
+execution.finishExecution();</code></pre>
+
                     </div>
                 </div>
             </div>
@@ -482,7 +507,7 @@ public class ClassWithMonitoredMethod {
 
     <p>
 		Usually after integrating something into something else, you want to see the results. To see the results of your MoSKito Integration you need a kind of UI. Surely you can watch the logs,
-but this is kind of boring, and there are no good pictures to show. Therefore, we will stick with the Web User Interface - short WebUI. MoSKito WebUI is integrated directly into your application. 
+but this is kind of boring, and there are no good pictures to show. Therefore, we will stick with the Web User Interface - short WebUI. MoSKito WebUI is integrated directly into your application.
 This has a set of advantages and disadvantages, as well as historical reasons, which we are not going to bring on now. A standalone version of MoSKito WebUI is on its way, and will probably hit the shelves with 2.5 or 2.6.
 But for now, let's integrate the WebUI into your application, and get the party going. There are different ways to build apps, and therefore different ways to integrate WebUI, so we will stick with the most common ones.
 <br>For more information on WebUI visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-WebUI">MoSKito WebUI Documentation</a>.
@@ -503,41 +528,40 @@ But for now, let's integrate the WebUI into your application, and get the party 
         </div>
     </div>
 
-    <h3 id="section-inspect-maven" class="anchor">Maven</h3>
+    <div class="sub-docs-section">
+        <h3 id="section-inspect-maven" class="anchor">Maven</h3>
 
-    <p>The Maven integration of the WebUI is basically a small set of pom manipulations. 
-	Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
-	</p>
-    <div class="accordion" id="accordion-inspect-maven">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-maven"
-                   href="#collapse-inspect-maven">
-                    1) Define MoSKito Version and dependencies. 
-                </a>
-            </div>
-            <div id="collapse-inspect-maven" class="accordion-body in collapse">
-                <div class="accordion-inner">
-                    <pre class="brush: xml;">
-                        <properties>
-                            <moskito.version>2.4.0</moskito.version>
-                        </properties>
-                        <dependency>
-                            <groupId>net.anotheria</groupId>
-                            <artifactId>moskito-web</artifactId>
-                            <version>${moskito.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>net.anotheria</groupId>
-                            <artifactId>moskito-webui</artifactId>
-                            <version>${moskito.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>net.anotheria</groupId>
-                            <artifactId>moskito-webui-jersey</artifactId>
-                            <version>${moskito.version}</version>
-                        </dependency>
-                     </pre>
+        <p>The Maven integration of the WebUI is basically a small set of pom manipulations.
+        Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
+        </p>
+        <div class="accordion" id="accordion-inspect-maven">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-maven"
+                       href="#collapse-inspect-maven">
+                        1) Define MoSKito Version and dependencies.
+                    </a>
+                </div>
+                <div id="collapse-inspect-maven" class="accordion-body in collapse">
+                    <div class="accordion-inner">
+<pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
+    &lt;moskito.version&gt;2.4.0&lt;/moskito.version&gt;
+&lt;/properties&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-web&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-webui&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-webui-jersey&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
                 </div>
             </div>
         </div>
@@ -552,60 +576,64 @@ But for now, let's integrate the WebUI into your application, and get the party 
             </div>
             <div id="collapse-inspect-maven2" class="accordion-body in collapse">
                 <div class="accordion-inner">
-                    <pre class="brush: xml;">
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-dependency-plugin</artifactId>
-                            <configuration>
-                                <artifactItems><artifactItem>
-                                    <groupId>net.anotheria</groupId>
-                                    <artifactId>moskito-webui</artifactId>
-                                    <version>${moskito.version}</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/tmp</outputDirectory>
-                                    <includes>img/**,js/**,**/*.jsp,css/**</includes>
-                                </artifactItem></artifactItems>
-                            </configuration>
-                            <executions>
-                                <execution>
-                                    <phase>compile</phase>
-                                    <goals>
-                                        <goal>unpack</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
+<pre class="prettyprint linenums"><code class="language-xml">&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;
+    &lt;configuration&gt;
+        &lt;artifactItems&gt;&lt;artifactItem&gt;
+            &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+            &lt;artifactId&gt;moskito-webui&lt;/artifactId&gt;
+            &lt;version&gt;${moskito.version}&lt;/version&gt;
+            &lt;type&gt;jar&lt;/type&gt;
+            &lt;overWrite&gt;true&lt;/overWrite&gt;
+            &lt;outputDirectory&gt;${project.build.directory}/tmp&lt;/outputDirectory&gt;
+            &lt;includes&gt;img/**,js/**,**/*.jsp,css/**&lt;/includes&gt;
+        &lt;/artifactItem&gt;&lt;/artifactItems&gt;
+    &lt;/configuration&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;phase&gt;compile&lt;/phase&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;unpack&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
 
-                        <plugin>
-                            <artifactId>maven-war-plugin</artifactId>
-                            <version>2.1</version>
-                            <configuration>
-                                <webResources>
-                                    <resource>
-                                      <directory>${project.build.directory}/tmp</directory>
-                                    </resource>
-                                </webResources>
-                            </configuration>
-                        </plugin>
-                        </pre>
+&lt;plugin&gt;
+    &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.1&lt;/version&gt;
+    &lt;configuration&gt;
+        &lt;webResources&gt;
+            &lt;resource&gt;
+              &lt;directory&gt;${project.build.directory}/tmp&lt;/directory&gt;
+            &lt;/resource&gt;
+        &lt;/webResources&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;</code></pre>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="sub-docs-section">
+        <h3 id="section-inspect-gradle" class="anchor">Gradle</h3>
 
-    <h3 id="section-inspect-gradle" class="anchor">Gradle</h3>
+        <p>Upcoming.</p>
+    </div>
 
-    <p>Upcoming.</p>
+    <div class="sub-docs-section">
+        <h3 id="section-inspect-ant" class="anchor">Ant</h3>
 
-    <h3 id="section-inspect-ant" class="anchor">Ant</h3>
+        <p>Upcoming.</p>
+    </div>
 
-    <p>Upcoming.</p>
+    <div class="sub-docs-section">
+        <h3 id="section-inspect-toolless" class="anchor">Without any tools at all</h3>
 
-    <h3 id="section-inspect-toolless" class="anchor">Without any tools at all</h3>
-
-    <p>Upcoming.</p>
+        <p>Upcoming.</p>
+    </div>
 
 
 </div>
@@ -625,7 +653,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
                 <li><a href="#section-ehcache">Ehcache</a></li>
                 <li><a href="#section-proxy">Proxies</a></li>
                 <li><a href="#section-callexecution">Call Execution</a></li>
-                <li class="active dropdown"><a href="#section-webui">Inspect Integration</a>
+                <li class="active dropdown"><a href="#section-inspect">Inspect Integration</a>
                     <ul class="dropdown-menu">
                         <li><a href="#section-inspect-maven">Maven</a></li>
                         <li><a href="#section-inspect-gradle">Gradle</a></li>
@@ -645,7 +673,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
 </div>
 <!-- End of content -->
 
-<div class="clients">
+<div class="clients footer">
 
     <div class="frame-title container">
         <h2>Monitored by MoSKito</h2>
@@ -688,6 +716,8 @@ But for now, let's integrate the WebUI into your application, and get the party 
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <script type="text/javascript" src="static-ext/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="static-ext/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="static-ext/google-code-prettify/application.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-2.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modalmanager.js"></script>
@@ -695,10 +725,6 @@ But for now, let's integrate the WebUI into your application, and get the party 
 <script type="text/javascript" src="static-ext/jquery.ui.totop-1.2/js/jquery.ui.totop.min.js"></script>
 <script type="text/javascript" src="static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
 
-<script type="text/javascript" src="static-ext/syntaxhighlighter-3.0.83/scripts/shCore.js"></script>
-<script type="text/javascript" src="static-ext/syntaxhighlighter-3.0.83/scripts/shBrushJScript.js"></script>
-<script type="text/javascript" src="static-ext/syntaxhighlighter-3.0.83/scripts/shBrushXml.js"></script>
-<script type="text/javascript" src="static-ext/syntaxhighlighter-3.0.83/scripts/shBrushJava.js"></script>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
 <script type="text/javascript" src="static-int/js/common.js"></script>
