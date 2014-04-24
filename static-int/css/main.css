@@ -1362,6 +1362,10 @@ h3.anchor {
     position: relative;
 }
 
+.link-box:hover {
+    background: #e9f2f9;
+}
+
 .link-box .lb-img {
     background: #000;
 }
