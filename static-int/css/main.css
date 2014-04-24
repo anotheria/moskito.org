@@ -1382,12 +1382,14 @@ h3.anchor {
 }
 
 .link-box h2 {
-    position: absolute;
-    left: 0;
-    top: 25px;
     width: 100%;
     text-align: center;
-    color: #FFF;
+    margin-top: 0;
+    color: #4F93CD;
+}
+
+.link-box:hover h2 {
+    text-decoration: underline;
 }
 
 .link-box .paddner {
