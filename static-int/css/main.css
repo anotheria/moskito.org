@@ -7,8 +7,10 @@ body {
 body {
     background: #F5F5F5;
     color: #444;
-    font-size: 12px;
+    font-size: 15px;
     padding: 0;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 300;
 }
 
 body.moskitorizing {
@@ -94,7 +96,6 @@ a:focus {
     font-size: 48px;
     font-weight: 300;
     margin-top: 30px;
-    font-family: open_sanslight;
 }
 
 .moskito-code .main-box p,
@@ -137,7 +138,6 @@ a:focus {
 .right-side p,
 .left-side p {
     font-size: 18px;
-    font-family: open_sanslight;
     line-height: 28px;
     margin-top: 45px;
     margin-right: 15px;
@@ -152,8 +152,6 @@ a:focus {
 .left-side small {
     display: block;
     color: #9B9B9B;
-    font-size: 13px;
-    font-family: open_sanslight;
     margin-right: 15px;
 }
 
@@ -200,13 +198,11 @@ a:focus {
 .tl-area {
     position: relative;
     text-align: center;
-    font-family: open_sanslight;
     margin-bottom: 80px;
 }
 
 .tl-area p {
     display: block;
-    font-size: 13px;
     color: #9b9b9b;
     padding-top: 8px;
     padding-bottom: 10px;
@@ -248,7 +244,6 @@ a:focus {
     line-height: 74px;
     font-size: 31px;
     color: #8e8e8e;
-    font-family: open_sanslight;
     position: relative;
 }
 
@@ -322,7 +317,6 @@ a:focus {
 .logo > a > span {
     display: inline-block;
     float: left;
-    font-family: open_sanslight;
     margin-left: 10px;
     font-size: 21px;
     line-height: 22px;
@@ -331,8 +325,7 @@ a:focus {
 
 .logo > a > span > b {
     display: block;
-    font-weight: normal;
-    font-family: open_sansregular;
+    font-weight: 400;
 }
 
 .scroll {
@@ -356,7 +349,6 @@ a:focus {
 .scroll .logo > a > span b {
     font-weight: normal;
     display: inline-block;
-    font-family: open_sanslight;
 }
 
 .scroll .logo > a > span {
@@ -381,14 +373,13 @@ ul.main-menu > li {
     padding: 0;
     margin: 0 0 0 2px;
     font-size: 18px;
-    font-family: open_sanslight;
-    font-weight: normal;
+    font-weight: 300;
 }
 
 ul.main-menu > li > a,
 ul.main-menu > li > span {
     display: block;
-    padding: 35px 15px 20px 15px;
+    padding: 30px 15px 20px 15px;
     color: #999;
     -webkit-transition: all 0.08s linear;
     -moz-transition: all 0.08s linear;
@@ -455,37 +446,37 @@ ul.main-menu > li.active > span {
 }
 
 h1 {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 h2 {
     font-size: 26px;
-    font-family: open_sanslight;
-    font-weight: normal;
+    font-weight: 300;
     color: #000;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 h3 {
-    font-family: open_sanslight;
     font-weight: normal;
     color: #000;
 }
 
 .modal-body {
-    font-family: open_sanslight;
-    font-size: 14px;
     line-height: 18px;
 }
 
 .main-info {
     margin-top: 80px;
-    font-family: open_sanslight;
     color: #FFF;
 }
 
 .main-info p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 26px;
     margin: 0 0 30px;
 }
@@ -504,10 +495,6 @@ h3 {
 
 .moskito-central .main-info p {
     font-size: 18px;
-}
-
-.btn {
-    font-family: open_sanslight;
 }
 
 .btn.green-btn,
@@ -595,8 +582,6 @@ h3 {
 }
 
 .frame.main-text {
-    font-family: open_sanslight;
-    font-size: 13px;
     line-height: 24px;
     margin: 50px 0 60px 0;
 }
@@ -607,26 +592,46 @@ h3 {
 
 .frame {
     background: #FFF;
-    margin: 0 0 30px;
+    padding: 80px 0;
+}
+
+.frame.black {
+    background: #222;
+    color: #888;
+}
+
+.frame.gray {
+    background: #F5F5F5;
+}
+
+.frame.black h2 {
+    color: #FFF;
+}
+
+.frame.black .core-item h3 {
+    color: #FFF;
 }
 
 .frame-title {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
-    margin-top: 35px;
+    margin-bottom: 0;
 }
 
-.frame-title p {
-    font-size: 14px;
-    font-family: open_sanslight;
+.frame-title.ft-center {
+    border: none;
+    margin-bottom: 30px;
 }
 
-.features-list .frame-title {
-    margin-bottom: 10px;
+.frame-title.ft-center h2 {
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 34px;
+}
+
+.frame-title h2 {
+    margin-top: 0;
 }
 
 .content {
-    padding-bottom: 20px;
     background: #FFF;
     overflow: hidden;
 }
@@ -642,7 +647,6 @@ h3 {
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
     border: none;
     padding: 8px 15px;
-    font-family: open_sanslight;
     font-size: 18px;
     color: #999;
     margin: 0 0 0 2px;
@@ -673,7 +677,6 @@ h3 {
 
 .core-item {
     text-align: center;
-    font-family: open_sanslight;
     margin: 0 0 15px;
 }
 
@@ -685,48 +688,31 @@ h3 {
     line-height: 24px;
 }
 
-.core-item p {
-    font-size: 14px;
-}
-
-.core-item a {
-    font-size: 14px;
-}
-
 .next-box ul {
     margin: 0;
     list-style: none;
 }
 
 .next-box ul li {
-    font-family: open_sanslight;
     margin: 0 0 10px 0;
     padding: 0 0 0 25px;
     background: url(../img/mark.png) no-repeat left 6px;
-    font-size: 13px;
 }
 
 .news {
-    font-family: open_sanslight;
     margin: 0 0 10px 0;
     padding: 0 0 0 25px;
     background: url(../img/mark.png) no-repeat left 24px;
 }
 
 .news span {
-    font-size: 12px;
     color: #9a9a9a;
-}
-
-.news p {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .footer {
     background: #f5f5f5;
-    font-family: open_sanslight;
-    font-size: 13px;
-    padding: 30px 0 0 0;
+    padding: 80px 0;
 
 }
 
@@ -745,7 +731,6 @@ ul.links > li {
     margin: 0 0 10px 0;
     padding: 0 0 0 25px;
     background: url(../img/mark.png) no-repeat left 5px;
-    font-size: 13px;
 }
 
 .footer b {
@@ -754,7 +739,8 @@ ul.links > li {
 }
 
 .clients {
-    padding: 10px 0 5px 0;
+    padding: 30px 0;
+    background: #222;
 }
 
 .hexagon {
@@ -797,12 +783,43 @@ ul.links > li {
     min-width: 320px;
 }
 
-.features-list {
-    margin-bottom: 50px;
+
+.home .frame.features-list
+{
+    border: 1px solid #EEE;
+}
+
+.frame.features-list {
+    padding: 80px 0;
+    border-bottom: 1px solid #EEE;
+}
+
+.home .features-list .frame-title {
+    margin-top: -100px;
+    border: none;
+    margin-bottom: 0;
 }
 
 .features-list .frame-title {
     position: relative;
+    border-bottom:  1px solid #EEE;
+    margin-bottom: 60px;
+    margin-top: -15px;
+    text-align: center;
+}
+
+.home .features-list .frame-title h2 {
+    margin-bottom: 50px;
+    bottom: 0;
+}
+
+.features-list .frame-title h2 {
+    margin-bottom: -80px;
+    position: relative;
+    bottom: -12px;
+    background: #FFF;
+    display: inline-block;
+    padding: 0 50px;
 }
 
 .features-list ul {
@@ -814,7 +831,7 @@ ul.links > li {
 
 .features-list li {
     width: 360px;
-    height: 300px;
+    height: 320px;
     padding: 0;
     margin: 20px 20px 0 20px;
     display: block;
@@ -840,15 +857,17 @@ li.core-item a.btn {
     left: 50%;
     width: 60px;
     margin-left: -45px;
-    background: #f5f5f5;
+    background: #F5F5F5;
     box-shadow: none;
-    border: 1px solid #efefef;
+    border: 1px solid #F5F5F5;
     -webkit-transition: all 0.08s linear;
     -moz-transition: all 0.08s linear;
     -o-transition: all 0.08s linear;
     transition: all 0.08s linear;
     color: #4f93cd;
-    font-size: 13px;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
 .features-list li a.btn:hover {
@@ -1004,7 +1023,6 @@ li.core-item a.btn {
 
 .clients ul li {
     position: relative;
-    height: 80px;
     float: left;
     margin-right: 95px;
 }
@@ -1019,18 +1037,11 @@ li.core-item a.btn {
     -o-transition: all 0.12s linear;
     transition: all 0.12s linear;
     height: 60px;
+    opacity: 0.2;
 }
 
-.clients ul li img.monochrome {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20;
-}
-
-.clients ul li:hover img.monochrome {
-    opacity: 0;
-    filter: alpha(opacity=0);
+.clients ul li:hover img {
+    opacity: 0.5;
 }
 
 .facebook-box {
@@ -1079,9 +1090,7 @@ li.core-item a.btn {
 }
 
 .scrollspy a {
-    font-size: 13px;
     padding: 4px 15px;
-    font-family: open_sanslight;
     color: #888;
     border-left: 2px solid #FFF;
 }
@@ -1129,7 +1138,6 @@ li.core-item a.btn {
 .scrollspy .active .dropdown-menu a {
     border-left: 2px solid #FFF;
     color: #888;
-    font-size: 12px;
     padding: 2px 15px;
     font-weight: normal;
     background: none;
@@ -1152,7 +1160,6 @@ li.core-item a.btn {
 .scrollspy-content {
     margin-top: 40px;
     margin-bottom: 30px;
-    font-size: 13px;
     line-height: 24px;
 }
 
@@ -1197,7 +1204,7 @@ h3.anchor {
 .home .main-box {
     background-image: url(../img/home_bg.jpg);
     position: relative;
-    height: 715px;
+    height: 755px;
 }
 
 .home .main-box .container {
@@ -1205,8 +1212,7 @@ h3.anchor {
 }
 
 .home .main-info {
-    max-width: 750px;
-    margin: 60px auto -30px;
+    margin: 80px auto 0;
     text-align: center;
 }
 
@@ -1355,9 +1361,7 @@ h3.anchor {
     text-decoration: none;
     display: block;
     background: #F5F5F5;
-    font-family: open_sanslight;
     border-radius: 5px;
-    margin: 60px 0 10px;
     overflow: hidden;
     position: relative;
 }
@@ -1381,10 +1385,6 @@ h3.anchor {
     opacity: 0.7;
 }
 
-.link-box p {
-    font-size: 14px;
-}
-
 .link-box h2 {
     width: 100%;
     text-align: center;
@@ -1397,5 +1397,9 @@ h3.anchor {
 }
 
 .link-box .paddner {
-    padding: 20px 30px;
+    padding: 40px 30px;
+}
+
+p, li {
+    line-height: 1.5;
 }
