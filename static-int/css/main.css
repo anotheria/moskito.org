@@ -50,20 +50,20 @@ a:focus {
 
 .main-box {
     height: 540px;
-    background: #000 url(../img/main_bg.jpg) no-repeat fixed center 50px;
+    background: #222 url(../img/home_bg.jpg) no-repeat fixed center 50px;
     overflow: hidden;
 }
 
 .moskito-control .main-box {
-    background: #000 url(../img/main_bg_control.jpg) no-repeat fixed center 50px;
+    background: #222 url(../img/main_bg_control.jpg) no-repeat fixed center 50px;
 }
 
 .moskito-central  .main-box {
-    background: #000 url(../img/main_bg_central.jpg) no-repeat fixed center 50px;
+    background: #222 url(../img/main_bg_central.jpg) no-repeat fixed center 50px;
 }
 
 .moskito-code  .main-box {
-    background: #000 url(../img/main_bg_code.jpg) no-repeat fixed center 50px;
+    background: #222 url(../img/main_bg_code.jpg) no-repeat fixed center 50px;
     text-align: center;
     height: auto;
 }
@@ -125,7 +125,7 @@ a:focus {
 }
 
 .moskito-support  .main-box {
-    background: #000 url(../img/main_bg_support.jpg) no-repeat fixed center 50px;
+    background: #000 url(../img/home_bg.jpg) no-repeat fixed center 50px;
 }
 
 .gray-box {
@@ -600,10 +600,16 @@ h3 {
     color: #888;
 }
 
+.moskito-support .frame.black {
+    background: url("../img/home_bg.jpg") no-repeat fixed center 50px #222;
+    position: relative;
+}
+
 .frame.gray {
     background: #F5F5F5;
 }
 
+.frame.black p,
 .frame.black h2 {
     color: #FFF;
 }
@@ -629,6 +635,12 @@ h3 {
 
 .frame-title h2 {
     margin-top: 0;
+}
+
+.frame-title p {
+    position: relative;
+    top: -20px;
+    margin-bottom: 20px;
 }
 
 .content {
@@ -734,8 +746,7 @@ ul.links > li {
 }
 
 .footer b {
-    font-family: open_sansregular;
-    font-weight: normal;
+    font-weight: 500;
 }
 
 .clients {
@@ -1357,7 +1368,7 @@ h3.anchor {
 
 .link-box:hover,
 .link-box {
-    color: #000;
+    color: #444;
     text-decoration: none;
     display: block;
     background: #F5F5F5;
@@ -1402,4 +1413,62 @@ h3.anchor {
 
 p, li {
     line-height: 1.5;
+}
+
+.paybox {
+    background: #F5F5F5;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 105px;
+    position: relative;
+}
+
+.paybox .paybox-header {
+    background: #93C01B;
+    padding: 20px 0;
+    border-bottom: 1px solid #FFF;
+}
+
+.paybox.free .paybox-header {
+    background: #5BA1DC;
+}
+
+.paybox .paybox-header h2 {
+    margin: 0;
+    color: #FFF;
+}
+
+.paybox .paybox-body {
+    padding: 30px 30px;
+    font-weight: 400;
+}
+
+.paybox .paybox-footer {
+    background: #ecf4d7;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.paybox.free .paybox-footer {
+    background: #e9f2f9;
+}
+
+.paybox .price-line {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid #FFF;
+}
+
+.paybox .price-line p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.pb-line {
+    border-top: 1px solid #DDD;
+    padding: 15px 30px;
+    font-size: 15px;
 }
