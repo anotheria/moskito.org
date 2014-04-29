@@ -794,21 +794,9 @@ ul.links > li {
     min-width: 320px;
 }
 
-
-.home .frame.features-list
-{
-    border: 1px solid #EEE;
-}
-
 .frame.features-list {
     padding: 60px 0;
     border-bottom: 1px solid #EEE;
-}
-
-.home .features-list .frame-title {
-    margin-top: -80px;
-    border: none;
-    margin-bottom: 0;
 }
 
 .features-list .frame-title {
@@ -819,10 +807,25 @@ ul.links > li {
     text-align: center;
 }
 
+/*
+
 .home .features-list .frame-title h2 {
     margin-bottom: 30px;
     bottom: 0;
 }
+
+.home .features-list .frame-title {
+    margin-top: -80px;
+    border: none;
+    margin-bottom: 0;
+}
+
+.home .frame.features-list
+{
+    border: 1px solid #EEE;
+}
+
+*/
 
 .features-list .frame-title h2 {
     margin-bottom: -80px;
