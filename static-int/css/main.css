@@ -603,6 +603,7 @@ h3 {
 .moskito-support .frame.black {
     background: url("../img/home_bg.jpg") no-repeat fixed center 50px #222;
     position: relative;
+    padding-bottom: 100px;
 }
 
 .frame.gray {
@@ -802,30 +803,14 @@ ul.links > li {
 .features-list .frame-title {
     position: relative;
     border-bottom:  1px solid #EEE;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     margin-top: -15px;
     text-align: center;
 }
 
-/*
-
-.home .features-list .frame-title h2 {
-    margin-bottom: 30px;
-    bottom: 0;
+.first-frame {
+    margin-bottom: -60px;
 }
-
-.home .features-list .frame-title {
-    margin-top: -80px;
-    border: none;
-    margin-bottom: 0;
-}
-
-.home .frame.features-list
-{
-    border: 1px solid #EEE;
-}
-
-*/
 
 .features-list .frame-title h2 {
     margin-bottom: -80px;
