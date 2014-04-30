@@ -603,6 +603,7 @@ h3 {
 .moskito-support .frame.black {
     background: url("../img/home_bg.jpg") no-repeat fixed center 50px #222;
     position: relative;
+    padding-bottom: 100px;
 }
 
 .frame.gray {
@@ -802,30 +803,14 @@ ul.links > li {
 .features-list .frame-title {
     position: relative;
     border-bottom:  1px solid #EEE;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     margin-top: -15px;
     text-align: center;
 }
 
-/*
-
-.home .features-list .frame-title h2 {
-    margin-bottom: 30px;
-    bottom: 0;
+.first-frame {
+    margin-bottom: -60px;
 }
-
-.home .features-list .frame-title {
-    margin-top: -80px;
-    border: none;
-    margin-bottom: 0;
-}
-
-.home .frame.features-list
-{
-    border: 1px solid #EEE;
-}
-
-*/
 
 .features-list .frame-title h2 {
     margin-bottom: -80px;
@@ -1445,6 +1430,7 @@ p, li {
 .paybox .paybox-body {
     padding: 30px 30px;
     font-weight: 400;
+    min-height: 100px;
 }
 
 .paybox .paybox-footer {
@@ -1455,8 +1441,18 @@ p, li {
     bottom: 0;
 }
 
+.paybox .paybox-footer span {
+    color: #93C01B;
+    font-weight: 400;
+}
+
 .paybox.free .paybox-footer {
     background: #e9f2f9;
+}
+
+.paybox.free .paybox-footer span {
+    color: #5BA1DC;
+    font-weight: 400;
 }
 
 .paybox .price-line {
@@ -1475,4 +1471,9 @@ p, li {
     border-top: 1px solid #DDD;
     padding: 15px 30px;
     font-size: 15px;
+    min-height: 40px;
+}
+
+.pb-line span {
+    line-height: 40px;
 }
