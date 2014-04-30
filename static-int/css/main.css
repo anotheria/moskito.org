@@ -1430,6 +1430,7 @@ p, li {
 .paybox .paybox-body {
     padding: 30px 30px;
     font-weight: 400;
+    min-height: 100px;
 }
 
 .paybox .paybox-footer {
@@ -1440,8 +1441,18 @@ p, li {
     bottom: 0;
 }
 
+.paybox .paybox-footer span {
+    color: #93C01B;
+    font-weight: 400;
+}
+
 .paybox.free .paybox-footer {
     background: #e9f2f9;
+}
+
+.paybox.free .paybox-footer span {
+    color: #5BA1DC;
+    font-weight: 400;
 }
 
 .paybox .price-line {
@@ -1460,4 +1471,9 @@ p, li {
     border-top: 1px solid #DDD;
     padding: 15px 30px;
     font-size: 15px;
+    min-height: 40px;
+}
+
+.pb-line span {
+    line-height: 40px;
 }
