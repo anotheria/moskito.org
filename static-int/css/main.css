@@ -1477,3 +1477,8 @@ p, li {
 .pb-line span {
     line-height: 40px;
 }
+
+.header-section {
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
