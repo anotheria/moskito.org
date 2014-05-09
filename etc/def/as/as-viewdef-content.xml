@@ -1,0 +1,229 @@
+<view name="Content" title="Content" requiredroles="admin,developer,editor">
+	<sections>
+		<!-- Section Page -->
+		<section title="Page" type="module">
+			<module>ASWebData</module>
+			<document>Pagex</document>
+			<filter name="AZ" field="name" />
+			<filter name="MissingTranslation" field="Any" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="template" comparable="true">
+					<decorator name="linkTargetName" />
+				</element>
+				<element type="field" name="c1" comparable="true">
+					<decorator name="subboxes" />
+				</element>
+				<element type="field" name="c2" comparable="true">
+					<decorator name="subboxes" />
+				</element>
+				<element type="field" name="c3" comparable="true">
+					<decorator name="subboxes" />
+				</element>
+				<element type="field" name="header" comparable="true">
+					<decorator name="subboxes" />
+				</element>
+				<element type="field" name="footer" comparable="true">
+					<decorator name="subboxes" />
+				</element>
+				<element type="field" name="mediaLinks" comparable="true">
+					<decorator name="mediaLinks" />
+				</element>
+				<element type="field" name="scripts" comparable="true">
+					<decorator name="scripts" />
+				</element>
+				<element type="field" name="localizations" comparable="true">
+					<decorator name="localizations" />
+				</element>
+				<element type="field" name="httpsonly" />
+				<element type="function" name="preview" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+				<element type="function" name="showUsages" />
+				<element type="function" name="version" />
+			</elements>
+			<dialog name="Edit" title="Edit Page">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="title" />
+					<element type="field" name="keywords" />
+					<element type="field" name="description" />
+					<element type="field" name="mediaLinks" />
+					<element type="field" name="scripts" />
+					<element type="field" name="localizations" />
+					<element type="field" name="template" />
+					<element type="field" name="attributes" />
+					<element type="empty" />
+					<element type="field" name="c1" />
+					<element type="field" name="c2" />
+					<element type="field" name="c3" />
+					<element type="empty" />
+					<element type="field" name="header" />
+					<element type="field" name="footer" />
+					<element type="empty" />
+					<element type="field" name="httpsonly" />
+					<element type="empty" />
+					<element type="field" name="accessOperation" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+
+		<!-- Section Box -->
+		<section title="Box" type="module">
+			<module>ASWebData</module>
+			<document>Box</document>
+			<filter name="AZ" field="name" />
+			<filter name="MissingTranslation" field="Any" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="type" comparable="true">
+					<decorator name="linkTargetName" />
+				</element>
+				<element type="field" name="handler" comparable="true">
+					<decorator name="linkTargetName" />
+				</element>
+				<element type="field" name="cssClass" comparable="true" />
+				<element type="field" name="mediaLinks" comparable="true">
+					<decorator name="mediaLinks" />
+				</element>
+				<element type="field" name="scripts" comparable="true">
+					<decorator name="scripts" />
+				</element>
+				<element type="field" name="localizations" comparable="true">
+					<decorator name="localizations" />
+				</element>
+				<element type="field" name="subboxes" comparable="true">
+					<decorator name="subboxes" />
+				</element>
+				<element type="field" name="guards" comparable="true">
+					<decorator name="guards" />
+				</element>
+				<element type="field" name="attributes" comparable="true">
+					<decorator name="attributes" />
+				</element>
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+                <element type="function" name="showUsages" />
+				<element type="function" name="version" />
+			</elements>
+			<dialog name="Edit" title="Edit Box">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="type" />
+					<element type="field" name="handler" />
+					<element type="field" name="mediaLinks" />
+					<element type="field" name="scripts" />
+					<element type="field" name="localizations" />
+					<element type="field" name="subboxes" />
+					<element type="field" name="cssClass" />
+					<element type="field" name="content" rich="true" />
+					<element type="field" name="parameter1" />
+					<element type="field" name="parameter2" />
+					<element type="field" name="parameter3" />
+					<element type="field" name="parameter4" />
+					<element type="field" name="parameter5" />
+					<element type="field" name="parameter6" />
+					<element type="field" name="parameter7" />
+					<element type="field" name="parameter8" />
+					<element type="field" name="parameter9" />
+					<element type="field" name="parameter10" />
+					<element type="field" name="guards" />
+					<element type="field" name="attributes" />
+					<element type="empty" />
+					<element type="field" name="accessOperation" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+
+		<!-- Section Attribute -->
+		<section title="Attribute" type="module">
+			<module>ASWebData</module>
+			<document>Attribute</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="key" comparable="true">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="value" comparable="true" />
+				<element type="field" name="subattributes" comparable="true">
+					<decorator name="subboxes" />
+				</element>
+				<element type="field" name="guards" comparable="true">
+					<decorator name="guards" />
+				</element>
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+                <element type="function" name="showUsages" />
+			</elements>
+			<dialog name="Edit" title="Edit Attribute">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="key" />
+					<element type="field" name="value" />
+					<element type="field" name="subattributes" />
+					<element type="field" name="guards" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+	</sections>
+</view>

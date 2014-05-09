@@ -1,0 +1,122 @@
+  <module name="ASWebData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+	<document name="Pagex">
+		<property type="string" name="name"/>
+		<property type="string" name="title" multilingual="true"/>
+		<property type="string" name="keywords" multilingual="true"/>
+		<property type="string" name="description" multilingual="true"/>
+		<property name="mediaLinks" type="list">
+	        <content>
+				<link name="mediaLink" type="single" target="ASSiteData.MediaLink"/>
+        	</content>
+        </property>
+        <property name="scripts" type="list">
+	        <content>
+				<link name="script" type="single" target="ASSiteData.Script"/>
+        	</content>
+        </property>
+		<link type="single" target="ASSiteData.PageTemplate" name="template"/>
+		<property name="attributes" type="list">
+	        <content>
+				<link name="attribute" type="single" target="Attribute"/>
+        	</content>
+        </property>
+		<property name="c1" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="c2" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="c3" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="header" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="footer" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="localizations" type="list">
+	        <content>
+				<link name="localization" type="single" target="ASResourceData.LocalizationBundle"/>
+        	</content>
+        </property>
+		<property type="boolean" name="httpsonly"/>
+		<link name="accessOperation" type="single" target="AnoAccessConfiguration.AccessOperation" />
+	</document>
+	<document name="Box">
+		<property name="name" type="string"/>
+		<link name="type" type="single" target="ASFederatedData.BoxType"/>
+		<link name="handler" type="single" target="ASFederatedData.BoxHandlerDef"/>
+		<property name="content" type="text" multilingual="true"/>
+		<property name="mediaLinks" type="list">
+	        <content>
+				<link name="mediaLink" type="single" target="ASSiteData.MediaLink"/>
+        	</content>
+        </property>
+        <property name="scripts" type="list">
+	        <content>
+				<link name="script" type="single" target="ASSiteData.Script"/>
+        	</content>
+        </property>
+        <property name="localizations" type="list">
+	        <content>
+				<link name="localization" type="single" target="ASResourceData.LocalizationBundle"/>
+        	</content>
+        </property>
+		<property name="subboxes" type="list">
+	        <content>
+				<link name="subbox" type="single" target="Box"/> 
+        	</content>
+        </property>
+		<property name="cssClass" type="string"/>
+		<property name="parameter1" type="string"/>
+		<property name="parameter2" type="string"/>
+		<property name="parameter3" type="string"/>
+		<property name="parameter4" type="string"/>
+		<property name="parameter5" type="string"/>
+		<property name="parameter6" type="string"/>
+		<property name="parameter7" type="string"/>
+		<property name="parameter8" type="string"/>
+		<property name="parameter9" type="string"/>
+		<property name="parameter10" type="string"/>
+		<property name="guards" type="list">
+	        <content>
+				<link name="guard" type="single" target="ASFederatedData.GuardDef"/>
+        	</content>
+        </property>
+		<property name="attributes" type="list">
+	        <content>
+				<link name="attribute" type="single" target="Attribute"/>
+        	</content>
+        </property>
+        <link name="accessOperation" type="single" target="AnoAccessConfiguration.AccessOperation" />
+	</document>
+
+	<document name="Attribute">
+		<property name="name" type="string"/>
+		<property name="key" type="string"/>
+		<property name="value" type="string"/>
+		<property name="subattributes" type="list">
+	        <content>
+				<link name="type" type="single" target="Attribute"/>
+        	</content>
+        </property>
+		<property name="guards" type="list">
+	        <content>
+				<link name="guard" type="single" target="ASFederatedData.GuardDef"/>
+        	</content>
+        </property>
+	</document>
+
+  </module>

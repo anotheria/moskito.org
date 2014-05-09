@@ -1,0 +1,4 @@
+<decorator name="iToA" class="net.anotheria.asg.util.decorators.ItoADecorator"/>
+<decorator name="idToA" class="net.anotheria.asg.util.decorators.IDItoADecorator"/>
+<decorator name="editLink" class="net.anotheria.asg.util.decorators.EditLinkDecorator"/>
+<!--decorator name="pixDec" class="net.anotheria.score.util.PictureDecorator"/-->

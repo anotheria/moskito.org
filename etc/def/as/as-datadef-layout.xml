@@ -1,0 +1,14 @@
+  <module name="ASLayoutData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+  	<document name="PageStyle">
+		<property name="name" type="string"/>
+		<property name="css" type="text"/>
+		<property type="text" name="description"/>
+  	</document>
+	<document name="PageLayout">
+		<property type="string" name="name"/>
+		<property type="string" name="layoutpage"/>
+		<link name="style" type="single" target="ASLayoutData.PageStyle"/>
+		<property type="text" name="description"/>
+	</document> 
+   </module>

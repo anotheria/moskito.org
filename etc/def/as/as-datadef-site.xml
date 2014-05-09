@@ -1,0 +1,180 @@
+  <module name="ASSiteData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/> 
+	<document name="PageTemplate">
+		<property type="string" name="name"/>
+		<link name="layout" type="single" target="ASLayoutData.PageLayout"/>
+		<link name="site"  type="single" target="ASSiteData.Site"/>
+		<property name="mediaLinks" type="list">
+	        <content>
+				<link name="mediaLinks" type="single" target="ASSiteData.MediaLink"/>
+        	</content>
+        </property>
+		<property name="scripts" type="list">
+	        <content>
+				<link name="scripts" type="single" target="ASSiteData.Script"/>
+        	</content>
+        </property>
+		<!-- cXfirst properties defines boxes which have to be inserted at the start of each column, BEFORE any other boxes are rendered -->
+		<property name="c1first" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="c2first" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="c3first" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<!-- cXlast properties defines boxes which have to be inserted at the start of each column, BEFORE any other boxes are rendered -->
+		<property name="c1last" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="c2last" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="c3last" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+        <!-- 
+			 Meta boxes are rendered in the head tag, thus allowing you to embed own javascript or styles, or metas, or whatever.
+			 PageTemplate also has its own header and footer boxes. 
+             Header boxes are rendered immediately after the <body> tag. 
+             Footer boxes are rendered immediately before the </body> tag. 
+			 Both, header and footer boxes in page layout are rendered BEFORE the header and footer boxes in the page.
+        -->
+        <property name="meta" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="header" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+		<property name="footer" type="list">
+	        <content>
+				<link name="box" type="single" target="ASWebData.Box"/>
+        	</content>
+        </property>
+        <property name="localizations" type="list">
+	        <content>
+				<link name="localization" type="single" target="ASResourceData.LocalizationBundle"/>
+        	</content>
+        </property>
+		
+		<property type="text" name="description"/>
+		
+	</document> 
+	<document name="MediaLink">
+		<property name="name" type="string"/>
+		<link name="file" type="single" target="ASResourceData.FileLink"/>
+		<property name="href" type="string"/>
+		<property name="type" type="string"/>
+		<property name="media" type="enumeration" enumeration="MediaDesc"/>
+		<property name="rel" type="enumeration" enumeration="LinkTypes"/>
+		<property name="rev" type="enumeration" enumeration="LinkTypes"/>
+		<property name="charset" type="string"/>
+		<property name="hreflang" type="string"/>
+		<property name="browserFiltering" type="string"/>
+        <property name="guards" type="list">
+            <content>
+                <link name="guard" type="single" target="ASFederatedData.GuardDef"/>
+            </content>
+        </property>
+	</document>
+	<document name="Script">
+		<property name="name" type="string"/>
+		<link name="file" type="single" target="ASResourceData.FileLink"/>
+		<property name="link" type="string"/>
+		<property name="content" type="text"/>
+		<property name="browserFiltering" type="string"/>
+        <property name="guards" type="list">
+            <content>
+                <link name="guard" type="single" target="ASFederatedData.GuardDef"/>
+            </content>
+        </property>
+	</document>
+  	<document name="Site">
+		<property name="name" type="string"/>
+		<property name="title" type="string" multilingual="true"/>
+		<property type="string" name="keywords" multilingual="true"/>
+		<property type="string" name="description" multilingual="true"/>
+		<property name="subtitle" type="string" multilingual="true"/>
+		<property name="mainNavi" type="list">
+	        <content>
+				<link name="item" type="single" target="ASSiteData.NaviItem"/>
+        	</content>
+        </property>
+		<property name="topNavi" type="list">
+	        <content>
+				<link name="item" type="single" target="ASSiteData.NaviItem"/>
+        	</content>
+        </property>
+        <link type="single" target="ASWebData.Pagex" name="startpage"/>
+        <link type="single" target="ASWebData.Pagex" name="searchpage"/>
+        <property type="boolean" name="languageselector"/>
+        <link type="single" target="ASResourceData.Image" name="headerBackground"/>
+        <link type="single" target="ASResourceData.Image" name="siteLogo"/>
+  	</document>
+  	<document name="NaviItem">
+		<property name="name" type="string" multilingual="true"/>
+		<property name="title" type="string" multilingual="true"/>
+		<property name="icon" type="image"/>
+		<property name="externalLink" type="string"/>
+		<link name="internalLink" type="single" target="ASWebData.Pagex"/>
+		<link name="pageAlias" type="single" target="ASSiteData.PageAlias"/>
+		<property name="popup" type="boolean"/>
+        <!-- sometimes it's  useful to have such class name for easy rendering with proper class name-->
+		<property name="className" type="string"/>
+		<property name="subNavi" type="list">
+	        <content>
+				<link name="item" type="single" target="ASSiteData.NaviItem"/>
+        	</content>
+        </property>
+		<property name="guards" type="list">
+	        <content>
+				<link name="guard" type="single" target="ASFederatedData.GuardDef"/>
+        	</content>
+        </property>
+        <link name="accessOperation" type="single" target="AnoAccessConfiguration.AccessOperation" />
+  	</document>
+  	<document name="EntryPoint">
+		<property name="name" type="string"/>
+		<link name="startPage" type="single" target="ASWebData.Pagex"/>
+		<link name="startSite" type="single" target="ASSiteData.Site"/>
+		<property name="type" type="enumeration" enumeration="PageAliasType"/>
+		<property name="defaultEntry" type="boolean"/>
+		<property name="domains" type="list">
+	        <content>
+				<property name="domain" type="string"/>
+        	</content>
+        </property>
+  	</document>
+  	<document name="PageAlias">
+		<property name="name" type="string"/>
+		<link name="targetPage" type="single" target="ASWebData.Pagex"/>
+		<property name="parameters" type="string"/>
+		<property name="type" type="enumeration" enumeration="PageAliasType"/>
+		<property name="pathes" type="list">
+	        <content>
+				<property name="path" type="string"/>
+        	</content>
+        </property>
+  	</document>
+  	<document name="RedirectUrl">
+		<property name="in" type="string"/>
+		<property name="out" type="string"/>
+  	</document>
+ </module>

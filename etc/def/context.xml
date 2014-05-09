@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<context>
+    <package>net.anotheria.anosite.gen</package>
+    <owner>anotheria</owner>
+    <applicationName>moskitoorg</applicationName>
+    <applicationURLPath></applicationURLPath>
+    <servletMapping>cms</servletMapping>
+    <encoding>utf-8</encoding>
+    <languages>
+        <supported>
+            <language>EN</language>
+        </supported>
+        <default>
+            <language>EN</language>
+        </default>
+    </languages>
+    <cmsVersion1>false</cmsVersion1>
+    <cmsVersion2>true</cmsVersion2>
+    <welcomeMessage>
+        Hello and Goodbye!
+    </welcomeMessage>
+</context>

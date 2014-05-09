@@ -1,0 +1,16 @@
+<module name="AnoAccessApplicationData" storageType="db">
+	<options>
+        <option name="fixture">true</option>
+        <option name="jdbcConfig">ano-access-db-configuration</option>
+    </options>
+
+	<document name="UserData">
+		<property type="string" name="userId" />
+		<property name="roles" type="list">
+			<content>
+				<link name="role" type="single" target="AnoAccessConfiguration.Role" />
+			</content>
+		</property>
+	</document>
+
+</module>

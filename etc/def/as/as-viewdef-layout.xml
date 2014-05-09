@@ -1,0 +1,95 @@
+   <!-- Layout view, here everything is defined -->
+
+	<view name="Layout" title="Layout" requiredroles="admin,developer,producer">
+		<sections>
+
+			<!-- Section PageStyle -->
+			<section title="Style" type="module">
+				<module>ASLayoutData</module>
+				<document>PageStyle</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit Style">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="css" /> 
+		      			<element type="field" name="description" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+
+			<!-- Section PageLayout -->
+			<section title="Layout" type="module">
+				<module>ASLayoutData</module>
+				<document>PageLayout</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="layoutpage" comparable="true"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="style" comparable="true"> 
+	        		   	<decorator name="linkTargetName"/>
+					</element>
+					
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit Template">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="layoutpage" /> 
+		      			<element type="field" name="style" /> 
+		      			<element type="field" name="description" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+
+    	</sections>
+	</view>

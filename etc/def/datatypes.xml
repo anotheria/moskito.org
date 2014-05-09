@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<datatypes>
+
+	<enumeration name="ActionCommandDef">
+		<element>Redirect</element>
+		<element>Forward</element>
+		<element>none</element>
+	</enumeration>
+	
+
+	<enumeration name="Priority">
+		<element>P1</element>
+		<element>P2</element>
+		<element>P3</element>
+		<element>P4</element>
+		<element>P5</element>
+		<element>P6</element>
+		<element>P7</element>
+		<element>P8</element>
+		<element>P9</element>
+		<element>P10</element>
+		<element>P11</element>
+		<element>P12</element>
+		<element>P13</element>
+		<element>P14</element>
+		<element>P15</element>
+		<element>P16</element>
+		<element>P17</element>
+		<element>P18</element>
+		<element>P19</element>
+		<element>P20</element>
+		<element>P21</element>
+		<element>P22</element>
+		<element>P23</element>
+		<element>P24</element>
+		<element>P25</element>
+		<element>P26</element>
+		<element>P27</element>
+		<element>P28</element>
+		<element>P29</element>
+		<element>P30</element>
+		<element>P31</element>
+		<element>P32</element>
+		<element>P33</element>
+		<element>P34</element>
+		<element>P35</element>
+		<element>P36</element>
+		<element>P37</element>
+		<element>P38</element>
+		<element>P39</element>
+		<element>P40</element>
+		<element>P41</element>
+		<element>P42</element>
+		<element>P43</element>
+		<element>P44</element>
+		<element>P45</element>
+		<element>P46</element>
+		<element>P47</element>
+		<element>P48</element>
+		<element>P49</element>
+		<element>P50</element>
+		<element>P51</element>
+		<element>P52</element>
+		<element>P53</element>
+		<element>P54</element>
+		<element>P55</element>
+		<element>P56</element>
+		<element>P57</element>
+		<element>P58</element>
+		<element>P59</element>
+		<element>P60</element>
+		<element>P61</element>
+		<element>P62</element>
+		<element>P63</element>
+		<element>P64</element>
+		<element>P65</element>
+		<element>P66</element>
+		<element>P67</element>
+		<element>P68</element>
+		<element>P69</element>
+		<element>P70</element>
+		<element>P71</element>
+		<element>P72</element>
+		<element>P73</element>
+		<element>P74</element>
+		<element>P75</element>
+		<element>P76</element>
+		<element>P77</element>
+		<element>P78</element>
+		<element>P79</element>
+		<element>P80</element>
+		<element>P81</element>
+		<element>P82</element>
+		<element>P83</element>
+		<element>P84</element>
+		<element>P85</element>
+		<element>P86</element>
+		<element>P87</element>
+		<element>P88</element>
+		<element>P89</element>
+		<element>P90</element>
+		<element>P91</element>
+		<element>P92</element>
+		<element>P93</element>
+		<element>P94</element>
+		<element>P95</element>
+		<element>P96</element>
+		<element>P97</element>
+		<element>P98</element>
+		<element>P99</element>
+		<element>P100</element>
+	</enumeration>
+
+	<!-- HTTP DTD types -->
+	<enumeration name="MediaDesc">
+		<element>all</element>
+		<element>screen</element>
+		<element>tty</element>
+		<element>tv</element>
+		<element>projection</element>
+		<element>handheld</element>
+		<element>print</element>
+		<element>braille</element>
+		<element>aural</element>
+	</enumeration>
+	
+	<enumeration name="LinkTypes">
+		<element>none</element>
+		<element>alternate</element>
+		<element>stylesheet</element>
+		<element>start</element>
+		<element>next</element>
+		<element>prev</element>
+		<element>contents</element>
+		<element>index</element>
+		<element>glossary</element>
+		<element>copyright</element>
+		<element>chapter</element>
+		<element>section</element>
+		<element>subsection</element>
+		<element>appendix</element>
+		<element>help</element>
+		<element>bookmark</element>
+	</enumeration>
+	
+	<enumeration name="Allowance">
+		<element>Restricted</element>
+		<element>Allowed</element>
+	</enumeration>
+	
+	<enumeration name="PageAliasType">
+		<element>Mask</element>
+		<element>Redirect</element>
+	</enumeration>
+	
+</datatypes>

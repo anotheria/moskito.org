@@ -1,0 +1,20 @@
+	<!-- Including all the bundled ano-site views -->
+	<!--@include:as-viewdef-content.xml -->
+	<!--@include:as-viewdef-site.xml -->
+	<!--@include:as-viewdef-siteconfig.xml -->
+	<!--@include:as-viewdef-layout.xml -->
+	<!--@include:as-viewdef-definitions.xml -->
+	<!--@include:as-viewdef-resources.xml -->
+	<!--@include:as-viewdef-actions.xml -->
+	<!--@include:as-viewdef-wizard.xml -->
+	<!--@include:as-viewdef-user.xml -->
+    <!--@include:as-viewdef-blog.xml -->
+    <!--@include:as-viewdef-ano-access-configuration.xml -->
+    <!--@include:as-viewdef-ano-access-application-data.xml -->
+
+	<!--  AnoSite supports following embedded user roles
+		developer: a developer who works on the code, has access to almost anything.
+		editor: the content editor, has access to content only.
+		producer: the designer or html producer who can access site meta info and layout
+		we suggest that you also insert an admin role to protect sensitive information like payment.
+	 --> 

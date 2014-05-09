@@ -1,0 +1,222 @@
+	<view name="Resources" title="Resources" requiredroles="admin,developer,editor,producer">
+		<sections>
+			<section title="Text" type="module">
+				<module>ASResourceData</module>
+				<document>TextResource</document>
+				<filter name="AZ" field="name"/>
+				<filter name="MissingTranslation" field="Any" />
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="value" comparable="true"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+	      		</elements>
+	      		<dialog name="Edit" title="Edit TextResource">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="value" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        	        	<element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+	    		    	
+			<section title="LocalizationBundles" type="module">
+				<module>ASResourceData</module>
+				<document>LocalizationBundle</document>
+				<filter name="AZ" field="name"/>
+				<filter name="MissingTranslation" field="Any" />
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+	      		</elements>
+	      		<dialog name="Edit" title="Edit LocalizationBundle">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="messages" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        	        	<element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+	    		    	
+	    	<section title="Mail Templates" type="module">
+				<module>ASResourceData</module>
+				<document>MailTemplate</document>
+				<filter name="AZ" field="name"/>
+				<filter name="MissingTranslation" field="Any" />				
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="sender" comparable="true"/>
+					<element type="field" name="subject" comparable="true"/>
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+	      		</elements>
+	      		<dialog name="Edit" title="Edit Mail Template">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="sender" />
+						<element type="field" name="senderName"/>
+		      			<element type="field" name="subject" />
+		      			<element type="field" name="message" /> 
+		      			<element type="field" name="plainMessage" />
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+	    	
+            <section title="Pictures" type="module">
+				<module>ASResourceData</module>
+                <document>Image</document>
+				<filter name="AZ" field="name"/>
+				<filter name="MissingTranslation" field="Any" />
+                <elements>
+                	<element type="field" name="id" comparable="true">
+	                    <decorator name="idToA">
+	                    <rule>3</rule>
+	                    </decorator>
+                    </element>
+                    <element type="field" name="name" comparable="default">
+	        		   	<decorator name="editLink"/>
+					</element>
+		            <element type="field" name="title" comparable="true"/>
+		            <element type="field" name="alias" comparable="true"/>
+        		    <element type="field" name="image" comparable="false"/>
+        		    <element type="field" name="size" comparable="false">
+        		    	<decorator name="fileSizeDecorator"/>
+        		    </element>
+         		    <element type="field" name="pixels" comparable="false">
+        		    	<decorator name="imageSizeDecorator"/>
+        		    </element>
+        		    <element type="function" name="edit"/>
+                    <element type="function" name="duplicate"/>
+                    <element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+	        		<element type="function" name="version"/>
+	            </elements>
+    	        <dialog name="Edit" title="Upload a picture">
+                    <elements>
+                        <element type="empty"/>
+                        <element type="field" name="id" readonly="true"/>                            
+                        <element type="field" name="name" />
+	                    <element type="field" name="title"/>
+    	                <element type="field" name="alias"/>
+    	                <element type="field" name="image"/>
+        				<element type="empty"/>
+                        <element type="list">
+                    	    <element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+    	                <element type="empty"/>
+        	      	</elements>
+				</dialog>
+			</section>
+	    	
+            <section title="File" type="module">
+				<module>ASResourceData</module>
+                <document>FileLink</document>
+				<filter name="AZ" field="name"/>
+				<filter name="MissingTranslation" field="Any" />
+                <elements>
+                	<element type="field" name="id" comparable="true">
+	                    <decorator name="idToA">
+	                    <rule>3</rule>
+	                    </decorator>
+                    </element>
+                    <element type="field" name="name" comparable="default">
+	        		   	<decorator name="editLink"/>
+					</element>
+		            <element type="field" name="title" comparable="true"/>
+        		    <element type="field" name="size" comparable="false">
+        		    	<decorator name="fileSizeDecorator"/>
+        		    </element>
+                    <element type="function" name="edit"/>
+                    <element type="function" name="duplicate"/>
+                    <element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+	        		<element type="function" name="version"/>
+	            </elements>
+    	        <dialog name="Edit" title="Upload a picture">
+                    <elements>
+                        <element type="empty"/>
+                        <element type="field" name="id" readonly="true"/>                            
+                        <element type="field" name="name" />
+	                    <element type="field" name="title"/>
+    	                <element type="field" name="file"/>
+        				<element type="empty"/>
+                        <element type="list">
+                    	    <element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+    	                <element type="empty"/>
+        	      	</elements>
+				</dialog>
+			</section>
+		</sections>
+	</view>

@@ -1,0 +1,18 @@
+<module name="ASUserData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+    <listener class="net.anotheria.anosite.cms.listener.UserListener"/>
+
+	<document name="UserDef">
+		<property name="login" type="string"/>
+		<property name="status" type="list">
+	        <content>
+				<link name="statusLink" type="single" target="ASUserData.RoleDef"/>
+        	</content>
+        </property>
+        <property name="password" type="password"/>
+	</document>
+
+	<document name="RoleDef">
+	        <property name="name" type="string"/>
+	</document>
+</module>

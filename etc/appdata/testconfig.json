@@ -1,0 +1,18 @@
+{
+	value: "xyz,or whatever the master chief develop wishes",
+	systemName: "UNCONFIGURED",
+	test: {
+		systemName: "TEST/INTEGRATION",
+	},
+	
+	prod: {
+		systemName: "PRODUCTION",
+	},
+	
+	dev: {
+		systemName: "DEVELOP",
+		leon: {
+			systemName: "DEVELOP (Leon's Tomcat)",
+		}
+	},
+}

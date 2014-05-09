@@ -1,0 +1,9 @@
+{
+	"storageDir": "/work/data/moskito.org/content",
+	"cms":{
+		storageDir: "/opt/app/moskito.org/cms/content"
+	},
+	"prod":{
+		storageDir: "/opt/app/moskito.org/prod/content"
+	}
+}

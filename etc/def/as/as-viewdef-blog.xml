@@ -1,0 +1,150 @@
+<view name="Blog" title="Blog" requiredroles="admin,developer,producer">
+    <sections>
+
+        <section title="Posts" type="module">
+            <module>ASBlogData</module>
+            <document>Post</document>
+            <filter name="AZ" field="name"/>
+
+            <elements>
+                <element type="field" name="id" comparable="true">
+                    <decorator name="idToA">
+                        <rule>3</rule>
+                    </decorator>
+                </element>
+                <element type="field" name="name" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="field" name="created" comparable="default">
+                    <decorator name="date">
+                        <rule>dd.MM.yyyy HH:mm</rule>
+                    </decorator>
+                </element>
+                <element type="field" name="updated" comparable="default">
+                    <decorator name="date">
+                        <rule>dd.MM.yyyy HH:mm</rule>
+                    </decorator>
+                </element>
+                <element type="field" name="blogger" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="field" name="tags" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="function" name="edit"/>
+                <element type="function" name="deleteWithConfirmation"/>
+                <element type="function" name="lock"/>
+                <element type="function" name="unlock"/>
+            </elements>
+
+            <dialog name="Edit" title="Edit Post">
+                <elements>
+                    <element type="empty"/>
+                    <element type="field" name="id" readonly="true"/>
+                    <element type="empty"/>
+                    <element type="field" name="name"/>
+                    <element type="empty"/>
+                    <element type="field" name="content" rich="true"/>
+                    <element type="empty"/>
+                    <element type="field" name="tags"/>
+                    <element type="empty"/>
+                    <element type="field" name="comments"/>                                           <!-- for DEBUG -->
+                    <element type="empty"/>
+                    <element type="list">
+                        <element type="function" name="updateAndClose"/>
+                        <element type="function" name="updateAndStay"/>
+                        <element type="function" name="cancel"/>
+                        <element type="function" name="lock"/>
+                        <element type="function" name="unlock"/>
+                    </element>
+                </elements>
+            </dialog>
+
+        </section>
+
+
+        <section title="Tags" type="module">
+        <module>ASBlogData</module>
+        <document>Tag</document>
+        <filter name="AZ" field="name"/>
+
+            <elements>
+                <element type="field" name="id" comparable="true">
+                    <decorator name="idToA">
+                        <rule>3</rule>
+                    </decorator>
+                </element>
+                <element type="field" name="name" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="function" name="edit"/>
+                <element type="function" name="deleteWithConfirmation"/>
+                <element type="function" name="lock"/>
+                <element type="function" name="unlock"/>
+            </elements>
+
+            <dialog name="Edit" title="Edit Tag">
+                <elements>
+                    <element type="empty"/>
+                    <element type="field" name="id" readonly="true"/>
+                    <element type="empty"/>
+                    <element type="field" name="name"/>
+                    <element type="empty"/>
+                    <element type="list">
+                        <element type="function" name="updateAndClose"/>
+                        <element type="function" name="updateAndStay"/>
+                        <element type="function" name="cancel"/>
+                        <element type="function" name="lock"/>
+                        <element type="function" name="unlock"/>
+                    </element>
+                </elements>
+            </dialog>
+
+        </section>
+
+        <section title="Comments" type="module">
+            <module>ASBlogData</module>
+            <document>Comment</document>
+
+            <elements>
+                <element type="field" name="id" comparable="true">
+                    <decorator name="idToA">
+                        <rule>3</rule>
+                    </decorator>
+                </element>
+                <element type="field" name="created" comparable="default">
+                    <decorator name="date"/>
+                </element>
+                <element type="field" name="commentator" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="field" name="content" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="function" name="edit"/>
+                <element type="function" name="deleteWithConfirmation"/>
+                <element type="function" name="lock"/>
+                <element type="function" name="unlock"/>
+            </elements>
+
+            <dialog name="Edit" title="Edit Comment">
+                <elements>
+                    <element type="empty"/>
+                    <element type="field" name="id" readonly="true"/>
+                    <element type="empty"/>
+                    <element type="field" name="content"/>
+                    <element type="empty"/>
+                    <element type="list">
+                        <element type="function" name="updateAndClose"/>
+                        <element type="function" name="updateAndStay"/>
+                        <element type="function" name="cancel"/>
+                        <element type="function" name="lock"/>
+                        <element type="function" name="unlock"/>
+                    </element>
+                </elements>
+            </dialog>
+
+        </section>
+
+    </sections>
+</view>

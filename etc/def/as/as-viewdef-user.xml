@@ -1,0 +1,84 @@
+<!-- Managing of users view -->
+<view name="User" title="UserManagement" requiredroles="admin">
+    <sections>
+        <!-- User Document section-->
+        <section title="Users" type="module">
+            <module>ASUserData</module>
+            <document>UserDef</document>
+            <filter name="AZ" field="name"/>
+            <elements>
+                <element type="field" name="id" comparable="true">
+                    <decorator name="idToA">
+                        <rule>3</rule>
+                    </decorator>
+                </element>
+                <element type="field" name="login" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="field" name="status" comparable="true">
+                    <decorator name="roles"/>
+		        </element>
+                <element type="function" name="edit"/>
+                <element type="function" name="deleteWithConfirmation"/>
+                <element type="function" name="lock"/>
+                <element type="function" name="unlock"/>
+            </elements>
+            <dialog name="Edit" title="Edit User">
+                <elements>
+                    <element type="empty"/>
+                    <element type="field" name="id" readonly="true"/>
+                    <element type="empty"/>
+                    <element type="field" name="login" title="Login" autocompleteOff="true"/>
+                    <element type="empty"/>
+                    <element type="field" name="status" title="Status"/>
+                    <element type="empty"/>
+                    <element type="field" name="password" title="Password" autocompleteOff="true"/>
+                    <element type="empty"/>
+                    <element type="list">
+                        <element type="function" name="updateAndClose"/>
+                        <element type="function" name="updateAndStay"/>
+                        <element type="function" name="cancel"/>
+                        <element type="function" name="lock"/>
+                        <element type="function" name="unlock"/>
+                    </element>
+                </elements>
+            </dialog>
+        </section>
+ 	<!-- Role Document section-->
+        <section title="Roles" type="module">
+            <module>ASUserData</module>
+            <document>RoleDef</document>
+            <filter name="AZ" field="name"/>
+            <elements>
+                <element type="field" name="id" comparable="true">
+                    <decorator name="idToA">
+                        <rule>3</rule>
+                    </decorator>
+                </element>
+                <element type="field" name="name" comparable="default">
+                    <decorator name="editLink"/>
+                </element>
+                <element type="function" name="edit"/>
+                <element type="function" name="deleteWithConfirmation"/>
+                <element type="function" name="lock"/>
+                <element type="function" name="unlock"/>
+            </elements>
+            <dialog name="Edit" title="Edit Role">
+                <elements>
+                    <element type="empty"/>
+                    <element type="field" name="id" readonly="true"/>
+                    <element type="empty"/>
+                    <element type="field" name="name" title="Name"/>
+                    <element type="empty"/>
+                    <element type="list">
+                        <element type="function" name="updateAndClose"/>
+                        <element type="function" name="updateAndStay"/>
+                        <element type="function" name="cancel"/>
+                        <element type="function" name="lock"/>
+                        <element type="function" name="unlock"/>
+                    </element>
+                </elements>
+            </dialog>
+        </section>
+    </sections>
+</view>

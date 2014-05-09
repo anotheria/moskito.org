@@ -1,0 +1,221 @@
+<view name="AnoAccessConfiguration" title="Ano-Access Configuration" requiredroles="admin,developer,editor">
+	<sections>
+		<section title="Access Operations" type="module">
+			<module>AnoAccessConfiguration</module>
+			<document>AccessOperation</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="description" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+				<element type="function" name="version" />
+			</elements>
+			<dialog name="Edit" title="Edit Access Operation">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="description" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+
+		<section title="Roles" type="module">
+			<module>AnoAccessConfiguration</module>
+			<document>Role</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="permissions" />
+				<element type="field" name="contextInitializers" />
+				<element type="field" name="description" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+				<element type="function" name="version" />
+			</elements>
+			<dialog name="Edit" title="Edit Role">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="permissions" />
+					<element type="field" name="contextInitializers" />
+					<element type="field" name="description" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+
+		<section title="Permissions" type="module">
+			<module>AnoAccessConfiguration</module>
+			<document>Permission</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="accessOperation" />
+				<element type="field" name="priority" />
+				<element type="field" name="deny" />
+				<element type="field" name="constraints" />
+				<element type="field" name="description" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+				<element type="function" name="version" />
+			</elements>
+			<dialog name="Edit" title="Edit Permission">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="accessOperation" />
+					<element type="field" name="priority" />
+					<element type="field" name="deny" />
+					<element type="field" name="constraints" />
+					<element type="field" name="description" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+
+		<section title="Constraints" type="module">
+			<module>AnoAccessConfiguration</module>
+			<document>Constraint</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="className" />
+				<element type="field" name="contextInitializers" />
+				<element type="field" name="description" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+				<element type="function" name="version" />
+			</elements>
+			<dialog name="Edit" title="Edit Constraint">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="className" />
+					<element type="field" name="contextInitializers" />
+					<element type="field" name="parameter1" />
+					<element type="field" name="parameter2" />
+					<element type="field" name="parameter3" />
+					<element type="field" name="parameter4" />
+					<element type="field" name="parameter5" />
+					<element type="field" name="description" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+
+		<section title="Context Initializers" type="module">
+			<module>AnoAccessConfiguration</module>
+			<document>ContextInitializer</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="className" />
+				<element type="field" name="description" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+				<element type="function" name="version" />
+			</elements>
+			<dialog name="Edit" title="Edit Context Initializer">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="className" />
+					<element type="field" name="description" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+	</sections>
+</view>

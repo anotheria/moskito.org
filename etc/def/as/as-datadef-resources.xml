@@ -1,0 +1,37 @@
+  <module name="ASResourceData">
+    <options>
+		<option name="fixture">true</option>
+	</options>
+  
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+	<document name="TextResource">
+		<property type="string" name="name"/>
+		<property type="string" name="value" multilingual="true"/>
+	</document>
+	<document name="LocalizationBundle">
+		<property type="string" name="name"/>
+		<property type="text" name="messages" multilingual="true"/>
+	</document>
+	<document name="MailTemplate">
+		<property type="string" name="name"/>
+		<property type="string" name="sender" multilingual="true"/>
+		<property type="string" name="senderName" multilingual="true"/>
+		<property type="string" name="subject" multilingual="true"/>
+		<property type="text" name="message" multilingual="true"/>
+		<property type="text" name="plainMessage" multilingual="true"/> 
+	</document>
+	<document name="Image">
+		<property name="name" type="string"/>
+		<property name="title" type="string" multilingual="false"/>
+		<property name="alias" type="string" multilingual="true"/>
+		<property name="image" type="image"/>
+		<property name="size" type="string"/>
+		<property name="pixels" type="string"/>
+	</document>
+	<document name="FileLink">
+		<property name="name" type="string"/>
+		<property name="title" type="string" multilingual="false"/>
+		<property name="file" type="image"/>
+		<property name="size" type="string"/>
+	</document>
+  </module>

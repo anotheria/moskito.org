@@ -1,0 +1,31 @@
+  <module name="ASGeographicData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/> 
+	<document name="Country">
+		<property type="string" name="name"/>
+		<property type="string" name="code"/>
+		<property type="string" name="description" multilingual="true"/>
+		<property name="priority" type="enumeration" enumeration="Priority"/>
+	</document>
+	<!--<document name="Region">
+  		<property name="priority" type="enumeration" enumeration="Priority"/>
+  		<property name="byDefault" type="boolean" />
+  		<property name="name" type="string"/>  		
+  		<property name="value" type="enumeration" enumeration="Region"/>
+  		<property name="description" type="string" multilingual="true"/>
+  		<link name="country" type="single" target="ASGeographicData.Country"/>
+  	</document>
+  		 -->
+	<document name="City">
+		<property type="string" name="name"/>
+		<property type="string" name="description" multilingual="true"/>
+		<!-- <link name="region" type="single" target="ASGeographicData.Region"/>-->
+		<property name="priority" type="enumeration" enumeration="Priority"/>
+	</document>
+	<document name="Language">
+		<property type="string" name="name"/>
+		<property type="string" name="code"/>
+		<property type="string" name="description" multilingual="true"/>
+		<property name="priority" type="enumeration" enumeration="Priority"/>
+	</document>		
+
+  </module>

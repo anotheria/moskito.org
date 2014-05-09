@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<version>1.0.0-SNAPSHOT</version>
+	<artifactId>moskito.org</artifactId>
+	<packaging>war</packaging>
+	<name>moskito.org</name>
+
+	<parent>
+		<groupId>net.anotheria</groupId>
+		<artifactId>ano-site-standalone</artifactId>
+		<version>2.5.4</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.anotheria</groupId>
+			<artifactId>ano-comm</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.anotheria</groupId>
+			<artifactId>ano-util</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.anotheria</groupId>
+			<artifactId>ano-prise</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.anotheria</groupId>
+			<artifactId>ano-tags</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		 <dependency>
+		 	<groupId>org.jdom</groupId>
+		 	<artifactId>jdom</artifactId>
+			<version>1.1.3</version>
+		 </dependency>
+		
+        <!-- Enable logback logging -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>ano-commercial-release</id>
+			<name>Anotheria release Repository</name>
+			<url>http://repository.anotheria.net/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>ano-commercial-snapshot</id>
+			<name>Anotheria snapshot Repository</name>
+			<url>http://repository.anotheria.net/content/repositories/snapshots</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<warName>ROOT</warName>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
+    <scm>
+        <url>https://github.com/anotheria/moskito.org</url>
+        <connection>scm:git:git@github.com:anotheria/moskito.org.git</connection>
+        <developerConnection>scm:git:git@github.com:anotheria/moskito.org.git</developerConnection>
+    </scm>
+</project>

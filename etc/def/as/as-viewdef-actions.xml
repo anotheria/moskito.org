@@ -1,0 +1,137 @@
+<view name="Actions" title="Actions" requiredroles="admin,developer">
+	<sections>
+		<section title="Mappings" type="module">
+			<module>ASCustomAction</module>
+			<document>ActionMappingDef</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default">
+					<decorator name="editLink" />
+				</element>
+				<element type="field" name="action" comparable="true" />
+				<element type="field" name="url" comparable="true" />
+				<element type="field" name="page" comparable="true" />
+				<element type="field" name="command" comparable="true" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+			</elements>
+			<dialog name="Edit" title="Edit Mapping">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="empty" />
+					<element type="field" name="action" />
+					<element type="field" name="url" />
+					<element type="field" name="page" />
+					<element type="empty" />
+					<element type="field" name="parameters" />
+					<element type="field" name="command" />
+					<element type="field" name="localizationBundles" />
+					<element type="empty" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+
+		<section title="Actions" type="module">
+			<module>ASAction</module>
+			<document>ActionDef</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+				</element>
+				<element type="field" name="name" comparable="default" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+			</elements>
+		</section>
+
+		<section title="CustomActions" type="module">
+			<module>ASCustomAction</module>
+			<document>CustomActionDef</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default" />
+				<element type="field" name="clazz" comparable="true" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+			</elements>
+			<dialog name="Edit" title="Edit Action">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="clazz" />
+					<element type="empty" />
+					<element type="field" name="accessOperation" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>					
+				</elements>
+			</dialog>
+		</section>
+
+		<section title="GenericActions" type="module">
+			<module>ASGenericAction</module>
+			<document>GenericActionDef</document>
+			<filter name="AZ" field="name" />
+			<elements>
+				<element type="field" name="id" comparable="true">
+					<decorator name="idToA">
+						<rule>3</rule>
+					</decorator>
+				</element>
+				<element type="field" name="name" comparable="default" />
+				<element type="field" name="clazz" comparable="true" />
+				<element type="function" name="edit" />
+				<element type="function" name="duplicate" />
+				<element type="function" name="deleteWithConfirmation" />
+				<element type="function" name="lock" />
+				<element type="function" name="unlock" />
+			</elements>
+			<dialog name="Edit" title="Edit Action">
+				<elements>
+					<element type="empty" />
+					<element type="field" name="id" readonly="true" />
+					<element type="field" name="name" />
+					<element type="field" name="clazz" />
+					<element type="list">
+						<element type="function" name="updateAndClose" />
+						<element type="function" name="updateAndStay" />
+						<element type="function" name="cancel" />
+						<element type="function" name="lock" />
+						<element type="function" name="unlock" />
+					</element>
+				</elements>
+			</dialog>
+		</section>
+	</sections>
+</view>

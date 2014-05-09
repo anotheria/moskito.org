@@ -1,0 +1,34 @@
+<module name="ASBlogData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+    <listener class="net.anotheria.anosite.cms.listener.BlogListener"/>
+
+    <document name="Post">
+        <property name="created" type="long"/>
+        <property name="updated" type="long"/>
+        <property name="name" type="string"/>
+        <property name="blogger" type="string"/>
+        <property name="content" type="text"/>
+        <property name="comments" type="list">
+            <content>
+                <link name="postCommentLink" type="single" target="ASBlogData.Comment"/>
+            </content>
+        </property>
+        <property name="tags" type="list">
+            <content>
+                <link name="postTagLink" type="single" target="ASBlogData.Tag"/>
+            </content>
+        </property>
+    </document>
+
+    <document name="Comment">
+        <property name="name" type="string"/>
+        <property name="created" type="long"/>
+        <property name="commentator" type="string"/>
+        <property name="content" type="string"/>
+    </document>
+
+    <document name="Tag">
+        <property name="name" type="string"/>
+    </document>
+
+</module>

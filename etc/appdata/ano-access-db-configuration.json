@@ -1,0 +1,11 @@
+{
+    "driver":"org.h2.jdbcx.JdbcDataSource",
+	"preconfiguredJdbcUrl":"jdbc:h2:mem:baldur_m2m;IGNORECASE=TRUE",
+	"vendor":"h2",
+	"host":"localhost",
+	"username":"moskito",
+	"password":"",
+    "idRecoveryAttempts":10,
+    "startId":0,
+
+}

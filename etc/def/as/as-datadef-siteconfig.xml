@@ -1,0 +1,8 @@
+  <module name="ASSiteConfig">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+	<document name="FilteredIP">
+		<property name="ipAddress" type="string"/>
+		<property name="mask" type="int"/>
+		<property name="allowance" type="enumeration" enumeration="Allowance"/>
+	</document>
+  </module>

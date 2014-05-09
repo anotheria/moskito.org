@@ -1,0 +1,63 @@
+<module name="AnoAccessConfiguration">
+	<listener class="net.anotheria.anosite.cms.listener.CRUDLogListener" />
+
+	<options>
+		<option name="fixture">true</option>
+	</options>
+
+	<document name="AccessOperation">
+		<property type="string" name="name" />
+		<property type="string" name="description" />
+	</document>
+
+	<document name="Role">
+		<property type="string" name="name" />
+		<property name="permissions" type="list">
+			<content>
+				<link name="permission" type="single" target="AnoAccessConfiguration.Permission" />
+			</content>
+		</property>
+		<property name="contextInitializers" type="list">
+			<content>
+				<link name="contextInitializer" type="single" target="AnoAccessConfiguration.ContextInitializer" />
+			</content>
+		</property>
+		<property type="string" name="description" />
+	</document>
+
+	<document name="Permission">
+		<property type="string" name="name" />
+		<link name="accessOperation" type="single" target="AnoAccessConfiguration.AccessOperation" />
+		<property name="priority" type="int" />
+		<property type="boolean" name="deny" />
+		<property name="constraints" type="list">
+			<content>
+				<link name="constraint" type="single" target="AnoAccessConfiguration.Constraint" />
+			</content>
+		</property>
+		<property type="string" name="description" />
+	</document>
+
+	<document name="Constraint">
+		<property type="string" name="name" />
+		<property type="string" name="className" />
+		<property name="contextInitializers" type="list">
+			<content>
+				<link name="contextInitializer" type="single" target="AnoAccessConfiguration.ContextInitializer" />
+			</content>
+		</property>
+		<property name="parameter1" type="string" />
+		<property name="parameter2" type="string" />
+		<property name="parameter3" type="string" />
+		<property name="parameter4" type="string" />
+		<property name="parameter5" type="string" />
+		<property type="string" name="description" />
+	</document>
+
+	<document name="ContextInitializer">
+		<property type="string" name="name" />
+		<property type="string" name="className" />
+		<property type="string" name="description" />
+	</document>
+
+</module>

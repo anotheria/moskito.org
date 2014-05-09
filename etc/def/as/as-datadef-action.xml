@@ -1,0 +1,42 @@
+<module name="ASGenericAction">
+	<listener class="net.anotheria.anosite.cms.listener.CRUDLogListener" />
+	<document name="GenericActionDef">
+		<property name="name" type="string" />
+		<property name="clazz" type="string" />
+	</document>
+</module>
+
+<module name="ASCustomAction">
+	<listener class="net.anotheria.anosite.cms.listener.CRUDLogListener" />
+	<document name="CustomActionDef">
+		<property name="name" type="string" />
+		<property name="clazz" type="string" />
+		<link name="accessOperation" type="single" target="AnoAccessConfiguration.AccessOperation" />
+	</document>
+	<document name="ActionMappingDef">
+		<!-- Used for linking -->
+		<property name="name" type="string" />
+		<link type="single" target="ASAction.ActionDef" name="action" />
+		<property name="url" type="string" />
+		<property name="parameters" type="string" />
+		<link type="single" target="ASWebData.Pagex" name="page" />
+		<property name="command" type="enumeration" enumeration="ActionCommandDef" />
+        <property name="localizationBundles" type="list">
+            <content>
+                <link name="localizationBundles" type="single" target="ASResourceData.LocalizationBundle"/>
+            </content>
+        </property>
+	</document>
+</module>
+
+<module name="ASAction" storageType="federation">
+	<listener class="net.anotheria.anosite.cms.listener.CRUDLogListener" />
+	<federatedmodule name="ASGenericAction" key="G" />
+	<federatedmodule name="ASCustomAction" key="C" />
+	<mapping sourceDocument="ActionDef" targetDocument="G.GenericActionDef" />
+	<mapping sourceDocument="ActionDef" targetDocument="C.CustomActionDef" />
+	<document name="ActionDef">
+		<property name="name" type="string" />
+		<property name="clazz" type="string" />
+	</document>
+</module>

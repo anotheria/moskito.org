@@ -1,0 +1,53 @@
+  <module name="ASGenericData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+	<document name="GenericBoxType">
+		<property name="name" type="string"/>
+		<property name="rendererpage" type="string"/>
+	</document>
+	<document name="GenericBoxHandlerDef">
+		<property name="name" type="string"/>
+		<property name="clazz" type="string"/>
+	</document>
+	<document name="GenericGuardDef">
+		<property name="name" type="string"/>
+		<property name="clazz" type="string"/>
+	</document>
+  </module>
+  <module name="ASCustomData">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+	<document name="CustomBoxType">
+		<property name="name" type="string"/>
+		<property name="rendererpage" type="string"/>
+	</document>
+	<document name="CustomBoxHandlerDef">
+		<property name="name" type="string"/>
+		<property name="clazz" type="string"/>
+	</document>
+	<document name="CustomGuardDef">
+		<property name="name" type="string"/>
+		<property name="clazz" type="string"/>
+	</document>
+  </module>
+  <module name="ASFederatedData" storageType="federation">
+    <listener class="net.anotheria.anosite.cms.listener.CRUDLogListener"/>
+	<federatedmodule name="ASGenericData" key="G"/>
+	<federatedmodule name="ASCustomData"  key="C"/>
+	<mapping sourceDocument="BoxType" targetDocument="G.GenericBoxType"/>
+	<mapping sourceDocument="BoxType" targetDocument="C.CustomBoxType"/>
+	<mapping sourceDocument="BoxHandlerDef" targetDocument="G.GenericBoxHandlerDef"/>
+	<mapping sourceDocument="BoxHandlerDef" targetDocument="C.CustomBoxHandlerDef"/>
+	<mapping sourceDocument="GuardDef" targetDocument="G.GenericGuardDef"/>
+	<mapping sourceDocument="GuardDef" targetDocument="C.CustomGuardDef"/>
+	<document name="BoxType">
+		<property name="name" type="string"/>
+		<property name="rendererpage" type="string"/>
+	</document>
+	<document name="BoxHandlerDef">
+		<property name="name" type="string"/>
+		<property name="clazz" type="string"/>
+	</document>
+	<document name="GuardDef">
+		<property name="name" type="string"/>
+		<property name="clazz" type="string"/>
+	</document>
+  </module>

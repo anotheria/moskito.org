@@ -1,0 +1,285 @@
+	<view name="Definitions" title="Definitions" requiredroles="admin,developer">
+		<sections>
+			<section title="Generic BoxType" type="module">
+				<module>ASGenericData</module>
+				<document>GenericBoxType</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="rendererpage" comparable="true"/> 
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit Generic BoxType">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="rendererpage" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+
+    		<!-- Section BoxHandler -->
+			<section title="Generic BoxHandler" type="module">
+				<module>ASGenericData</module>
+				<document>GenericBoxHandlerDef</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="clazz" comparable="true"/> 
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit Generic BoxHandler">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="clazz" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+
+    		<!-- Section Guard -->
+			<section title="Generic Guard" type="module">
+				<module>ASGenericData</module>
+				<document>GenericGuardDef</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="clazz" comparable="true"/> 
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit Generic Guard">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="clazz" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+
+			<!-- custom -->
+
+			<section title="CustomBoxType" type="module">
+				<module>ASCustomData</module>
+				<document>CustomBoxType</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="rendererpage" comparable="true"/> 
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit Custom BoxType">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="rendererpage" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+
+    		<!-- Section BoxHandler -->
+			<section title="CustomBoxHandler" type="module">
+				<module>ASCustomData</module>
+				<document>CustomBoxHandlerDef</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="clazz" comparable="true"/> 
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit CustomBoxHandler">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="clazz" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+		
+    		<!-- Section Guard -->
+			<section title="CustomGuard" type="module">
+				<module>ASCustomData</module>
+				<document>CustomGuardDef</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+	        		   	<decorator name="idToA">
+	        		 		<rule>3</rule>
+	        		   	</decorator>
+					</element>
+					<element type="field" name="name" comparable="default"> 
+	        		   	<decorator name="editLink"/>
+					</element>
+					<element type="field" name="clazz" comparable="true"/> 
+	        		<element type="function" name="edit"/>
+	        		<element type="function" name="duplicate"/>
+	        		<element type="function" name="deleteWithConfirmation"/>
+					<element type="function" name="lock"/>
+	        		<element type="function" name="unlock"/>
+                    <element type="function" name="showUsages" />
+	      		</elements>
+	      		<dialog name="Edit" title="Edit CustomGuard">
+        			<elements>
+	       				<element type="empty"/>
+		       			<element type="field" name="id" readonly="true"/>
+		      			<element type="field" name="name" /> 
+		      			<element type="field" name="clazz" /> 
+						<element type="empty"/>
+						<element type="list">
+							<element type="function" name="updateAndClose"/>
+							<element type="function" name="updateAndStay"/>
+							<element type="function" name="cancel"/>
+							<element type="function" name="lock"/>
+	        		        <element type="function" name="unlock"/>
+						</element>
+        			</elements>
+      			</dialog>
+	    	</section>
+
+			<!-- combined -->
+
+			<section title="Federated BoxTypes" type="module">
+				<module>ASFederatedData</module>
+				<document>BoxType</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+					</element>
+					<element type="field" name="name" comparable="default"/> 
+					<element type="field" name="rendererpage" comparable="true"/> 
+	        		<element type="function" name="deleteWithConfirmation"/>
+	      		</elements>
+	    	</section>
+
+    		<!-- Section BoxHandler -->
+			<section title="Federated BoxHandler" type="module">
+				<module>ASFederatedData</module>
+				<document>BoxHandlerDef</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+					</element>
+					<element type="field" name="name" comparable="default"/> 
+					<element type="field" name="clazz" comparable="true"/> 
+	        		<element type="function" name="deleteWithConfirmation"/>
+	      		</elements>
+	    	</section>
+    		<!-- Section BoxHandler -->
+			<section title="Federated Guard" type="module">
+				<module>ASFederatedData</module>
+				<document>GuardDef</document>
+				<filter name="AZ" field="name"/>
+				<elements>
+					<element type="field" name="id" comparable="true">
+					</element>
+					<element type="field" name="name" comparable="default"/> 
+					<element type="field" name="clazz" comparable="true"/> 
+	        		<element type="function" name="deleteWithConfirmation"/>
+	      		</elements>
+	    	</section>
+		</sections>
+	</view>

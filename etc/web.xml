@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2.3.dtd">
+
+<web-app>
+	<display-name>ano-home</display-name>
+
+    <!--  MOSKITO UI-->
+    <!--  Adding filter to moskito ui which redirects requests to /mui/* to moskito user interface -->
+    <filter>
+        <filter-name>MoskitoUIFilter</filter-name>
+        <filter-class>net.anotheria.moskito.webui.MoskitoUIFilter</filter-class>
+        <init-param>
+            <param-name>path</param-name>
+            <param-value>/mui/</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>MoskitoUIFilter</filter-name>
+        <url-pattern>/mui/*</url-pattern>
+    </filter-mapping>
+    <!-- REST INTERFACE -->
+    <servlet>
+        <servlet-name>JerseyServletContainer</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>net.anotheria.moskito.webui</param-value>
+        </init-param>
+        <init-param>
+            <param-name>com.sun.jersey.config.feature.DisableXmlSecurity</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JerseyServletContainer</servlet-name>
+        <url-pattern>/muirest/*</url-pattern>
+    </servlet-mapping>
+    <!--  / MOSKITO UI END -->
+
+	<servlet>
+		<servlet-name>fileservlet</servlet-name>
+		<servlet-class>net.anotheria.webutils.filehandling.servlet.FileDeliveryServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>contentpage</servlet-name>
+		<servlet-class>net.anotheria.anosite.content.servlet.ContentPageServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>stylesheet</servlet-name>
+		<servlet-class>net.anotheria.anosite.content.servlet.StyleSheetServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>actionservlet</servlet-name>
+		<servlet-class>net.anotheria.anosite.action.servlet.ActionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>fileservlet</servlet-name>
+		<url-pattern>/file/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>stylesheet</servlet-name>
+		<url-pattern>/styles/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>contentpage</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>actionservlet</servlet-name>
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
+
+    <servlet>
+       <servlet-name>cmsImageServlet</servlet-name>
+       <servlet-class>net.anotheria.anosite.content.servlet.resource.CMSImageServlet</servlet-class>
+   </servlet>
+   <servlet>
+      <servlet-name>cmsFileServlet</servlet-name>
+      <servlet-class>net.anotheria.anosite.content.servlet.resource.CMSFileServlet</servlet-class>
+   </servlet>
+
+    <servlet-mapping>
+        <servlet-name>cmsImageServlet</servlet-name>
+        <url-pattern>/cmsImage/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>cmsFileServlet</servlet-name>
+        <url-pattern>/cmsFile/*</url-pattern>
+    </servlet-mapping>
+
+	<filter>
+		<filter-name>FirstFilter</filter-name>
+		<filter-class>net.anotheria.anosite.content.filter.FirstFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>RequestURIFilter</filter-name>
+		<filter-class>net.anotheria.moskito.web.filters.RequestURIFilter</filter-class>
+		<init-param>
+			<param-name>limit</param-name>
+			<param-value>500</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>UserAgentFilter</filter-name>
+		<filter-class>net.anotheria.moskito.web.filters.UserAgentFilter</filter-class>
+		<init-param>
+			<param-name>limit</param-name>
+			<param-value>500</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>MoskitoCommandFilter</filter-name>
+		<filter-class>net.anotheria.moskito.web.filters.MoskitoCommandFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>JourneyFilter</filter-name>
+		<filter-class>net.anotheria.moskito.web.filters.JourneyFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>LanguageFilter</filter-name>
+		<filter-class>net.anotheria.anosite.content.filter.LanguageFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>EditModeSwitcher</filter-name>
+		<filter-class>net.anotheria.anosite.content.filter.EditModeSwitcherFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>IPFilter</filter-name>
+		<filter-class>net.anotheria.anosite.shared.presentation.filter.IPFilter</filter-class>
+		<init-param>
+			<param-name>maintenancePage</param-name>
+			<param-value>blockedip.html</param-value>
+		</init-param>
+		<init-param>
+			<param-name>restrictedExtensions</param-name>
+			<param-value>
+				html,
+				action
+				</param-value>
+		</init-param>
+		<init-param>
+			<param-name>restrictedPaths</param-name>
+			<param-value>
+				cms,
+				mui,
+				admintool
+				</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>EntryPointFilter</filter-name>
+		<filter-class>net.anotheria.anosite.content.filter.EntryPointFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>APIFilter</filter-name>
+		<filter-class>net.anotheria.anoplass.api.filter.APIFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>CMSFilter</filter-name>
+		<filter-class>net.anotheria.anosite.gen.shared.filter.CMSFilter</filter-class>
+		<init-param>
+			<param-name>path</param-name>
+			<param-value>/cms/</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>FirstFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>MoskitoCommandFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>JourneyFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>RequestURIFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>UserAgentFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LanguageFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>EditModeSwitcher</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CMSFilter</filter-name>
+		<url-pattern>/cms/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>EntryPointFilter</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>APIFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IPFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- taglib definitions -->
+	<taglib>
+		<taglib-uri>http://www.anotheria.net/tags/anosite</taglib-uri>
+		<taglib-location>/WEB-INF/tld/anosite.tld</taglib-location>
+	</taglib>
+
+    <listener>
+		<listener-class>
+			net.anotheria.moskito.webui.util.StartStopListener
+		</listener-class>
+	</listener>
+    <listener>
+		<listener-class>
+			net.anotheria.moskito.web.session.SessionCountProducer
+		</listener-class>
+    </listener>
+    <listener>
+		<listener-class>
+			net.anotheria.moskito.webui.util.SetupPreconfiguredAccumulators
+		</listener-class>
+	</listener>
+    <listener>
+        <listener-class>
+            net.anotheria.moskitoorg.shared.listener.ContextInitializer
+        </listener-class>
+    </listener>
+    <listener>
+        <listener-class>
+            net.anotheria.anosite.shared.presentation.listener.ContextInitializer
+        </listener-class>
+    </listener>
+    <listener>
+        <listener-class>
+            net.anotheria.anosite.shared.presentation.listener.APISessionListener
+        </listener-class>
+    </listener>
+
+
+	<welcome-file-list>
+		<welcome-file></welcome-file>
+	</welcome-file-list>
+</web-app> 
