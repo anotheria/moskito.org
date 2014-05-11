@@ -4,14 +4,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Health and Performance Monitoring for Java Applications | MoSKito</title>
+    <title>${pagex.title}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description"
-          content="MoSKito: Health and Performance Monitoring for Java applications. Complete ecosystem for DevOps. Free and open source"/>
+          content="${site.description}"/>
     <meta name="keywords"
-          content="java monitoring, application monitoring, application performance management,
-          open source java monitoring, devops, moskito, health monitoring"/>
+          content="${site.keywords}"/>
     <link rel="shortcut icon" href="static-int/img/favicon.ico" type="image/x-icon">
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-2.3.2/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-2.3.2/css/bootstrap-responsive.css"/>
