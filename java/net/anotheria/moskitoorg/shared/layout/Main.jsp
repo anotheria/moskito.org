@@ -39,11 +39,15 @@
     <!-- HEADER -->
     <ano:define id="__boxlist" toScope="request" name="page" property="headerBoxes" />
     <jsp:include page="/net/anotheria/anosite/layout/templates/ListIterator.jsp" flush="false" />
+    <!-- HEADER END-->
 
+    <!-- Column1 -->
     <div class="content">
         <ano:define id="__boxlist" toScope="request" name="page" property="column1" />
         <jsp:include page="/net/anotheria/anosite/layout/templates/ListIterator.jsp" flush="false" />
     </div>
+    <!-- Column1 END -->
+
 
 
     <!-- Column2 -->
@@ -51,16 +55,19 @@
         <ano:define id="__boxlist" toScope="request" name="page" property="column2" />
         <jsp:include page="/net/anotheria/anosite/layout/templates/ListIterator.jsp" flush="false" />
     </div>
+    <!-- Column2 END -->
 
     <!-- Column3 -->
     <ano:define id="__boxlist" toScope="request" name="page" property="column3" />
     <jsp:include page="/net/anotheria/anosite/layout/templates/ListIterator.jsp" flush="false" />
+    <!-- Column3 END -->
 
 </div>
 
-    <!-- Footer -->
+    <!-- Footer Boxes -->
     <ano:define id="__boxlist" toScope="request" name="page" property="footerBoxes" />
     <jsp:include page="/net/anotheria/anosite/layout/templates/ListIterator.jsp" flush="false" />
+    <!-- Footer Boxes END -->
 
 
 </body>
