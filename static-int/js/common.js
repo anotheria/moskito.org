@@ -24,4 +24,9 @@ $(document).ready(function () {
     }, function () {
         $('.integrate-box').css('margin-right', '50%');
     });
+
+    $('.bar-link a').click(function () {
+        $(this).parent().toggleClass('active');
+        return false;
+    });
 });

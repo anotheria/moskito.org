@@ -389,7 +389,7 @@ ul.main-menu > li > span {
 
 .scroll ul.main-menu > li > a,
 .scroll ul.main-menu > li > span {
-    padding: 13px 15px 20px 15px;
+    padding: 10px 15px 20px 15px;
 }
 
 .scroll ul.main-menu > li {
@@ -1481,4 +1481,144 @@ p, li {
 .header-section {
     margin-bottom: 80px;
     margin-top: 20px;
+}
+
+.main-menu .bar-link {
+    margin-left: 50px;
+}
+
+.main-menu .bar-link > a {
+    position: relative;
+    top: -3px;
+    z-index: 1000;
+    padding: 0;
+    margin: 30px 15px 20px;
+}
+
+.scroll ul.main-menu > li.bar-link > a {
+    padding: 0;
+    margin: 10px 15px 20px;
+}
+
+.close-bar-box {
+    position: absolute;
+    top: -1px;
+    left: 50px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url(../img/close.png);
+    background-repeat: no-repeat;
+    background-size: 36px auto;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    visibility: hidden;
+}
+
+.main-menu .bar-link .bar-box {
+    display: block;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    position: relative;
+    right: 0;
+}
+
+.main-menu .bar-link.active .bar-box {
+    right: -50px;
+    opacity: 0;
+}
+
+.main-menu .bar-link.active .close-bar-box {
+    left: -1px;
+    opacity: 0.3;
+    visibility: visible;
+}
+
+.main-menu .bar-link a:hover .close-bar-box {
+    opacity: 0.5;
+}
+
+.right-menu {
+    position: fixed;
+    background: rgba(0,0,0,0);
+    width: 400px;
+    top: 0;
+    right: -200px;
+    bottom: 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    visibility: hidden;
+    padding-top: 120px;
+    padding-left: 50px;
+}
+
+.scroll .right-menu {
+    padding-top: 80px;
+}
+
+.main-menu .bar-link.active .right-menu {
+    background: rgba(0,0,0,0.8);
+    right: 0;
+    visibility: visible;
+}
+
+.main-menu .icon-bar {
+    background-color: #999;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 36px;
+    margin-top: 8px;
+}
+
+.main-menu .bar-link a:hover .icon-bar {
+    background-color: #777;
+}
+
+.main-menu .icon-bar:first-child {
+    margin-top: 7px;
+}
+
+.right-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.right-menu ul li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.right-menu ul li a {
+    font-size: 18px;
+    color: #FFF;
+    display: block;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.main-menu .bar-link.active .right-menu ul li a {
+    opacity: 1;
+}
+
+.main-menu .bar-link.active .right-menu ul li a:hover {
+    opacity: 0.6;
+    text-decoration: none;
 }

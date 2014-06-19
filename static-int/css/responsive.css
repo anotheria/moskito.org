@@ -348,6 +348,10 @@
     .btnline .btn.green-btn {
         margin-top: 10px;
     }
+
+    .main-menu .bar-link {
+        display: none;
+    }
 }
 
 @media (max-width: 650px) {
