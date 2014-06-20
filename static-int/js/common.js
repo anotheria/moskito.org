@@ -26,7 +26,11 @@ $(document).ready(function () {
     });
 
     $('.bar-link a').click(function () {
-        $(this).parent().toggleClass('active');
+        $('body').addClass('right-menu-active');
+        return false;
+    });
+    $('.close-bar-box').click(function () {
+        $('body').removeClass('right-menu-active');
         return false;
     });
 });

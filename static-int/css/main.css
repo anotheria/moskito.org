@@ -34,15 +34,6 @@ a:focus {
     outline: none;
 }
 
-.header {
-    height: 90px;
-    background-color: #FFF;
-    width: 100%;
-    visibility: visible;
-    position: relative;
-    z-index: 1000;
-}
-
 .inner-page .header {
     background: #F5F5F5;
     border-bottom: 1px solid #DDDDDD;
@@ -328,14 +319,23 @@ a:focus {
     font-weight: 400;
 }
 
-.scroll {
-    padding-top: 90px;
-}
-
-.scroll .header {
+.header {
     top: 0;
     left: 0;
     position: fixed;
+    height: 90px;
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    visibility: visible;
+    z-index: 1000;
+    -webkit-transition: all 500ms ease 0s;
+    -moz-transition: all 500ms ease 0s;
+    -o-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+}
+
+.scroll .header {
     height: 50px;
     background-color: #FFF;
     background-color: rgba(255, 255, 255, 0.95);
@@ -793,6 +793,13 @@ ul.links > li {
 
 .wrapper {
     min-width: 320px;
+    left: 0;
+    position: relative;
+    -webkit-transition: all 500ms ease 0s;
+    -moz-transition: all 500ms ease 0s;
+    -o-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+    padding-top: 90px;
 }
 
 .frame.features-list {
@@ -1502,8 +1509,8 @@ p, li {
 
 .close-bar-box {
     position: absolute;
-    top: -1px;
-    left: 50px;
+    top: 30px;
+    right: 500px;
     display: block;
     width: 36px;
     height: 36px;
@@ -1511,11 +1518,18 @@ p, li {
     background-repeat: no-repeat;
     background-size: 36px auto;
     opacity: 0;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+    -webkit-transition: all 500ms ease 0s;
+    -moz-transition: all 500ms ease 0s;
+    -o-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
     visibility: hidden;
+    cursor: pointer;
+}
+
+.right-menu-active .close-bar-box {
+    right: 40px;
+    opacity: 0.3;
+    visibility: visible;
 }
 
 .main-menu .bar-link .bar-box {
@@ -1523,51 +1537,47 @@ p, li {
     width: 36px;
     height: 36px;
     overflow: hidden;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+    -webkit-transition: 500ms ease 0s;
+    -moz-transition: 500ms ease 0s;
+    -o-transition: 500ms ease 0s;
+    transition: 500ms ease 0s;
     position: relative;
     right: 0;
-}
-
-.main-menu .bar-link.active .bar-box {
-    right: -50px;
-    opacity: 0;
-}
-
-.main-menu .bar-link.active .close-bar-box {
-    left: -1px;
-    opacity: 0.3;
     visibility: visible;
 }
 
-.main-menu .bar-link a:hover .close-bar-box {
+.right-menu-active .main-menu .bar-link .bar-box {
+    right: -450px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.right-menu-active .close-bar-box:hover {
     opacity: 0.5;
 }
 
 .right-menu {
     position: fixed;
-    background: rgba(0,0,0,0);
-    width: 400px;
+    background: #111;
+    width: 300px;
     top: 0;
-    right: -200px;
+    right: -350px;
     bottom: 0;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+    -webkit-transition: all 500ms ease 0s;
+    -moz-transition: all 500ms ease 0s;
+    -o-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
     visibility: hidden;
-    padding-top: 120px;
+    padding-top: 50px;
     padding-left: 50px;
 }
 
-.scroll .right-menu {
-    padding-top: 80px;
+.right-menu-active .header,
+.right-menu-active .wrapper {
+    left: -350px;
 }
 
-.main-menu .bar-link.active .right-menu {
-    background: rgba(0,0,0,0.8);
+.right-menu-active .main-menu .bar-link .right-menu {
     right: 0;
     visibility: visible;
 }
@@ -1593,32 +1603,65 @@ p, li {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.right-menu > ul {
     margin-bottom: 40px;
+}
+
+.right-menu > ul ul {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.right-menu > ul ul li {
+    margin-bottom: 0;
+}
+
+.right-menu > ul ul ul {
+    margin-left: 40px;
+}
+
+.right-menu > ul ul li a {
+    font-size: 18px;
+    display: block;
+    padding-left: 40px;
+    background:  url(../img/menu_line.png) no-repeat left 14px;
+    opacity: 0.5;
 }
 
 .right-menu ul li {
     margin: 0;
     padding: 0;
     margin-bottom: 8px;
-    display: block;
 }
 
 .right-menu ul li a {
-    font-size: 18px;
+    font-size: 20px;
     color: #FFF;
-    display: block;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    opacity: 0;
-}
-
-.main-menu .bar-link.active .right-menu ul li a {
-    opacity: 1;
-}
-
-.main-menu .bar-link.active .right-menu ul li a:hover {
     opacity: 0.6;
+    -webkit-transition: all 200ms ease 0s;
+    -moz-transition: all 200ms ease 0s;
+    -o-transition: all 200ms ease 0s;
+    transition: all 200ms ease 0s;
+}
+
+.right-menu-active .main-menu .bar-link .right-menu ul li a:hover {
+    opacity: 1;
     text-decoration: none;
+}
+
+.right-menu-active #habla_panel_div,
+.right-menu-active #habla_compressed_div {
+    position: relative;
+    left: 0;
+    -webkit-transition: all 500ms ease 0s;
+    -moz-transition: all 500ms ease 0s;
+    -o-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+}
+
+.right-menu-active #habla_panel_div,
+.right-menu-active #habla_compressed_div {
+    left: -350px;
 }
