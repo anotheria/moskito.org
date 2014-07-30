@@ -25,12 +25,8 @@ $(document).ready(function () {
         $('.integrate-box').css('margin-right', '50%');
     });
 
-    $('.bar-link a').click(function () {
-        $('body').addClass('right-menu-active');
-        return false;
-    });
-    $('.close-bar-box').click(function () {
-        $('body').removeClass('right-menu-active');
+    $('.bar-link').click(function () {
+        $('body').toggleClass('right-menu-active');
         return false;
     });
 });

@@ -1547,9 +1547,10 @@ p, li {
 }
 
 .right-menu-active .main-menu .bar-link .bar-box {
-    right: -450px;
-    opacity: 0;
-    visibility: hidden;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .right-menu-active .close-bar-box:hover {
@@ -1586,9 +1587,9 @@ p, li {
     background-color: #999;
     border-radius: 1px;
     display: block;
-    height: 2px;
-    width: 36px;
-    margin-top: 8px;
+    height: 3px;
+    width: 38px;
+    margin-top: 6px;
 }
 
 .main-menu .bar-link a:hover .icon-bar {
