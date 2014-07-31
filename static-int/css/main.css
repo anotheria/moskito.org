@@ -43,6 +43,7 @@ a:focus {
     height: 540px;
     background: #222 url(../img/home_bg.jpg) no-repeat fixed center 50px;
     overflow: hidden;
+    padding-top: 70px;
 }
 
 .moskito-control .main-box {
@@ -325,7 +326,7 @@ a:focus {
     position: fixed;
     height: 90px;
     background-color: #FFF;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 1);
     width: 100%;
     visibility: visible;
     z-index: 1000;
@@ -336,7 +337,7 @@ a:focus {
 }
 
 .scroll .header {
-    height: 50px;
+    height: 60px;
     background-color: #FFF;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 1px 50px rgba(0, 0, 0, 0.25);
@@ -357,7 +358,7 @@ a:focus {
 }
 
 .scroll .logo {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 ul.main-menu {
@@ -389,7 +390,7 @@ ul.main-menu > li > span {
 
 .scroll ul.main-menu > li > a,
 .scroll ul.main-menu > li > span {
-    padding: 10px 15px 20px 15px;
+    padding: 15px 15px 20px 15px;
 }
 
 .scroll ul.main-menu > li {
@@ -799,7 +800,6 @@ ul.links > li {
     -moz-transition: all 500ms ease 0s;
     -o-transition: all 500ms ease 0s;
     transition: all 500ms ease 0s;
-    padding-top: 90px;
 }
 
 .frame.features-list {
@@ -1208,7 +1208,7 @@ h3.anchor {
 }
 
 .home .main-box {
-    background-image: url(../img/home_bg.jpg);
+    background: url("../img/home_bg.jpg") no-repeat fixed 50% 0 rgba(0, 0, 0, 0);
     position: relative;
     height: 730px;
 }
@@ -1504,7 +1504,7 @@ p, li {
 
 .scroll ul.main-menu > li.bar-link > a {
     padding: 0;
-    margin: 10px 15px 20px;
+    margin: 15px 15px 20px;
 }
 
 .close-bar-box {

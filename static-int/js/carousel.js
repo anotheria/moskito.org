@@ -1,24 +1,4 @@
 $(document).ready(function() {
-
-    $("#carousel").carouFredSel({
-        scroll: {
-            fx: "crossfade",
-            duration: 1000,
-            timeoutDuration: 7000
-        },
-        auto: {
-            pauseOnHover: 'resume'
-        },
-        prev: {
-            button: "#carouselPrev",
-            key: "left"
-        },
-        next: {
-            button: "#carouselNext",
-            key	: "right"
-        }
-    });
-
     $(".features-list ul").carouFredSel({
         width   : "100%",
         items: 3,
@@ -57,7 +37,6 @@ $(document).ready(function() {
                    visible: 2,
                    height: "auto"
                 }
-
             });
         }
     });
