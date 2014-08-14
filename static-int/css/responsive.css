@@ -217,10 +217,15 @@
         line-height: 46px;
     }
 
+    .header,
     .scroll .header {
         position: relative;
         height: 90px;
         box-shadow: none;
+    }
+
+    ul.main-menu > li > a, ul.main-menu > li > span {
+        padding: 30px 15px 20px !important;
     }
 
     .scroll {
@@ -258,6 +263,14 @@
     .right-view-area,
     .left-view-area {
         display: none;
+    }
+
+    #habla_beta_container_do_not_rely_on_div_classes_or_names {
+        display: none;
+    }
+
+    .right-menu-active .header {
+        left: 0 !important;
     }
 }
 
@@ -299,7 +312,7 @@
     ul.main-menu,
     .logo {
         float: none;
-        text-align: center;
+        text-align: left;
     }
 
     ul.main-menu {
@@ -318,7 +331,7 @@
     ul.main-menu > li.active > span {
         color: #FFF;
     }
-
+    .scroll
     .main-info {
         margin: 80px 0 0;
     }
@@ -349,8 +362,10 @@
         margin-top: 10px;
     }
 
-    .main-menu .bar-link {
-        display: none;
+    .main-menu .bar-link .bar-box {
+        position: absolute;
+        top: 0;
+        right: 10px;
     }
 }
 

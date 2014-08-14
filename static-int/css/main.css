@@ -313,6 +313,7 @@ a:focus {
     font-size: 21px;
     line-height: 22px;
     color: #000;
+    text-align: left;
 }
 
 .logo > a > span > b {
@@ -1555,6 +1556,7 @@ p, li {
 }
 
 .right-menu {
+    text-align: left;
     position: fixed;
     background: #111;
     width: 300px;
