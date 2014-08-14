@@ -1570,6 +1570,7 @@ p, li {
     visibility: hidden;
     padding-top: 50px;
     padding-left: 50px;
+    overflow-y: auto;
 }
 
 .right-menu-active .header,
