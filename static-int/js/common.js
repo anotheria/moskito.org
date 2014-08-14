@@ -41,7 +41,7 @@ $(document).ready(function () {
         $('.integrate-box').css('margin-right', '50%');
     });
 
-    $('.bar-box').click(function () {
+    $('.bar-box, .close-bar-box').click(function () {
         $('body').toggleClass('right-menu-active');
     });
 });

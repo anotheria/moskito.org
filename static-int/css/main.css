@@ -1497,7 +1497,7 @@ p, li {
 .close-bar-box {
     position: absolute;
     top: 30px;
-    right: 500px;
+    right: -100px;
     display: block;
     width: 36px;
     height: 36px;
@@ -1533,6 +1533,14 @@ p, li {
     visibility: visible;
     cursor: pointer;
     padding: 28px 15px 20px;
+}
+
+.scroll .main-menu .bar-link .bar-box {
+    padding: 13px 15px 20px;
+}
+
+.right-menu-active .scroll .main-menu .bar-link .bar-box {
+    padding: 5px 15px 20px;
 }
 
 .right-menu-active .main-menu .bar-link .bar-box {
