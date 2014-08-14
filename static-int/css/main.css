@@ -1494,19 +1494,6 @@ p, li {
     margin-left: 50px;
 }
 
-.main-menu .bar-link > a {
-    position: relative;
-    top: -3px;
-    z-index: 1000;
-    padding: 0;
-    margin: 30px 15px 20px;
-}
-
-.scroll ul.main-menu > li.bar-link > a {
-    padding: 0;
-    margin: 15px 15px 20px;
-}
-
 .close-bar-box {
     position: absolute;
     top: 30px;
@@ -1544,6 +1531,8 @@ p, li {
     position: relative;
     right: 0;
     visibility: visible;
+    cursor: pointer;
+    padding: 28px 15px 20px;
 }
 
 .right-menu-active .main-menu .bar-link .bar-box {
@@ -1590,10 +1579,14 @@ p, li {
     height: 3px;
     width: 38px;
     margin-top: 6px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
-.main-menu .bar-link a:hover .icon-bar {
-    background-color: #777;
+.main-menu .bar-link:hover .icon-bar {
+    background-color: #444;
 }
 
 .main-menu .icon-bar:first-child {
