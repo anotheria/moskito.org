@@ -54,6 +54,7 @@ var locations = [
 ];
 function initializeMap(){
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        scrollwheel: false,
         zoom: 2,
         center: new google.maps.LatLng(32.0667,34.7667),
         mapTypeId: google.maps.MapTypeId.ROADMAP
