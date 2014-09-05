@@ -76,7 +76,7 @@ function initializeMap(){
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-                infowindow.setContent(locations[i][0] + ', ' + locations[i][1]);
+                infowindow.setContent(locations[i][0] + ' ' + locations[i][1]);
                 infowindow.open(map, marker);
             }
         })(marker, i));
