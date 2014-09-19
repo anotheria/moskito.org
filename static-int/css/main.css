@@ -1043,7 +1043,7 @@ li.core-item a.btn {
 .clients ul li {
     position: relative;
     float: left;
-    margin-right: 95px;
+    margin-right: 60px;
 }
 
 .clients ul li:last-child {
