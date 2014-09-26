@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    $('.tooltip-top').tooltip({placement:'top', container: 'body'}).on('show', function (e) {e.stopPropagation();});
     // Cache the Window object
     $window = $(window);
     $('[data-type="background"]').each(function(){

@@ -97,7 +97,7 @@ a:focus {
 }
 
 .moskitorizing .main-box p {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-size: 18px;
 }
 
@@ -122,9 +122,7 @@ a:focus {
 
 .gray-box {
     padding: 80px 0;
-    border-top: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
-    background: #F5F5F5;
+    background: #f5f5f5;
 }
 
 .right-side p,
@@ -233,7 +231,7 @@ a:focus {
     float: right;
     margin-top: 40px;
     text-align: center;
-    line-height: 74px;
+    line-height: 76px;
     font-size: 31px;
     color: #8e8e8e;
     position: relative;
@@ -1682,4 +1680,120 @@ p, li {
 .right-menu-active #habla_panel_div,
 .right-menu-active #habla_compressed_div {
     left: -350px;
+}
+
+
+.moskito-story .arrow_down{
+    display: block;
+    background: url("../img/arrow_down_long.png") 0 0 no-repeat transparent;
+    width: 25px;
+    height: 70px;
+    margin: 0 auto;
+}
+.moskito-story .arrow_down_line{
+    display: block;
+    background: url("../img/arrow_down_long.png") 0 0 no-repeat transparent;
+    width: 25px;
+    height: 50px;
+    margin: 50px auto 5px;
+}
+.moskito-story .text-center .first-message{
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.moskito-story .span10.text-center p,
+.moskito-story .span12.text-center p{
+    font-size: 18px;
+    margin: 40px auto 25px;
+    line-height: 24px;
+}
+.moskito-story .span12.text-center p span{
+    font-size: 16px;
+    color: #7d7d7d;
+}
+
+
+.moskito-story .row-fluid.step-area .span6 {
+    position: relative;
+}
+.moskito-story .row-fluid.step-area .span6 .span2{
+    position: absolute;
+    bottom: -5px;
+}
+.moskito-story .row-fluid.step-area:first-child{
+    margin: 0;
+}
+
+.moskito-story .row-fluid.step-area{
+    margin-top: 40px;
+}
+.moskito-story .gray-box .row-fluid.step-area .span6.mid_pos .span2{
+    left: 0;
+}
+
+.moskito-story .gray-box .row-fluid.step-area .span6:last-child .span2{
+    right: 0px;
+}
+
+.moskito-story .gray-box .row-fluid.step-area .span6:last-child .span10,
+.moskito-story .gray-box .row-fluid.step-area .span6:last-child .span2{
+    float: right;
+}
+
+.moskito-story .container .row-fluid.step-area .span12.mid_pos{
+    float: none;
+    margin: 0 auto;
+    position: relative;
+}
+.moskito-story .container .row-fluid.step-area .span12.mid_pos .span2{
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+}
+.moskito-story .white_box .container .row-fluid.step-area .span12.mid_pos .span2{
+    left: 30%;
+}
+
+.moskito-story .container .row-fluid.step-area .span12.mid_pos .span12{
+    margin: 0;
+}
+
+.moskito-story .tooltip{
+    white-space:normal;
+    min-width: 200px;
+    font-size: 13px;
+    z-index: 10000;
+}
+
+.moskito-story .top-info .step-box {
+    display: inline-block;
+    float: none;
+}
+
+.moskito-story .wrapper {
+    padding-bottom: 50px;
+}
+
+.step-box {
+    font-size: 16px;
+}
+
+.moskito-story .main-box {
+    overflow: inherit;
+}
+
+.moskito-story .step-box {
+    float: none;
+}
+
+.top-info {
+    position: relative;
+    bottom: -70px;
+    text-align: center;
+}
+
+.moskito-story .gray-box {
+    padding-top: 0;
 }
