@@ -91,7 +91,7 @@
 
 
                     <pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
-    &lt;moskito.version&gt;2.4.2&lt;/moskito.version&gt;
+    &lt;moskito.version&gt;2.5.5&lt;/moskito.version&gt;
 &lt;/properties&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
@@ -217,7 +217,7 @@ public class ClassWithMonitoredMethod {
 
 
 <pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
-    &lt;moskito.version&gt;2.4.2&lt;/moskito.version&gt;
+    &lt;moskito.version&gt;2.5.5&lt;/moskito.version&gt;
 &lt;/properties&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
@@ -535,7 +535,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
     <div class="sub-docs-section">
         <h3 id="section-inspect-maven" class="anchor">Maven</h3>
 
-        <p>The Maven integration of the WebUI is basically a small set of pom manipulations.
+        <p>The Maven integration of the MoSKito Inspect is basically a small set of pom manipulations.
         Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
         </p>
         <div class="accordion" id="accordion-inspect-maven">
@@ -549,7 +549,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
                 <div id="collapse-inspect-maven" class="accordion-body in collapse">
                     <div class="accordion-inner">
 <pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
-    &lt;moskito.version&gt;2.4.0&lt;/moskito.version&gt;
+    &lt;moskito.version&gt;2.5.5&lt;/moskito.version&gt;
 &lt;/properties&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
@@ -558,7 +558,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
 &lt;/dependency&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
-    &lt;artifactId&gt;moskito-webui&lt;/artifactId&gt;
+    &lt;artifactId&gt;moskito-inspect-embedded&lt;/artifactId&gt;
     &lt;version&gt;${moskito.version}&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
