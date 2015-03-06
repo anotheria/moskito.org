@@ -1840,3 +1840,25 @@ p, li {
 .supporters-list {
     border-bottom: 1px solid #eee;
 }
+
+@media print {
+    .header,
+    .logo,
+    .main-menu,
+    .well,
+    .clients,
+    .footer,
+    .main-info h1,
+    .main-box,
+    .moskito-code .main-info{
+        display: none;
+    }
+    pre{
+        background-color:transparent;
+        border: 0px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        padding: 0;
+        text-align: left;
+    }
+}
