@@ -1859,8 +1859,8 @@ p, li {
         }
         .scrollspy-content h2{
             margin-bottom: 0;
-            font-size: 28px;
-            padding-bottom: 2px;
+            font-size: 24px;
+            padding-bottom: 0px;
         }
         .header-section,
         .scrollspy-content{
