@@ -1843,22 +1843,40 @@ p, li {
 
 @media print {
     .header,
-    .logo,
-    .main-menu,
-    .well,
-    .clients,
-    .footer,
-    .main-info h1,
-    .main-box,
-    .moskito-code .main-info{
-        display: none;
-    }
-    pre{
-        background-color:transparent;
-        border: 0px;
-        word-wrap: break-word;
-        white-space: pre-wrap;
-        padding: 0;
-        text-align: left;
-    }
+        .logo,
+        .main-menu,
+        .well,
+        .clients,
+        .footer,
+        .main-info h1,
+        .main-box,
+        .moskito-code .main-info {
+            display: none;
+        }
+        body{
+            font-size: 13px;
+            line-height: 1.1;
+        }
+        .scrollspy-content h2{
+            margin-bottom: 0;
+            font-size: 24px;
+            padding-bottom: 0px;
+        }
+        .header-section,
+        .scrollspy-content{
+            margin-top: 0px;
+        }
+        pre {
+            background-color: transparent;
+            border: 0px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            padding: 0;
+            text-align: left;
+        }
+
+        .printFont{
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
 }

@@ -1,6 +1,4 @@
-                                MoSKito
-
-                     Contributor License Agreement
+               MoSKito Contributor License Agreement
 
   Thank you for your interest in MoSKito ("the project"),
   represented by its maintainer. In order to clarify the intellectual
@@ -72,4 +70,3 @@
   A PARTICULAR PURPOSE AND ANY WARRANTY OF NON-INFRINGEMENT.
 
   Please sign: __________________________________ Date: ________________
-
