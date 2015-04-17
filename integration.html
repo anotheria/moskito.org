@@ -505,16 +505,105 @@ execution.finishExecution();</code></pre>
     </div>
 
 
+	    <!-- Inspect -->
+	<div class="docs-section">
+	    <h2 id="section-inspect-remote" class="anchor">Enable MoSKito Inspect with Agent/Standalone</h2>
+
+	    <p>
+			Usually after integrating something into something else, you want to see the results. To see the results of your MoSKito Integration you need a kind of UI. Surely you can watch the logs,
+	but this is kind of boring, and there are no good pictures to show. Therefore, we will stick with the Web User Interface - short MoSKito Inspect. There are <b>two ways of integrating MoSKito Inspect</b>, either as <b>standalone</b> or directly <b>embedded</b> into your application.
+	Which one to choose depends on you, standalone version is easier to setup and can connect to multiple servers, embedded - simplifies you deploment.<br>
+	The integration of the standalone version is explained here, scroll down for the embedded version.
+	<br>For more information on MoSKito Inspect visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Inspect">MoSKito Inspect Documentation</a>.
+	    </p>
+	<p>First you'll need to download the <a href="download.html">Standalone MoSKito Inspect bundle.</a></p>
+
+	    <div class="accordion" id="accordion-inspect-r">
+	        <div class="accordion-group">
+	            <div class="accordion-heading">
+	                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-e" href="#collapse-inspect">
+	                    How Inspect looks like (click to show)
+	                </a>
+	            </div>
+	            <div id="collapse-inspect" class="accordion-body collapse">
+	                <div class="accordion-inner">
+						<img src="static-int/img/moskito_scr_3.png">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="sub-docs-section">
+	        <h3 id="section-inspect-remote-maven" class="anchor">Maven</h3>
+
+	        <p>The Maven integration of the MoSKito Inspect is basically one dependency in your pom.
+	        Thanks to servlet 3 MoSKito Agent for Inspect is automagically started once you add MoSKito jars to your project.
+	        </p>
+	        <div class="accordion" id="accordion-inspect-remote-maven">
+	            <div class="accordion-group">
+	                <div class="accordion-heading">
+	                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-remote-maven"
+	                       href="#collapse-inspect-remote-maven">
+	                        Define MoSKito Version and dependencies.
+	                    </a>
+	                </div>
+	                <div id="collapse-inspect-remote-maven" class="accordion-body in collapse">
+	                    <div class="accordion-inner">
+	<pre class="prettyprint linenums"><code class="language-xml">
+&lt;properties&gt;
+    &lt;moskito.version&gt;2.6.0&lt;/moskito.version&gt;
+&lt;/properties&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
+    &lt;artifactId&gt;moskito-inspect-remote&lt;/artifactId&gt;
+    &lt;version&gt;${moskito.version}&lt;/version&gt;
+&lt;/dependency&gt;
+	</code></pre>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    </div>
+
+	    <div class="sub-docs-section">
+	        <h3 id="section-inspect-remote-toolless" class="anchor">Without tools</h3>
+
+				        <p>Without maven you will need to add all related jars to your project. We don't provide it, because it can break your other dependencies, but feel free to ask for it on the mailing list or build yourself.
+					Another option would be to pick all the libs from MoSKito Inspect installation.
+				        </p>
+				        <div class="accordion" id="accordion-inspect-remote-toolless">
+				            <div class="accordion-group">
+				                <div class="accordion-heading">
+				                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-remote-toolless"
+				                       href="#collapse-inspect-remote-toolless">
+				                        Start RMI Endpoint.
+				                    </a>
+				                </div>
+				                <div id="collapse-inspect-remote-maven" class="accordion-body in collapse">
+				                    <div class="accordion-inner">
+										<pre class="prettyprint linenums"><code class="language-java">try{
+  StartMoSKitoInspectBackendForRemote.startMoSKitoInspectBackend();
+}catch(MoSKitoInspectStartException e){
+  //handle error 
+  log.error("Couldn't auto-start MoSKito Inspect in embedded mode ", e);
+}</code></pre>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+	    </div>
+
+
+	</div>
+	<!-- Inspect End -->
+
     <!-- Inspect -->
 <div class="docs-section">
-    <h2 id="section-inspect" class="anchor">Enable MoSKito Inspect</h2>
+    <h2 id="section-inspect-embedded" class="anchor">Enable MoSKito Inspect in Embedded Mode</h2>
 
     <p>
-		Usually after integrating something into something else, you want to see the results. To see the results of your MoSKito Integration you need a kind of UI. Surely you can watch the logs,
-but this is kind of boring, and there are no good pictures to show. Therefore, we will stick with the Web User Interface - short WebUI. MoSKito WebUI is integrated directly into your application.
-This has a set of advantages and disadvantages, as well as historical reasons, which we are not going to bring on now. A standalone version of MoSKito WebUI is on its way, and will probably hit the shelves with 2.5 or 2.6.
-But for now, let's integrate the WebUI into your application, and get the party going. There are different ways to build apps, and therefore different ways to integrate WebUI, so we will stick with the most common ones.
-<br>For more information on WebUI visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-WebUI">MoSKito WebUI Documentation</a>.
+		Embedded mode allows you to embed MoSKito Inspect into your application. This is easier to handle if you only have limited amount of servers, all your components run in web containers anyway and/or you can not allow network connection from standalone inspect to your servers.
+		<br>For more information on MoSKito Inspect visit <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Inspect">MoSKito Inspect Documentation</a>.
     </p>
 
     <div class="accordion" id="accordion-inspect">
@@ -533,23 +622,23 @@ But for now, let's integrate the WebUI into your application, and get the party 
     </div>
 
     <div class="sub-docs-section">
-        <h3 id="section-inspect-maven" class="anchor">Maven</h3>
+        <h3 id="section-inspect-embedded-maven" class="anchor">Maven</h3>
 
         <p>The Maven integration of the MoSKito Inspect is basically a small set of pom manipulations.
         Thanks to servlet 3 MoSKito is automagically added once you add MoSKito jars to your project. All you need are following simple additions to your pom.
         </p>
-        <div class="accordion" id="accordion-inspect-maven">
+        <div class="accordion" id="accordion-inspect-embedded-maven">
             <div class="accordion-group">
                 <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-maven"
-                       href="#collapse-inspect-maven">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-inspect-embedded-maven"
+                       href="#collapse-inspect-embedded-maven">
                         1) Define MoSKito Version and dependencies.
                     </a>
                 </div>
-                <div id="collapse-inspect-maven" class="accordion-body in collapse">
+                <div id="collapse-inspect-embedded-maven" class="accordion-body in collapse">
                     <div class="accordion-inner">
 <pre class="prettyprint linenums"><code class="language-xml">&lt;properties&gt;
-    &lt;moskito.version&gt;2.5.5&lt;/moskito.version&gt;
+    &lt;moskito.version&gt;2.6.0&lt;/moskito.version&gt;
 &lt;/properties&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
@@ -563,7 +652,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
 &lt;/dependency&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;net.anotheria&lt;/groupId&gt;
-    &lt;artifactId&gt;moskito-webui-jersey&lt;/artifactId&gt;
+    &lt;artifactId&gt;moskito-inspect-jersey&lt;/artifactId&gt;
     &lt;version&gt;${moskito.version}&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
                 </div>
@@ -591,7 +680,7 @@ But for now, let's integrate the WebUI into your application, and get the party 
             &lt;type&gt;jar&lt;/type&gt;
             &lt;overWrite&gt;true&lt;/overWrite&gt;
             &lt;outputDirectory&gt;${project.build.directory}/tmp&lt;/outputDirectory&gt;
-            &lt;includes&gt;img/**,js/**,**/*.jsp,css/**&lt;/includes&gt;
+            &lt;includes&gt;moskito/**,**/*.jsp&lt;/includes&gt;
         &lt;/artifactItem&gt;&lt;/artifactItems&gt;
     &lt;/configuration&gt;
     &lt;executions&gt;
@@ -622,19 +711,19 @@ But for now, let's integrate the WebUI into your application, and get the party 
     </div>
 
     <div class="sub-docs-section">
-        <h3 id="section-inspect-gradle" class="anchor">Gradle</h3>
+        <h3 id="section-inspect-embedded-gradle" class="anchor">Gradle</h3>
 
         <p>Upcoming.</p>
     </div>
 
     <div class="sub-docs-section">
-        <h3 id="section-inspect-ant" class="anchor">Ant</h3>
+        <h3 id="section-inspect-embedded-ant" class="anchor">Ant</h3>
 
         <p>Upcoming.</p>
     </div>
 
     <div class="sub-docs-section">
-        <h3 id="section-inspect-toolless" class="anchor">Without any tools at all</h3>
+        <h3 id="section-inspect-embedded-toolless" class="anchor">Without any tools at all</h3>
 
         <p>Upcoming.</p>
     </div>
@@ -657,12 +746,18 @@ But for now, let's integrate the WebUI into your application, and get the party 
                 <li><a href="#section-ehcache">Ehcache</a></li>
                 <li><a href="#section-proxy">Proxies</a></li>
                 <li><a href="#section-callexecution">Call Execution</a></li>
-                <li class="dropdown"><a href="#section-inspect">Inspect Integration</a>
+                <li class="dropdown"><a href="#section-inspect-remote">Inspect Integration with Agent</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#section-inspect-maven">Maven</a></li>
-                        <li><a href="#section-inspect-gradle">Gradle</a></li>
-                        <li><a href="#section-inspect-ant">Ant</a></li>
-                        <li><a href="#section-inspect-toollees">Toolless</a></li>
+                        <li><a href="#section-inspect-remote-maven">Maven</a></li>
+                        <li><a href="#section-inspect-remote-toolless">Toolless</a></li>
+                    </ul>
+				</li>
+                <li class="dropdown"><a href="#section-inspect-embedded">Inspect Integration Embedded</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#section-inspect-embedded-maven">Maven</a></li>
+                        <li><a href="#section-inspect-embedded-gradle">Gradle</a></li>
+                        <li><a href="#section-inspect-embedded-ant">Ant</a></li>
+                        <li><a href="#section-inspect-embedded-toollees">Toolless</a></li>
                     </ul>
 				</li>
             </ul>
