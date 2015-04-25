@@ -1,0 +1,595 @@
+/* Common Page Styles */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #FFF;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Open sans', 'sans-serif';
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #479fec;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0055a1;
+    text-decoration: none;
+}
+
+.header {
+    height: 90px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.scroll .header {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    height: 60px;
+}
+
+.logo {
+    float: left;
+    margin-top: 17px;
+    position: relative;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.scroll .logo {
+    margin-top: 9px;
+}
+
+.logo img.logo-black {
+    height: 40px;
+    opacity: 0;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.scroll .logo img.logo-black {
+    opacity: 1;
+    height: 30px;
+}
+
+.logo img.logo-white {
+    height: 40px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    opacity: 1;
+    display: block;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.scroll .logo img.logo-white {
+    opacity: 0;
+    height: 30px;
+}
+
+.logo span {
+    float: left;
+    display: block;
+    color: #FFF;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 25px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.scroll .logo span {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.logo span b {
+    display: block;
+    font-weight: 400;
+    font-size: 21px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.scroll .logo span b {
+    font-size: 18px;
+}
+
+.main-menu {
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: 3px;
+}
+
+.main-menu > li {
+    float: left;
+    display: inline-block;
+}
+
+.main-menu > li > a {
+    display: block;
+    padding: 30px 15px;
+    font-size: 16px;
+    color: #FFF;
+    position: relative;
+}
+
+.main-menu > li > a:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    display: block;
+    height: 2px;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -15px;
+    background: #FFF;
+    opacity: 0;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.scroll .main-menu > li > a:after {
+    display: none;
+}
+
+.main-menu > li > a:hover:after {
+    opacity: 1;
+    width: 50px;
+    margin-left: -25px;
+}
+
+.scroll .main-menu > li > a {
+    padding: 15px 15px;
+    color: #777;
+}
+
+.scroll .main-menu > li > a:hover {
+    color: #333;
+}
+
+.main-box {
+    height: 640px;
+    background: #0055a1;
+    text-align: center;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+}
+
+.btn {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.btn-lg {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-white {
+    border: 2px solid #FFF;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.btn-white:hover {
+    background: #FFF;
+}
+
+.btn-blue {
+    border: 2px solid #479fec;
+    color: #479fec;
+    text-transform: uppercase;
+}
+
+.btn-blue:hover {
+    background: #479fec;
+    color: #FFF;
+}
+
+.btn-green {
+    border: 2px solid #77bd53;
+    color: #77bd53;
+    text-transform: uppercase;
+}
+
+.btn-green:hover {
+    background: #77bd53;
+    color: #FFF;
+}
+
+.min-btns {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.min-btns .btn {
+    min-width: 200px;
+    margin: 0 15px;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 48px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-box-padding-1 {
+    padding: 200px 0 0;
+}
+
+.support-bg {
+    background-image: url("../img-new/main-bg/bg-support.jpg");
+    background-position: 0 300px;
+}
+
+.gray-box-out {
+    background: #0055a1;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.8;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.section-title h2 b {
+    font-weight: 600;
+}
+
+.section-title h3 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.prices {
+    border-radius: 5px;
+    background: #f7f7f7;
+    border: 1px solid #DDD;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.prices .row {
+    margin: 0;
+}
+
+.prices .row .col-md-3 {
+    padding: 0;
+}
+
+.prices .row .col-md-3:last-child .plan {
+    border-right: none;
+}
+
+.prices .plan {
+    border-right: 1px solid #DDD;
+    overflow: hidden;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.prices .plan h4 {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.prices .plan h4 small {
+    display: block;
+    margin-top: 6px;
+    text-transform: uppercase;
+    color: #479fec;
+}
+
+.plan-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-height: 340px;
+}
+
+.plan-list li {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.plan-list li small {
+    display: block;
+    color: #999;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.plan-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 300;
+    color: #77bd53;
+}
+
+.plan.best-plan {
+    margin-bottom: -30px;
+    margin-top: -30px;
+    margin-left: -1px;
+    background: #FFF;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 0 40px rgba(0,0,0,0.13);
+    border-radius: 5px;
+    border: 1px solid #DDD;
+}
+
+.plan.best-plan:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #479fec;
+    height: 6px;
+}
+
+.plan.best-plan:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #479fec;
+    height: 6px;
+}
+
+.plan.best-plan .plan-footer {
+    margin-bottom: 6px;
+}
+
+.plan.best-plan .plan-list {
+    height: 370px;
+}
+
+.prices .plan.best-plan h4 {
+    margin-top: 6px;
+}
+
+i.help {
+    display: block;
+    background: #d8d8d8;
+    border-radius: 20px;
+    float: right;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    font-weight: 700;
+    color: #FFF;
+    cursor: help;
+}
+
+.section-line {
+    border-top: 1px solid #DDD;
+}
+
+.section-gray {
+    background: #f7f7f7;
+}
+
+.section-black {
+    background: #2e3234;
+    color: #666;
+    padding-bottom: 30px;
+}
+
+.section .min-btns {
+    margin-top: -10px;
+}
+
+.section.section-features {
+    padding-bottom: 50px;
+}
+
+.feature-box {
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.feature-box p {
+    margin-bottom: 10px;
+    color: #999;
+    font-size: 12px;
+}
+
+.feature-box a {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.feature-box a:hover {
+    background: #ececec;
+}
+
+.feature-box > i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 21px;
+    color: #FFF;
+    background: #479fec;
+}
+
+.companies-container {
+    text-align: center;
+}
+
+.companies-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.companies-list li {
+    float: left;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.companies-list li img {
+    height: 50px;
+    opacity: 0.4;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.companies-list li:hover img {
+    opacity: 0.7;
+}
+
+.footer-nav-box {
+    margin-bottom: 40px;
+}
+
+.footer h4 {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #999;
+}
+
+.footer a:hover {
+    color: #FFF;
+}
+
+.footer-nav-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav-box ul li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.social-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.social-box ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.social-box ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #666;
+    text-align: center;
+    line-height: 40px;
+    color: #333;
+    border-radius: 40px;
+    font-size: 18px;
+}
+
+.social-box ul li a:hover {
+    background: #FFF;
+    color: #333;
+}
