@@ -274,6 +274,7 @@ h4 {
 .support-bg {
     background-image: url("../img-new/main-bg/bg-support.jpg");
     background-position: 0 300px;
+    background-size: cover;
 }
 
 .gray-box-out {
