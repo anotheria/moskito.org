@@ -190,7 +190,7 @@ a:hover {
 }
 
 .main-box {
-    height: 640px;
+    height: 400px;
     background: #0055a1;
     text-align: center;
     color: #FFF;
@@ -268,12 +268,11 @@ h4 {
 }
 
 .main-box-padding-1 {
-    padding: 200px 0 0;
+    padding: 100px 0 0;
 }
 
 .support-bg {
     background-image: url("../img-new/main-bg/bg-support.jpg");
-    background-position: 0 300px;
     background-size: cover;
 }
 
