@@ -1500,10 +1500,6 @@ li.core-item a.btn {
     cursor: default;
 }
 
-.scroll .tooltip {
-    visibility: hidden;
-}
-
 #watchMovie object {
     width: 100%;
 }
