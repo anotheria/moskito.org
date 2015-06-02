@@ -8,14 +8,11 @@
     <meta name="keywords" content="moskito storage, centralised storage server, performance history, java monitoring, application monitoring,
     open source java monitoring, moskito"/>
     <link rel="shortcut icon" href="static-int/img/favicon.ico" type="image/x-icon">
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-2.3.2/css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-2.3.2/css/bootstrap-responsive.css"/>
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-modal-2.1/css/bootstrap-modal.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-3.3.4/css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/font-awesome-3.2.1/css/font-awesome.min.css"/>
-    <!--Icons on the page may be changed by simply inserting the icon name.
-    Icon names and previews are here: http://fortawesome.github.io/Font-Awesome/icons/ -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/common.css"/>
+    <link href='static-int/css-new/common.css' rel='stylesheet' type='text/css'>
+    <link href='static-int/css-new/central.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -29,132 +26,109 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 <div itemscope itemtype="http://schema.org/SoftwareApplication" class="wrapper moskito-central">
 
-<div class="header">
-    <div class="container">
-        <div class="logo">
-            <a itemprop="url" href="http://www.moskito.org/moskito-central.html">
-                <img src="static-int/img/logo.png" alt="MoSKito"/>
-                <span><b>MoSKito</b> &nbsp;&nbsp;Central</span>
-            </a>
-        </div>
-        <ul class="main-menu">
-            <li class="inactive"><a href="index.html">Essential</a></li>
-            <li class="inactive"><a href="moskito-control.html">Control</a></li>
-            <li class="active"><span>Central</span></li>
-        </ul>
-    </div>
-</div>
+    <div id="header" data-logo-name="Central"></div>
 
-<div class="main-box">
-    <div class="container">
-        <div class="row-fluid">
-            <div class="span7">
-                <div class="main-info">
-                    <h1>Storage for MoSKito data<br>
-                    </h1>
+    <div class="main-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-7">
+                    <div class="main-info text-left">
+                        <h1>Storage for MoSKito data<br>
+                        </h1>
 
-                    <p>
-                        <span itemprop="name">MoSKito-Central</span> is the <span itemprop="description">centralised storage server for keeping performance data, collected by
-                        MoSKito</span>.
-                        <br/><br/>
-                        Build your own data warehouse. Know how your app performed last Monday, a month or a year ago.
-                    </p>
+                        <p>
+                            <span itemprop="name">MoSKito-Central</span> is the <span itemprop="description">centralised storage server for keeping performance data, collected by
+                            MoSKito</span>.
+                            <br/><br/>
+                            Build your own data warehouse. Know how your app performed last Monday, a month or a year ago.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-5 presentation">
+                    <img src="static-int/img/java_web_app.png" class="central-img" alt="Java web app">
                 </div>
             </div>
-            <div class="span5 presentation">
-                <img src="static-int/img/java_web_app.png" class="central-img" alt="Java web app">
+        </div>
+    </div>
+
+    <!-- FEATURES SECTION START -->
+    <div class="section section-line section-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>MoSKito Central Features</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="icon-archive"></i>
+                                <h4>Centralised data archive</h4>
+                                <p>Complete and exhaustive performance history of your application, stored in one place.</p>
+                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-archive">More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="icon-ok"></i>
+                                <h4>Complete tracing of inter-node communication</h4>
+                                <p>Capture all the calls and processes that run between nodes of your app, and never miss any of the
+                                    them.</p>
+                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-tracing">More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="icon-shield"></i>
+                                <h4>Local storage ensures data security</h4>
+                                <p>The data is stored entirely on the local machine. No external servers or cloud storage involved. Your
+                                    info is only at your own disposal.</p>
+                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-security">More</a>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="icon-exchange"></i>
+                                <h4>Multiple transfer protocols</h4>
+                                <p>Use direct communication, RMI or HTTP. Create custom connectors and use any other protocol.</p>
+                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-transfer">More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="icon-hdd"></i>
+                                <h4>Absolute storage flexibility</h4>
+                                <p>
+                                    - Application memory or filesystem.<br>
+                                    - JSON/XML/CSV files (other types available after config).<br>
+                                    - SQL and non-SQL databases.
+                                </p>
+                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-storage">More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="icon-gears"></i>
+                                <h4>Embedded or Standalone Modes</h4>
+                                <p>Embedded Mode for collecting and storing data inside one monitored app, Standalone Mode for complex
+                                    application architecture.</p>
+                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-modes">More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="content">
-    <div class="frame features-list">
-        <div class="frame-title container">
-            <h2>MoSKito-Central Features</h2>
-
-        </div>
-        <ul>
-            <li class="core-item">
-                <div class="hexagon">
-                    <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
-                    <i class="icon-archive"></i>
-                    <!--Change icons by typing the new icon name.
-                    Icon names and previews are here: http://fortawesome.github.io/Font-Awesome/icons/ -->
-                </div>
-                <h3>Centralised data archive</h3>
-
-                <p>Complete and exhaustive performance history of your application, stored in one place.</p>
-                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-archive"
-                   class="btn">More</a>
-            </li>
-            <li class="core-item">
-                <div class="hexagon">
-                    <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
-                    <i class="icon-ok"></i>
-                </div>
-                <h3>Complete tracing of inter-node communication</h3>
-
-                <p>Capture all the calls and processes that run between nodes of your app, and never miss any of the
-                    them.</p>
-                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-tracing"
-                   class="btn">More</a>
-            </li>
-            <li class="core-item">
-                <div class="hexagon">
-                    <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
-                    <i class="icon-shield"></i>
-                </div>
-                <h3>Local storage ensures data security</h3>
-
-                <p>The data is stored entirely on the local machine. No external servers or cloud storage involved. Your
-                    info is only at your own disposal.</p>
-                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-security"
-                   class="btn">More</a>
-            </li>
-            <li class="core-item">
-                <div class="hexagon">
-                    <img src="static-int/img/hexagon.png" alt="Multi-purpose"/>
-                    <i class="icon-exchange"></i>
-                </div>
-                <h3>Multiple transfer protocols</h3>
-
-                <p>Use direct communication, RMI or HTTP. Create custom connectors and use any other protocol.</p>
-                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-transfer"
-                   class="btn">More</a>
-            </li>
-            <li class="core-item">
-                <div class="hexagon">
-                    <img src="static-int/img/hexagon.png" alt="Non-Invasive"/>
-                    <i class="icon-hdd"></i>
-                </div>
-                <h3>Absolute storage flexibility</h3>
-
-                <p>
-                    - Application memory or filesystem.<br>
-                    - JSON/XML/CSV files (other types available after config).<br>
-                    - SQL and non-SQL databases.
-                </p>
-                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-storage"
-                   class="btn">More</a>
-            </li>
-            <li class="core-item">
-                <div class="hexagon">
-                    <img src="static-int/img/hexagon.png" alt="Monitoring System Kit"/>
-                    <i class="icon-gears"></i>
-                </div>
-                <h3>Embedded or Standalone Modes</h3>
-
-                <p>Embedded Mode for collecting and storing data inside one monitored app, Standalone Mode for complex
-                    application architecture.</p>
-                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Overview#MoSKito-CentralOverview-modes"
-                   class="btn">More</a>
-            </li>
-        </ul>
-    </div>
+    <!-- START SECTION END -->
 
     <div class="container">
-        <div class="row-fluid">
-            <div class="span4 next-box">
+        <div class="row">
+            <div class="col-md-4 next-box">
                 <div class="frame">
                     <div class="frame-title">
                         <h2>What's Next</h2>
@@ -178,133 +152,33 @@
                     </ul>
                 </div>
             </div>
-            <div class="span4 news-box">
-                <div class="frame">
-                    <div class="frame-title">
-                        <h2>MoSKito News</h2>
-                    </div>
-                    <div class="news">
-                        <span>29. OCT 2014</span>
-                        <p>2.5.4 – Provide a RollingOnDemandStatsProducer which can 'forget' not used entries and only uses most interesting stats.
-                        </p>
-                    </div>
-
-                    <div class="news">
-                        <span>17. OCT 2014</span>
-                        <p>2.5.3 – Support for generic IStatsProducer-decorators, Allow Journey to be triggered via HttpHeader and even more - <a href="https://confluence.opensource.anotheria.net/display/MSK/Change+Log" target="_blank">check out Change Log</a>
-                        </p>
-                    </div>
-
-                    <div class="news">
-                        <span>03. DEC 2013</span>
-                        <p>The ultimate MoSKito Integration Guide is on our blog. All secrets revealed!
-                        </p>
-                    </div>
-                </div>
+            <div class="col-md-4 news-box">
+                <div id="news"></div>
             </div>
-            <div class="span4 facebook-box">
-                <div class="frame">
-                    <div class="frame-title">
-                        <h2>Find us on Facebook</h2>
-                    </div>
-                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Anotherianet/120131349401"
-                         data-width="370" data-show-faces="true" data-header="false" data-stream="false"
-                         data-show-border="false"></div>
-                </div>
+            <div class="col-md-4 twitter-box">
+                <div id="socialWidget"></div>
             </div>
         </div>
 
     </div>
-</div>
-<div class="footer">
-    <div class="container">
-        <div class="row-fluid">
-            <div class="span4 links-box">
-                <h2>More</h2>
-                <ul class="links">
-                    <li><a href="license.html">License</a></li>
-                    <li><a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Central+Changelog">ChangeLog</a>
-                    </li>
-                    <li><a itemprop="downloadUrl" href="https://github.com/anotheria/moskito-central">MoSKito-Central on GitHub</a></li>
-                    <li><a href="https://jira.opensource.anotheria.net/browse/MSKCENTRAL">Submit a bug</a></li>
-                    <li><a href="http://blog.anotheria.net/category/msk/">Blog</a></li>
-                    <li><a href="http://lists.anotheria.net/cgi-bin/mailman/listinfo/moskito-users">Subscribe to mailing
-                        list</a></li>
-                    <li><a href="moskito-forum.html">User's Forum</a></li>
-                    <li><a href="moskito-support.html">Support</a></li>
-                </ul>
-            </div>
-            <div class="span4 feedback-box">
-                <h2>Feedback</h2>
 
-                <p>Please send your comments, suggestions or any other kind of positive or negative feedback to
-                    moskito [at] anotheria.net</p>
+    <div id="companies"></div>
+    <div id="footer"></div>
 
-                <p>For questions or help subscribe to MoSKito users mailing list: moskito-users@lists.anotheria.net
-                    (<a href="http://lists.anotheria.net/cgi-bin/mailman/listinfo/moskito-users">use this link to
-                        subscribe</a>)</p>
-
-                <p>Browse the arcives on <a href="http://moskito-users.1088230.n5.nabble.com/">nabble</a>.</p>
-
-                <p>
-                    Thank you for your interest in MoSKito.
-                    <!-- Rich snippet: author -->
-                    <br/><b itemscope itemtype="http://schema.org/SoftwareApplication">
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <span itemprop="name">
-                    Leon Rosenberg</span></span> and the MoSKito Team</b>
-                </p>
-            </div>
-            <div class="span4">
-                <a class="twitter-timeline" href="https://twitter.com/search?q=%23moskito-java"
-                   data-widget-id="365391211919454208">Tweets about "#moskito-java"</a>
-                <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = p + "://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");</script>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clients">
-    <div class="container">
-        <ul>
-            <li>
-                <img class="color" alt="All you need logo" src="static-int/img/client5.png"/>
-            </li>
-            <li>
-                <img class="color" alt="C-date logo" src="static-int/img/client4.png"/>
-            </li>
-            <li>
-                <img class="color" alt="Bosch logo" src="static-int/img/client1.png"/>
-            </li>
-            <li>
-                <img class="color" alt="Friend scout 24 logo" src="static-int/img/client3.png"/>
-            </li>
-            <li>
-                <img class="color" alt="Tyntec logo" src="static-int/img/client6.png"/>
-            </li>
-            <li>
-                <img class="color" alt="Parship logo" src="static-int/img/client2.png"/>
-            </li>
-        </ul>
-    </div>
-</div>
 </div>
 
-<script type="text/javascript" src="static-ext/jquery-1.8.3/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="static-ext/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static-ext/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="static-ext/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modalmanager.js"></script>
 <script type="text/javascript" src="static-ext/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1-packed.js"></script>
 <script type="text/javascript" src="static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="static-int/js/carousel.js"></script>
 <script type="text/javascript" src="static-int/js/common.js"></script>
+<script type="text/javascript" src="static-int/js/open-header.js"></script>
+<script type="text/javascript" src="static-int/js/open-news.js"></script>
+<script type="text/javascript" src="static-int/js/open-companies.js"></script>
+<script type="text/javascript" src="static-int/js/open-footer.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

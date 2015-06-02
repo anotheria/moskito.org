@@ -7,47 +7,61 @@
     <meta name="description" content="MoSKito Integration"/>
     <meta name="keywords" content="moskito Integration, java application monitoring support,
     java monitoring, application monitoring, open source java monitoring, professional support, moskito"/>
-    <link rel="shortcut icon" href="static-int/img/favicon.ico" type="image/x-icon">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-3.3.4/css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/font-awesome-3.2.1/css/font-awesome.min.css"/>
-    <link type="text/css" rel="stylesheet" href="static-ext/google-code-prettify/prettify.css"/>
-    <link href='static-int/css-new/common.css' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="../static-int/img/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="../static-ext/bootstrap-2.3.2/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="../static-ext/bootstrap-2.3.2/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="../static-ext/bootstrap-modal-2.1/css/bootstrap-modal.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="../static-ext/font-awesome-3.2.1/css/font-awesome.min.css"/>
+    <!--Icons on the page may be changed by simply inserting the icon name.
+    Icon names and previews are here: http://fortawesome.github.io/Font-Awesome/icons/ -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="../static-ext/google-code-prettify/prettify.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="../static-int/css/common.css"/>
 </head>
 
 <body data-spy="scroll" data-target="#myNavbar" data-offset="100">
 <div id="fb-root"></div>
 
-<div class="wrapper">
+<div class="wrapper moskito-code">
 
-    <div id="header" data-logo-name="For Developers"></div>
-
-    <!-- Main box start -->
-    <div class="main-box main-page-content">
-        <div class="gray-box-out"></div>
-        <div class="container">
-            <div class="main-info">
-                <div class="main-box-padding-2">
-                    <h1>
-                        Let's get techy
-                    </h1>
-                    <p>This pages explains MoSKito from Developers perspective. No marketing bla-bla.<br> Promise.</p>
-                </div>
-            </div>
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="http://moskito.org">
+                <img src="../static-int/img/logo.png" alt="MoSKito"/>
+                <span><b>MoSKito</b> for Developers</span>
+            </a>
         </div>
+        <ul class="main-menu text-center">
+            <li class="inactive"><a href="../index.html">Essential</a></li>
+            <li class="inactive"><a href="../moskito-control.html">Control</a></li>
+            <li class="inactive"><a href="../moskito-central.html">Central</a></li>
+        </ul>
     </div>
-    <!-- Main box end -->
+</div>
 
 <!-- Start of content -->
 <div class="content">
 
+<!-- Main box start -->
+<div class="main-box">
+    <div class="container">
+        <div class="main-info">
+            <h1>Let's get techy</h1>
+
+            <p>
+                This pages explains MoSKito from Developers perspective. No marketing bla-bla.<br> Promise.
+            </p>
+        </div>
+    </div>
+</div>
 <!-- Main box end -->
 
 <div class="container">
 
-<div class="row">
+<div class="row-fluid">
 
-<div class="col-xs-9 scrollspy-content">
+<div class="span9 scrollspy-content">
 
 	<!-- Intro -->
 <div class="docs-section">
@@ -57,7 +71,9 @@
 
         Since the start of the MoSKito Project we were using following definiton of MoSKito:
         <div class="well">
+        <blockquote>
         MoSKito is a <b>multi-purpose</b>, <b>non-invasive</b>, <b>interval based</b> monitoring system kit for <b>collection</b>, <b>storage</b> and <b>instant analysis</b> of application’s <b>performance</b> and <b>behavior data</b>.
+        </blockquote>
         </div>
         Apparently this definition won't help you much. Instead we are going to concentrate on <i>what can it be used for?</i> and get back to the features later.
         <br>MoSKito concentrates on three aspects of your application:<br>
@@ -146,10 +162,10 @@
 </div>
 
 
-<div class="col-xs-3">
+<div class="span3">
     <nav id="myNavbar" role="navigation">
         <div id="navbarCollapse">
-            <ul class="nav scrollspy">
+            <ul class="nav navbar-nav scrollspy">
                 <li class="active dropdown"><a href="#section-intro">Introduction</a>
                     <ul class="dropdown-menu">
                         <li><a href="#section-intro-producers">Producers</a></li>
@@ -197,11 +213,31 @@
 </div>
 <!-- End of content -->
 
-    <div id="footer"></div>
-
+<div class="clients">
+    <div class="container">
+        <ul>
+            <li>
+                <img class="color" alt="All you need logo" src="../static-int/img/client5.png"/>
+            </li>
+            <li>
+                <img class="color" alt="C-date logo" src="../static-int/img/client4.png"/>
+            </li>
+            <li>
+                <img class="color" alt="Bosch logo" src="../static-int/img/client1.png"/>
+            </li>
+            <li>
+                <img class="color" alt="Friend scout 24 logo" src="../static-int/img/client3.png"/>
+            </li>
+            <li>
+                <img class="color" alt="Tyntec logo" src="../static-int/img/client6.png"/>
+            </li>
+            <li>
+                <img class="color" alt="Parship logo" src="../static-int/img/client2.png"/>
+            </li>
+        </ul>
+    </div>
 </div>
-
-
+</div>
 <script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -211,23 +247,19 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<script type="text/javascript" src="static-ext/jquery-1.10.2/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="static-ext/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="static-ext/google-code-prettify/prettify.js"></script>
-<script type="text/javascript" src="static-ext/google-code-prettify/application.js"></script>
-<script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modalmanager.js"></script>
-<script type="text/javascript" src="static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="../static-ext/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../static-ext/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="../static-ext/google-code-prettify/application.js"></script>
+<script type="text/javascript" src="../static-ext/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static-ext/bootstrap-modal-2.1/js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="../static-ext/bootstrap-modal-2.1/js/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="../static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
 
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<script type="text/javascript" src="static-int/js/common.js"></script>
-<script type="text/javascript" src="static-int/js/common-new.js"></script>
-<script type="text/javascript" src="static-int/js/code.js"></script>
+<script type="text/javascript" src="../static-int/js/common.js"></script>
+<script type="text/javascript" src="../static-int/js/code.js"></script>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-
-<script type="text/javascript" src="static-int/js/open-header.js"></script>
-<script type="text/javascript" src="static-int/js/open-footer.js"></script>
-
 <script type="text/javascript">
     _uacct = "UA-2363606-2";
     urchinTracker();

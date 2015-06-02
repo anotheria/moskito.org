@@ -1,0 +1,11 @@
+.moskito-central  .main-box {
+    background-image:url(../img/main_bg_central.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+    padding-top: 80px;
+}
+
+.section.section-features {
+    border-bottom: 1px solid #EEE;
+}
