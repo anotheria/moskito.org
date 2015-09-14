@@ -2324,3 +2324,44 @@ h3.anchor {
     height: 30px;
     padding: 25px 15px;
 }
+
+.mobile-box {
+    background: url("../img-new/main/mobile.png") center top;
+    background-size: 260px auto;
+    width: 260px;
+    height: 380px;
+    margin: -20px auto -70px;
+    position: relative;
+}
+
+.app-store {
+    display: block;
+    background: url("../img-new/main/app_store.png");
+    background-size: 139px auto;
+    width: 139px;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.app-store:hover {
+    opacity: 0.8;
+}
+
+.mobile-features-box,
+.mobile-text-box {
+    margin-top: 40px;
+}
+
+.mobile-features-box {
+    margin-bottom: -20px;
+}
+
+.mobile-white-line {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: url("../img-new/main/mobile_white_line.png") repeat-x;
+    height: 80px;
+}
