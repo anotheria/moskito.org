@@ -234,13 +234,12 @@ a:focus {
     display: block;
     width: 69px;
     height: 76px;
-    background: url(../img/step_box.png) no-repeat center center;
     float: right;
     margin-top: 40px;
     text-align: center;
     line-height: 76px;
     font-size: 31px;
-    color: #8e8e8e;
+    color: #CCC;
     position: relative;
 }
 
@@ -1073,7 +1072,7 @@ li.core-item a.btn {
 }
 
 .modal-backdrop, .modal-backdrop.fade.in {
-    background-color: #000;
+    background-color: #CCC;
 }
 
 .scroll .modal-scrollable {
@@ -1784,7 +1783,7 @@ p, li {
 }
 
 .step-box {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .moskito-story .main-box {
