@@ -549,6 +549,10 @@ i.help {
     background: #479fec;
 }
 
+.feature-box > i.fa-mobile {
+    font-size: 28px;
+}
+
 .companies-container {
     text-align: center;
 }
@@ -929,6 +933,7 @@ h2 {
     font-size: 18px;
 }
 
+.btn.orange-btn,
 .btn.green-btn,
 .btn.blue-btn {
     padding: 12px 25px;
@@ -960,6 +965,14 @@ h2 {
 
 .btn.blue-btn:hover {
     background: #4d98d8;
+}
+
+.btn.orange-btn {
+    background: #eb8e14;
+}
+
+.btn.orange-btn:hover {
+    background: #e48100;
 }
 
 .btn.green-btn:active,
@@ -1135,6 +1148,7 @@ h2 {
 
 .next-box ul {
     margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -1645,9 +1659,14 @@ h3.anchor {
 }
 
 .btnline {
-    background-image: url(../img/btnline.png);
-    background-repeat: repeat-y;
-    background-size: 100% auto;
+    background: -moz-linear-gradient(left,  rgba(0,85,161,0.9) 0%, rgba(0,85,161,0.9) 40%, rgba(113,156,0,0.9) 60%, rgba(113,156,0,0.9) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,85,161,0.9)), color-stop(40%,rgba(0,85,161,0.9)), color-stop(60%,rgba(113,156,0,0.9)), color-stop(100%,rgba(113,156,0,0.9))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,85,161,0.9) 0%,rgba(0,85,161,0.9) 40%,rgba(113,156,0,0.9) 60%,rgba(113,156,0,0.9) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,85,161,0.9) 0%,rgba(0,85,161,0.9) 40%,rgba(113,156,0,0.9) 60%,rgba(113,156,0,0.9) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,85,161,0.9) 0%,rgba(0,85,161,0.9) 40%,rgba(113,156,0,0.9) 60%,rgba(113,156,0,0.9) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,85,161,0.9) 0%,rgba(0,85,161,0.9) 40%,rgba(113,156,0,0.9) 60%,rgba(113,156,0,0.9) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60055a1', endColorstr='#e6719c00',GradientType=1 ); /* IE6-9 */
+
     padding: 20px 0;
     position: absolute;
     bottom: 0;
@@ -2332,6 +2351,7 @@ h3.anchor {
     height: 380px;
     margin: -20px auto -70px;
     position: relative;
+    overflow: hidden;
 }
 
 .app-store {
@@ -2364,4 +2384,45 @@ h3.anchor {
     width: 100%;
     background: url("../img-new/main/mobile_white_line.png") repeat-x;
     height: 80px;
+    z-index: 100;
+}
+
+.popover {
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.popover.bottom > .arrow {
+    top: -8px;
+    border: none;
+}
+
+.popover.top > .arrow {
+    bottom: -8px;
+    border: none;
+}
+
+.actions-buttons {
+    background: rgb(0,85,161); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(0,85,161,1) 20%, rgba(113,156,0,1) 50%, rgba(205,96,0,1) 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%,rgba(0,85,161,1)), color-stop(50%,rgba(113,156,0,1)), color-stop(80%,rgba(205,96,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,85,161,1) 20%,rgba(113,156,0,1) 50%,rgba(205,96,0,1) 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,85,161,1) 20%,rgba(113,156,0,1) 50%,rgba(205,96,0,1) 80%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,85,161,1) 20%,rgba(113,156,0,1) 50%,rgba(205,96,0,1) 80%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,85,161,1) 20%,rgba(113,156,0,1) 50%,rgba(205,96,0,1) 80%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0055a1', endColorstr='#cd6000',GradientType=1 ); /* IE6-9 */
+
+    padding: 20px 0;
+}
+
+.btn.btn-full {
+    width: 100%;
+}
+
+.mobile-box .owl-carousel {
+    width: 224px;
+    position: absolute;
+    top: 66px;
+    left: 18px;
 }

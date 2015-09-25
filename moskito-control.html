@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="static-int/img/favicon.ico" type="image/x-icon">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/bootstrap-3.3.4/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/owl.carousel/assets/owl.carousel.css"/>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/font-awesome-3.2.1/css/font-awesome.min.css"/>
     <link href='static-int/css-new/common.css' rel='stylesheet' type='text/css'>
     <link href='static-int/css-new/control.css' rel='stylesheet' type='text/css'>
@@ -175,11 +176,16 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
                     </p>
-                    <a href="#" class="app-store pull-right"></a>
+                    <a href="https://itunes.apple.com/de/app/msk-control/id688838411" class="app-store pull-right"></a>
                 </div>
                 <div class="col-md-4">
                     <div class="mobile-box">
-
+                        <div id="iOS-control-screen">
+                            <div class="item"><img src="static-int/img/moskito_control_ios/screen_1.jpeg" alt="Moskito control iOS screen 1"></div>
+                            <div class="item"><img src="static-int/img/moskito_control_ios/screen_2.jpeg" alt="Moskito control iOS screen 2"></div>
+                            <div class="item"><img src="static-int/img/moskito_control_ios/screen_3.jpeg" alt="Moskito control iOS screen 3"></div>
+                            <div class="item"><img src="static-int/img/moskito_control_ios/screen_4.jpeg" alt="Moskito control iOS screen 4"></div>
+                        </div>
                         <span class="mobile-white-line"></span>
                     </div>
                 </div>
@@ -212,15 +218,22 @@
 
 <script type="text/javascript" src="static-ext/jquery-1.10.2/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modal.js"></script>
-<script type="text/javascript" src="static-ext/bootstrap-modal-2.1/js/bootstrap-modalmanager.js"></script>
-<script type="text/javascript" src="static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="static-ext/owl.carousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="static-int/js/common.js"></script>
 <script type="text/javascript" src="static-int/js/open-header.js"></script>
 <script type="text/javascript" src="static-int/js/open-news.js"></script>
 <script type="text/javascript" src="static-int/js/open-mobile.js"></script>
 <script type="text/javascript" src="static-int/js/open-companies.js"></script>
 <script type="text/javascript" src="static-int/js/open-footer.js"></script>
+<script>
+    $('#iOS-control-screen').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        items: 1
+    })
+</script>
+
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

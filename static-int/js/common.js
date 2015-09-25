@@ -2,6 +2,8 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('.tooltip-top').tooltip({placement:'top', container: 'body'}).on('show', function (e) {e.stopPropagation();});
 
+    $('[data-toggle="popover"]').popover({trigger:'hover'});
+
     $('.inactive span').tooltip({
         placement: 'bottom'
     });
