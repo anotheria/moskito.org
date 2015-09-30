@@ -15,6 +15,7 @@
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/owl.carousel/assets/owl.carousel.css"/>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/font-awesome-3.2.1/css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-ext/font-awesome-4.4.0/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" rev="stylesheet" href="static-int/css/theme.css"/>
     <link href='static-int/css-new/common.css' rel='stylesheet' type='text/css'>
 </head>
 
@@ -144,11 +145,12 @@
                         </div>
                         <div class="col-md-4">
                             <div class="feature-box">
-                                <i class="icon-shield"></i>
-                                <h4>Keep your data safe</h4>
-                                <p>MoSKito does not use any external servers or resources for processing or storing your app's data.
-                                    All the collected info is kept locally, ensuring your privacy.</p>
-                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-privacy">More</a>
+                                <i class="icon-dashboard"></i>
+                                <h4>Dashboard</h4>
+                                <p>
+                                    One-page overview for all critical services and processes of Application in multi nodes production environment (enterprise, cloud). Visualize the overall status to everyone involved in the most simple and understandable way.
+                                </p>
+                                <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Inspect">More</a>
                             </div>
                         </div>
 
@@ -236,7 +238,8 @@
                 <div class="col-md-4 text-right mobile-text-box">
                     <h2>MoSKito for iPhone</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+                        Mobile addition to the open source MoSKito Monitoring Framework.
+                        <br>Control and monitor your application from anywhere.
                     </p>
                     <a href="https://itunes.apple.com/de/app/moskito-ui/id531387262?l=en&mt=8" class="app-store pull-right"></a>
                 </div>
@@ -253,19 +256,16 @@
                 </div>
                 <div class="col-md-4 text-left mobile-features-box">
                     <div class="feature-box">
-                        <i class="icon-refresh"></i>
-                        <h4>See more with short intervals</h4>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper...</p>
+                        <i class="fa fa-lightbulb-o"></i>
+                        <p>Monitor performance of your applications with thresholds</p>
                     </div>
                     <div class="feature-box">
-                        <i class="icon-refresh"></i>
-                        <h4>See more with short intervals</h4>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper...</p>
+                        <i class="fa fa-line-chart"></i>
+                        <p>Visualize your business and technical key figures with graphs (accumulators)</p>
                     </div>
                     <div class="feature-box">
-                        <i class="icon-refresh"></i>
-                        <h4>See more with short intervals</h4>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper...</p>
+                        <i class="fa fa-tachometer"></i>
+                        <p>Monitor multiple applications in one screen and switch between them</p>
                     </div>
                 </div>
             </div>
@@ -288,9 +288,11 @@
                     </a>
                 </div>
                 <div class="col-md-4 text-left">
-                    <a href="moskito-support.html" class="btn btn-full orange-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="Ready to start? Get Free Consultation">
-                        Get Free Consultation
-                    </a>
+                    <span style="display: block" data-container="body" data-toggle="popover" data-placement="top" data-content="Ready to start? Get Free Consultation">
+                        <a href="#contactUs" class="btn btn-full orange-btn" data-toggle="modal" data-target="#contactUs">
+                            Get Free Consultation
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
@@ -299,17 +301,112 @@
 
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="contactUs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">MoSKitoRize your App</h4>
+            </div>
+            <div class="modal-body">
+                <form id="feedbackForm" data-toggle="validator" action="javascript:void(null);" method="post" role="form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group error">
+                                <label for="fName">First Name<span class="required-item">*</span></label>
+                                <input type="text" id="fName" name="fName" placeholder="First Name" class="form-control" data-error="Please, enter your First Name" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="lName">Last Name<span class="required-item">*</span></label>
+                                <input type="text" id="lName" name="lName" placeholder="Last Name" class="form-control" data-error="Please, enter your Last Name" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="cEmail">Email<span class="required-item">*</span></label>
+                                <input type="email" id="cEmail" name="cEmail" placeholder="Email address" class="form-control" data-error="Sorry, that email address is invalid" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="cCompany">Company</label>
+                                <input type="text" id="cCompany" name="cCompany" placeholder="Company name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="Note">Note</label>
+                                <textarea id="Note" name="Note" placeholder="Note" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="submit-message" style="display:none;">
+                    <p><strong>Thank you.</strong> Your message has been sent.</p>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript" src="static-ext/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="static-ext/jquery-serialize-object/jquery.serialize-object.min.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="static-ext/owl.carousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
+<script type="text/javascript" src="static-ext/bootstrap-validator/validator.min.js"></script>
 <script type="text/javascript" src="static-int/js/common.js"></script>
 <script type="text/javascript" src="static-int/js/map.js"></script>
 <script type="text/javascript" src="static-int/js/open-header.js"></script>
 <script type="text/javascript" src="static-int/js/open-news.js"></script>
-<script type="text/javascript" src="static-int/js/open-mobile.js"></script>
 <script type="text/javascript" src="static-int/js/open-companies.js"></script>
 <script type="text/javascript" src="static-int/js/open-footer.js"></script>
+
+
+<script>
+    $(function() {
+        $('#feedbackForm').validator().on('submit', function (e) {
+            if (e.preventDefault()) {
+                alert('error');
+            } else {
+                e.preventDefault()
+                $.ajax({
+                    url: 'http://moskito-moskitorize.rhcloud.com/feedback',
+                    type: 'post',
+                    dataType: 'json',
+                    contentType: 'application/json;charset=utf-8',
+                    data: JSON.stringify($("#feedbackForm").serializeObject()),
+                    success: function(data) {
+                    }
+                });
+                $('#feedbackForm').hide();
+                $('.submit-message').show();
+                return false;
+            }
+        });
+        $('#contactUs').on('hidden.bs.modal', function (e) {
+            $('#feedbackForm input').val('');
+            $('#feedbackForm').show();
+            $('.submit-message').hide();
+        })
+    });
+</script>
 
 <script>
     $('#iOS-screen').owlCarousel({
@@ -318,7 +415,7 @@
         nav:false,
         items: 1,
         autoplay: true
-    })
+    });
 </script>
 
 <script>

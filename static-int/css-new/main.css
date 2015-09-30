@@ -543,7 +543,7 @@ i.help {
     text-align: center;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 4px;
     font-size: 21px;
     color: #FFF;
     background: #479fec;
@@ -2372,8 +2372,22 @@ h3.anchor {
     margin-top: 40px;
 }
 
+.mobile-text-box p {
+    line-height: 24px;
+}
+
 .mobile-features-box {
     margin-bottom: -20px;
+}
+
+.mobile-features-box p {
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+}
+
+.mobile-features-box .feature-box {
+    min-height: 40px;
 }
 
 .mobile-white-line {

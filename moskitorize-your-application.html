@@ -204,6 +204,7 @@
 
 </div>
 
+
 <!-- Modal -->
 <div class="modal fade" id="contactUs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -213,7 +214,7 @@
                 <h4 class="modal-title" id="myModalLabel">MoSKitoRize your App</h4>
             </div>
             <div class="modal-body">
-                <form data-toggle="validator" action="http://moskito-moskitorize.rhcloud.com/feedback/submit" method="post" role="form">
+                <form id="feedbackForm" data-toggle="validator" action="javascript:void(null);" method="post" role="form">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group error">
@@ -256,17 +257,55 @@
                         </div>
                     </div>
                 </form>
+
+                <div class="submit-message" style="display:none;">
+                    <p><strong>Thank you.</strong> Your message has been sent.</p>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-
 <script type="text/javascript" src="static-ext/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="static-ext/jquery-serialize-object/jquery.serialize-object.min.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="static-ext/carouFredSel-6.2.1/helper-plugins/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="static-ext/bootstrap-validator/validator.min.js"></script>
 <script type="text/javascript" src="static-int/js/common.js"></script>
+
+<script>
+    $(function() {
+        $('#feedbackForm').validator().on('submit', function (e) {
+            if (e.preventDefault()) {
+                alert('error');
+            } else {
+                e.preventDefault()
+                $.ajax({
+                    url: 'http://moskito-moskitorize.rhcloud.com/feedback',
+                    type: 'post',
+                    dataType: 'json',
+                    contentType: 'application/json;charset=utf-8',
+                    data: JSON.stringify($("#feedbackForm").serializeObject()),
+                    success: function(data) {
+                    }
+                });
+                $('#feedbackForm').hide();
+                $('.submit-message').show();
+                return false;
+            }
+        });
+        $('#contactUs').on('hidden.bs.modal', function (e) {
+            $('#feedbackForm input').val('');
+            $('#feedbackForm').show();
+            $('.submit-message').hide();
+        })
+    });
+</script>
+
+
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,0 +1,140 @@
+.btn {
+    -webkit-transition: all 0.12s linear;
+    -moz-transition: all 0.12s linear;
+    -o-transition: all 0.12s linear;
+    transition: all 0.12s linear;
+    padding: 8px 15px;
+}
+
+.form-control {
+    padding: 8px 15px;
+    height: 36px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+.modal-actions {
+    overflow: hidden;
+}
+
+.modal-actions .btn {
+    margin-left: 5px;
+    min-width: 120px;
+}
+
+.modal-content {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: none;
+    border: none;
+}
+
+.modal-backdrop, .modal-backdrop.fade.in {
+    background-color: #CCC;
+}
+
+.modal-header {
+    background: #479fec;
+    color: #FFF;
+    border: none;
+    padding: 15px 30px;
+}
+
+.modal-header .close {
+    font-weight: 300;
+    font-size: 28px;
+    color: #FFF;
+    text-shadow: none;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 11px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.form-control {
+    border-color: #DDD;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background: #479fec;
+    border-color: #479fec;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #338bd8;
+    border-color: #338bd8;
+}
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #338bd8;
+    border-color: #338bd8;
+}
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-primary[disabled] {
+    background-color: #338bd8;
+    border-color: #338bd8;
+}
+
+
+.btn-success {
+    background: #93c01b;
+    border-color: #93c01b;
+}
+.btn-success:hover,
+.btn-success:focus {
+    background: #87b900;
+    border-color: #87b900;
+}
+.btn-success:active,
+.btn-success.active {
+    background: #87b900;
+    border-color: #87b900;
+}
+.btn-success.disabled,
+.btn-success:disabled,
+.btn-success[disabled] {
+    background: #87b900;
+    border-color: #87b900;
+}
+
+.required-item {
+    color: #ff2828;
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    bottom: -4px;
+}
+
+.form-group .help-block {
+    font-size: 12px;
+}
+
+.has-error .form-control {
+    border-color: #ff2828;
+}
+
+.has-error .form-control:focus {
+    box-shadow: none;
+    border-color: #ff2828;
+}
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+    color: #ff2828;
+}

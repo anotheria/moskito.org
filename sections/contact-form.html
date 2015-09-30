@@ -1,0 +1,84 @@
+
+<!-- Modal -->
+<div class="modal fade" id="contactUs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">MoSKitoRize your App</h4>
+            </div>
+            <div class="modal-body">
+                <form id="feedbackForm" data-toggle="validator" action="javascript:void(null);" method="post" role="form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group error">
+                                <label for="fName">First Name<span class="required-item">*</span></label>
+                                <input type="text" id="fName" name="fName" placeholder="First Name" class="form-control" data-error="Please, enter your First Name" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="lName">Last Name<span class="required-item">*</span></label>
+                                <input type="text" id="lName" name="lName" placeholder="Last Name" class="form-control" data-error="Please, enter your Last Name" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="cEmail">Email<span class="required-item">*</span></label>
+                                <input type="email" id="cEmail" name="cEmail" placeholder="Email address" class="form-control" data-error="Sorry, that email address is invalid" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="cCompany">Company</label>
+                                <input type="text" id="cCompany" name="cCompany" placeholder="Company name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="Note">Note</label>
+                                <textarea id="Note" name="Note" placeholder="Note" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $('#feedbackForm').validator().on('submit', function (e) {
+            if (e.isDefaultPrevented()) {
+                alert('error');
+            } else {
+                alert('ok');
+                $.ajax({
+                    url: 'http://moskito-moskitorize.rhcloud.com/feedback',
+                    type: 'post',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    dataType: 'json',
+                    data: $("#feedbackForm").serialize(),
+                    success: function(data) {
+                        alert('ok');
+                    }
+                });
+
+            }
+        });
+
+    });
+</script>
