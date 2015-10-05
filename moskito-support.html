@@ -33,7 +33,7 @@
                     </h3>
 
                     <div class="min-btns">
-                        <a class="btn btn-lg btn-white hvr-rectangle-out" href="mailto:support@moskito.org?subject=professional-support" role="button">Send mail</a>
+                        <a class="btn btn-lg btn-white hvr-rectangle-out send-mail-link" href="mailto:support@moskito.org?subject=professional-support" role="button">Send mail</a>
                         <a class="btn btn-lg btn-white hvr-rectangle-out" href="skype:+49(0)4035716835" role="button">+49 (0) 40 357 168 35</a>
                     </div>
                 </div>
@@ -248,7 +248,7 @@
             </div>
 
             <div class="min-btns">
-                <a class="btn btn-lg btn-blue hvr-rectangle-out" href="mailto:support@moskito.org?subject=professional-support" role="button">Send mail</a>
+                <a class="btn btn-lg btn-blue hvr-rectangle-out send-mail-link" href="mailto:support@moskito.org?subject=professional-support" role="button">Send mail</a>
                 <a class="btn btn-lg btn-blue hvr-rectangle-out" href="skype:+49(0)4035716835" role="button">+49 (0) 40 357 168 35</a>
             </div>
         </div>
@@ -269,7 +269,7 @@
                                 <i class="icon-shield"></i>
                                 <h4>MoSKito Maintenance</h4>
                                 <p>Support and bugfixing on a specific project</p>
-                                <a href="mailto:support@moskito.org?subject=MoSKito-Maintenance">get it!</a>
+                                <a class="send-mail-link" href="mailto:support@moskito.org?subject=MoSKito-Maintenance">get it!</a>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -277,7 +277,7 @@
                                 <i class="icon-cogs"></i>
                                 <h4>Integration with Your System</h4>
                                 <p>On/off site</p>
-                                <a href="mailto:support@moskito.org?subject=MoSKito-Integration">get it!</a>
+                                <a class="send-mail-link" href="mailto:support@moskito.org?subject=MoSKito-Integration">get it!</a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -286,7 +286,7 @@
                                 <i class="icon-wrench"></i>
                                 <h4>Features on Demand</h4>
                                 <p>Extra MoSKito functionality, tailored for your application</p>
-                                <a href="mailto:support@moskito.org?subject=MoSKito-Features-on-Demand">get it!</a>
+                                <a class="send-mail-link" href="mailto:support@moskito.org?subject=MoSKito-Features-on-Demand">get it!</a>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -294,7 +294,7 @@
                                 <i class="icon-trophy"></i>
                                 <h4>Trainings and Consultancy</h4>
                                 <p>In person or interactively</p>
-                                <a href="mailto:support@moskito.org?subject=MoSKito-Training">get it!</a>
+                                <a class="send-mail-link" href="mailto:support@moskito.org?subject=MoSKito-Training">get it!</a>
                             </div>
                         </div>
                     </div>
@@ -367,6 +367,11 @@
 
 </script>
 
+<script>
+    $('.send-mail-link').click(function() {
+        ga(['_trackEvent', 'mailbutton', 'sendmail1']);
+    });
+</script>
 
 
 </body>

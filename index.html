@@ -307,7 +307,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">MoSKitoRize your App</h4>
+                <h4 class="modal-title" id="myModalLabel">Free Consultation</h4>
             </div>
             <div class="modal-body">
                 <form id="feedbackForm" data-toggle="validator" action="javascript:void(null);" method="post" role="form">
@@ -378,36 +378,6 @@
 <script type="text/javascript" src="static-int/js/open-companies.js"></script>
 <script type="text/javascript" src="static-int/js/open-footer.js"></script>
 
-
-<script>
-    $(function() {
-        $('#feedbackForm').validator().on('submit', function (e) {
-            if (e.preventDefault()) {
-                alert('error');
-            } else {
-                e.preventDefault()
-                $.ajax({
-                    url: 'http://moskito-moskitorize.rhcloud.com/feedback',
-                    type: 'post',
-                    dataType: 'json',
-                    contentType: 'application/json;charset=utf-8',
-                    data: JSON.stringify($("#feedbackForm").serializeObject()),
-                    success: function(data) {
-                    }
-                });
-                $('#feedbackForm').hide();
-                $('.submit-message').show();
-                return false;
-            }
-        });
-        $('#contactUs').on('hidden.bs.modal', function (e) {
-            $('#feedbackForm input').val('');
-            $('#feedbackForm').show();
-            $('.submit-message').hide();
-        })
-    });
-</script>
-
 <script>
     $('#iOS-screen').owlCarousel({
         loop:true,
@@ -428,6 +398,37 @@
     ga('send', 'pageview');
 
 </script>
+
+<script>
+    $(function() {
+        $('#feedbackForm').validator().on('submit', function (e) {
+            if (e.preventDefault()) {
+                alert('error');
+            } else {
+                e.preventDefault()
+                $.ajax({
+                    url: 'http://moskito-moskitorize.rhcloud.com/feedback',
+                    type: 'post',
+                    dataType: 'json',
+                    contentType: 'application/json;charset=utf-8',
+                    data: JSON.stringify($("#feedbackForm").serializeObject()),
+                    success: function(data) {
+                    }
+                });
+                $('#feedbackForm').hide();
+                $('.submit-message').show();
+                ga(['_trackEvent', 'formsend', 'getconsultation1']);
+                return false;
+            }
+        });
+        $('#contactUs').on('hidden.bs.modal', function (e) {
+            $('#feedbackForm input').val('');
+            $('#feedbackForm').show();
+            $('.submit-message').hide();
+        })
+    });
+</script>
+
 <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/
 window.olark || (function (c) {
