@@ -310,7 +310,7 @@
                 <h4 class="modal-title" id="myModalLabel">Free Consultation</h4>
             </div>
             <div class="modal-body">
-                <form id="feedbackForm" data-toggle="validator" action="javascript:void(null);" method="post" role="form">
+                <form id="feedbackForm" data-toggle="validator" method="post" role="form">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group error">
@@ -402,8 +402,7 @@
 <script>
     $(function() {
         $('#feedbackForm').validator().on('submit', function (e) {
-            if (e.preventDefault()) {
-                alert('error');
+            if (e.isDefaultPrevented()) {
             } else {
                 e.preventDefault()
                 $.ajax({

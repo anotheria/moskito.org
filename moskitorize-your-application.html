@@ -290,7 +290,7 @@
 <script>
     $(function() {
         $('#feedbackForm').validator().on('submit', function (e) {
-            if (e.preventDefault()) {
+            if (e.isDefaultPrevented()) {
                 alert('error');
             } else {
                 e.preventDefault()
