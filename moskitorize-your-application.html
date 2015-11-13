@@ -291,7 +291,6 @@
     $(function() {
         $('#feedbackForm').validator().on('submit', function (e) {
             if (e.isDefaultPrevented()) {
-                alert('error');
             } else {
                 e.preventDefault()
                 $.ajax({
