@@ -61,6 +61,9 @@
   .section-one-screen h1 {
     position: relative;
     margin-top: 50px;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
   }
 
   .section-one-screen .one-screen-footer .text {
@@ -120,6 +123,10 @@
 
   .one-screen-footer .ico {
     margin-top: 15px;
+  }
+
+  .one-screen-footer .ico-people {
+    margin-bottom: 10px;
   }
 
 }

@@ -51,8 +51,13 @@ body {
 
 .ico-people {
   background: url("../img/ico/ico-people.svg") no-repeat center;
-  width: 53px;
-  height: 44px;
+  width: 44px;
+  height: 37px;
+}
+
+.one-screen-footer .ico-people {
+  margin-top: 3px;
+  margin-bottom: 13px;
 }
 
 .ico-support {
