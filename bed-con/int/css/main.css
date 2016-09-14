@@ -1,0 +1,224 @@
+/*========================================
+--------------PROJECT STYLE---------------
+========================================*/
+body {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.section {
+  position: relative;
+}
+
+.one-screen-footer .ico {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.header {
+  padding-top: 20px;
+}
+
+.header .logo {
+  float: left;
+  margin-right: 20px;
+}
+
+.header .logo img {
+  width: 55px;
+  height: 56px;
+}
+
+.header .logo-text {
+  font-size: 24px;
+  color: #fff;
+}
+
+.header .logo-text span {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  font-weight: 600;
+}
+
+.ico-monitor {
+  background: url("../img/ico/ico-monitor.svg") no-repeat center;
+  width: 45px;
+  height: 44px;
+}
+
+.ico-people {
+  background: url("../img/ico/ico-people.svg") no-repeat center;
+  width: 53px;
+  height: 44px;
+}
+
+.ico-support {
+  background: url("../img/ico/ico-support.svg") no-repeat center;
+  width: 43px;
+  height: 44px;
+}
+
+.bg-one-screen {
+  background: url("../img/bg/bg-one-screen.jpg") no-repeat center / cover;
+  height: 817px;
+}
+
+.header > .container {
+  position: relative;
+}
+
+.section-one-screen .btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.section-one-screen h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.section-one-screen .one-screen-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 60px;
+  text-align: center;
+  height: 220px;
+  background: rgba(0,85,164,.8);
+}
+
+.section-one-screen .one-screen-footer .text {
+  font-size: 30px;
+  color: #fff;
+}
+
+.section-info {
+  padding: 90px 0 120px;
+}
+
+.section-info p {
+  margin-bottom: 60px;
+}
+
+.section-info .btn {
+  min-width: 240px;
+}
+
+.section-info .contact {
+  position: relative;
+  padding-left: 145px;
+  text-align: left;
+  display: inline-block;
+}
+
+.section-info .contact .name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.section-info .contact .tel {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.section-info .ava {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  padding: 4px;
+  border: 2px solid #62656d;
+}
+
+.footer {
+  background: url("../img/bg/bg-footer.jpg") no-repeat center / cover;
+  padding: 85px 0;
+}
+
+.footer .logo-moskito img {
+  width: 59px;
+  height: 60px;
+}
+
+.footer .logo-anotheria img {
+  width: 58px;
+  height: 60px;
+}
+
+.footer .logo + .logo {
+  margin-left: 25px;
+}
+
+.footer .copyright {
+  display: block;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #737882;
+}
+
+.footer .copyright span {
+  margin-top: 10px;
+}
+
+.footer .copyright a {
+  color: #9da5b0;
+}
+
+.footer .copyright a:hover {
+  opacity: 0.8;
+}
+
+.footer .btn {
+  min-width: 240px;
+}
+
+.list-social {
+  margin-bottom: 0;
+}
+
+.list-social li {
+  display: inline-block;
+}
+
+.list-social li + li {
+  margin-left: 10px;
+}
+
+.list-social .fa {
+  font-size: 25px;
+  line-height: 44px;
+}
+
+.list-social a {
+  width: 46px;
+  height: 46px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  background: #6e747e;
+  color: #444750;
+  border: 2px solid #6e747e;
+}
+
+.list-social li a:hover {
+  background: rgba(0,0,0,0);
+  color: #6e747e;
+}
+
+.footer .center-box {
+  text-align: center;
+}
+
+.footer .right-box {
+  text-align: right;
+}
