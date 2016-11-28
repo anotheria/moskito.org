@@ -2194,11 +2194,12 @@ h3.anchor {
 }
 
 .partner-box .partner-logo {
-    line-height: 120px;
+    line-height: 150px;
 }
 
 .partner-box .partner-logo img {
-    height: 60px;
+    max-width: 194px;
+    max-height: 120px;
 }
 
 .partner-box .partner-desc {
