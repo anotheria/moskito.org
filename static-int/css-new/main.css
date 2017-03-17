@@ -568,10 +568,6 @@ i.help {
     float: left;
     display: inline-block;
     margin: 0 20px;
-}
-
-.companies-list li img {
-    height: 50px;
     opacity: 0.4;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -579,7 +575,12 @@ i.help {
     transition: all 0.2s linear;
 }
 
-.companies-list li:hover img {
+.companies-list li img {
+    width: inherit !important;
+    height: 50px;
+}
+
+.companies-list li:hover {
     opacity: 0.7;
 }
 
