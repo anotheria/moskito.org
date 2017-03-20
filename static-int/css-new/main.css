@@ -562,10 +562,10 @@ i.help {
     margin: 0;
     padding: 0;
     display: inline-block;
+    text-align: center;
 }
 
 .companies-list li {
-    float: left;
     display: inline-block;
     margin: 0 20px;
     opacity: 0.4;
