@@ -367,17 +367,16 @@ h4 {
     margin: 0;
 }
 
-.prices .row .col-md-3 {
+.prices .row > div {
     padding: 0;
 }
 
-.prices .row .col-md-3:last-child .plan {
+.prices .row > div:last-child .plan {
     border-right: none;
 }
 
 .prices .plan {
     border-right: 1px solid #DDD;
-    overflow: hidden;
     padding: 30px 20px;
     position: relative;
 }
@@ -2447,4 +2446,45 @@ h3.anchor {
     position: absolute;
     top: 66px;
     left: 18px;
+}
+
+.plan-img {
+    margin-left: -21px;
+    margin-right: -21px;
+    height: 140px;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-img:before {
+    content: "";
+    display: block;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    transition: all 0.2s linear;
+}
+
+.plan:hover .plan-img:before {
+    opacity: 0;
+}
+
+.plan-title {
+    margin-top: -10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan .plan-title h4 {
+    font-weight: 300;
 }
