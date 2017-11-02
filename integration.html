@@ -303,6 +303,17 @@ public class ClassWithMonitoredMethod {
 
 <!-- spring -->
 <div class="docs-section">
+    <h2 id="section-javaagent" class="anchor">Javaagent</h2>
+
+    <p>
+        MoSKito comes with 2 Javaagents, a light version for quick fixes and a full blown javaagent with all features similar to the AOP. The later is yet BETA (as of 2.8.4).
+		The javaagents can be downloaded from the <a href="download.html">moskito download page</a>. Alternatively you can build them yourself from github sources here: <a href="https://github.com/anotheria/moskito-javaagent">https://github.com/anotheria/moskito-javaagent</a> and here: <a href="https://github.com/anotheria/moskito-javaagent-lite">https://github.com/anotheria/moskito-javaagent-lite</a>. The download packages contain READMEs with instructions.
+    </p>
+</div>
+
+
+<!-- spring -->
+<div class="docs-section">
     <h2 id="section-spring" class="anchor">Spring</h2>
 
     <p>
@@ -698,19 +709,7 @@ execution.finishExecution();</code></pre>
     <div class="sub-docs-section">
         <h3 id="section-inspect-embedded-gradle" class="anchor">Gradle</h3>
 
-        <p>Upcoming.</p>
-    </div>
-
-    <div class="sub-docs-section">
-        <h3 id="section-inspect-embedded-ant" class="anchor">Ant</h3>
-
-        <p>Upcoming.</p>
-    </div>
-
-    <div class="sub-docs-section">
-        <h3 id="section-inspect-embedded-toolless" class="anchor">Without any tools at all</h3>
-
-        <p>Upcoming.</p>
+        <p>We do not provide graddle support ourselves, but there is a blog entry on moskito and graddle: http://coders-kitchen.com/2013/03/29/tutorial-using-moskito-with-cdi/</p>
     </div>
 
 
@@ -726,6 +725,7 @@ execution.finishExecution();</code></pre>
             <ul class="nav scrollspy">
                 <li class="active"><a href="#section-aop">AOP</a></li>
                 <li><a href="#section-cdi">CDI</a></li>
+                <li><a href="#section-javaagent">Javaagent</a></li>
                 <li><a href="#section-spring">Spring</a></li>
                 <li><a href="#section-web">Web</a></li>
                 <li><a href="#section-ehcache">Ehcache</a></li>
@@ -741,8 +741,6 @@ execution.finishExecution();</code></pre>
                     <ul class="dropdown-menu">
                         <li><a href="#section-inspect-embedded-maven">Maven</a></li>
                         <li><a href="#section-inspect-embedded-gradle">Gradle</a></li>
-                        <li><a href="#section-inspect-embedded-ant">Ant</a></li>
-                        <li><a href="#section-inspect-embedded-toollees">Toolless</a></li>
                     </ul>
 				</li>
             </ul>
