@@ -333,11 +333,23 @@ h4 {
 
 .section {
     padding: 70px 0;
+    position: relative;
 }
 
 .section-title {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.packages-title {
+    position: relative;
+    z-index: 2;
+}
+
+.packages-title h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 0;
 }
 
 .section-title h2 {
@@ -2487,4 +2499,94 @@ h3.anchor {
 
 .plan .plan-title h4 {
     font-weight: 300;
+}
+
+.section-half-left {
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
+.section-half-left:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+}
+
+.section-half-right {
+    position: absolute;
+    right: 0;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
+.section-half-right:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%);
+}
+
+.flex-bbox {
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.flex-bbox.flex-title {
+    justify-content: center;
+}
+
+.packages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.packages-list li {
+    font-size: 16px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.packages-list li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    background: #479fec;
+    transition: all 0.2s linear;
+}
+
+.packages-list li:hover:before {
+    background: #333;
+}
+
+.packages-list li + li {
+    margin-top: 15px;
+}
+
+.packages-list li small {
+    display: block;
+    color: #479fec;
+    font-weight: 600;
 }
