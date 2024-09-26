@@ -3,6 +3,10 @@ import '@glidejs/glide/dist/css/glide.core.min.css'
 import '@glidejs/glide/dist/css/glide.theme.min.css'
 import { Image } from 'astro:assets'
 import iphoneBtn from '@/assets/images/main/app_store@2x.png'
+import screen1 from '@/assets/images/moskito_ios/screen_1.jpeg'
+import screen2 from '@/assets/images/moskito_ios/screen_2.jpeg'
+import screen3 from '@/assets/images/moskito_ios/screen_3.jpeg'
+import screen4 from '@/assets/images/moskito_ios/screen_4.jpeg'
 ---
 
 <script>
@@ -33,16 +37,16 @@ import iphoneBtn from '@/assets/images/main/app_store@2x.png'
         <div class="moskito-iphone__device glide__track" data-glide-el="track">
           <div class="moskito-iphone__screen glide__slides">
             <div class="moskito-iphone__screen-item glide__slide">
-              <img src="static-int/img/moskito_ios/screen_1.jpeg" alt="Moskito iOS screen 1" />
+              <Image src={screen1} alt="Moskito iOS screen 1" />
             </div>
             <div class="moskito-iphone__screen-item glide__slide">
-              <img src="static-int/img/moskito_ios/screen_2.jpeg" alt="Moskito iOS screen 2" />
+              <Image src={screen2} alt="Moskito iOS screen 2" />
             </div>
             <div class="moskito-iphone__screen-item glide__slide">
-              <img src="static-int/img/moskito_ios/screen_3.jpeg" alt="Moskito iOS screen 3" />
+              <Image src={screen3} alt="Moskito iOS screen 3" />
             </div>
             <div class="moskito-iphone__screen-item glide__slide">
-              <img src="static-int/img/moskito_ios/screen_4.jpeg" alt="Moskito iOS screen 4" />
+              <Image src={screen4} alt="Moskito iOS screen 4" />
             </div>
           </div>
         </div>

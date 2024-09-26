@@ -192,7 +192,16 @@ import 'leaflet/dist/leaflet.css'
     ]
 
     locations.forEach((client) => {
-      L.marker([client.lat, client.lng]).addTo(map).bindPopup(client.name)
+      const marker = L.marker([client.lat, client.lng], {
+        keyboard: false,
+      })
+        .addTo(map)
+        .bindPopup(client.name)
+
+      const element = marker.getElement()
+      if (element) {
+        element.setAttribute('tabindex', '-1')
+      }
     })
   })
 </script>

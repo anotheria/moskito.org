@@ -16,7 +16,7 @@ const { icon, title, description, moreLink } = Astro.props
   <div class="feature-item__info">
     <h3 class="feature-item__title">{title}</h3>
     <p class="feature-item__description">{description}</p>
-    <a href={moreLink} class="feature-item__btn" title={title}> More </a>
+    <a href={moreLink} class="feature-item__btn" title={title} aria-label={`Learn more about ${title}`}> More </a>
   </div>
 </li>
 

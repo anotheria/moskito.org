@@ -23,16 +23,16 @@ import AppButton from '../../ui/AppButton.astro'
       </p>
     </div>
     <div class="view-area view-area--left">
-      <h3 class="view-area__title">Integrate</h3>
+      <p class="view-area__title">Integrate</p>
 
       <p class="view-area__description">You are just one annotation away</p>
-      <Image src={ArrowRightImg} alt="Arrow right" class="cursive-arrow cursive-arrow--right" />
+      <Image src={ArrowRightImg} alt="Arrow right" class="cursive-arrow cursive-arrow--right" loading="eager" />
     </div>
     <div class="view-area view-area--right">
-      <h3 class="view-area__title">Inspect and Analyze</h3>
+      <p class="view-area__title">Inspect and Analyze</p>
 
       <p class="view-area__description">Detect problematic spots in your code in seconds</p>
-      <Image src={ArrowLeftImg} alt="Arrow left" class="cursive-arrow cursive-arrow--left" />
+      <Image src={ArrowLeftImg} alt="Arrow left" class="cursive-arrow cursive-arrow--left" loading="eager" />
     </div>
     <div class="view__box">
       <div class="view__area">
@@ -277,6 +277,13 @@ import AppButton from '../../ui/AppButton.astro'
 
     .view-area {
       display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main-box {
+      background-image: none;
+      background: linear-gradient(to bottom, #001f3f, #111111);
     }
   }
 

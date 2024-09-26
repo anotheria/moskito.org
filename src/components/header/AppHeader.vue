@@ -44,6 +44,9 @@ const logoSize = computed(() => {
 
       <button
         class="header__drawer-button"
+        aria-label="Open navigation menu"
+        :aria-expanded="drawerVisible"
+        title="Toggle navigation menu"
         @click="drawerVisible = !drawerVisible"
         @keydown.enrter="drawerVisible = !drawerVisible"
         @keydown.space="drawerVisible = !drawerVisible"
