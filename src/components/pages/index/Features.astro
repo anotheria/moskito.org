@@ -1,0 +1,127 @@
+---
+import FeatureItem from '../../../components/FeatureItem.astro'
+
+const features = [
+  {
+    icon: 'fa-tachometer',
+    title: 'Collect any performance data',
+    description:
+      'Threads. Memory. Caches. Storages. Services. Registrations. Payments. Conversion. Partner Performance. SQL. Online Users. Load distribution... Whatever you need!',
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-collectanydata',
+  },
+  {
+    icon: 'fa-keyboard-o',
+    title: 'No code change required',
+    description:
+      "MoSKito is non-invasive: it measures 'around' the monitored code, without changing it. Integration is done via proxies, annotations, inheritance, aop, class loaders or plain calling.",
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-nocodechange',
+  },
+  {
+    icon: 'fa-cogs',
+    title: 'Works with your app server',
+    description:
+      "MoSKito supports all major application servers: Tomcat, Jetty, JBoss, Glassfish, WebLogic, Websphere… No need to ask 'Does it work with mine?', it does.",
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-appservers',
+  },
+  {
+    icon: 'fa-refresh',
+    title: 'See more with short intervals',
+    description:
+      "MoSKito is interval-based, using short (5min) & long (24h) monitoring intervals. Shorter intervals are more sensitive to anomalies, providing more understanding about the system's behavior.",
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-intervals',
+  },
+  {
+    icon: 'fa-lock',
+    title: 'Keep your data private',
+    description:
+      "MoSKito does not use any external servers or resources for processing or storing your app's data. All the collected info is kept locally, ensuring your privacy.",
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-privacy',
+  },
+  {
+    icon: 'fa-tachometer',
+    title: 'Dashboard',
+    description:
+      'One-page overview for all critical services and processes of Application in multi nodes production environment (enterprise, cloud). Visualize the overall status to everyone involved in the most simple and understandable way.',
+    moreLink: 'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Inspect',
+  },
+  {
+    icon: 'fa-exclamation-triangle',
+    title: 'Define and watch critical areas',
+    description:
+      'Set performance boundaries for the most critical parameters of your app with thresholds. Then, monitor their health with a simple alarm system, intuitive as a traffic light.',
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-thresholds',
+  },
+  {
+    icon: 'fa-bar-chart',
+    title: 'Display data in charts',
+    description: 'Get a powerful visual analytic tool with accumulators.',
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-accumulators',
+  },
+  {
+    icon: 'fa-eye',
+    title: "Make app's inner life visible",
+    description:
+      'Record user actions in the form of actual calls that occur inside your web application with journeys. Get effective live system profiling with no performance impact.',
+    moreLink:
+      'https://confluence.opensource.anotheria.net/display/MSK/MoSKito-Essential+Overview#MoSKito-EssentialOverview-journeys',
+  },
+]
+---
+
+<section class="features" aria-labelledby="features-title">
+  <div class="container">
+    <h2 id="features-title" class="title features__title">MoSKito Features</h2>
+    <ul class="features__list">
+      {
+        features.map((feature) => (
+          <FeatureItem
+            icon={feature.icon}
+            title={feature.title}
+            description={feature.description}
+            moreLink={feature.moreLink}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style lang="scss">
+  .features {
+    padding: 4rem 0;
+
+    &__title {
+      margin-bottom: 2.5rem;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.875rem;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .features {
+      &__list {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+</style>

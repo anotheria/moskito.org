@@ -1,0 +1,225 @@
+---
+import '@glidejs/glide/dist/css/glide.core.min.css'
+import '@glidejs/glide/dist/css/glide.theme.min.css'
+import { Image } from 'astro:assets'
+import iphoneBtn from '@/assets/images/main/app_store@2x.png'
+---
+
+<script>
+  import Glide from '@glidejs/glide'
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    new Glide('.glide', {
+      // autoplay: 2000,
+      type: 'carousel',
+    }).mount()
+  })
+</script>
+
+<section class="moskito-iphone">
+  <div class="moskito-iphone__container">
+    <div class="moskito-iphone__content">
+      <div class="moskito-iphone__info">
+        <h2 class="moskito-iphone__title">MoSKito for iPhone</h2>
+        <p class="moskito-iphone__description">
+          Mobile addition to the open source MoSKito Monitoring Framework.
+          <br />Control and monitor your application from anywhere.
+        </p>
+        <a href="https://itunes.apple.com/de/app/moskito-ui/id531387262?l=en&mt=8" class="moskito-iphone__app-store">
+          <Image src={iphoneBtn} alt="App button" class="moskito-iphone__btn" />
+        </a>
+      </div>
+      <div class="moskito-iphone__showcase glide">
+        <div class="moskito-iphone__device glide__track" data-glide-el="track">
+          <div class="moskito-iphone__screen glide__slides">
+            <div class="moskito-iphone__screen-item glide__slide">
+              <img src="static-int/img/moskito_ios/screen_1.jpeg" alt="Moskito iOS screen 1" />
+            </div>
+            <div class="moskito-iphone__screen-item glide__slide">
+              <img src="static-int/img/moskito_ios/screen_2.jpeg" alt="Moskito iOS screen 2" />
+            </div>
+            <div class="moskito-iphone__screen-item glide__slide">
+              <img src="static-int/img/moskito_ios/screen_3.jpeg" alt="Moskito iOS screen 3" />
+            </div>
+            <div class="moskito-iphone__screen-item glide__slide">
+              <img src="static-int/img/moskito_ios/screen_4.jpeg" alt="Moskito iOS screen 4" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="moskito-iphone__features">
+        <div class="moskito-iphone__feature">
+          <i class="moskito-iphone__feature-icon fa fa-lightbulb-o"></i>
+          <p class="moskito-iphone__feature-text">Monitor performance of your applications with thresholds</p>
+        </div>
+        <div class="moskito-iphone__feature">
+          <i class="moskito-iphone__feature-icon fa fa-line-chart"></i>
+          <p class="moskito-iphone__feature-text">
+            Visualize your business and technical key figures with graphs (accumulators)
+          </p>
+        </div>
+        <div class="moskito-iphone__feature">
+          <i class="moskito-iphone__feature-icon fa fa-tachometer"></i>
+          <p class="moskito-iphone__feature-text">
+            Monitor multiple applications in one screen and switch between them
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .moskito-iphone {
+    padding-top: 70px;
+    overflow: hidden;
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &__info {
+      flex: 0 0 30%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 26px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 30px;
+    }
+
+    &__description {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #333;
+      line-height: 24px;
+    }
+
+    &__app-store {
+      display: inline-block;
+      width: 135px;
+      height: 40px;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__showcase {
+      flex: 0 0 30%;
+      margin-bottom: 30px;
+      background-image: url('/images/mobile@2x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 75px;
+      max-width: 300px;
+      margin-bottom: -100px;
+      cursor: auto;
+    }
+
+    &__device {
+      position: relative;
+      max-width: 260px;
+      margin: 0 auto;
+      border-radius: 2px;
+      cursor: grab;
+
+      &::before {
+        content: '';
+        background-image: url('/images/mobile_white_line.png');
+        background-repeat: repeat-x;
+        background-position: bottom;
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        pointer-events: none;
+      }
+    }
+
+    &__screen-item {
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__device-line {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+
+    &__features {
+      flex: 0 0 30%;
+    }
+
+    &__feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &__feature-icon {
+      font-size: 20px;
+      margin-right: 15px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 40px;
+      text-align: center;
+      color: #fff;
+      background: #479fec;
+      flex: 0 0 auto;
+    }
+
+    &__feature-text {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+      line-height: 24px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .moskito-iphone {
+      &__content {
+        flex-direction: column;
+      }
+
+      &__showcase {
+        margin-bottom: 0;
+        padding-bottom: 75px;
+      }
+
+      &__device {
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+</style>

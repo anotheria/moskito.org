@@ -1,0 +1,93 @@
+---
+import { Image } from 'astro:assets'
+import Client1 from '@/assets/images/companies/client1.png'
+import Client2 from '@/assets/images/companies/client2.png'
+import Client3 from '@/assets/images/companies/client3.png'
+import Client4 from '@/assets/images/companies/client4.png'
+import Client5 from '@/assets/images/companies/client5.png'
+import Client6 from '@/assets/images/companies/client6.png'
+import Client7 from '@/assets/images/companies/client7.png'
+import Client8 from '@/assets/images/companies/client8.png'
+import Client9 from '@/assets/images/companies/client9.png'
+---
+
+<div class="partners section">
+  <div class="container">
+    <div class="partners__content">
+      <h2 class="partners__title">Trusting Moskito to monitor their applications</h2>
+      <div class="partners__logos">
+        <div class="partners__photo">
+          <Image src={Client1} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client2} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client3} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client4} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client5} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client6} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client7} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client8} alt="Client logo" class="partners__img" />
+        </div>
+        <div class="partners__photo">
+          <Image src={Client9} alt="Client logo" class="partners__img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .partners {
+    background: #f7f7f7;
+
+    &__content {
+    }
+
+    &__title {
+      margin-bottom: 40px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    &__logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &__photo {
+      opacity: 0.4;
+      transition: all 0.2s linear;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 50px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .partners {
+      &__logos {
+        gap: 15px;
+      }
+    }
+  }
+</style>

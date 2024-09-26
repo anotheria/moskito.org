@@ -1,0 +1,25 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+@media (max-width: 520px) {
+  .section {
+    padding: 50px 0;
+  }
+}

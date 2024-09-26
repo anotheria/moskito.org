@@ -1,0 +1,269 @@
+---
+export interface Props {
+  text: string
+  href?: string
+  type?: 'button' | 'submit' | 'reset'
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'danger'
+    | 'warn'
+    | 'info'
+    | 'light'
+    | 'dark'
+    | 'link'
+    | 'white'
+    | 'black'
+    | 'orange'
+  size?: 'small' | 'medium' | 'large'
+  disabled?: boolean
+  className?: string
+}
+
+const {
+  text,
+  href,
+  type = 'button',
+  color = 'primary',
+  size = 'medium',
+  disabled = false,
+  className = '',
+} = Astro.props
+
+const Element = href ? 'a' : 'button'
+---
+
+<Element
+  class={`button button--${color} button--${size} text-center ${className}`}
+  {href}
+  type={Element === 'button' ? type : undefined}
+  disabled={disabled}
+  role={href ? 'button' : undefined}
+  aria-disabled={disabled}
+>
+  {text}
+</Element>
+
+<style lang="scss">
+  .button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      box-shadow 0.15s ease;
+
+    &:focus {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &--primary {
+      background-color: #479fec;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #3c87c9;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #b8daff;
+        outline: 0;
+      }
+    }
+
+    &--secondary {
+      background-color: #6c757d;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #545b62;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #d6d6d6;
+        outline: 0;
+      }
+    }
+
+    &--success {
+      background-color: #93c01b;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #87b900;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #d1e49d;
+        outline: 0;
+      }
+    }
+
+    &--danger {
+      background-color: #dc3545;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #c82333;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #f0a1a8;
+        outline: 0;
+      }
+    }
+
+    &--warn {
+      background-color: #ffc439;
+      color: #212529;
+
+      &:hover:not(:disabled) {
+        background-color: #d9a730;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #ffe6aa;
+        outline: 0;
+      }
+    }
+
+    &--info {
+      background-color: #17a2b8;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #138496;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #7fd1e9;
+        outline: 0;
+      }
+    }
+
+    &--light {
+      background-color: #f8f9fa;
+      color: #212529;
+
+      &:hover:not(:disabled) {
+        background-color: #e2e6ea;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #f0f0f0;
+        outline: 0;
+      }
+    }
+
+    &--dark {
+      background-color: #343a40;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #23272b;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #6c757d;
+        outline: 0;
+      }
+    }
+
+    &--link {
+      background-color: transparent;
+      color: #007bff;
+
+      &:hover:not(:disabled) {
+        background-color: #e9ecef;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #b8daff;
+        outline: 0;
+      }
+    }
+
+    &--white {
+      background-color: #fff;
+      color: #212529;
+
+      &:hover:not(:disabled) {
+        background-color: #e9ecef;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #f8f9fa;
+        outline: 0;
+      }
+    }
+
+    &--black {
+      background-color: #000;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #000;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #000;
+        outline: 0;
+      }
+    }
+
+    &--orange {
+      background-color: #fd7e14;
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        background-color: #d56e0f;
+      }
+
+      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        box-shadow: 0 0 0 0.2rem #f0a500;
+        outline: 0;
+      }
+    }
+
+    &--small {
+      font-size: 0.875rem;
+      padding: 0.25em 0.5em;
+    }
+
+    &--medium {
+      font-size: 1rem;
+      padding: 0.5em 1em;
+    }
+
+    &--large {
+      font-size: 1.25rem;
+      padding: 0.75em 1.5em;
+    }
+  }
+</style>

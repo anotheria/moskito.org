@@ -1,0 +1,161 @@
+---
+
+---
+
+<div class="news">
+  <div class="container">
+    <div class="news__content">
+      <div class="news__column">
+        <h2 class="news__title">What's Next</h2>
+        <ul class="news__list">
+          <li class="news__item">
+            <a href="https://confluence.opensource.anotheria.net/display/MSK/About+MoSKito-Essential" class="news__link"
+              >MoSKito-Essential Overview</a
+            >
+          </li>
+          <li class="news__item">
+            <a href="https://confluence.opensource.anotheria.net/display/MSK/MoSKito+FAQ" class="news__link"
+              >MoSKito FAQ</a
+            >
+          </li>
+          <li class="news__item">
+            <a
+              href="https://confluence.opensource.anotheria.net/display/MSK/Start+working%2C+step+by+step"
+              class="news__link">Start working, step by step</a
+            >
+          </li>
+          <li class="news__item">
+            <a href="https://confluence.opensource.anotheria.net/display/MSK/Home" class="news__link"
+              >MoSKito Documentation</a
+            >
+          </li>
+          <li class="news__item">
+            <a href="https://central.sonatype.com/search?q=moskito&smo=true" class="news__link">Maven dependencies</a>
+          </li>
+          <li class="news__item">
+            <a href="https://www.moskito.org/moskito-support.html" class="news__link">Get support</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="news__column">
+        <h2 class="news__title">MoSKito News</h2>
+        <ul class="news__list">
+          <li class="news__item">
+            <h4 class="news__subtitle">RELEASE</h4>
+            2.10.0 released with <a
+              href="https://confluence.opensource.anotheria.net/display/MSK/Change+Log"
+              class="news__link">new features including now and past long running queries and load factors.</a
+            >
+          </li>
+          <li class="news__item">
+            <h4 class="news__subtitle">BLOG</h4>
+            <a href="https://anotheria.net/blog/msk/killem-all/" class="news__link"> Featured: Kill Switch</a>
+          </li>
+          <li class="news__item">
+            <h4 class="news__subtitle">TUTORIAL</h4>
+            <a href="https://www.youtube.com/watch?v=5RCkx-hGK1Q" class="news__link"
+              >MoSKito Webinar by the Tomcat Community</a
+            > is now online on YouTube.
+          </li>
+        </ul>
+      </div>
+
+      <div class="news__column">
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3D%2523moskitojava" class="news__link"
+          >Tweets about "#moskitojava"</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .news {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+    &__content {
+      display: flex;
+      gap: 100px;
+    }
+
+    &__column {
+      max-width: 360px;
+
+      &:nth-child(2) {
+        .news__item {
+          &::before {
+            top: 25px;
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-size: 26px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1.2;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      padding-left: 25px;
+    }
+
+    &__item {
+      font-size: 14px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #479fec;
+        opacity: 0.8;
+        position: absolute;
+        left: -20px;
+        top: 5px;
+      }
+    }
+
+    &__link {
+      color: #0055a1;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    &__subtitle {
+      color: #9a9a9a;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: 1060px) {
+    .news {
+      &__content {
+        gap: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 840px) {
+    .news {
+      &__content {
+        flex-direction: column;
+      }
+
+      &__column {
+        max-width: 100%;
+      }
+
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,81 @@
+---
+export interface Props {
+  icon: string
+  title: string
+  description: string
+  moreLink: string
+}
+
+const { icon, title, description, moreLink } = Astro.props
+---
+
+<li class="feature-item">
+  <div class="feature-item__icon-wrapper" aria-hidden="true">
+    <i class={`feature-item__icon fa ${icon}`}></i>
+  </div>
+  <div class="feature-item__info">
+    <h3 class="feature-item__title">{title}</h3>
+    <p class="feature-item__description">{description}</p>
+    <a href={moreLink} class="feature-item__btn" title={title}> More </a>
+  </div>
+</li>
+
+<style lang="scss">
+  .feature-item {
+    display: flex;
+    gap: 1rem;
+
+    &__icon-wrapper {
+      flex: 0 0 auto;
+    }
+
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 1.3125rem;
+      color: #fff;
+      background: #479fec;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    &__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.625rem;
+    }
+
+    &__description {
+      margin-bottom: 0.625rem;
+      color: #999;
+      font-size: 0.8125rem;
+      line-height: 1.25;
+      flex: 1 0 auto;
+    }
+
+    &__btn {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      display: inline-flex;
+      background: #f7f7f7;
+      border-radius: 0.3125rem;
+      padding: 0.625rem;
+      align-self: start;
+      color: #479fec;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        background: #ececec;
+      }
+    }
+  }
+</style>

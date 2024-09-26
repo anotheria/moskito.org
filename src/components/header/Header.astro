@@ -1,0 +1,16 @@
+---
+import AppHeader from './AppHeader.vue'
+import AppHeaderMenu from './AppHeaderMenu.astro'
+
+interface Props {
+  pageName: string
+}
+
+const { pageName } = Astro.props
+---
+
+<AppHeader client:load pageName={pageName}>
+  <AppHeaderMenu />
+</AppHeader>
+
+<style lang="scss"></style>

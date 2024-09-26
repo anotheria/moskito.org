@@ -1,0 +1,111 @@
+---
+import AppButton from '../ui/AppButton.astro'
+---
+
+<nav class="header__nav">
+  <ul class="menu">
+    <li class="menu__item">
+      <a href="/" class="menu__link">Essential</a>
+    </li>
+    <li class="menu__item">
+      <a href="moskito-control.html" class="menu__link">Control</a>
+    </li>
+    <li class="menu__item">
+      <a href="moskito-central.html" class="menu__link">Central</a>
+    </li>
+    <li class="menu__item">
+      <a href="download.html" class="menu__link">Download</a>
+    </li>
+    <li class="menu__item">
+      <a href="https://anotheria.net/blog/msk/" class="menu__link">Blog</a>
+    </li>
+  </ul>
+</nav>
+<div class="header__buttons">
+  <AppButton text="Get Support" />
+  <AppButton text="Donate" color="warn" />
+</div>
+
+<style lang="scss">
+  .header {
+    &__nav {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &__item {
+      position: relative;
+
+      & + & {
+        margin-left: 1rem;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 0.5rem;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: '';
+        display: block;
+        opacity: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s ease;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        &::after {
+          width: 50px;
+          opacity: 1;
+        }
+      }
+
+      :global(.header--scrolled) & {
+        color: #777;
+
+        &::after {
+          content: none;
+        }
+
+        &:hover,
+        &:focus {
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 876px) {
+    .header {
+      &__nav {
+        display: none;
+      }
+
+      &__buttons {
+        margin-left: auto;
+      }
+    }
+  }
+</style>

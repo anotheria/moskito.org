@@ -1,0 +1,56 @@
+---
+import FreeConsulatation from '../../FreeConsulatation.vue'
+import AppButton from '../../ui/AppButton.astro'
+import AppTooltip from '../../ui/AppTooltip.vue'
+---
+
+<div class="actions-buttons">
+  <div class="container flex">
+    <div class="actions-buttons__row">
+      <div class="actions-buttons__col">
+        <AppTooltip client:idle text="How to integrate MoSKito into your code and your environment" position="top">
+          <AppButton href="integration.html" text="Continue to integration guide" color="primary" className="w-full" />
+        </AppTooltip>
+      </div>
+      <div class="actions-buttons__col">
+        <AppTooltip client:idle text="Don't have time for setup? We can help!" position="top">
+          <AppButton
+            href="moskitorize-your-application.html"
+            text="MoSKitoRize Your App! Free!"
+            color="success"
+            className="w-full"
+          />
+        </AppTooltip>
+      </div>
+      <div class="actions-buttons__col">
+        <AppTooltip client:idle text="Ready to start? Get Free Consultation" position="top">
+          <FreeConsulatation client:idle>
+            <AppButton text="Get Free Consultation" color="orange" className="w-full" />
+          </FreeConsulatation>
+        </AppTooltip>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .actions-buttons {
+    background: linear-gradient(to right, rgba(0, 85, 161, 1) 20%, rgba(113, 156, 0, 1) 50%, rgba(205, 96, 0, 1) 80%);
+
+    padding: 20px 0;
+    width: 100%;
+
+    &__row {
+      display: inline-grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+      gap: 30px;
+    }
+
+    @media (max-width: 600px) {
+      &__row {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+</style>

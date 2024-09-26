@@ -1,0 +1,345 @@
+---
+// import AppButtonTooltip from '../../ui/AppButtonTooltip.vue'
+import { Image } from 'astro:assets'
+import ArrowLeftImg from '@/assets/images/arrow-left.png'
+import ArrowRightImg from '@/assets/images/arrow-right.png'
+import AppTooltip from '../../ui/AppTooltip.vue'
+import AppButton from '../../ui/AppButton.astro'
+---
+
+<div class="main-box">
+  <div class="container relative">
+    <div class="main-info">
+      <p class="main-info__call">Don't wait for your customers to tell you that your site is down!</p>
+
+      <h1 class="main-info__title" itemprop="name">
+        MoSKito Monitoring for Java applications. Complete ecosystem for DevOps. The Toolkit for a SR Engineer.
+      </h1>
+
+      <p class="main-info__description" itemprop="description">
+        Natural choice for Microservices.
+        <br />
+        Free &amp; open source.
+      </p>
+    </div>
+    <div class="view-area view-area--left">
+      <h3 class="view-area__title">Integrate</h3>
+
+      <p class="view-area__description">You are just one annotation away</p>
+      <Image src={ArrowRightImg} alt="Arrow right" class="cursive-arrow cursive-arrow--right" />
+    </div>
+    <div class="view-area view-area--right">
+      <h3 class="view-area__title">Inspect and Analyze</h3>
+
+      <p class="view-area__description">Detect problematic spots in your code in seconds</p>
+      <Image src={ArrowLeftImg} alt="Arrow left" class="cursive-arrow cursive-arrow--left" />
+    </div>
+    <div class="view__box">
+      <div class="view__area">
+        <div class="integrate">
+          <div class="integrate__bg"></div>
+          <div class="integrate__rline"></div>
+        </div>
+        <div class="inspect"></div>
+      </div>
+    </div>
+  </div>
+  <div class="btnline">
+    <div class="container flex">
+      <div class="btnline__row">
+        <div class="btnline__col">
+          <AppTooltip client:load text="How to integrate MoSKito into your code and your environment" position="bottom">
+            <AppButton
+              href="integration.html"
+              text="Continue to integration guide"
+              color="primary"
+              className="w-full"
+            />
+          </AppTooltip>
+        </div>
+        <div class="btnline__col">
+          <AppTooltip client:load text="Don't have time for setup? We can help!" position="bottom">
+            <AppButton
+              href="moskitorize-your-application.html"
+              text="MoSKitoRize Your App! Free!"
+              color="success"
+              className="w-full"
+            />
+          </AppTooltip>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .main-box {
+    background-color: #222;
+    background-image: url('/images/home-bg.jpg');
+    background-size: cover;
+    background-position: 0 0;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding-top: 70px;
+    position: relative;
+    max-height: 800px;
+  }
+
+  .main-info {
+    margin: 60px auto 0;
+    text-align: center;
+    max-width: 600px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+
+    &__call {
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0 0 25px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .view {
+    &__box {
+      width: 754px;
+      height: 500px;
+      margin: 0 auto;
+      background-image: url('/static-int/img/view.png');
+      background-position: center 60px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      overflow: hidden;
+      padding-top: 60px;
+
+      &:has(.integrate__bg:hover) {
+        .integrate {
+          margin-right: 0%;
+        }
+      }
+
+      &:has(.inspect:hover) {
+        .integrate {
+          margin-right: 100%;
+        }
+      }
+    }
+
+    &__area {
+      background: #fff;
+      height: 420px;
+      border-radius: 5px;
+      margin: 30px;
+      position: relative;
+    }
+  }
+
+  .integrate {
+    height: 440px;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    margin-right: 50%;
+    transition: all 0.5s ease;
+
+    &__bg {
+      background-image: url('/static-int/img/intrgrate_sc.png');
+      background-repeat: no-repeat;
+      background-size: 696px auto;
+      height: 440px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &__rline {
+      position: absolute;
+      right: -22px;
+      top: -65px;
+      height: 500px;
+      width: 43px;
+      background-image: url('/static-int/img/rline.png');
+    }
+  }
+
+  .inspect {
+    background-image: url('/static-int/img/inspect_sc.png');
+    background-repeat: no-repeat;
+    background-size: 696px auto;
+    height: 440px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-radius: 5px;
+  }
+
+  .view-area {
+    &--left {
+      position: absolute;
+      left: -10px;
+      bottom: 150px;
+      color: #fff;
+      width: 170px;
+      text-align: right;
+    }
+
+    &--right {
+      position: absolute;
+      right: -10px;
+      bottom: 150px;
+      color: #fff;
+      width: 170px;
+    }
+
+    &__title {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      opacity: 0.5;
+      font-family: 'Handlee', cursive;
+      font-size: 15px;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+  }
+
+  .cursive-arrow {
+    &--right {
+      margin-left: auto;
+    }
+
+    &--left {
+      margin-right: auto;
+    }
+  }
+
+  .btnline {
+    background: linear-gradient(
+      to right,
+      rgba(0, 85, 161, 0.9) 0%,
+      rgba(0, 85, 161, 0.9) 40%,
+      rgba(113, 156, 0, 0.9) 60%,
+      rgba(113, 156, 0, 0.9) 100%
+    );
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+
+    &__row {
+      display: inline-grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 1248px) {
+    .view__box {
+      width: auto;
+      margin: 0 185px;
+    }
+
+    .view-area {
+      &--left {
+        left: 5px;
+      }
+
+      &--right {
+        right: 5px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .view__box {
+      max-width: 754px;
+      margin: 0 auto;
+    }
+
+    .view-area {
+      display: none;
+    }
+  }
+
+  // max 600px
+  @media (max-width: 600px) {
+    .main-info {
+      margin: 30px auto 0;
+
+      &__call {
+        font-size: 30px;
+        margin: 0 0 15px;
+      }
+
+      &__title {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__description {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .view__box {
+      display: none;
+    }
+
+    .view-area {
+      &--left {
+        left: 0;
+        bottom: 100px;
+        width: 100%;
+        text-align: center;
+      }
+
+      &--right {
+        right: 0;
+        bottom: 100px;
+        width: 100%;
+        text-align: center;
+      }
+
+      &__title {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      &__description {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .btnline {
+      padding: 10px 0;
+      position: static;
+      margin-top: 20px;
+    }
+
+    .btnline__row {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+</style>
